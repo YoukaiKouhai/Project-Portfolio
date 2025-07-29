@@ -25,27 +25,75 @@
         }
         .resume-line {
             display: flex;
-            align-items: center;
+            align-items: flex-start;  /* Change from center to flex-start to align top */
             margin-bottom: 10px;
         }
+
         .column1 {
-            flex: 0 0 100px;
+            flex: 0 0 100px;       /* Keep fixed width for date */
             white-space: nowrap;
             font-size: 16px;
             margin-right: 35px;
         }
+
         .column2 {
-            flex: 1;
+            flex: 1 1 auto;        /* Let this grow but allow max width */
             margin-bottom: 0px;
+            max-width: calc(100% - 100px - 35px - 150px); /* total width minus column1, margin, and role */
+            word-wrap: break-word; /* Wrap long text */
         }
+
         .role {
             font-style: italic;
-            flex: 0 0 150px; /* Adjust the flex property to control spacing */
+            flex: 0 0 150px;       /* Fixed width for role */
+            text-align: right;     /* Align text right */
         }
         .special-spacing .column1 {
             margin-right: 27px;
         }
 
+        .entry {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .entry .date {
+            flex: 0 0 140px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .entry .company {
+            flex: 1;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .entry .position {
+            flex: 0 0 160px;
+            text-align: right;
+            font-style: italic;
+            color: #555;
+        }
+
+        .entry-details {
+            display: flex;
+            margin-left: 140px; /* aligns with column 1 */
+            padding-bottom: 15px;
+        }
+
+        .entry-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .entry-details li {
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        
     </style>
 </head>
 <body>                                                                            <!--<body>: Contains the visible content of the page.-->
@@ -56,16 +104,16 @@
     <a href="../contact/index.html">Contact</a>
     <a href="https://github.com/YoukaiKouhai" target="_blank">GitHub</a>
   </nav>
-    <div class="resume">                                                          <!--<div> is a generic container element that is used to group other elements together. In this case, it has a class attribute set to "resume". This class is referenced in the CSS for styling purposes.-->
-        <h1>Austin Wong</h1>                                                      <!--<h1> is a heading element. It represents the highest level of heading and is typically used for the main title of a page.-->
+  <div class="resume">                                                          <!--<div> is a generic container element that is used to group other elements together. In this case, it has a class attribute set to "resume". This class is referenced in the CSS for styling purposes.-->
+      <h1>Austin Wong</h1>                                                      <!--<h1> is a heading element. It represents the highest level of heading and is typically used for the main title of a page.-->
         <p>My LinkedIn: </p>                                                      <!--<p> is a paragraph element. It's used for blocks of text.-->
         <hr>                                                                      <!--<hr> is a horizontal rule element. It creates a horizontal line to separate content.-->
         <hr>
         <h2>Summary</h2>                                                          <!--<h2> is another heading element, but at a lower level than <h1>. It represents a sub-heading.-->
-        <p>A brief summary of your skills and experience.</p>
-        <hr>
+        <p>Aspiring bioengineer and research assistant with diverse experience in computational modeling, biosensor development, and medical device simulation. Ability to lead projects and collaborate across lab and classroom settings. </p>
+      <hr>
 
-        <h2>Education</h2>
+      <h2>Education</h2>
         <div class="resume-line special-spacing">
           <div class="column1">2023 – Present</div>
           <div class="column2"><strong>University of California San Diego</strong>, Bachelors, Bioengineering</div>
@@ -75,41 +123,138 @@
           <div class="column2"><strong>San Jose State University</strong>, Bachelor's, Biomedical Engineering</div>
         </div>
         <div class="resume-line">
-          <div class="column1">2018 – 2023</div>
+          <div class="column1">2018 – 2025</div>
           <div class="column2"><strong>College of San Mateo, Skyline College, and Canada College</strong>, GE & Core courses</div>
         </div>
-        <div class="resume-line">
-          <div class="column1">2017 – 2021</div>
-          <div class="column2"><strong>Aragon High School</strong>, Diploma</div>
-        </div>
-        <hr>
+      <hr>
 
-        <h2>Skills</h2>
+      <h2>Technical Skills</h2>
         <div class="resume-line">
-          <div class="column1"><strong>Technical:</strong></div>
-          <div class="column2"><strong>Computer-Aided Design Software:</strong> Fusion 360, Solidworks, Onshape, Formlab, Kura</div>
+          <div class="column2"><strong>Computer-Aided Design Software:</strong></div>
+          <div class="column2"> Fusion 360, Solidworks, Onshape, Formlab, Kura</div>
         </div>
         <div class="resume-line">
-          <div class="column1"></div>
-          <div class="column2"><strong>Object-oriented Languages:</strong> Java, JavaScript, Python</div>
+          <div class="column2"><strong>Programming Languages:</strong></div>
+          <div class="column2"> Java, JavaScript, Python, R (statistical programming), C++</div>
         </div>
         <div class="resume-line">
-          <div class="column1"></div>
-          <div class="column2"><strong>Software:</strong> Proficient in Microsoft Office Suite, Google Suite, Adobe Creative Cloud, ImageJ</div>
+          <div class="column2"><strong>Computer Software: </strong>:</div>
+          <div class="column2">Microsoft Office Suite, Google Suite, Adobe Creative Cloud, ImageJ</div>
         </div>
         <div style="margin-bottom: 30px;"></div>
+      <hr>
+
+      <h2>Work Experience</h2>
+
         <div class="resume-line">
-          <div class="column1"><strong>Language:</strong></div>
-          <div class="column2">Proficient in both English & Cantonese, with intermediate skills in Mandarin & Japanese.</div>
+          <div class="column1">2024 – Present</div>
+          <div class="column2"><strong>Aran Lab, University of California San Diego</strong></div>
+          <div class="role">Student Researcher</div>
         </div>
-        <div style="margin-bottom: 15px;"></div>
         <div class="resume-line">
           <div class="column1"></div>
-          <div class="column2">Possesses the ability to read & write in Traditional Chinese & has some knowledge of Japanese.</div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Conducted molecular biology research on CRISPR-Cas and microRNA mechanisms, contributing to novel biosensor development.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Explored graphene and biomolecules to develop novel biosensing devices, advancing the field of disease detection and treatment.</li>
+            </ul>
+          </div>
         </div>
-        <hr>
 
-        <h2>Projects</h2>
+        <div class="resume-line">
+          <div class="column1">Summer 2024</div>
+          <div class="column2"><strong>Conboy Lab, University of California Berkeley</strong></div>
+          <div class="role">Intern</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Performed cell culturing of bone marrow stem cells, hybridoma cells, and other cell types.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Conducted subcloning, performed immunostaining, and operated flow cytometry.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-line">
+          <div class="column1">2021 – 2022</div>
+          <div class="column2"><strong>SJSU Animal Care – Team Govy BME Project</strong></div>
+          <div class="role">Researcher</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Utilized SolidWorks to design the device, printed using Formlab, and cured the 3D print after it was resin printed.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Designed prosthetic to repair the damaged beak area, supporting the lower beak and reducing shifting.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Gained extensive wet lab experience in biology and chemistry labs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-line">
+          <div class="column1">Summer 2021</div>
+          <div class="column2"><strong>Google, CSSI: Online</strong></div>
+          <div class="role">Participant</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Project: Tic-Tac-Toe Combo</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Built using Node.js, ExpressJS, p5.js, and socket programming for multiplayer functionality.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-line">
+          <div class="column1">2022 – 2023</div>
+          <div class="column2"><strong>San Mateo County Libraries – Big Lift Program</strong></div>
+          <div class="role">STEM Activity Leader</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Led daily STEM enrichment activities for K–1 students, encouraging curiosity and literacy.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Created an open-ended environment promoting child-directed projects and creative problem-solving.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-line">
+          <div class="column1">2022 – 2023</div>
+          <div class="column2"><strong>Peer Connections at San Jose State University</strong></div>
+          <div class="role">Advanced Tutor</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; CRLA Level 1 & 2 Certified Tutor</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-line">
+          <div class="column1">Spring 2022</div>
+          <div class="column2"><strong>SJSU Accessible Education Center</strong></div>
+          <div class="role">Student Assistant</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Provided front-desk support, assisting students, staff, and visitors.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Managed confidential accommodation records and maintained digital files under FERPA compliance.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Proctored exams and supported assistive services like scribing and reading support.</li>
+              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Helped with tech tasks including printer troubleshooting, document scanning, and accessibility tool setup.</li>
+            </ul>
+          </div>
+        </div>
+
+
+      <h2>Projects</h2>
         <div class="resume-line special-spacing">
           <div class="column1">2023 – Present</div>
           <div class="column2"><strong>Java Self-Projects</strong></div>
@@ -136,15 +281,6 @@
           <div class="column2"><strong>Glucose Monitor Static Analysis</strong></div>
           <div class="role">Project Lead</div>
         </div>
-
-        <h2>Experience</h2>
-        <h3>Job Title, Company</h3>
-        <p>Start Date - End Date</p>
-        <ul> <!---->
-            <li>Responsibility or achievement</li>
-            <li>Responsibility or achievement</li>
-            <!-- Add more responsibilities or achievements as needed -->
-        </ul>
 
     </div>
 </body>
