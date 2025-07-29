@@ -1,66 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>CV</title>
-  <link rel="stylesheet" href="../style.css">
+<!DOCTYPE html>                                                                   <!--<!DOCTYPE html>: Defines the document type and version of HTML.-->
+<html lang="en">                                                                  <!--<head>: Contains meta-information about the document, such as character encoding, viewport settings, and the title of the page.-->
+<head>                                                                            <!--The <head> element is a fundamental part of an HTML document. It provides information about the document, such as its title, character encoding, links to external resources like stylesheets and scripts, and other meta-information.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin's Personal Site</title>
+    <style>                                                                        /*<style>: This is an HTML element used to define the style information for a document.*/
+        body {                                                                     /*This is a CSS rule that applies styles to the <body> element of the HTML document.*/
+            font-family: Arial, sans-serif;                                        /*font-family: Arial, sans-serif;: This sets the font of the entire page to Arial or a sans-serif font if Arial is not available.*/
+            margin: 0;                                                             /*margin: 0;: This removes any default margin around the entire page.*/
+            padding: 20px;                                                         /*padding: 20px;: This adds 20 pixels of padding inside the body element. Padding is the space between the content and the border of an element.*/
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .resume {                                                                  /*.resume: This is a CSS class selector. It targets an HTML element with the class "resume". For example, <div class="resume"> in your HTML.*/
+            max-width: 850px;                                                      /*max-width: 800px;: This sets the maximum width of the element with the class "resume" to 800 pixels. This means that the gray box in the middle won't stretch beyond 800 pixels.*/
+            margin: auto;                                                          /*margin: auto;: This centers the element horizontally on the page. The auto value for the margin automatically calculates and applies equal margins on both sides of the element, which centers it.*/
+            background-color: #f8f8f8;                                           /*background-color: #f8f8f8;: This sets the background color of the element to a light gray. #f8f8f8 is a hexadecimal color code representing a shade of gray.*/
+            padding: 20px;                                                         /*padding: 20px;: This adds 20 pixels of space inside the element. The padding creates space between the content and the border of the element.*/
+            border-radius: 8px;                                                    /*border-radius: 8px;: This gives the element rounded corners with a radius of 8 pixels.*/
+        }
+        .resume-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .column1 {
+            flex: 0 0 100px;
+            white-space: nowrap;
+            font-size: 16px;
+            margin-right: 35px;
+        }
+        .column2 {
+            flex: 1;
+            margin-bottom: 0px;
+        }
+        .role {
+            font-style: italic;
+            flex: 0 0 150px; /* Adjust the flex property to control spacing */
+        }
+        .special-spacing .column1 {
+            margin-right: 27px;
+        }
+
+    </style>
 </head>
-<body>
+<body>                                                                            <!--<body>: Contains the visible content of the page.-->
   <nav>
     <a href="../index.html">Home</a>
+    <a href="../cv/index.html">CV</a>
     <a href="../projects/index.html">Projects</a>
     <a href="../contact/index.html">Contact</a>
-    <a href="../cv/index.html">CV</a>
-    <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+    <a href="https://github.com/YoukaiKouhai" target="_blank">GitHub</a>
   </nav>
+    <div class="resume">                                                          <!--<div> is a generic container element that is used to group other elements together. In this case, it has a class attribute set to "resume". This class is referenced in the CSS for styling purposes.-->
+        <h1>Austin Wong</h1>                                                      <!--<h1> is a heading element. It represents the highest level of heading and is typically used for the main title of a page.-->
+        <p>My LinkedIn: </p>                                                      <!--<p> is a paragraph element. It's used for blocks of text.-->
+        <hr>                                                                      <!--<hr> is a horizontal rule element. It creates a horizontal line to separate content.-->
+        <hr>
+        <h2>Summary</h2>                                                          <!--<h2> is another heading element, but at a lower level than <h1>. It represents a sub-heading.-->
+        <p>A brief summary of your skills and experience.</p>
+        <hr>
 
-  <h1>Curriculum Vitae</h1>
+        <h2>Education</h2>
+        <div class="resume-line special-spacing">
+          <div class="column1">2023 – Present</div>
+          <div class="column2"><strong>University of California San Diego</strong>, Bachelors, Bioengineering</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1">2021 – 2023</div>
+          <div class="column2"><strong>San Jose State University</strong>, Bachelor's, Biomedical Engineering</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1">2018 – 2023</div>
+          <div class="column2"><strong>College of San Mateo, Skyline College, and Canada College</strong>, GE & Core courses</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1">2017 – 2021</div>
+          <div class="column2"><strong>Aragon High School</strong>, Diploma</div>
+        </div>
+        <hr>
 
-  <section>
-    <header>
-      <h2>Contact Information</h2>
-    </header>
-    <p>Name: John Doe<br>
-       Email: johndoe@example.com<br>
-       Location: San Diego, CA</p>
-  </section>
+        <h2>Skills</h2>
+        <div class="resume-line">
+          <div class="column1"><strong>Technical:</strong></div>
+          <div class="column2"><strong>Computer-Aided Design Software:</strong> Fusion 360, Solidworks, Onshape, Formlab, Kura</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2"><strong>Object-oriented Languages:</strong> Java, JavaScript, Python</div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2"><strong>Software:</strong> Proficient in Microsoft Office Suite, Google Suite, Adobe Creative Cloud, ImageJ</div>
+        </div>
+        <div style="margin-bottom: 30px;"></div>
+        <div class="resume-line">
+          <div class="column1"><strong>Language:</strong></div>
+          <div class="column2">Proficient in both English & Cantonese, with intermediate skills in Mandarin & Japanese.</div>
+        </div>
+        <div style="margin-bottom: 15px;"></div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">Possesses the ability to read & write in Traditional Chinese & has some knowledge of Japanese.</div>
+        </div>
+        <hr>
 
-  <section>
-    <header>
-      <h2>Education</h2>
-    </header>
-    <article>
-      <h3>B.S. in Bioengineering</h3>
-      <p>University of California, San Diego</p>
-      <time datetime="2021-09">September 2021</time> – <time datetime="2025-06">June 2025</time>
-    </article>
-  </section>
+        <h2>Projects</h2>
+        <div class="resume-line special-spacing">
+          <div class="column1">2023 – Present</div>
+          <div class="column2"><strong>Java Self-Projects</strong></div>
+        </div>
+        <div class="resume-line">
+          <div class="column1"></div>
+          <div class="column2">
+            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+              <li style="text-indent: -1em; padding-left: 1em; margin-bottom: 5px;">&#9830; These are some of Java projects that I completed on my own. The projects cover a variety of topics, including basic input/output, data manipulation, and object-oriented programming.</li>
+              <li style="text-indent: -1em; padding-left: 1em; margin-left: 20px; margin-bottom: 5px;">&#9830; Calculate Coin Value: This project calculates the value of a set of coins in dollars and cents.</li>
+              <li style="text-indent: -1em; padding-left: 1em; margin-left: 20px; margin-bottom: 5px;">&#9830; Clothing Advice Based on Weather: This project recommends clothing based on the current weather conditions.</li>
+              <li style="text-indent: -1em; padding-left: 1em; margin-left: 20px;">&#9830; Generate Username: This project generates a username based on the user's first and last name.</li>
+              <!--Perform Basic Mathematical Operations: This project allows the user to perform basic mathematical operations, such as addition, subtraction, multiplication, and division.
+              Print the "99 Bottles of Beer" Song: This project prints the "99 Bottles of Beer" song using loops and methods.
+              Fill an Array with Random Unique Lottery Ticket Numbers: This project fills an array with random unique lottery ticket numbers.
+              Member Class: This class represents a member of a gym, club, or other organization.
+              -->
+            </ul>
+          </div>
+          <div class="role"></div>
+        </div>
+        <div class="resume-line">
+          <div class="column1">2023</div>
+          <div class="column2"><strong>Glucose Monitor Static Analysis</strong></div>
+          <div class="role">Project Lead</div>
+        </div>
 
-  <section>
-    <header>
-      <h2>Experience</h2>
-    </header>
-    <article>
-      <h3>Research Assistant – Tissue Mechanics Lab</h3>
-      <p>UC San Diego</p>
-      <time datetime="2024-01">Jan 2024</time> – <time datetime="2024-08">Aug 2024</time>
-      <ul>
-        <li>Assisted with tensile testing on chicken knee joints</li>
-        <li>Analyzed mechanical data using Python and Excel</li>
-        <li>Co-authored lab report submitted to faculty</li>
-      </ul>
-    </article>
-  </section>
+        <h2>Experience</h2>
+        <h3>Job Title, Company</h3>
+        <p>Start Date - End Date</p>
+        <ul> <!---->
+            <li>Responsibility or achievement</li>
+            <li>Responsibility or achievement</li>
+            <!-- Add more responsibilities or achievements as needed -->
+        </ul>
 
-  <section>
-    <header>
-      <h2>Skills</h2>
-    </header>
-    <ul>
-      <li>Python, MATLAB, Excel, Git</li>
-      <li>Openpyxl, SciPy, NumPy</li>
-      <li>Biomedical data analysis</li>
-    </ul>
-  </section>
+    </div>
 </body>
 </html>
