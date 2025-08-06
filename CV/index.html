@@ -1,102 +1,13 @@
-<!DOCTYPE html>                                                                   <!--<!DOCTYPE html>: Defines the document type and version of HTML.-->
-<html lang="en">                                                                  <!--<head>: Contains meta-information about the document, such as character encoding, viewport settings, and the title of the page.-->
-<head>                                                                            <!--The <head> element is a fundamental part of an HTML document. It provides information about the document, such as its title, character encoding, links to external resources like stylesheets and scripts, and other meta-information.-->
+<!DOCTYPE html>                                                                   
+<html lang="en">                                                                
+<head>                                                                           
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Austin's Personal Site</title>
-    <style>                                                                        /*<style>: This is an HTML element used to define the style information for a document.*/
-        body {                                                                     /*This is a CSS rule that applies styles to the <body> element of the HTML document.*/
-            font-family: Arial, sans-serif;                                        /*font-family: Arial, sans-serif;: This sets the font of the entire page to Arial or a sans-serif font if Arial is not available.*/
-            margin: 0;                                                             /*margin: 0;: This removes any default margin around the entire page.*/
-            padding: 20px;                                                         /*padding: 20px;: This adds 20 pixels of padding inside the body element. Padding is the space between the content and the border of an element.*/
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-        .resume {                                                                  /*.resume: This is a CSS class selector. It targets an HTML element with the class "resume". For example, <div class="resume"> in your HTML.*/
-            max-width: 850px;                                                      /*max-width: 800px;: This sets the maximum width of the element with the class "resume" to 800 pixels. This means that the gray box in the middle won't stretch beyond 800 pixels.*/
-            margin: auto;                                                          /*margin: auto;: This centers the element horizontally on the page. The auto value for the margin automatically calculates and applies equal margins on both sides of the element, which centers it.*/
-            background-color: #f8f8f8;                                           /*background-color: #f8f8f8;: This sets the background color of the element to a light gray. #f8f8f8 is a hexadecimal color code representing a shade of gray.*/
-            padding: 20px;                                                         /*padding: 20px;: This adds 20 pixels of space inside the element. The padding creates space between the content and the border of the element.*/
-            border-radius: 8px;                                                    /*border-radius: 8px;: This gives the element rounded corners with a radius of 8 pixels.*/
-        }
-        .resume-line {
-            display: flex;
-            align-items: flex-start;  /* Change from center to flex-start to align top */
-            margin-bottom: 10px;
-        }
-
-        .column1 {
-            flex: 0 0 100px;       /* Keep fixed width for date */
-            white-space: nowrap;
-            font-size: 16px;
-            margin-right: 35px;
-        }
-
-        .column2 {
-            flex: 1 1 auto;        /* Let this grow but allow max width */
-            margin-bottom: 0px;
-            max-width: calc(100% - 100px - 35px - 150px); /* total width minus column1, margin, and role */
-            word-wrap: break-word; /* Wrap long text */
-        }
-
-        .role {
-            font-style: italic;
-            flex: 0 0 150px;       /* Fixed width for role */
-            text-align: right;     /* Align text right */
-        }
-        .special-spacing .column1 {
-            margin-right: 27px;
-        }
-
-        .entry {
-            display: flex;
-            margin-bottom: 10px;
-        }
-
-        .entry .date {
-            flex: 0 0 140px;
-            font-weight: bold;
-            color: #444;
-        }
-
-        .entry .company {
-            flex: 1;
-            font-weight: bold;
-            color: #222;
-        }
-
-        .entry .position {
-            flex: 0 0 160px;
-            text-align: right;
-            font-style: italic;
-            color: #555;
-        }
-
-        .entry-details {
-            display: flex;
-            margin-left: 140px; /* aligns with column 1 */
-            padding-bottom: 15px;
-        }
-
-        .entry-details ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .entry-details li {
-            margin-bottom: 5px;
-            color: #444;
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>                                                                            <!--<body>: Contains the visible content of the page.-->
+<body>
+  <main>                                                                         
   <nav>
     <a href="../index.html">Home</a>
     <a href="../CV/index.html">CV</a>
@@ -104,12 +15,12 @@
     <a href="../contact/index.html">Contact</a>
     <a href="https://github.com/YoukaiKouhai" target="_blank">GitHub</a>
   </nav>
-  <div class="resume">                                                          <!--<div> is a generic container element that is used to group other elements together. In this case, it has a class attribute set to "resume". This class is referenced in the CSS for styling purposes.-->
-      <h1>Austin Wong</h1>                                                      <!--<h1> is a heading element. It represents the highest level of heading and is typically used for the main title of a page.-->
-        <p>My LinkedIn: </p>                                                      <!--<p> is a paragraph element. It's used for blocks of text.-->
-        <hr>                                                                      <!--<hr> is a horizontal rule element. It creates a horizontal line to separate content.-->
+  <div class="resume">                                                          
+      <h1>Austin Wong</h1>                                                      
+        <p>My LinkedIn: </p>                                                     
+        <hr>                                                                   
         <hr>
-        <h2>Summary</h2>                                                          <!--<h2> is another heading element, but at a lower level than <h1>. It represents a sub-heading.-->
+        <h2>Summary</h2>                                                          
         <p>Aspiring bioengineer and research assistant with diverse experience in computational modeling, biosensor development, and medical device simulation. Ability to lead projects and collaborate across lab and classroom settings. </p>
       <hr>
 
@@ -154,9 +65,9 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Conducted molecular biology research on CRISPR-Cas and microRNA mechanisms, contributing to novel biosensor development.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Explored graphene and biomolecules to develop novel biosensing devices, advancing the field of disease detection and treatment.</li>
+            <ul class="no-style">
+               <li>&#9830; Conducted molecular biology research on CRISPR-Cas and microRNA mechanisms, contributing to novel biosensor development.</li>
+               <li>&#9830; Explored graphene and biomolecules to develop novel biosensing devices, advancing the field of disease detection and treatment.</li>
             </ul>
           </div>
         </div>
@@ -169,9 +80,9 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Performed cell culturing of bone marrow stem cells, hybridoma cells, and other cell types.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Conducted subcloning, performed immunostaining, and operated flow cytometry.</li>
+            <ul class="no-style">
+               <li>&#9830; Performed cell culturing of bone marrow stem cells, hybridoma cells, and other cell types.</li>
+               <li>&#9830; Conducted subcloning, performed immunostaining, and operated flow cytometry.</li>
             </ul>
           </div>
         </div>
@@ -184,10 +95,10 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Utilized SolidWorks to design the device, printed using Formlab, and cured the 3D print after it was resin printed.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Designed prosthetic to repair the damaged beak area, supporting the lower beak and reducing shifting.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Gained extensive wet lab experience in biology and chemistry labs.</li>
+            <ul class="no-style">
+               <li>&#9830; Utilized SolidWorks to design the device, printed using Formlab, and cured the 3D print after it was resin printed.</li>
+               <li>&#9830; Designed prosthetic to repair the damaged beak area, supporting the lower beak and reducing shifting.</li>
+               <li>&#9830; Gained extensive wet lab experience in biology and chemistry labs.</li>
             </ul>
           </div>
         </div>
@@ -200,9 +111,9 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Project: Tic-Tac-Toe Combo</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Built using Node.js, ExpressJS, p5.js, and socket programming for multiplayer functionality.</li>
+            <ul class="no-style">
+               <li>&#9830; Project: Tic-Tac-Toe Combo</li>
+               <li>&#9830; Built using Node.js, ExpressJS, p5.js, and socket programming for multiplayer functionality.</li>
             </ul>
           </div>
         </div>
@@ -215,9 +126,9 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Led daily STEM enrichment activities for K–1 students, encouraging curiosity and literacy.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Created an open-ended environment promoting child-directed projects and creative problem-solving.</li>
+            <ul class="no-style">
+               <li>&#9830; Led daily STEM enrichment activities for K–1 students, encouraging curiosity and literacy.</li>
+               <li>&#9830; Created an open-ended environment promoting child-directed projects and creative problem-solving.</li>
             </ul>
           </div>
         </div>
@@ -230,8 +141,8 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; CRLA Level 1 & 2 Certified Tutor</li>
+            <ul class="no-style">
+               <li>&#9830; CRLA Level 1 & 2 Certified Tutor</li>
             </ul>
           </div>
         </div>
@@ -244,11 +155,11 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Provided front-desk support, assisting students, staff, and visitors.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Managed confidential accommodation records and maintained digital files under FERPA compliance.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Proctored exams and supported assistive services like scribing and reading support.</li>
-              <li style="text-indent: -1em; padding-left: 1em;">&#9830; Helped with tech tasks including printer troubleshooting, document scanning, and accessibility tool setup.</li>
+            <ul class="no-style">
+               <li>&#9830; Provided front-desk support, assisting students, staff, and visitors.</li>
+               <li>&#9830; Managed confidential accommodation records and maintained digital files under FERPA compliance.</li>
+               <li>&#9830; Proctored exams and supported assistive services like scribing and reading support.</li>
+               <li>&#9830; Helped with tech tasks including printer troubleshooting, document scanning, and accessibility tool setup.</li>
             </ul>
           </div>
         </div>
@@ -262,16 +173,11 @@
         <div class="resume-line">
           <div class="column1"></div>
           <div class="column2">
-            <ul style="list-style-type: none; padding: 0; margin-top: -8px;">
+            <ul class="no-style">
               <li style="text-indent: -1em; padding-left: 1em; margin-bottom: 5px;">&#9830; These are some of Java projects that I completed on my own. The projects cover a variety of topics, including basic input/output, data manipulation, and object-oriented programming.</li>
               <li style="text-indent: -1em; padding-left: 1em; margin-left: 20px; margin-bottom: 5px;">&#9830; Calculate Coin Value: This project calculates the value of a set of coins in dollars and cents.</li>
               <li style="text-indent: -1em; padding-left: 1em; margin-left: 20px; margin-bottom: 5px;">&#9830; Clothing Advice Based on Weather: This project recommends clothing based on the current weather conditions.</li>
               <li style="text-indent: -1em; padding-left: 1em; margin-left: 20px;">&#9830; Generate Username: This project generates a username based on the user's first and last name.</li>
-              <!--Perform Basic Mathematical Operations: This project allows the user to perform basic mathematical operations, such as addition, subtraction, multiplication, and division.
-              Print the "99 Bottles of Beer" Song: This project prints the "99 Bottles of Beer" song using loops and methods.
-              Fill an Array with Random Unique Lottery Ticket Numbers: This project fills an array with random unique lottery ticket numbers.
-              Member Class: This class represents a member of a gym, club, or other organization.
-              -->
             </ul>
           </div>
           <div class="role"></div>
@@ -283,5 +189,6 @@
         </div>
 
     </div>
+    </main>  
 </body>
 </html>

@@ -7,33 +7,34 @@
 </head>
 <body>
   <nav>
-    <a href="../index.html">Home</a>
-    <a href="../CV/index.html">CV</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../contact/index.html">Contact</a>
-    <a href="https://github.com/YoukaiKouhai" target="_blank">GitHub</a>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../CV/index.html">CV</a></li>
+      <li><a href="../projects/index.html">Projects</a></li>
+      <li><a href="../contact/index.html" class="current">Contact</a></li>
+      <li><a href="https://github.com/YoukaiKouhai" target="_blank">GitHub</a></li>
+    </ul>
   </nav>
 
   <h1>Contact</h1>
 
   <form action="mailto:you@example.com" method="POST" enctype="text/plain">
     <label>
-      Your Email:
-      <input type="email" name="email" value="your@email.com">
+      <span>Your Email:</span>
+      <input type="email" name="email" placeholder="your@email.com" />
     </label>
-    <br><br>
+
     <label>
-      Subject:
-      <input name="subject" value="Hello from your site">
+      <span>Subject:</span>
+      <input type="text" name="subject" placeholder="Hello from your site" />
     </label>
-    <br><br>
+
     <label>
-      Message:
-      <br>
-      <textarea name="body" rows="6" cols="40">Type your message here...</textarea>
+      <span>Message:</span>
+      <textarea name="body" rows="6" placeholder="Type your message here..."></textarea>
     </label>
-    <br><br>
-    <button>Send</button>
+
+    <button type="submit">Send</button>
   </form>
 </body>
 </html>
