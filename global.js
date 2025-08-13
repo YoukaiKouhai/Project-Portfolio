@@ -126,3 +126,82 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
 });
 
+// Async function to fetch JSON data
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+
+    // Check if the request was successful
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+
+    // Optional: log the response to inspect in DevTools
+    console.log(response);
+
+    // Parse and return the JSON data
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+    // Validate containerElement
+    if (!(containerElement instanceof HTMLElement)) {
+        console.error('renderProjects: Invalid container element.');
+        return;
+    }
+
+    // Validate heading level
+    const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    if (!validHeadings.includes(headingLevel)) {
+        console.warn(`Invalid heading level "${headingLevel}". Defaulting to "h2".`);
+        headingLevel = 'h2';
+    }
+
+    // Clear previous content
+    containerElement.innerHTML = '';
+
+    // Check if projects data is valid
+    if (!Array.isArray(projects) || projects.length === 0) {
+        const placeholder = document.createElement('p');
+        placeholder.textContent = 'No projects available at the moment.';
+        containerElement.appendChild(placeholder);
+        return;
+    }
+
+    // Loop through projects and create article elements
+    projects.forEach(project => {
+        const article = document.createElement('article');
+
+        // Create heading
+        const heading = document.createElement(headingLevel);
+        heading.textContent = project.title || 'Untitled Project';
+
+        // Create image
+        const img = document.createElement('img');
+        img.src = project.image || 'placeholder.jpg';
+        img.alt = project.title || 'Project Image';
+
+        // Create description
+        const desc = document.createElement('p');
+        desc.textContent = project.description || 'No description available.';
+
+        // Append elements to article
+        article.appendChild(heading);
+        article.appendChild(img);
+        article.appendChild(desc);
+
+        // Append article to container
+        containerElement.appendChild(article);
+    });
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
+

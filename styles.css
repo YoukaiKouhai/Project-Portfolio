@@ -387,3 +387,33 @@ html[data-theme="dark"] {
     --border-color: oklch(50% 10% 200 / 40%);
   }
 }
+
+#profile-stats {
+  background-color: #f0f0f0; /* light gray background */
+  border: 1px solid #ccc;    /* subtle border */
+  border-radius: 8px;        /* rounded corners */
+  padding: 1.5rem;           /* space inside the box */
+  max-width: 600px;          /* optional: limit width */
+  margin: 1rem auto;         /* center horizontally with margin */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  font-family: Arial, sans-serif; /* optional: nicer font */
+}
+
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5em 1em;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: bold;
+  text-align: center;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  text-align: center;
+  margin: 0;
+}
