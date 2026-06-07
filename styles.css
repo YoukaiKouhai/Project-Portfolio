@@ -305,6 +305,34 @@ path.selected {
   padding-bottom: 3rem;
 }
 
+.commit-progress-control {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem;
+  margin-block: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--surface-bg);
+}
+
+.commit-progress-control label {
+  color: var(--text-secondary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#commit-progress {
+  flex: 1;
+  accent-color: var(--color-accent);
+}
+
+#commit-time {
+  margin-left: auto;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -340,6 +368,63 @@ path.selected {
   overflow-x: auto;
 }
 
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+#scatter-story,
+#scatter-plot {
+  flex: 1;
+  min-width: 0;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+}
+
+.step {
+  min-height: 65vh;
+  display: grid;
+  align-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: color-mix(in oklch, var(--surface-bg), transparent 40%);
+  opacity: 0.55;
+  transition: 250ms ease;
+  transition-property: opacity, transform, background-color, border-color;
+}
+
+.step.active {
+  background: var(--surface-bg);
+  border-color: var(--color-accent);
+  opacity: 1;
+  transform: translateX(0.25rem);
+}
+
+.step p {
+  margin: 0;
+}
+
+.step-kicker {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .commit-chart {
   display: block;
   min-width: 44rem;
@@ -373,6 +458,10 @@ path.selected {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+
+  @starting-style {
+    r: 0;
+  }
 }
 
 .commit-dot:hover,
@@ -455,6 +544,94 @@ dl.info[hidden]:not(:hover, :focus-within) {
 .error-message {
   color: oklch(55% 0.22 27);
   font-weight: 700;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) minmax(0, 4fr);
+  gap: 0.8rem 1rem;
+  margin-block: 1rem 3rem;
+}
+
+#files > div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  padding-block: 0.35rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#files dt {
+  grid-column: 1;
+}
+
+#files dt code {
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+#files dt small {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--text-secondary);
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  min-width: 0;
+  margin: 0;
+  padding-top: 0.25em;
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color);
+  transition: 200ms;
+
+  @starting-style {
+    scale: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .commit-progress-control,
+  #scrolly-1 {
+    display: block;
+  }
+
+  #commit-progress,
+  #commit-time {
+    display: block;
+    width: 100%;
+    margin-block: 0.5rem 0;
+  }
+
+  #scatter-plot {
+    position: static;
+    max-height: none;
+  }
+
+  .step {
+    min-height: auto;
+  }
+
+  #files {
+    grid-template-columns: 1fr;
+  }
+
+  #files > div,
+  #files dt,
+  #files dd {
+    grid-column: 1;
+  }
 }
 
 /* Resume styles */
