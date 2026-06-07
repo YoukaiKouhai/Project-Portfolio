@@ -201,6 +201,11 @@ form button:hover {
   font-style: italic;
 }
 
+.project-link {
+  justify-self: center;
+  font-weight: 700;
+}
+
 .projects-visualization {
   display: flex;
   align-items: center;

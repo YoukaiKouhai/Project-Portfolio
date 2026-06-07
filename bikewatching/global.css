@@ -1,0 +1,63 @@
+:root {
+  --page-bg: #f7faf9;
+  --panel-bg: rgb(255 255 255 / 0.92);
+  --text-primary: #1b2428;
+  --text-secondary: #536066;
+  --border-color: rgb(22 54 68 / 0.18);
+  --accent: #167c80;
+  --shadow: rgb(20 37 44 / 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font: 100%/1.5 system-ui, sans-serif;
+  min-height: 100vh;
+  color: var(--text-primary);
+  background: var(--page-bg);
+}
+
+a {
+  color: var(--accent);
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  max-width: min(28rem, calc(100vw - 2rem));
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  background: var(--panel-bg);
+  box-shadow: 0 0.8rem 2rem var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: 1;
+}
+
+p {
+  margin-block: 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}

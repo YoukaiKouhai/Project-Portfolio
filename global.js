@@ -162,13 +162,35 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         return;
     }
 
+    const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+        ? "/"
+        : "/Project-Portfolio/";
+
+    function resolveProjectUrl(url) {
+        if (!url) {
+            return '';
+        }
+
+        return url.startsWith('http') || url.startsWith('/')
+            ? url
+            : BASE_PATH + url;
+    }
+
     // Loop through projects and create article elements
     projects.forEach(project => {
         const article = document.createElement('article');
+        const projectUrl = resolveProjectUrl(project.url);
 
         // Create heading
         const heading = document.createElement(headingLevel);
-        heading.textContent = project.title || 'Untitled Project';
+        if (projectUrl) {
+            const headingLink = document.createElement('a');
+            headingLink.href = projectUrl;
+            headingLink.textContent = project.title || 'Untitled Project';
+            heading.appendChild(headingLink);
+        } else {
+            heading.textContent = project.title || 'Untitled Project';
+        }
 
         // Create image
         const img = document.createElement('img');
@@ -188,6 +210,14 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
         projectDetails.appendChild(desc);
         projectDetails.appendChild(year);
+
+        if (projectUrl) {
+            const link = document.createElement('a');
+            link.className = 'project-link';
+            link.href = projectUrl;
+            link.textContent = 'View project';
+            projectDetails.appendChild(link);
+        }
 
         // Append elements to article
         article.appendChild(heading);
