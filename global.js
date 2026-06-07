@@ -61,6 +61,7 @@ function setupNavigation() {
     { url: '', title: 'Home' },
     { url: 'CV/', title: 'CV' },
     { url: 'projects/', title: 'Projects' },
+    { url: 'meta/', title: 'Meta' },
     { url: 'contact/', title: 'Contact' },
     { url: 'https://github.com/YoukaiKouhai', title: 'GitHub' }
   ];
