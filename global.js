@@ -1,3 +1,23 @@
+function getSavedTheme() {
+  try {
+    const savedTheme = localStorage.getItem('theme') || localStorage.getItem('colorScheme');
+    return savedTheme === 'dark' ? 'dark' : 'light';
+  } catch {
+    return 'light';
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem('theme', theme);
+  } catch {
+    // The current tab may block storage; the visible theme can still update.
+  }
+}
+
+const savedTheme = getSavedTheme();
+document.documentElement.dataset.theme = savedTheme;
+
 // Theme switcher functionality
 function setupThemeSwitcher() {
   // Insert the color scheme switcher at the top right of the body
@@ -7,7 +27,6 @@ function setupThemeSwitcher() {
     <label class="color-scheme">
       Theme:
       <select id="colorSchemeSelect">
-        <option value="light dark">Automatic</option>
         <option value="light">Light</option>
         <option value="dark">Dark</option>
       </select>
@@ -17,50 +36,18 @@ function setupThemeSwitcher() {
 
   const select = document.getElementById('colorSchemeSelect');
 
-  function setColorScheme(scheme) {
-    if (scheme === 'light dark') {
-      document.documentElement.removeAttribute('data-theme');
-      document.documentElement.style.removeProperty('color-scheme');
-    } else {
-      document.documentElement.setAttribute('data-theme', scheme);
-      document.documentElement.style.setProperty('color-scheme', scheme);
-    }
-    select.value = scheme;
-    localStorage.colorScheme = scheme;
-  }
-
-  // Initialize theme from localStorage or system preference
-  function initTheme() {
-    const savedScheme = localStorage.colorScheme || 'light dark';
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // If automatic, use system preference
-    if (savedScheme === 'light dark') {
-      document.documentElement.style.setProperty(
-        'color-scheme', 
-        systemPrefersDark ? 'dark' : 'light'
-      );
-    }
-    
-    setColorScheme(savedScheme);
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    select.value = theme;
+    saveTheme(theme);
   }
 
   // Listen for changes
-  select.addEventListener('input', (event) => {
-    setColorScheme(event.target.value);
+  select.addEventListener('change', (event) => {
+    setTheme(event.target.value);
   });
 
-  // Watch for system preference changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (localStorage.colorScheme === 'light dark') {
-      document.documentElement.style.setProperty(
-        'color-scheme', 
-        e.matches ? 'dark' : 'light'
-      );
-    }
-  });
-
-  initTheme();
+  setTheme(savedTheme);
 }
 
 // Helper function
@@ -187,14 +174,24 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         img.src = project.image || 'placeholder.jpg';
         img.alt = project.title || 'Project Image';
 
+        const projectDetails = document.createElement('div');
+        projectDetails.className = 'project-details';
+
         // Create description
         const desc = document.createElement('p');
         desc.textContent = project.description || 'No description available.';
 
+        const year = document.createElement('p');
+        year.className = 'project-year';
+        year.textContent = project.year ? `Year: ${project.year}` : 'Year: Unknown';
+
+        projectDetails.appendChild(desc);
+        projectDetails.appendChild(year);
+
         // Append elements to article
         article.appendChild(heading);
         article.appendChild(img);
-        article.appendChild(desc);
+        article.appendChild(projectDetails);
 
         // Append article to container
         containerElement.appendChild(article);

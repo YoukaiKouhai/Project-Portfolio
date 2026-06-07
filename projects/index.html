@@ -7,7 +7,19 @@
   </head>
   <body>
     <h1>Projects</h1>
-    <p>Here's where projects will go.</p>
+    <p>Explore projects by year, search across project details, or click a pie slice to filter the list.</p>
+
+    <div class="projects-visualization">
+      <svg id="projects-pie-plot" viewBox="-50 -50 100 100" role="img" aria-label="Projects by year pie chart"></svg>
+      <ul class="legend" aria-label="Project years"></ul>
+    </div>
+
+    <input
+      class="searchBar"
+      type="search"
+      aria-label="Search projects"
+      placeholder="Search projects..."
+    >
 
     <div class="projects"></div>
 
