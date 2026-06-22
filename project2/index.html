@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persuasive Visualization: Is the World Aging Rapidly?</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <script type="module" src="../global.js"></script>
+
+  <main class="project2-page">
+    <header class="project2-header">
+      <p class="project2-kicker">DSC 106 · Project 2 · Persuasive/Deceptive Visualization</p>
+      <h1>Is the world rapidly becoming an aging society?</h1>
+      <p class="proposition">
+        <strong>Proposition:</strong> The world is rapidly becoming an aging society.
+      </p>
+      <p>
+        The same World Bank population dataset can make this proposition feel urgent
+        or overstated. The paired views below intentionally use different rhetorical
+        frames, followed by a transparent audit of those choices.
+      </p>
+      <p class="author">Individual portfolio implementation by Austin Wong.</p>
+    </header>
+
+    <section class="perspective perspective-for">
+      <div class="perspective-heading">
+        <p class="stance">Perspective A · Supports the proposition</p>
+        <h2>Major economies are aging fast</h2>
+      </div>
+
+      <figure>
+        <img
+          src="aging_urgent.svg"
+          alt="A line chart with a compressed vertical axis showing rising age-65-plus shares from 2000 to 2020 in the European Union, high-income economies, North America, East Asia and Pacific, and the world."
+        >
+        <figcaption><a href="aging_urgent.svg" download>Download visualization A</a></figcaption>
+      </figure>
+
+      <div class="decision-list">
+        <article>
+          <span class="score deceptive">−1.5</span>
+          <h3>Selected economically prominent regions</h3>
+          <p>
+            I included the European Union, high-income economies, North America, East
+            Asia and Pacific, and the World aggregate. This helps the argument by
+            emphasizing places with clear upward trajectories, but it omits low-income
+            regions where aging is limited or nearly flat.
+          </p>
+        </article>
+
+        <article>
+          <span class="score deceptive">−1.5</span>
+          <h3>Started the timeline in 2000</h3>
+          <p>
+            The recent twenty-year window highlights acceleration and avoids the slower
+            early decades. The period is substantively relevant to current policy, but
+            choosing it after seeing the data increases the perceived speed of change.
+          </p>
+        </article>
+
+        <article>
+          <span class="score deceptive">−2</span>
+          <h3>Truncated the vertical axis at 5%</h3>
+          <p>
+            The compressed 5%–22% scale makes differences and slopes visually dramatic.
+            It supports precise comparison within the observed range, but it also makes
+            modest percentage-point changes occupy most of the chart height.
+          </p>
+        </article>
+
+        <article>
+          <span class="score earnest">+1</span>
+          <h3>Direct labels, values, and method disclosure</h3>
+          <p>
+            Every series is directly labeled at its 2020 endpoint, and the source note
+            discloses both the selected-region filter and truncated axis. These choices
+            reduce lookup effort and give careful readers enough information to audit
+            the persuasive framing.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="perspective perspective-against">
+      <div class="perspective-heading">
+        <p class="stance">Perspective B · Challenges the proposition</p>
+        <h2>The world remains overwhelmingly young and working-age</h2>
+      </div>
+
+      <figure>
+        <img
+          src="aging_context.svg"
+          alt="A one-hundred-person grid showing about nine people age 65 or older, sixty-five working-age people, and twenty-six people under age 15, alongside regional age-65-plus percentages."
+        >
+        <figcaption><a href="aging_context.svg" download>Download visualization B</a></figcaption>
+      </figure>
+
+      <div class="decision-list">
+        <article>
+          <span class="score earnest">+2</span>
+          <h3>Used the World aggregate and a part-to-whole denominator</h3>
+          <p>
+            The 100-person grid makes the 9.3% global share concrete and preserves the
+            full population denominator. This directly answers how dominant older adults
+            are in the population rather than only how quickly their share has changed.
+          </p>
+        </article>
+
+        <article>
+          <span class="score deceptive">−1</span>
+          <h3>Focused on one endpoint instead of change over time</h3>
+          <p>
+            A 2020 snapshot weakens the sense of acceleration by removing the historical
+            trajectory. The endpoint is accurate, but it answers “how old is the world
+            now?” more strongly than “how rapidly is the world aging?”
+          </p>
+        </article>
+
+        <article>
+          <span class="score earnest">+1.5</span>
+          <h3>Added contrasting regional aggregates</h3>
+          <p>
+            Showing the European Union, high-income, low-income, and Sub-Saharan African
+            aggregates reveals that aging is highly uneven. This prevents the global
+            average from hiding important geographic differences.
+          </p>
+        </article>
+
+        <article>
+          <span class="score neutral">0</span>
+          <h3>Used “fewer than 1 in 10” framing</h3>
+          <p>
+            The phrase is numerically faithful to 9.3%, but it emphasizes smallness and
+            can encourage readers to discount future momentum. I chose it because it is
+            memorable, while recognizing that an equally valid title could stress that
+            the share nearly doubled since 1960.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="reflection">
+      <h2>Reflection</h2>
+      <p>
+        The straightforward part was finding accurate values and producing legible
+        encodings. The difficult part was realizing how easily a defensible analytical
+        choice became rhetorical. Selecting 2000–2020, choosing major economies, or
+        switching from rate-of-change to population composition did not require changing
+        a single value, yet each choice substantially changed the emotional and policy
+        implications of the result.
+      </p>
+      <p>
+        The most surprising lesson was that disclosure alone does not neutralize a
+        persuasive design. A small note saying “axis begins at 5%” is technically honest,
+        but many readers will still remember the steep lines rather than the footnote.
+        Conversely, the 100-person view feels calm and contextual while strategically
+        ignoring six decades of growth. Ethical visualization therefore requires more
+        than factual marks; it requires considering the question a design makes easy to
+        answer and the nearby questions it quietly suppresses.
+      </p>
+      <p>
+        I define acceptable persuasion as framing that advances an interpretation while
+        preserving access to material counterevidence, denominators, transformations,
+        and uncertainty. A visualization becomes misleading when its persuasive effect
+        depends on readers not noticing a consequential omission. The boundary is not a
+        single technique such as truncation or filtering, but whether the omitted context
+        would reasonably reverse or substantially qualify the claimed conclusion.
+      </p>
+    </section>
+
+    <section class="methods">
+      <h2>Data and transformations</h2>
+      <p>
+        Source:
+        <a href="https://github.com/light-and-salt/World-Bank-Data-by-Indicators/tree/master/health" target="_blank" rel="noopener noreferrer">
+          World Bank Data by Indicators, health
+        </a>.
+        The analysis uses population age 65+ as a percentage of total population,
+        population ages 15–64 as a percentage of total population, and derived
+        under-15 share calculated as 100 minus those two groups.
+      </p>
+      <p>
+        <a href="aging_series.csv">Download selected time-series data</a>
+        ·
+        <a href="aging_context.csv">Download 2020 context data</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

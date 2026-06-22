@@ -1,5 +1,12 @@
 [
     {
+        "title": "Is the World Aging Rapidly?",
+        "year": "2026",
+        "url": "project2/",
+        "image": "project2/aging_urgent.svg",
+        "description": "Two opposing persuasive visualizations use the same World Bank population dataset to argue for and against the proposition that the world is rapidly becoming an aging society."
+    },
+    {
         "title": "Grocery Store Foods: Processing and Price",
         "year": "2026",
         "url": "project1/",
