@@ -1,0 +1,3682 @@
+location,region,scenario,year,anomaly_c,temp_c
+San Diego,North America,historical,1950,-0.413,17.516
+New York,North America,historical,1950,-0.819,11.218
+London,Europe,historical,1950,0.08,12.567
+Lagos,Africa,historical,1950,-0.385,27.084
+Delhi,South Asia,historical,1950,0.263,28.665
+Tokyo,East Asia,historical,1950,-0.384,17.176
+Sydney,Oceania,historical,1950,-0.535,16.688
+Longyearbyen,Arctic,historical,1950,0.537,-9.869
+Manaus,South America,historical,1950,-0.478,26.948
+San Diego,North America,historical,1951,-0.54,17.388
+New York,North America,historical,1951,-0.223,11.814
+London,Europe,historical,1951,0.405,12.891
+Lagos,Africa,historical,1951,-0.398,27.071
+Delhi,South Asia,historical,1951,0.577,28.98
+Tokyo,East Asia,historical,1951,-0.64,16.92
+Sydney,Oceania,historical,1951,-0.533,16.691
+Longyearbyen,Arctic,historical,1951,0.133,-10.273
+Manaus,South America,historical,1951,0.022,27.448
+San Diego,North America,historical,1952,-1.024,16.904
+New York,North America,historical,1952,1.167,13.204
+London,Europe,historical,1952,0.759,13.246
+Lagos,Africa,historical,1952,0.072,27.541
+Delhi,South Asia,historical,1952,0.65,29.053
+Tokyo,East Asia,historical,1952,0.409,17.969
+Sydney,Oceania,historical,1952,-0.036,17.188
+Longyearbyen,Arctic,historical,1952,0.723,-9.682
+Manaus,South America,historical,1952,0.294,27.72
+San Diego,North America,historical,1953,-0.991,16.937
+New York,North America,historical,1953,0.144,12.181
+London,Europe,historical,1953,-0.455,12.032
+Lagos,Africa,historical,1953,-0.317,27.152
+Delhi,South Asia,historical,1953,0.425,28.828
+Tokyo,East Asia,historical,1953,-0.16,17.4
+Sydney,Oceania,historical,1953,-0.212,17.012
+Longyearbyen,Arctic,historical,1953,-2.001,-12.406
+Manaus,South America,historical,1953,-0.808,26.618
+San Diego,North America,historical,1954,-0.396,17.532
+New York,North America,historical,1954,-1.138,10.899
+London,Europe,historical,1954,-1.551,10.936
+Lagos,Africa,historical,1954,-0.09,27.379
+Delhi,South Asia,historical,1954,1.289,29.692
+Tokyo,East Asia,historical,1954,-0.679,16.881
+Sydney,Oceania,historical,1954,0.182,17.405
+Longyearbyen,Arctic,historical,1954,-1.349,-11.754
+Manaus,South America,historical,1954,0.082,27.508
+San Diego,North America,historical,1955,-0.342,17.586
+New York,North America,historical,1955,-0.588,11.449
+London,Europe,historical,1955,-0.572,11.915
+Lagos,Africa,historical,1955,-0.121,27.348
+Delhi,South Asia,historical,1955,0.322,28.725
+Tokyo,East Asia,historical,1955,-0.399,17.161
+Sydney,Oceania,historical,1955,-0.086,17.137
+Longyearbyen,Arctic,historical,1955,2.469,-7.936
+Manaus,South America,historical,1955,-0.285,27.141
+San Diego,North America,historical,1956,-0.709,17.219
+New York,North America,historical,1956,-0.871,11.166
+London,Europe,historical,1956,0.171,12.658
+Lagos,Africa,historical,1956,0.067,27.537
+Delhi,South Asia,historical,1956,0.021,28.424
+Tokyo,East Asia,historical,1956,-0.439,17.121
+Sydney,Oceania,historical,1956,0.133,17.356
+Longyearbyen,Arctic,historical,1956,-1.208,-11.613
+Manaus,South America,historical,1956,-0.253,27.173
+San Diego,North America,historical,1957,-0.471,17.457
+New York,North America,historical,1957,-0.39,11.647
+London,Europe,historical,1957,-0.732,11.755
+Lagos,Africa,historical,1957,-0.1,27.369
+Delhi,South Asia,historical,1957,-0.141,28.261
+Tokyo,East Asia,historical,1957,-0.404,17.157
+Sydney,Oceania,historical,1957,-0.066,17.158
+Longyearbyen,Arctic,historical,1957,0.264,-10.141
+Manaus,South America,historical,1957,-0.607,26.819
+San Diego,North America,historical,1958,-0.943,16.985
+New York,North America,historical,1958,-0.342,11.696
+London,Europe,historical,1958,-0.994,11.493
+Lagos,Africa,historical,1958,-0.25,27.22
+Delhi,South Asia,historical,1958,0.682,29.085
+Tokyo,East Asia,historical,1958,-0.099,17.461
+Sydney,Oceania,historical,1958,-0.478,16.745
+Longyearbyen,Arctic,historical,1958,-2.03,-12.436
+Manaus,South America,historical,1958,-0.547,26.879
+San Diego,North America,historical,1959,-0.798,17.13
+New York,North America,historical,1959,0.952,12.989
+London,Europe,historical,1959,-0.01,12.477
+Lagos,Africa,historical,1959,0.1,27.57
+Delhi,South Asia,historical,1959,0.868,29.271
+Tokyo,East Asia,historical,1959,-0.373,17.187
+Sydney,Oceania,historical,1959,0.521,17.744
+Longyearbyen,Arctic,historical,1959,-2.044,-12.449
+Manaus,South America,historical,1959,0.135,27.561
+San Diego,North America,historical,1960,-1.83,16.098
+New York,North America,historical,1960,-0.504,11.534
+London,Europe,historical,1960,-0.595,11.892
+Lagos,Africa,historical,1960,-0.289,27.181
+Delhi,South Asia,historical,1960,-0.366,28.037
+Tokyo,East Asia,historical,1960,0.214,17.774
+Sydney,Oceania,historical,1960,0.23,17.453
+Longyearbyen,Arctic,historical,1960,-0.893,-11.298
+Manaus,South America,historical,1960,-0.953,26.473
+San Diego,North America,historical,1961,-2.542,15.386
+New York,North America,historical,1961,0.024,12.061
+London,Europe,historical,1961,-0.787,11.7
+Lagos,Africa,historical,1961,-0.328,27.141
+Delhi,South Asia,historical,1961,-0.171,28.231
+Tokyo,East Asia,historical,1961,0.066,17.626
+Sydney,Oceania,historical,1961,-0.213,17.01
+Longyearbyen,Arctic,historical,1961,0.472,-9.933
+Manaus,South America,historical,1961,-0.683,26.743
+San Diego,North America,historical,1962,-2.108,15.82
+New York,North America,historical,1962,-0.653,11.384
+London,Europe,historical,1962,-0.569,11.918
+Lagos,Africa,historical,1962,-0.193,27.276
+Delhi,South Asia,historical,1962,-0.604,27.799
+Tokyo,East Asia,historical,1962,0.411,17.971
+Sydney,Oceania,historical,1962,-0.486,16.738
+Longyearbyen,Arctic,historical,1962,-2.891,-13.296
+Manaus,South America,historical,1962,-0.638,26.788
+San Diego,North America,historical,1963,-0.533,17.395
+New York,North America,historical,1963,-1.54,10.497
+London,Europe,historical,1963,-0.05,12.436
+Lagos,Africa,historical,1963,-0.502,26.967
+Delhi,South Asia,historical,1963,0.797,29.2
+Tokyo,East Asia,historical,1963,-0.578,16.982
+Sydney,Oceania,historical,1963,-0.069,17.155
+Longyearbyen,Arctic,historical,1963,-0.864,-11.269
+Manaus,South America,historical,1963,-0.14,27.286
+San Diego,North America,historical,1964,-0.798,17.131
+New York,North America,historical,1964,0.56,12.597
+London,Europe,historical,1964,-1.475,11.012
+Lagos,Africa,historical,1964,0.043,27.512
+Delhi,South Asia,historical,1964,1.7,30.102
+Tokyo,East Asia,historical,1964,-0.746,16.814
+Sydney,Oceania,historical,1964,0.197,17.42
+Longyearbyen,Arctic,historical,1964,-2.046,-12.451
+Manaus,South America,historical,1964,0.452,27.878
+San Diego,North America,historical,1965,-1.035,16.893
+New York,North America,historical,1965,-1.168,10.869
+London,Europe,historical,1965,-0.838,11.649
+Lagos,Africa,historical,1965,-0.42,27.049
+Delhi,South Asia,historical,1965,-0.168,28.234
+Tokyo,East Asia,historical,1965,-0.191,17.369
+Sydney,Oceania,historical,1965,-0.214,17.01
+Longyearbyen,Arctic,historical,1965,-3.347,-13.752
+Manaus,South America,historical,1965,-0.65,26.776
+San Diego,North America,historical,1966,-1.273,16.655
+New York,North America,historical,1966,0.192,12.229
+London,Europe,historical,1966,-0.828,11.659
+Lagos,Africa,historical,1966,-0.657,26.813
+Delhi,South Asia,historical,1966,0.165,28.568
+Tokyo,East Asia,historical,1966,-1.176,16.384
+Sydney,Oceania,historical,1966,-0.521,16.703
+Longyearbyen,Arctic,historical,1966,-3.244,-13.649
+Manaus,South America,historical,1966,-0.968,26.458
+San Diego,North America,historical,1967,-0.881,17.048
+New York,North America,historical,1967,-0.127,11.91
+London,Europe,historical,1967,-0.034,12.452
+Lagos,Africa,historical,1967,-0.518,26.951
+Delhi,South Asia,historical,1967,0.232,28.634
+Tokyo,East Asia,historical,1967,-0.291,17.269
+Sydney,Oceania,historical,1967,-0.554,16.669
+Longyearbyen,Arctic,historical,1967,-1.6,-12.005
+Manaus,South America,historical,1967,-0.95,26.476
+San Diego,North America,historical,1968,-0.614,17.315
+New York,North America,historical,1968,-1.096,10.942
+London,Europe,historical,1968,-0.248,12.239
+Lagos,Africa,historical,1968,-0.413,27.057
+Delhi,South Asia,historical,1968,-0.389,28.013
+Tokyo,East Asia,historical,1968,-0.772,16.788
+Sydney,Oceania,historical,1968,0.377,17.601
+Longyearbyen,Arctic,historical,1968,-2.121,-12.526
+Manaus,South America,historical,1968,-0.752,26.674
+San Diego,North America,historical,1969,-0.97,16.958
+New York,North America,historical,1969,0.082,12.12
+London,Europe,historical,1969,-0.356,12.131
+Lagos,Africa,historical,1969,-0.334,27.135
+Delhi,South Asia,historical,1969,0.194,28.596
+Tokyo,East Asia,historical,1969,-0.64,16.92
+Sydney,Oceania,historical,1969,-0.166,17.057
+Longyearbyen,Arctic,historical,1969,0.626,-9.779
+Manaus,South America,historical,1969,-0.389,27.037
+San Diego,North America,historical,1970,-1.061,16.867
+New York,North America,historical,1970,-0.754,11.283
+London,Europe,historical,1970,0.373,12.859
+Lagos,Africa,historical,1970,-0.208,27.262
+Delhi,South Asia,historical,1970,0.923,29.326
+Tokyo,East Asia,historical,1970,-0.479,17.081
+Sydney,Oceania,historical,1970,0.208,17.431
+Longyearbyen,Arctic,historical,1970,-1.528,-11.933
+Manaus,South America,historical,1970,0.08,27.506
+San Diego,North America,historical,1971,-1.453,16.475
+New York,North America,historical,1971,-0.098,11.939
+London,Europe,historical,1971,-0.225,12.261
+Lagos,Africa,historical,1971,0.248,27.717
+Delhi,South Asia,historical,1971,-0.267,28.136
+Tokyo,East Asia,historical,1971,-0.374,17.186
+Sydney,Oceania,historical,1971,-0.016,17.208
+Longyearbyen,Arctic,historical,1971,-0.776,-11.181
+Manaus,South America,historical,1971,0.178,27.604
+San Diego,North America,historical,1972,-0.803,17.125
+New York,North America,historical,1972,-0.82,11.218
+London,Europe,historical,1972,-0.618,11.868
+Lagos,Africa,historical,1972,-0.496,26.973
+Delhi,South Asia,historical,1972,-0.441,27.961
+Tokyo,East Asia,historical,1972,0.216,17.776
+Sydney,Oceania,historical,1972,0.301,17.525
+Longyearbyen,Arctic,historical,1972,-2.337,-12.742
+Manaus,South America,historical,1972,-0.969,26.457
+San Diego,North America,historical,1973,-1.381,16.548
+New York,North America,historical,1973,-0.35,11.688
+London,Europe,historical,1973,-1.076,11.411
+Lagos,Africa,historical,1973,-0.359,27.111
+Delhi,South Asia,historical,1973,0.514,28.917
+Tokyo,East Asia,historical,1973,-0.607,16.953
+Sydney,Oceania,historical,1973,-0.393,16.831
+Longyearbyen,Arctic,historical,1973,3.153,-7.252
+Manaus,South America,historical,1973,-0.194,27.232
+San Diego,North America,historical,1974,-0.924,17.005
+New York,North America,historical,1974,-0.099,11.939
+London,Europe,historical,1974,0.36,12.847
+Lagos,Africa,historical,1974,0.058,27.527
+Delhi,South Asia,historical,1974,0.78,29.182
+Tokyo,East Asia,historical,1974,-0.715,16.846
+Sydney,Oceania,historical,1974,-0.041,17.183
+Longyearbyen,Arctic,historical,1974,-1.365,-11.77
+Manaus,South America,historical,1974,0.379,27.805
+San Diego,North America,historical,1975,-0.544,17.384
+New York,North America,historical,1975,0.229,12.267
+London,Europe,historical,1975,-0.843,11.643
+Lagos,Africa,historical,1975,-0.375,27.094
+Delhi,South Asia,historical,1975,-0.397,28.006
+Tokyo,East Asia,historical,1975,-1.479,16.081
+Sydney,Oceania,historical,1975,-0.425,16.799
+Longyearbyen,Arctic,historical,1975,3.964,-6.441
+Manaus,South America,historical,1975,-0.325,27.101
+San Diego,North America,historical,1976,-0.532,17.396
+New York,North America,historical,1976,-0.686,11.352
+London,Europe,historical,1976,-0.383,12.104
+Lagos,Africa,historical,1976,-0.186,27.283
+Delhi,South Asia,historical,1976,1.352,29.754
+Tokyo,East Asia,historical,1976,-0.105,17.455
+Sydney,Oceania,historical,1976,-0.004,17.22
+Longyearbyen,Arctic,historical,1976,1.879,-8.526
+Manaus,South America,historical,1976,-0.432,26.994
+San Diego,North America,historical,1977,-1.023,16.906
+New York,North America,historical,1977,0.675,12.712
+London,Europe,historical,1977,-0.167,12.319
+Lagos,Africa,historical,1977,0.399,27.868
+Delhi,South Asia,historical,1977,0.227,28.63
+Tokyo,East Asia,historical,1977,-0.956,16.604
+Sydney,Oceania,historical,1977,0.521,17.744
+Longyearbyen,Arctic,historical,1977,3.728,-6.677
+Manaus,South America,historical,1977,0.345,27.771
+San Diego,North America,historical,1978,-0.433,17.496
+New York,North America,historical,1978,-0.375,11.663
+London,Europe,historical,1978,0.478,12.964
+Lagos,Africa,historical,1978,0.131,27.6
+Delhi,South Asia,historical,1978,-0.437,27.965
+Tokyo,East Asia,historical,1978,0.153,17.713
+Sydney,Oceania,historical,1978,-0.25,16.974
+Longyearbyen,Arctic,historical,1978,0.068,-10.337
+Manaus,South America,historical,1978,-0.473,26.952
+San Diego,North America,historical,1979,-0.299,17.63
+New York,North America,historical,1979,-0.654,11.383
+London,Europe,historical,1979,-0.451,12.036
+Lagos,Africa,historical,1979,0.132,27.602
+Delhi,South Asia,historical,1979,1.191,29.594
+Tokyo,East Asia,historical,1979,0.444,18.005
+Sydney,Oceania,historical,1979,0.107,17.331
+Longyearbyen,Arctic,historical,1979,0.992,-9.414
+Manaus,South America,historical,1979,0.353,27.779
+San Diego,North America,historical,1980,-0.774,17.154
+New York,North America,historical,1980,-0.286,11.752
+London,Europe,historical,1980,-0.732,11.755
+Lagos,Africa,historical,1980,0.299,27.768
+Delhi,South Asia,historical,1980,0.53,28.932
+Tokyo,East Asia,historical,1980,-0.229,17.331
+Sydney,Oceania,historical,1980,0.751,17.975
+Longyearbyen,Arctic,historical,1980,-0.789,-11.194
+Manaus,South America,historical,1980,0.792,28.218
+San Diego,North America,historical,1981,-0.289,17.639
+New York,North America,historical,1981,-0.498,11.539
+London,Europe,historical,1981,0.461,12.948
+Lagos,Africa,historical,1981,-0.296,27.173
+Delhi,South Asia,historical,1981,-0.492,27.911
+Tokyo,East Asia,historical,1981,-0.739,16.821
+Sydney,Oceania,historical,1981,-0.13,17.093
+Longyearbyen,Arctic,historical,1981,-3.863,-14.268
+Manaus,South America,historical,1981,-0.561,26.865
+San Diego,North America,historical,1982,-1.425,16.503
+New York,North America,historical,1982,-1.416,10.621
+London,Europe,historical,1982,-0.43,12.057
+Lagos,Africa,historical,1982,-0.225,27.244
+Delhi,South Asia,historical,1982,-0.384,28.019
+Tokyo,East Asia,historical,1982,-0.017,17.543
+Sydney,Oceania,historical,1982,-0.199,17.025
+Longyearbyen,Arctic,historical,1982,-0.455,-10.86
+Manaus,South America,historical,1982,-0.576,26.85
+San Diego,North America,historical,1983,-0.513,17.416
+New York,North America,historical,1983,-1.711,10.326
+London,Europe,historical,1983,-0.561,11.926
+Lagos,Africa,historical,1983,-0.498,26.971
+Delhi,South Asia,historical,1983,-0.511,27.891
+Tokyo,East Asia,historical,1983,-0.619,16.941
+Sydney,Oceania,historical,1983,-0.22,17.003
+Longyearbyen,Arctic,historical,1983,0.555,-9.85
+Manaus,South America,historical,1983,-0.698,26.728
+San Diego,North America,historical,1984,-0.217,17.711
+New York,North America,historical,1984,-0.24,11.798
+London,Europe,historical,1984,0.095,12.581
+Lagos,Africa,historical,1984,-0.344,27.125
+Delhi,South Asia,historical,1984,-0.775,27.628
+Tokyo,East Asia,historical,1984,0.038,17.598
+Sydney,Oceania,historical,1984,-0.149,17.074
+Longyearbyen,Arctic,historical,1984,-1.007,-11.412
+Manaus,South America,historical,1984,-0.789,26.637
+San Diego,North America,historical,1985,-0.119,17.81
+New York,North America,historical,1985,-0.872,11.166
+London,Europe,historical,1985,-0.366,12.12
+Lagos,Africa,historical,1985,-0.306,27.163
+Delhi,South Asia,historical,1985,-0.104,28.298
+Tokyo,East Asia,historical,1985,0.304,17.864
+Sydney,Oceania,historical,1985,-0.253,16.971
+Longyearbyen,Arctic,historical,1985,1.884,-8.521
+Manaus,South America,historical,1985,-0.124,27.302
+San Diego,North America,historical,1986,0.718,18.647
+New York,North America,historical,1986,-1.017,11.021
+London,Europe,historical,1986,-0.075,12.411
+Lagos,Africa,historical,1986,-0.092,27.377
+Delhi,South Asia,historical,1986,0.866,29.268
+Tokyo,East Asia,historical,1986,-0.572,16.988
+Sydney,Oceania,historical,1986,-0.004,17.219
+Longyearbyen,Arctic,historical,1986,0.129,-10.276
+Manaus,South America,historical,1986,0.292,27.718
+San Diego,North America,historical,1987,0.687,18.615
+New York,North America,historical,1987,-0.69,11.347
+London,Europe,historical,1987,0.286,12.773
+Lagos,Africa,historical,1987,0.073,27.542
+Delhi,South Asia,historical,1987,0.532,28.934
+Tokyo,East Asia,historical,1987,-0.608,16.952
+Sydney,Oceania,historical,1987,-0.104,17.12
+Longyearbyen,Arctic,historical,1987,-0.825,-11.23
+Manaus,South America,historical,1987,0.219,27.645
+San Diego,North America,historical,1988,-0.533,17.395
+New York,North America,historical,1988,-0.278,11.759
+London,Europe,historical,1988,-0.274,12.213
+Lagos,Africa,historical,1988,0.403,27.872
+Delhi,South Asia,historical,1988,0.965,29.368
+Tokyo,East Asia,historical,1988,-0.204,17.356
+Sydney,Oceania,historical,1988,0.61,17.834
+Longyearbyen,Arctic,historical,1988,-0.933,-11.338
+Manaus,South America,historical,1988,0.656,28.082
+San Diego,North America,historical,1989,0.13,18.058
+New York,North America,historical,1989,0.369,12.406
+London,Europe,historical,1989,-0.186,12.301
+Lagos,Africa,historical,1989,-0.52,26.95
+Delhi,South Asia,historical,1989,-1.144,27.258
+Tokyo,East Asia,historical,1989,-0.386,17.174
+Sydney,Oceania,historical,1989,-0.471,16.752
+Longyearbyen,Arctic,historical,1989,-1.312,-11.717
+Manaus,South America,historical,1989,-0.736,26.69
+San Diego,North America,historical,1990,-0.241,17.687
+New York,North America,historical,1990,0.318,12.355
+London,Europe,historical,1990,0.099,12.586
+Lagos,Africa,historical,1990,-0.55,26.919
+Delhi,South Asia,historical,1990,0.275,28.677
+Tokyo,East Asia,historical,1990,-0.221,17.34
+Sydney,Oceania,historical,1990,-0.176,17.047
+Longyearbyen,Arctic,historical,1990,-3.029,-13.434
+Manaus,South America,historical,1990,-0.649,26.776
+San Diego,North America,historical,1991,-1.11,16.819
+New York,North America,historical,1991,-0.93,11.107
+London,Europe,historical,1991,0.111,12.598
+Lagos,Africa,historical,1991,0.053,27.522
+Delhi,South Asia,historical,1991,-0.124,28.279
+Tokyo,East Asia,historical,1991,-0.471,17.089
+Sydney,Oceania,historical,1991,-0.073,17.151
+Longyearbyen,Arctic,historical,1991,-1.437,-11.842
+Manaus,South America,historical,1991,0.09,27.516
+San Diego,North America,historical,1992,-0.226,17.702
+New York,North America,historical,1992,-1.91,10.128
+London,Europe,historical,1992,-0.909,11.578
+Lagos,Africa,historical,1992,-0.109,27.361
+Delhi,South Asia,historical,1992,-0.656,27.747
+Tokyo,East Asia,historical,1992,-1.033,16.527
+Sydney,Oceania,historical,1992,-0.656,16.568
+Longyearbyen,Arctic,historical,1992,-0.941,-11.346
+Manaus,South America,historical,1992,-0.545,26.881
+San Diego,North America,historical,1993,-0.342,17.586
+New York,North America,historical,1993,0.543,12.581
+London,Europe,historical,1993,-0.309,12.178
+Lagos,Africa,historical,1993,-0.276,27.193
+Delhi,South Asia,historical,1993,-0.016,28.387
+Tokyo,East Asia,historical,1993,-0.353,17.207
+Sydney,Oceania,historical,1993,-0.614,16.609
+Longyearbyen,Arctic,historical,1993,3.406,-6.999
+Manaus,South America,historical,1993,-0.256,27.17
+San Diego,North America,historical,1994,0.461,18.389
+New York,North America,historical,1994,0.291,12.328
+London,Europe,historical,1994,-0.424,12.062
+Lagos,Africa,historical,1994,0.306,27.775
+Delhi,South Asia,historical,1994,0.71,29.112
+Tokyo,East Asia,historical,1994,-0.045,17.515
+Sydney,Oceania,historical,1994,0.136,17.359
+Longyearbyen,Arctic,historical,1994,-1.498,-11.903
+Manaus,South America,historical,1994,0.263,27.689
+San Diego,North America,historical,1995,0.155,18.083
+New York,North America,historical,1995,0.304,12.342
+London,Europe,historical,1995,-0.546,11.94
+Lagos,Africa,historical,1995,0.374,27.843
+Delhi,South Asia,historical,1995,-0.078,28.325
+Tokyo,East Asia,historical,1995,-0.357,17.203
+Sydney,Oceania,historical,1995,-0.1,17.124
+Longyearbyen,Arctic,historical,1995,0.496,-9.909
+Manaus,South America,historical,1995,0.388,27.814
+San Diego,North America,historical,1996,-0.39,17.538
+New York,North America,historical,1996,-0.453,11.585
+London,Europe,historical,1996,-0.981,11.506
+Lagos,Africa,historical,1996,-0.397,27.072
+Delhi,South Asia,historical,1996,-0.771,27.632
+Tokyo,East Asia,historical,1996,0.093,17.654
+Sydney,Oceania,historical,1996,-0.707,16.516
+Longyearbyen,Arctic,historical,1996,-0.239,-10.644
+Manaus,South America,historical,1996,-0.641,26.785
+San Diego,North America,historical,1997,0.715,18.643
+New York,North America,historical,1997,-0.456,11.581
+London,Europe,historical,1997,-0.929,11.557
+Lagos,Africa,historical,1997,0.149,27.618
+Delhi,South Asia,historical,1997,0.805,29.208
+Tokyo,East Asia,historical,1997,0.335,17.895
+Sydney,Oceania,historical,1997,-0.486,16.738
+Longyearbyen,Arctic,historical,1997,-0.79,-11.195
+Manaus,South America,historical,1997,0.225,27.651
+San Diego,North America,historical,1998,0.027,17.955
+New York,North America,historical,1998,-0.932,11.105
+London,Europe,historical,1998,-0.123,12.364
+Lagos,Africa,historical,1998,0.582,28.052
+Delhi,South Asia,historical,1998,-0.112,28.291
+Tokyo,East Asia,historical,1998,0.493,18.053
+Sydney,Oceania,historical,1998,0.747,17.971
+Longyearbyen,Arctic,historical,1998,-1.439,-11.844
+Manaus,South America,historical,1998,0.804,28.23
+San Diego,North America,historical,1999,0.672,18.6
+New York,North America,historical,1999,0.472,12.51
+London,Europe,historical,1999,0.553,13.039
+Lagos,Africa,historical,1999,-0.785,26.684
+Delhi,South Asia,historical,1999,-0.739,27.664
+Tokyo,East Asia,historical,1999,0.454,18.014
+Sydney,Oceania,historical,1999,0.264,17.488
+Longyearbyen,Arctic,historical,1999,-2.295,-12.7
+Manaus,South America,historical,1999,-0.704,26.722
+San Diego,North America,historical,2000,0.61,18.538
+New York,North America,historical,2000,0.853,12.891
+London,Europe,historical,2000,0.618,13.104
+Lagos,Africa,historical,2000,-0.379,27.09
+Delhi,South Asia,historical,2000,-0.534,27.868
+Tokyo,East Asia,historical,2000,0.457,18.018
+Sydney,Oceania,historical,2000,0.315,17.538
+Longyearbyen,Arctic,historical,2000,-1.748,-12.153
+Manaus,South America,historical,2000,-0.406,27.02
+San Diego,North America,historical,2001,1.576,19.504
+New York,North America,historical,2001,0.444,12.481
+London,Europe,historical,2001,0.583,13.07
+Lagos,Africa,historical,2001,0.169,27.639
+Delhi,South Asia,historical,2001,0.994,29.396
+Tokyo,East Asia,historical,2001,-0.169,17.392
+Sydney,Oceania,historical,2001,0.338,17.562
+Longyearbyen,Arctic,historical,2001,0.915,-9.491
+Manaus,South America,historical,2001,0.095,27.521
+San Diego,North America,historical,2002,0.216,18.144
+New York,North America,historical,2002,0.806,12.843
+London,Europe,historical,2002,-0.445,12.041
+Lagos,Africa,historical,2002,0.824,28.294
+Delhi,South Asia,historical,2002,0.323,28.726
+Tokyo,East Asia,historical,2002,0.125,17.685
+Sydney,Oceania,historical,2002,0.342,17.565
+Longyearbyen,Arctic,historical,2002,0.901,-9.504
+Manaus,South America,historical,2002,0.973,28.399
+San Diego,North America,historical,2003,-0.235,17.694
+New York,North America,historical,2003,1.216,13.253
+London,Europe,historical,2003,1.246,13.732
+Lagos,Africa,historical,2003,-0.202,27.267
+Delhi,South Asia,historical,2003,-0.163,28.239
+Tokyo,East Asia,historical,2003,-0.074,17.486
+Sydney,Oceania,historical,2003,-0.088,17.136
+Longyearbyen,Arctic,historical,2003,0.271,-10.134
+Manaus,South America,historical,2003,-0.189,27.237
+San Diego,North America,historical,2004,0.048,17.976
+New York,North America,historical,2004,0.987,13.024
+London,Europe,historical,2004,0.469,12.956
+Lagos,Africa,historical,2004,-0.025,27.445
+Delhi,South Asia,historical,2004,-0.015,28.387
+Tokyo,East Asia,historical,2004,0.533,18.093
+Sydney,Oceania,historical,2004,-0.1,17.124
+Longyearbyen,Arctic,historical,2004,2.24,-8.165
+Manaus,South America,historical,2004,-0.033,27.393
+San Diego,North America,historical,2005,-0.121,17.808
+New York,North America,historical,2005,0.536,12.574
+London,Europe,historical,2005,0.061,12.547
+Lagos,Africa,historical,2005,0.203,27.672
+Delhi,South Asia,historical,2005,0.503,28.905
+Tokyo,East Asia,historical,2005,0.604,18.164
+Sydney,Oceania,historical,2005,-0.284,16.94
+Longyearbyen,Arctic,historical,2005,3.131,-7.275
+Manaus,South America,historical,2005,0.556,27.982
+San Diego,North America,historical,2006,-0.525,17.403
+New York,North America,historical,2006,0.852,12.889
+London,Europe,historical,2006,0.439,12.925
+Lagos,Africa,historical,2006,0.584,28.053
+Delhi,South Asia,historical,2006,0.615,29.018
+Tokyo,East Asia,historical,2006,0.676,18.236
+Sydney,Oceania,historical,2006,0.523,17.747
+Longyearbyen,Arctic,historical,2006,1.055,-9.35
+Manaus,South America,historical,2006,0.89,28.316
+San Diego,North America,historical,2007,-0.229,17.699
+New York,North America,historical,2007,1.291,13.328
+London,Europe,historical,2007,1.234,13.721
+Lagos,Africa,historical,2007,0.036,27.506
+Delhi,South Asia,historical,2007,-0.3,28.103
+Tokyo,East Asia,historical,2007,-0.173,17.387
+Sydney,Oceania,historical,2007,0.186,17.41
+Longyearbyen,Arctic,historical,2007,0.828,-9.577
+Manaus,South America,historical,2007,-0.077,27.349
+San Diego,North America,historical,2008,-0.377,17.551
+New York,North America,historical,2008,1.116,13.153
+London,Europe,historical,2008,0.585,13.072
+Lagos,Africa,historical,2008,0.1,27.569
+Delhi,South Asia,historical,2008,-0.46,27.943
+Tokyo,East Asia,historical,2008,0.528,18.088
+Sydney,Oceania,historical,2008,0.367,17.591
+Longyearbyen,Arctic,historical,2008,2.927,-7.478
+Manaus,South America,historical,2008,0.112,27.538
+San Diego,North America,historical,2009,0.192,18.12
+New York,North America,historical,2009,0.547,12.585
+London,Europe,historical,2009,0.347,12.833
+Lagos,Africa,historical,2009,0.388,27.857
+Delhi,South Asia,historical,2009,0.075,28.478
+Tokyo,East Asia,historical,2009,1.099,18.659
+Sydney,Oceania,historical,2009,0.499,17.722
+Longyearbyen,Arctic,historical,2009,2.531,-7.874
+Manaus,South America,historical,2009,0.513,27.939
+San Diego,North America,historical,2010,0.685,18.613
+New York,North America,historical,2010,0.46,12.497
+London,Europe,historical,2010,-0.628,11.859
+Lagos,Africa,historical,2010,0.76,28.229
+Delhi,South Asia,historical,2010,0.712,29.115
+Tokyo,East Asia,historical,2010,0.3,17.86
+Sydney,Oceania,historical,2010,0.489,17.713
+Longyearbyen,Arctic,historical,2010,0.542,-9.864
+Manaus,South America,historical,2010,0.908,28.334
+San Diego,North America,historical,2011,-0.336,17.593
+New York,North America,historical,2011,1.374,13.412
+London,Europe,historical,2011,1.025,13.512
+Lagos,Africa,historical,2011,0.257,27.726
+Delhi,South Asia,historical,2011,0.292,28.695
+Tokyo,East Asia,historical,2011,0.834,18.394
+Sydney,Oceania,historical,2011,-0.295,16.929
+Longyearbyen,Arctic,historical,2011,0.007,-10.399
+Manaus,South America,historical,2011,0.069,27.495
+San Diego,North America,historical,2012,0.273,18.201
+New York,North America,historical,2012,1.398,13.436
+London,Europe,historical,2012,-0.17,12.316
+Lagos,Africa,historical,2012,0.374,27.843
+Delhi,South Asia,historical,2012,-0.197,28.205
+Tokyo,East Asia,historical,2012,0.336,17.896
+Sydney,Oceania,historical,2012,-0.721,16.503
+Longyearbyen,Arctic,historical,2012,0.785,-9.62
+Manaus,South America,historical,2012,0.085,27.511
+San Diego,North America,historical,2013,0.49,18.418
+New York,North America,historical,2013,0.014,12.051
+London,Europe,historical,2013,0.269,12.756
+Lagos,Africa,historical,2013,0.638,28.107
+Delhi,South Asia,historical,2013,-0.171,28.232
+Tokyo,East Asia,historical,2013,-0.367,17.193
+Sydney,Oceania,historical,2013,0.432,17.655
+Longyearbyen,Arctic,historical,2013,0.835,-9.57
+Manaus,South America,historical,2013,0.874,28.3
+San Diego,North America,historical,2014,-0.168,17.76
+New York,North America,historical,2014,1.551,13.589
+London,Europe,historical,2014,0.708,13.195
+Lagos,Africa,historical,2014,0.533,28.002
+Delhi,South Asia,historical,2014,0.175,28.578
+Tokyo,East Asia,historical,2014,1.154,18.714
+Sydney,Oceania,historical,2014,0.451,17.675
+Longyearbyen,Arctic,historical,2014,1.093,-9.312
+Manaus,South America,historical,2014,0.686,28.112
+San Diego,North America,ssp126,2015,-0.887,17.041
+New York,North America,ssp126,2015,0.144,12.181
+London,Europe,ssp126,2015,0.948,13.434
+Lagos,Africa,ssp126,2015,0.505,27.974
+Delhi,South Asia,ssp126,2015,0.827,29.229
+Tokyo,East Asia,ssp126,2015,1.471,19.031
+Sydney,Oceania,ssp126,2015,0.57,17.794
+Longyearbyen,Arctic,ssp126,2015,1.034,-9.372
+Manaus,South America,ssp126,2015,0.464,27.89
+San Diego,North America,ssp126,2016,0.364,18.292
+New York,North America,ssp126,2016,0.549,12.586
+London,Europe,ssp126,2016,-0.275,12.211
+Lagos,Africa,ssp126,2016,0.527,27.996
+Delhi,South Asia,ssp126,2016,-0.063,28.34
+Tokyo,East Asia,ssp126,2016,1.244,18.804
+Sydney,Oceania,ssp126,2016,0.79,18.014
+Longyearbyen,Arctic,ssp126,2016,4.524,-5.882
+Manaus,South America,ssp126,2016,0.309,27.735
+San Diego,North America,ssp126,2017,-0.51,17.419
+New York,North America,ssp126,2017,0.088,12.125
+London,Europe,ssp126,2017,0.194,12.681
+Lagos,Africa,ssp126,2017,0.113,27.583
+Delhi,South Asia,ssp126,2017,0.141,28.543
+Tokyo,East Asia,ssp126,2017,1.529,19.089
+Sydney,Oceania,ssp126,2017,0.047,17.27
+Longyearbyen,Arctic,ssp126,2017,0.485,-9.921
+Manaus,South America,ssp126,2017,0.2,27.626
+San Diego,North America,ssp126,2018,0.556,18.485
+New York,North America,ssp126,2018,1.657,13.694
+London,Europe,ssp126,2018,0.734,13.22
+Lagos,Africa,ssp126,2018,0.528,27.998
+Delhi,South Asia,ssp126,2018,0.822,29.225
+Tokyo,East Asia,ssp126,2018,0.514,18.074
+Sydney,Oceania,ssp126,2018,0.397,17.62
+Longyearbyen,Arctic,ssp126,2018,3.211,-7.194
+Manaus,South America,ssp126,2018,1.149,28.575
+San Diego,North America,ssp126,2019,0.414,18.343
+New York,North America,ssp126,2019,1.895,13.933
+London,Europe,ssp126,2019,-0.613,11.873
+Lagos,Africa,ssp126,2019,1.026,28.495
+Delhi,South Asia,ssp126,2019,2.05,30.452
+Tokyo,East Asia,ssp126,2019,1.108,18.668
+Sydney,Oceania,ssp126,2019,0.888,18.112
+Longyearbyen,Arctic,ssp126,2019,0.932,-9.473
+Manaus,South America,ssp126,2019,1.41,28.836
+San Diego,North America,ssp126,2020,0.65,18.578
+New York,North America,ssp126,2020,1.447,13.485
+London,Europe,ssp126,2020,-1.073,11.413
+Lagos,Africa,ssp126,2020,0.741,28.211
+Delhi,South Asia,ssp126,2020,1.084,29.487
+Tokyo,East Asia,ssp126,2020,0.342,17.902
+Sydney,Oceania,ssp126,2020,0.736,17.959
+Longyearbyen,Arctic,ssp126,2020,-0.903,-11.308
+Manaus,South America,ssp126,2020,0.825,28.251
+San Diego,North America,ssp126,2021,0.088,18.017
+New York,North America,ssp126,2021,1.112,13.149
+London,Europe,ssp126,2021,0.679,13.166
+Lagos,Africa,ssp126,2021,0.079,27.548
+Delhi,South Asia,ssp126,2021,0.437,28.839
+Tokyo,East Asia,ssp126,2021,0.597,18.157
+Sydney,Oceania,ssp126,2021,0.412,17.635
+Longyearbyen,Arctic,ssp126,2021,-2.005,-12.41
+Manaus,South America,ssp126,2021,-0.266,27.16
+San Diego,North America,ssp126,2022,0.419,18.347
+New York,North America,ssp126,2022,2.082,14.119
+London,Europe,ssp126,2022,0.34,12.826
+Lagos,Africa,ssp126,2022,0.503,27.972
+Delhi,South Asia,ssp126,2022,1.348,29.751
+Tokyo,East Asia,ssp126,2022,0.452,18.012
+Sydney,Oceania,ssp126,2022,0.145,17.369
+Longyearbyen,Arctic,ssp126,2022,-1.293,-11.698
+Manaus,South America,ssp126,2022,0.434,27.86
+San Diego,North America,ssp126,2023,1.024,18.953
+New York,North America,ssp126,2023,0.821,12.858
+London,Europe,ssp126,2023,0.228,12.715
+Lagos,Africa,ssp126,2023,0.572,28.041
+Delhi,South Asia,ssp126,2023,1.27,29.673
+Tokyo,East Asia,ssp126,2023,1.174,18.734
+Sydney,Oceania,ssp126,2023,0.407,17.63
+Longyearbyen,Arctic,ssp126,2023,1.193,-9.212
+Manaus,South America,ssp126,2023,0.773,28.199
+San Diego,North America,ssp126,2024,0.252,18.18
+New York,North America,ssp126,2024,2.565,14.602
+London,Europe,ssp126,2024,0.06,12.547
+Lagos,Africa,ssp126,2024,1.005,28.474
+Delhi,South Asia,ssp126,2024,1.27,29.672
+Tokyo,East Asia,ssp126,2024,1.74,19.301
+Sydney,Oceania,ssp126,2024,0.764,17.988
+Longyearbyen,Arctic,ssp126,2024,1.916,-8.489
+Manaus,South America,ssp126,2024,1.025,28.451
+San Diego,North America,ssp126,2025,0.301,18.229
+New York,North America,ssp126,2025,2.609,14.646
+London,Europe,ssp126,2025,1.439,13.925
+Lagos,Africa,ssp126,2025,0.768,28.238
+Delhi,South Asia,ssp126,2025,0.261,28.663
+Tokyo,East Asia,ssp126,2025,1.049,18.609
+Sydney,Oceania,ssp126,2025,0.366,17.59
+Longyearbyen,Arctic,ssp126,2025,1.485,-8.92
+Manaus,South America,ssp126,2025,0.43,27.856
+San Diego,North America,ssp126,2026,0.128,18.056
+New York,North America,ssp126,2026,2.865,14.902
+London,Europe,ssp126,2026,1.318,13.805
+Lagos,Africa,ssp126,2026,0.637,28.106
+Delhi,South Asia,ssp126,2026,0.948,29.351
+Tokyo,East Asia,ssp126,2026,1.603,19.163
+Sydney,Oceania,ssp126,2026,1.107,18.331
+Longyearbyen,Arctic,ssp126,2026,0.281,-10.124
+Manaus,South America,ssp126,2026,0.574,28.0
+San Diego,North America,ssp126,2027,1.542,19.47
+New York,North America,ssp126,2027,2.633,14.67
+London,Europe,ssp126,2027,0.476,12.963
+Lagos,Africa,ssp126,2027,1.133,28.602
+Delhi,South Asia,ssp126,2027,0.7,29.103
+Tokyo,East Asia,ssp126,2027,0.475,18.035
+Sydney,Oceania,ssp126,2027,1.132,18.355
+Longyearbyen,Arctic,ssp126,2027,3.488,-6.918
+Manaus,South America,ssp126,2027,1.368,28.794
+San Diego,North America,ssp126,2028,0.447,18.375
+New York,North America,ssp126,2028,2.519,14.557
+London,Europe,ssp126,2028,0.91,13.397
+Lagos,Africa,ssp126,2028,0.752,28.221
+Delhi,South Asia,ssp126,2028,0.751,29.153
+Tokyo,East Asia,ssp126,2028,0.697,18.257
+Sydney,Oceania,ssp126,2028,0.868,18.092
+Longyearbyen,Arctic,ssp126,2028,-0.033,-10.438
+Manaus,South America,ssp126,2028,0.677,28.103
+San Diego,North America,ssp126,2029,0.504,18.432
+New York,North America,ssp126,2029,2.38,14.417
+London,Europe,ssp126,2029,0.799,13.285
+Lagos,Africa,ssp126,2029,1.223,28.692
+Delhi,South Asia,ssp126,2029,0.585,28.987
+Tokyo,East Asia,ssp126,2029,1.204,18.764
+Sydney,Oceania,ssp126,2029,1.472,18.696
+Longyearbyen,Arctic,ssp126,2029,3.193,-7.212
+Manaus,South America,ssp126,2029,1.47,28.896
+San Diego,North America,ssp126,2030,1.299,19.227
+New York,North America,ssp126,2030,1.484,13.521
+London,Europe,ssp126,2030,0.046,12.533
+Lagos,Africa,ssp126,2030,1.536,29.005
+Delhi,South Asia,ssp126,2030,1.037,29.439
+Tokyo,East Asia,ssp126,2030,1.741,19.302
+Sydney,Oceania,ssp126,2030,1.368,18.592
+Longyearbyen,Arctic,ssp126,2030,1.78,-8.625
+Manaus,South America,ssp126,2030,1.472,28.898
+San Diego,North America,ssp126,2031,0.866,18.794
+New York,North America,ssp126,2031,1.789,13.827
+London,Europe,ssp126,2031,0.278,12.765
+Lagos,Africa,ssp126,2031,1.074,28.543
+Delhi,South Asia,ssp126,2031,2.064,30.467
+Tokyo,East Asia,ssp126,2031,1.456,19.016
+Sydney,Oceania,ssp126,2031,0.863,18.087
+Longyearbyen,Arctic,ssp126,2031,2.833,-7.572
+Manaus,South America,ssp126,2031,0.99,28.416
+San Diego,North America,ssp126,2032,0.748,18.677
+New York,North America,ssp126,2032,1.463,13.501
+London,Europe,ssp126,2032,0.866,13.353
+Lagos,Africa,ssp126,2032,0.959,28.428
+Delhi,South Asia,ssp126,2032,1.124,29.526
+Tokyo,East Asia,ssp126,2032,2.328,19.888
+Sydney,Oceania,ssp126,2032,0.966,18.19
+Longyearbyen,Arctic,ssp126,2032,0.715,-9.69
+Manaus,South America,ssp126,2032,1.184,28.61
+San Diego,North America,ssp126,2033,-0.341,17.588
+New York,North America,ssp126,2033,2.699,14.736
+London,Europe,ssp126,2033,0.921,13.407
+Lagos,Africa,ssp126,2033,1.568,29.037
+Delhi,South Asia,ssp126,2033,1.052,29.455
+Tokyo,East Asia,ssp126,2033,2.305,19.865
+Sydney,Oceania,ssp126,2033,1.218,18.442
+Longyearbyen,Arctic,ssp126,2033,3.235,-7.17
+Manaus,South America,ssp126,2033,1.996,29.422
+San Diego,North America,ssp126,2034,0.181,18.109
+New York,North America,ssp126,2034,1.624,13.662
+London,Europe,ssp126,2034,0.287,12.774
+Lagos,Africa,ssp126,2034,1.293,28.762
+Delhi,South Asia,ssp126,2034,0.933,29.336
+Tokyo,East Asia,ssp126,2034,1.662,19.223
+Sydney,Oceania,ssp126,2034,1.381,18.604
+Longyearbyen,Arctic,ssp126,2034,2.059,-8.346
+Manaus,South America,ssp126,2034,1.208,28.634
+San Diego,North America,ssp126,2035,0.494,18.423
+New York,North America,ssp126,2035,2.571,14.609
+London,Europe,ssp126,2035,0.686,13.173
+Lagos,Africa,ssp126,2035,1.23,28.699
+Delhi,South Asia,ssp126,2035,1.413,29.816
+Tokyo,East Asia,ssp126,2035,1.928,19.488
+Sydney,Oceania,ssp126,2035,1.369,18.593
+Longyearbyen,Arctic,ssp126,2035,0.036,-10.369
+Manaus,South America,ssp126,2035,1.597,29.023
+San Diego,North America,ssp126,2036,0.602,18.53
+New York,North America,ssp126,2036,3.277,15.314
+London,Europe,ssp126,2036,0.777,13.264
+Lagos,Africa,ssp126,2036,1.389,28.858
+Delhi,South Asia,ssp126,2036,1.648,30.05
+Tokyo,East Asia,ssp126,2036,2.349,19.909
+Sydney,Oceania,ssp126,2036,2.094,19.318
+Longyearbyen,Arctic,ssp126,2036,3.688,-6.717
+Manaus,South America,ssp126,2036,1.656,29.082
+San Diego,North America,ssp126,2037,0.289,18.218
+New York,North America,ssp126,2037,3.602,15.639
+London,Europe,ssp126,2037,1.405,13.891
+Lagos,Africa,ssp126,2037,0.8,28.269
+Delhi,South Asia,ssp126,2037,0.36,28.762
+Tokyo,East Asia,ssp126,2037,1.735,19.295
+Sydney,Oceania,ssp126,2037,1.193,18.416
+Longyearbyen,Arctic,ssp126,2037,1.35,-9.056
+Manaus,South America,ssp126,2037,0.941,28.367
+San Diego,North America,ssp126,2038,0.598,18.526
+New York,North America,ssp126,2038,2.755,14.793
+London,Europe,ssp126,2038,1.819,14.305
+Lagos,Africa,ssp126,2038,1.214,28.684
+Delhi,South Asia,ssp126,2038,2.488,30.89
+Tokyo,East Asia,ssp126,2038,1.441,19.001
+Sydney,Oceania,ssp126,2038,1.172,18.395
+Longyearbyen,Arctic,ssp126,2038,2.51,-7.895
+Manaus,South America,ssp126,2038,1.359,28.785
+San Diego,North America,ssp126,2039,1.632,19.56
+New York,North America,ssp126,2039,1.958,13.996
+London,Europe,ssp126,2039,1.256,13.743
+Lagos,Africa,ssp126,2039,1.576,29.045
+Delhi,South Asia,ssp126,2039,3.103,31.506
+Tokyo,East Asia,ssp126,2039,1.748,19.308
+Sydney,Oceania,ssp126,2039,1.854,19.078
+Longyearbyen,Arctic,ssp126,2039,0.219,-10.186
+Manaus,South America,ssp126,2039,2.096,29.522
+San Diego,North America,ssp126,2040,1.977,19.905
+New York,North America,ssp126,2040,2.4,14.437
+London,Europe,ssp126,2040,1.621,14.108
+Lagos,Africa,ssp126,2040,0.902,28.371
+Delhi,South Asia,ssp126,2040,1.802,30.205
+Tokyo,East Asia,ssp126,2040,1.437,18.997
+Sydney,Oceania,ssp126,2040,1.175,18.399
+Longyearbyen,Arctic,ssp126,2040,-0.099,-10.504
+Manaus,South America,ssp126,2040,1.098,28.524
+San Diego,North America,ssp126,2041,0.803,18.732
+New York,North America,ssp126,2041,3.95,15.987
+London,Europe,ssp126,2041,0.365,12.852
+Lagos,Africa,ssp126,2041,1.013,28.482
+Delhi,South Asia,ssp126,2041,0.865,29.267
+Tokyo,East Asia,ssp126,2041,2.931,20.491
+Sydney,Oceania,ssp126,2041,0.551,17.775
+Longyearbyen,Arctic,ssp126,2041,2.882,-7.523
+Manaus,South America,ssp126,2041,1.003,28.429
+San Diego,North America,ssp126,2042,0.045,17.973
+New York,North America,ssp126,2042,2.675,14.712
+London,Europe,ssp126,2042,0.895,13.381
+Lagos,Africa,ssp126,2042,1.676,29.145
+Delhi,South Asia,ssp126,2042,1.598,30.0
+Tokyo,East Asia,ssp126,2042,2.303,19.863
+Sydney,Oceania,ssp126,2042,1.82,19.044
+Longyearbyen,Arctic,ssp126,2042,2.501,-7.904
+Manaus,South America,ssp126,2042,1.984,29.41
+San Diego,North America,ssp126,2043,1.47,19.398
+New York,North America,ssp126,2043,1.789,13.827
+London,Europe,ssp126,2043,0.418,12.905
+Lagos,Africa,ssp126,2043,1.239,28.708
+Delhi,South Asia,ssp126,2043,1.323,29.726
+Tokyo,East Asia,ssp126,2043,2.78,20.34
+Sydney,Oceania,ssp126,2043,1.31,18.533
+Longyearbyen,Arctic,ssp126,2043,0.413,-9.992
+Manaus,South America,ssp126,2043,1.327,28.753
+San Diego,North America,ssp126,2044,0.313,18.241
+New York,North America,ssp126,2044,3.112,15.15
+London,Europe,ssp126,2044,-0.068,12.418
+Lagos,Africa,ssp126,2044,0.968,28.437
+Delhi,South Asia,ssp126,2044,2.221,30.623
+Tokyo,East Asia,ssp126,2044,1.797,19.357
+Sydney,Oceania,ssp126,2044,0.755,17.978
+Longyearbyen,Arctic,ssp126,2044,1.4,-9.005
+Manaus,South America,ssp126,2044,0.941,28.367
+San Diego,North America,ssp126,2045,0.876,18.804
+New York,North America,ssp126,2045,3.572,15.609
+London,Europe,ssp126,2045,0.954,13.441
+Lagos,Africa,ssp126,2045,1.524,28.993
+Delhi,South Asia,ssp126,2045,1.968,30.37
+Tokyo,East Asia,ssp126,2045,1.884,19.444
+Sydney,Oceania,ssp126,2045,1.167,18.391
+Longyearbyen,Arctic,ssp126,2045,4.154,-6.251
+Manaus,South America,ssp126,2045,1.786,29.212
+San Diego,North America,ssp126,2046,1.522,19.45
+New York,North America,ssp126,2046,2.824,14.862
+London,Europe,ssp126,2046,0.697,13.183
+Lagos,Africa,ssp126,2046,1.458,28.928
+Delhi,South Asia,ssp126,2046,1.648,30.05
+Tokyo,East Asia,ssp126,2046,1.205,18.765
+Sydney,Oceania,ssp126,2046,1.116,18.34
+Longyearbyen,Arctic,ssp126,2046,0.808,-9.597
+Manaus,South America,ssp126,2046,1.655,29.081
+San Diego,North America,ssp126,2047,0.899,18.827
+New York,North America,ssp126,2047,2.246,14.283
+London,Europe,ssp126,2047,0.133,12.62
+Lagos,Africa,ssp126,2047,1.47,28.939
+Delhi,South Asia,ssp126,2047,1.651,30.054
+Tokyo,East Asia,ssp126,2047,2.262,19.822
+Sydney,Oceania,ssp126,2047,1.294,18.518
+Longyearbyen,Arctic,ssp126,2047,1.707,-8.699
+Manaus,South America,ssp126,2047,1.432,28.858
+San Diego,North America,ssp126,2048,1.885,19.813
+New York,North America,ssp126,2048,1.324,13.361
+London,Europe,ssp126,2048,-0.53,11.956
+Lagos,Africa,ssp126,2048,1.747,29.216
+Delhi,South Asia,ssp126,2048,1.5,29.902
+Tokyo,East Asia,ssp126,2048,1.544,19.105
+Sydney,Oceania,ssp126,2048,2.691,19.914
+Longyearbyen,Arctic,ssp126,2048,1.598,-8.807
+Manaus,South America,ssp126,2048,2.32,29.746
+San Diego,North America,ssp126,2049,1.697,19.626
+New York,North America,ssp126,2049,2.278,14.315
+London,Europe,ssp126,2049,1.075,13.562
+Lagos,Africa,ssp126,2049,2.005,29.475
+Delhi,South Asia,ssp126,2049,2.846,31.248
+Tokyo,East Asia,ssp126,2049,1.948,19.508
+Sydney,Oceania,ssp126,2049,2.055,19.278
+Longyearbyen,Arctic,ssp126,2049,2.373,-8.033
+Manaus,South America,ssp126,2049,2.027,29.453
+San Diego,North America,ssp126,2050,2.017,19.946
+New York,North America,ssp126,2050,2.697,14.734
+London,Europe,ssp126,2050,0.732,13.219
+Lagos,Africa,ssp126,2050,1.552,29.022
+Delhi,South Asia,ssp126,2050,1.667,30.07
+Tokyo,East Asia,ssp126,2050,2.087,19.647
+Sydney,Oceania,ssp126,2050,2.037,19.261
+Longyearbyen,Arctic,ssp126,2050,1.672,-8.733
+Manaus,South America,ssp126,2050,1.676,29.102
+San Diego,North America,ssp126,2051,1.984,19.912
+New York,North America,ssp126,2051,3.04,15.077
+London,Europe,ssp126,2051,0.498,12.985
+Lagos,Africa,ssp126,2051,1.281,28.75
+Delhi,South Asia,ssp126,2051,2.554,30.956
+Tokyo,East Asia,ssp126,2051,1.309,18.869
+Sydney,Oceania,ssp126,2051,1.818,19.042
+Longyearbyen,Arctic,ssp126,2051,4.098,-6.307
+Manaus,South America,ssp126,2051,1.444,28.87
+San Diego,North America,ssp126,2052,1.251,19.179
+New York,North America,ssp126,2052,3.558,15.595
+London,Europe,ssp126,2052,0.76,13.247
+Lagos,Africa,ssp126,2052,1.421,28.89
+Delhi,South Asia,ssp126,2052,2.239,30.641
+Tokyo,East Asia,ssp126,2052,1.832,19.392
+Sydney,Oceania,ssp126,2052,1.792,19.016
+Longyearbyen,Arctic,ssp126,2052,3.49,-6.915
+Manaus,South America,ssp126,2052,1.625,29.051
+San Diego,North America,ssp126,2053,1.876,19.804
+New York,North America,ssp126,2053,2.832,14.87
+London,Europe,ssp126,2053,0.994,13.48
+Lagos,Africa,ssp126,2053,1.463,28.932
+Delhi,South Asia,ssp126,2053,1.932,30.335
+Tokyo,East Asia,ssp126,2053,1.415,18.975
+Sydney,Oceania,ssp126,2053,1.656,18.88
+Longyearbyen,Arctic,ssp126,2053,4.218,-6.187
+Manaus,South America,ssp126,2053,1.465,28.891
+San Diego,North America,ssp126,2054,1.046,18.974
+New York,North America,ssp126,2054,2.866,14.904
+London,Europe,ssp126,2054,0.674,13.161
+Lagos,Africa,ssp126,2054,1.649,29.119
+Delhi,South Asia,ssp126,2054,1.57,29.972
+Tokyo,East Asia,ssp126,2054,1.001,18.561
+Sydney,Oceania,ssp126,2054,1.85,19.073
+Longyearbyen,Arctic,ssp126,2054,1.378,-9.027
+Manaus,South America,ssp126,2054,1.697,29.123
+San Diego,North America,ssp126,2055,0.677,18.605
+New York,North America,ssp126,2055,2.668,14.706
+London,Europe,ssp126,2055,0.334,12.82
+Lagos,Africa,ssp126,2055,1.707,29.176
+Delhi,South Asia,ssp126,2055,1.203,29.606
+Tokyo,East Asia,ssp126,2055,2.061,19.622
+Sydney,Oceania,ssp126,2055,1.574,18.798
+Longyearbyen,Arctic,ssp126,2055,0.197,-10.208
+Manaus,South America,ssp126,2055,2.062,29.488
+San Diego,North America,ssp126,2056,0.564,18.492
+New York,North America,ssp126,2056,2.969,15.006
+London,Europe,ssp126,2056,1.288,13.775
+Lagos,Africa,ssp126,2056,1.405,28.874
+Delhi,South Asia,ssp126,2056,1.437,29.839
+Tokyo,East Asia,ssp126,2056,2.004,19.564
+Sydney,Oceania,ssp126,2056,1.492,18.716
+Longyearbyen,Arctic,ssp126,2056,-0.876,-11.282
+Manaus,South America,ssp126,2056,1.606,29.032
+San Diego,North America,ssp126,2057,1.991,19.919
+New York,North America,ssp126,2057,3.451,15.488
+London,Europe,ssp126,2057,0.267,12.753
+Lagos,Africa,ssp126,2057,1.619,29.088
+Delhi,South Asia,ssp126,2057,1.729,30.131
+Tokyo,East Asia,ssp126,2057,1.303,18.863
+Sydney,Oceania,ssp126,2057,1.557,18.781
+Longyearbyen,Arctic,ssp126,2057,3.785,-6.62
+Manaus,South America,ssp126,2057,1.661,29.087
+San Diego,North America,ssp126,2058,1.532,19.46
+New York,North America,ssp126,2058,2.674,14.712
+London,Europe,ssp126,2058,0.331,12.817
+Lagos,Africa,ssp126,2058,1.303,28.772
+Delhi,South Asia,ssp126,2058,2.497,30.9
+Tokyo,East Asia,ssp126,2058,1.069,18.629
+Sydney,Oceania,ssp126,2058,1.244,18.468
+Longyearbyen,Arctic,ssp126,2058,1.078,-9.328
+Manaus,South America,ssp126,2058,0.839,28.265
+San Diego,North America,ssp126,2059,1.283,19.212
+New York,North America,ssp126,2059,2.645,14.682
+London,Europe,ssp126,2059,-0.484,12.003
+Lagos,Africa,ssp126,2059,1.697,29.166
+Delhi,South Asia,ssp126,2059,2.36,30.763
+Tokyo,East Asia,ssp126,2059,1.01,18.571
+Sydney,Oceania,ssp126,2059,2.458,19.682
+Longyearbyen,Arctic,ssp126,2059,3.352,-7.053
+Manaus,South America,ssp126,2059,1.702,29.128
+San Diego,North America,ssp126,2060,0.727,18.655
+New York,North America,ssp126,2060,1.702,13.739
+London,Europe,ssp126,2060,0.667,13.154
+Lagos,Africa,ssp126,2060,1.553,29.022
+Delhi,South Asia,ssp126,2060,2.156,30.559
+Tokyo,East Asia,ssp126,2060,2.424,19.984
+Sydney,Oceania,ssp126,2060,1.797,19.02
+Longyearbyen,Arctic,ssp126,2060,0.3,-10.105
+Manaus,South America,ssp126,2060,2.063,29.489
+San Diego,North America,ssp126,2061,1.421,19.35
+New York,North America,ssp126,2061,3.671,15.709
+London,Europe,ssp126,2061,1.1,13.587
+Lagos,Africa,ssp126,2061,1.786,29.255
+Delhi,South Asia,ssp126,2061,1.253,29.655
+Tokyo,East Asia,ssp126,2061,1.287,18.848
+Sydney,Oceania,ssp126,2061,2.284,19.507
+Longyearbyen,Arctic,ssp126,2061,3.251,-7.154
+Manaus,South America,ssp126,2061,1.984,29.41
+San Diego,North America,ssp126,2062,0.315,18.244
+New York,North America,ssp126,2062,4.043,16.081
+London,Europe,ssp126,2062,1.855,14.342
+Lagos,Africa,ssp126,2062,0.844,28.314
+Delhi,South Asia,ssp126,2062,1.507,29.91
+Tokyo,East Asia,ssp126,2062,2.155,19.715
+Sydney,Oceania,ssp126,2062,1.762,18.986
+Longyearbyen,Arctic,ssp126,2062,-0.384,-10.789
+Manaus,South America,ssp126,2062,1.091,28.517
+San Diego,North America,ssp126,2063,0.744,18.672
+New York,North America,ssp126,2063,3.312,15.349
+London,Europe,ssp126,2063,1.474,13.961
+Lagos,Africa,ssp126,2063,1.366,28.835
+Delhi,South Asia,ssp126,2063,2.726,31.129
+Tokyo,East Asia,ssp126,2063,2.752,20.312
+Sydney,Oceania,ssp126,2063,1.966,19.19
+Longyearbyen,Arctic,ssp126,2063,2.059,-8.346
+Manaus,South America,ssp126,2063,1.938,29.364
+San Diego,North America,ssp126,2064,0.836,18.765
+New York,North America,ssp126,2064,3.825,15.862
+London,Europe,ssp126,2064,1.698,14.185
+Lagos,Africa,ssp126,2064,1.245,28.714
+Delhi,South Asia,ssp126,2064,2.108,30.511
+Tokyo,East Asia,ssp126,2064,2.595,20.155
+Sydney,Oceania,ssp126,2064,2.282,19.506
+Longyearbyen,Arctic,ssp126,2064,1.98,-8.425
+Manaus,South America,ssp126,2064,1.767,29.193
+San Diego,North America,ssp126,2065,0.868,18.796
+New York,North America,ssp126,2065,4.05,16.087
+London,Europe,ssp126,2065,0.23,12.716
+Lagos,Africa,ssp126,2065,2.014,29.483
+Delhi,South Asia,ssp126,2065,1.507,29.91
+Tokyo,East Asia,ssp126,2065,1.615,19.175
+Sydney,Oceania,ssp126,2065,1.809,19.032
+Longyearbyen,Arctic,ssp126,2065,4.379,-6.027
+Manaus,South America,ssp126,2065,2.335,29.761
+San Diego,North America,ssp126,2066,1.026,18.955
+New York,North America,ssp126,2066,3.191,15.229
+London,Europe,ssp126,2066,0.235,12.721
+Lagos,Africa,ssp126,2066,1.677,29.146
+Delhi,South Asia,ssp126,2066,1.475,29.878
+Tokyo,East Asia,ssp126,2066,2.103,19.663
+Sydney,Oceania,ssp126,2066,1.897,19.121
+Longyearbyen,Arctic,ssp126,2066,2.044,-8.362
+Manaus,South America,ssp126,2066,1.608,29.033
+San Diego,North America,ssp126,2067,1.165,19.093
+New York,North America,ssp126,2067,3.687,15.724
+London,Europe,ssp126,2067,1.149,13.635
+Lagos,Africa,ssp126,2067,1.748,29.217
+Delhi,South Asia,ssp126,2067,2.414,30.817
+Tokyo,East Asia,ssp126,2067,1.774,19.334
+Sydney,Oceania,ssp126,2067,1.894,19.117
+Longyearbyen,Arctic,ssp126,2067,3.326,-7.079
+Manaus,South America,ssp126,2067,1.838,29.264
+San Diego,North America,ssp126,2068,1.452,19.38
+New York,North America,ssp126,2068,3.261,15.298
+London,Europe,ssp126,2068,1.038,13.525
+Lagos,Africa,ssp126,2068,1.715,29.185
+Delhi,South Asia,ssp126,2068,1.322,29.725
+Tokyo,East Asia,ssp126,2068,2.333,19.893
+Sydney,Oceania,ssp126,2068,1.888,19.112
+Longyearbyen,Arctic,ssp126,2068,2.76,-7.645
+Manaus,South America,ssp126,2068,1.935,29.361
+San Diego,North America,ssp126,2069,0.959,18.888
+New York,North America,ssp126,2069,2.933,14.971
+London,Europe,ssp126,2069,0.45,12.936
+Lagos,Africa,ssp126,2069,1.645,29.114
+Delhi,South Asia,ssp126,2069,2.127,30.529
+Tokyo,East Asia,ssp126,2069,2.42,19.98
+Sydney,Oceania,ssp126,2069,1.947,19.17
+Longyearbyen,Arctic,ssp126,2069,3.964,-6.441
+Manaus,South America,ssp126,2069,1.497,28.923
+San Diego,North America,ssp126,2070,1.189,19.117
+New York,North America,ssp126,2070,2.713,14.751
+London,Europe,ssp126,2070,-0.063,12.423
+Lagos,Africa,ssp126,2070,1.79,29.26
+Delhi,South Asia,ssp126,2070,2.041,30.444
+Tokyo,East Asia,ssp126,2070,1.938,19.498
+Sydney,Oceania,ssp126,2070,2.367,19.591
+Longyearbyen,Arctic,ssp126,2070,2.797,-7.608
+Manaus,South America,ssp126,2070,2.061,29.487
+San Diego,North America,ssp126,2071,1.114,19.042
+New York,North America,ssp126,2071,2.305,14.343
+London,Europe,ssp126,2071,-0.395,12.091
+Lagos,Africa,ssp126,2071,1.389,28.858
+Delhi,South Asia,ssp126,2071,1.992,30.395
+Tokyo,East Asia,ssp126,2071,2.263,19.823
+Sydney,Oceania,ssp126,2071,1.906,19.13
+Longyearbyen,Arctic,ssp126,2071,2.955,-7.45
+Manaus,South America,ssp126,2071,1.603,29.029
+San Diego,North America,ssp126,2072,1.078,19.006
+New York,North America,ssp126,2072,3.42,15.457
+London,Europe,ssp126,2072,-0.153,12.333
+Lagos,Africa,ssp126,2072,1.993,29.463
+Delhi,South Asia,ssp126,2072,2.292,30.694
+Tokyo,East Asia,ssp126,2072,1.385,18.946
+Sydney,Oceania,ssp126,2072,2.399,19.622
+Longyearbyen,Arctic,ssp126,2072,3.245,-7.16
+Manaus,South America,ssp126,2072,2.211,29.637
+San Diego,North America,ssp126,2073,1.417,19.345
+New York,North America,ssp126,2073,2.947,14.985
+London,Europe,ssp126,2073,0.724,13.21
+Lagos,Africa,ssp126,2073,1.41,28.88
+Delhi,South Asia,ssp126,2073,2.115,30.518
+Tokyo,East Asia,ssp126,2073,1.251,18.811
+Sydney,Oceania,ssp126,2073,1.499,18.723
+Longyearbyen,Arctic,ssp126,2073,2.572,-7.833
+Manaus,South America,ssp126,2073,1.189,28.615
+San Diego,North America,ssp126,2074,1.763,19.691
+New York,North America,ssp126,2074,1.928,13.966
+London,Europe,ssp126,2074,-0.424,12.063
+Lagos,Africa,ssp126,2074,1.801,29.27
+Delhi,South Asia,ssp126,2074,3.52,31.923
+Tokyo,East Asia,ssp126,2074,1.869,19.429
+Sydney,Oceania,ssp126,2074,1.951,19.175
+Longyearbyen,Arctic,ssp126,2074,2.473,-7.932
+Manaus,South America,ssp126,2074,2.043,29.469
+San Diego,North America,ssp126,2075,1.524,19.452
+New York,North America,ssp126,2075,2.634,14.671
+London,Europe,ssp126,2075,0.224,12.711
+Lagos,Africa,ssp126,2075,1.429,28.898
+Delhi,South Asia,ssp126,2075,2.045,30.448
+Tokyo,East Asia,ssp126,2075,2.494,20.054
+Sydney,Oceania,ssp126,2075,1.926,19.15
+Longyearbyen,Arctic,ssp126,2075,3.898,-6.508
+Manaus,South America,ssp126,2075,1.916,29.341
+San Diego,North America,ssp126,2076,1.193,19.121
+New York,North America,ssp126,2076,3.257,15.295
+London,Europe,ssp126,2076,0.531,13.017
+Lagos,Africa,ssp126,2076,1.872,29.341
+Delhi,South Asia,ssp126,2076,2.19,30.593
+Tokyo,East Asia,ssp126,2076,1.668,19.228
+Sydney,Oceania,ssp126,2076,1.584,18.808
+Longyearbyen,Arctic,ssp126,2076,4.777,-5.628
+Manaus,South America,ssp126,2076,1.974,29.4
+San Diego,North America,ssp126,2077,0.757,18.686
+New York,North America,ssp126,2077,2.531,14.569
+London,Europe,ssp126,2077,-0.06,12.426
+Lagos,Africa,ssp126,2077,1.514,28.983
+Delhi,South Asia,ssp126,2077,2.792,31.194
+Tokyo,East Asia,ssp126,2077,1.844,19.404
+Sydney,Oceania,ssp126,2077,1.786,19.01
+Longyearbyen,Arctic,ssp126,2077,2.508,-7.897
+Manaus,South America,ssp126,2077,1.241,28.667
+San Diego,North America,ssp126,2078,0.774,18.703
+New York,North America,ssp126,2078,2.723,14.761
+London,Europe,ssp126,2078,-0.292,12.195
+Lagos,Africa,ssp126,2078,1.638,29.108
+Delhi,South Asia,ssp126,2078,2.546,30.949
+Tokyo,East Asia,ssp126,2078,1.849,19.409
+Sydney,Oceania,ssp126,2078,1.969,19.193
+Longyearbyen,Arctic,ssp126,2078,2.101,-8.304
+Manaus,South America,ssp126,2078,1.677,29.103
+San Diego,North America,ssp126,2079,1.364,19.292
+New York,North America,ssp126,2079,2.224,14.262
+London,Europe,ssp126,2079,-1.385,11.101
+Lagos,Africa,ssp126,2079,1.935,29.404
+Delhi,South Asia,ssp126,2079,2.829,31.232
+Tokyo,East Asia,ssp126,2079,1.88,19.44
+Sydney,Oceania,ssp126,2079,2.19,19.414
+Longyearbyen,Arctic,ssp126,2079,1.59,-8.815
+Manaus,South America,ssp126,2079,1.962,29.388
+San Diego,North America,ssp126,2080,1.838,19.766
+New York,North America,ssp126,2080,2.927,14.965
+London,Europe,ssp126,2080,0.68,13.167
+Lagos,Africa,ssp126,2080,1.902,29.371
+Delhi,South Asia,ssp126,2080,2.734,31.137
+Tokyo,East Asia,ssp126,2080,1.53,19.09
+Sydney,Oceania,ssp126,2080,1.558,18.782
+Longyearbyen,Arctic,ssp126,2080,0.853,-9.553
+Manaus,South America,ssp126,2080,1.736,29.162
+San Diego,North America,ssp126,2081,1.038,18.966
+New York,North America,ssp126,2081,3.046,15.084
+London,Europe,ssp126,2081,0.613,13.099
+Lagos,Africa,ssp126,2081,1.97,29.439
+Delhi,South Asia,ssp126,2081,2.287,30.69
+Tokyo,East Asia,ssp126,2081,1.571,19.131
+Sydney,Oceania,ssp126,2081,2.096,19.32
+Longyearbyen,Arctic,ssp126,2081,1.915,-8.49
+Manaus,South America,ssp126,2081,2.369,29.795
+San Diego,North America,ssp126,2082,0.976,18.904
+New York,North America,ssp126,2082,2.867,14.904
+London,Europe,ssp126,2082,-0.166,12.321
+Lagos,Africa,ssp126,2082,1.568,29.037
+Delhi,South Asia,ssp126,2082,1.903,30.306
+Tokyo,East Asia,ssp126,2082,1.041,18.601
+Sydney,Oceania,ssp126,2082,1.572,18.796
+Longyearbyen,Arctic,ssp126,2082,3.664,-6.741
+Manaus,South America,ssp126,2082,1.534,28.96
+San Diego,North America,ssp126,2083,0.233,18.162
+New York,North America,ssp126,2083,2.293,14.33
+London,Europe,ssp126,2083,-0.843,11.643
+Lagos,Africa,ssp126,2083,1.801,29.27
+Delhi,South Asia,ssp126,2083,2.659,31.061
+Tokyo,East Asia,ssp126,2083,1.733,19.293
+Sydney,Oceania,ssp126,2083,1.667,18.89
+Longyearbyen,Arctic,ssp126,2083,3.425,-6.98
+Manaus,South America,ssp126,2083,1.884,29.31
+San Diego,North America,ssp126,2084,0.756,18.685
+New York,North America,ssp126,2084,2.142,14.179
+London,Europe,ssp126,2084,-0.488,11.999
+Lagos,Africa,ssp126,2084,1.83,29.3
+Delhi,South Asia,ssp126,2084,2.093,30.496
+Tokyo,East Asia,ssp126,2084,1.687,19.247
+Sydney,Oceania,ssp126,2084,1.841,19.064
+Longyearbyen,Arctic,ssp126,2084,3.819,-6.587
+Manaus,South America,ssp126,2084,2.001,29.427
+San Diego,North America,ssp126,2085,1.829,19.757
+New York,North America,ssp126,2085,1.776,13.814
+London,Europe,ssp126,2085,0.079,12.565
+Lagos,Africa,ssp126,2085,1.672,29.141
+Delhi,South Asia,ssp126,2085,3.1,31.502
+Tokyo,East Asia,ssp126,2085,1.944,19.504
+Sydney,Oceania,ssp126,2085,1.484,18.707
+Longyearbyen,Arctic,ssp126,2085,1.348,-9.057
+Manaus,South America,ssp126,2085,1.606,29.032
+San Diego,North America,ssp126,2086,2.003,19.931
+New York,North America,ssp126,2086,3.508,15.545
+London,Europe,ssp126,2086,0.671,13.158
+Lagos,Africa,ssp126,2086,1.835,29.304
+Delhi,South Asia,ssp126,2086,1.543,29.946
+Tokyo,East Asia,ssp126,2086,1.177,18.737
+Sydney,Oceania,ssp126,2086,2.113,19.337
+Longyearbyen,Arctic,ssp126,2086,2.177,-8.228
+Manaus,South America,ssp126,2086,2.392,29.818
+San Diego,North America,ssp126,2087,0.668,18.596
+New York,North America,ssp126,2087,4.002,16.04
+London,Europe,ssp126,2087,0.162,12.648
+Lagos,Africa,ssp126,2087,1.94,29.409
+Delhi,South Asia,ssp126,2087,2.159,30.562
+Tokyo,East Asia,ssp126,2087,1.515,19.075
+Sydney,Oceania,ssp126,2087,2.049,19.272
+Longyearbyen,Arctic,ssp126,2087,3.969,-6.436
+Manaus,South America,ssp126,2087,2.158,29.584
+San Diego,North America,ssp126,2088,0.329,18.258
+New York,North America,ssp126,2088,3.257,15.294
+London,Europe,ssp126,2088,0.765,13.251
+Lagos,Africa,ssp126,2088,1.249,28.718
+Delhi,South Asia,ssp126,2088,1.947,30.349
+Tokyo,East Asia,ssp126,2088,1.354,18.914
+Sydney,Oceania,ssp126,2088,1.533,18.757
+Longyearbyen,Arctic,ssp126,2088,1.685,-8.72
+Manaus,South America,ssp126,2088,1.383,28.809
+San Diego,North America,ssp126,2089,0.453,18.381
+New York,North America,ssp126,2089,2.909,14.947
+London,Europe,ssp126,2089,-0.282,12.204
+Lagos,Africa,ssp126,2089,1.785,29.254
+Delhi,South Asia,ssp126,2089,1.765,30.168
+Tokyo,East Asia,ssp126,2089,1.365,18.925
+Sydney,Oceania,ssp126,2089,2.184,19.408
+Longyearbyen,Arctic,ssp126,2089,4.918,-5.487
+Manaus,South America,ssp126,2089,1.799,29.225
+San Diego,North America,ssp126,2090,1.052,18.98
+New York,North America,ssp126,2090,3.659,15.696
+London,Europe,ssp126,2090,-0.518,11.969
+Lagos,Africa,ssp126,2090,1.953,29.423
+Delhi,South Asia,ssp126,2090,2.592,30.995
+Tokyo,East Asia,ssp126,2090,1.838,19.398
+Sydney,Oceania,ssp126,2090,2.096,19.319
+Longyearbyen,Arctic,ssp126,2090,6.131,-4.274
+Manaus,South America,ssp126,2090,2.116,29.542
+San Diego,North America,ssp126,2091,0.92,18.849
+New York,North America,ssp126,2091,2.907,14.945
+London,Europe,ssp126,2091,-1.119,11.368
+Lagos,Africa,ssp126,2091,1.473,28.942
+Delhi,South Asia,ssp126,2091,1.897,30.3
+Tokyo,East Asia,ssp126,2091,1.472,19.032
+Sydney,Oceania,ssp126,2091,2.152,19.376
+Longyearbyen,Arctic,ssp126,2091,4.021,-6.384
+Manaus,South America,ssp126,2091,1.169,28.595
+San Diego,North America,ssp126,2092,0.532,18.46
+New York,North America,ssp126,2092,2.991,15.029
+London,Europe,ssp126,2092,-0.05,12.436
+Lagos,Africa,ssp126,2092,1.543,29.012
+Delhi,South Asia,ssp126,2092,2.873,31.276
+Tokyo,East Asia,ssp126,2092,2.022,19.582
+Sydney,Oceania,ssp126,2092,1.685,18.909
+Longyearbyen,Arctic,ssp126,2092,1.489,-8.916
+Manaus,South America,ssp126,2092,1.486,28.912
+San Diego,North America,ssp126,2093,2.105,20.033
+New York,North America,ssp126,2093,1.834,13.871
+London,Europe,ssp126,2093,0.018,12.505
+Lagos,Africa,ssp126,2093,1.635,29.105
+Delhi,South Asia,ssp126,2093,1.434,29.837
+Tokyo,East Asia,ssp126,2093,2.052,19.613
+Sydney,Oceania,ssp126,2093,1.838,19.062
+Longyearbyen,Arctic,ssp126,2093,2.149,-8.256
+Manaus,South America,ssp126,2093,1.624,29.05
+San Diego,North America,ssp126,2094,1.051,18.98
+New York,North America,ssp126,2094,3.264,15.302
+London,Europe,ssp126,2094,-0.483,12.004
+Lagos,Africa,ssp126,2094,1.251,28.72
+Delhi,South Asia,ssp126,2094,1.848,30.251
+Tokyo,East Asia,ssp126,2094,2.151,19.711
+Sydney,Oceania,ssp126,2094,1.31,18.533
+Longyearbyen,Arctic,ssp126,2094,1.3,-9.105
+Manaus,South America,ssp126,2094,1.466,28.892
+San Diego,North America,ssp126,2095,0.61,18.538
+New York,North America,ssp126,2095,2.763,14.8
+London,Europe,ssp126,2095,0.42,12.907
+Lagos,Africa,ssp126,2095,1.89,29.359
+Delhi,South Asia,ssp126,2095,1.648,30.05
+Tokyo,East Asia,ssp126,2095,1.63,19.19
+Sydney,Oceania,ssp126,2095,2.069,19.293
+Longyearbyen,Arctic,ssp126,2095,2.75,-7.655
+Manaus,South America,ssp126,2095,2.091,29.517
+San Diego,North America,ssp126,2096,0.832,18.76
+New York,North America,ssp126,2096,4.268,16.306
+London,Europe,ssp126,2096,-0.223,12.264
+Lagos,Africa,ssp126,2096,1.406,28.876
+Delhi,South Asia,ssp126,2096,2.229,30.631
+Tokyo,East Asia,ssp126,2096,1.452,19.012
+Sydney,Oceania,ssp126,2096,1.645,18.869
+Longyearbyen,Arctic,ssp126,2096,3.806,-6.599
+Manaus,South America,ssp126,2096,1.523,28.948
+San Diego,North America,ssp126,2097,1.796,19.724
+New York,North America,ssp126,2097,3.201,15.238
+London,Europe,ssp126,2097,-0.386,12.1
+Lagos,Africa,ssp126,2097,1.813,29.282
+Delhi,South Asia,ssp126,2097,2.617,31.019
+Tokyo,East Asia,ssp126,2097,1.579,19.139
+Sydney,Oceania,ssp126,2097,1.5,18.724
+Longyearbyen,Arctic,ssp126,2097,3.885,-6.52
+Manaus,South America,ssp126,2097,1.945,29.371
+San Diego,North America,ssp126,2098,0.771,18.699
+New York,North America,ssp126,2098,3.074,15.111
+London,Europe,ssp126,2098,-0.137,12.35
+Lagos,Africa,ssp126,2098,2.058,29.527
+Delhi,South Asia,ssp126,2098,3.315,31.717
+Tokyo,East Asia,ssp126,2098,2.238,19.798
+Sydney,Oceania,ssp126,2098,2.026,19.25
+Longyearbyen,Arctic,ssp126,2098,2.277,-8.128
+Manaus,South America,ssp126,2098,2.468,29.894
+San Diego,North America,ssp126,2099,1.079,19.007
+New York,North America,ssp126,2099,2.965,15.003
+London,Europe,ssp126,2099,1.104,13.591
+Lagos,Africa,ssp126,2099,1.793,29.263
+Delhi,South Asia,ssp126,2099,1.525,29.927
+Tokyo,East Asia,ssp126,2099,1.181,18.741
+Sydney,Oceania,ssp126,2099,1.731,18.954
+Longyearbyen,Arctic,ssp126,2099,2.219,-8.186
+Manaus,South America,ssp126,2099,1.982,29.408
+San Diego,North America,ssp126,2100,1.712,19.64
+New York,North America,ssp126,2100,2.566,14.603
+London,Europe,ssp126,2100,-0.687,11.8
+Lagos,Africa,ssp126,2100,1.933,29.402
+Delhi,South Asia,ssp126,2100,2.785,31.188
+Tokyo,East Asia,ssp126,2100,1.372,18.932
+Sydney,Oceania,ssp126,2100,1.62,18.843
+Longyearbyen,Arctic,ssp126,2100,2.433,-7.972
+Manaus,South America,ssp126,2100,1.969,29.395
+San Diego,North America,ssp245,2015,0.054,17.982
+New York,North America,ssp245,2015,0.154,12.191
+London,Europe,ssp245,2015,0.086,12.573
+Lagos,Africa,ssp245,2015,0.661,28.13
+Delhi,South Asia,ssp245,2015,1.078,29.48
+Tokyo,East Asia,ssp245,2015,0.492,18.053
+Sydney,Oceania,ssp245,2015,0.625,17.849
+Longyearbyen,Arctic,ssp245,2015,1.753,-8.652
+Manaus,South America,ssp245,2015,0.496,27.922
+San Diego,North America,ssp245,2016,0.359,18.287
+New York,North America,ssp245,2016,0.742,12.779
+London,Europe,ssp245,2016,0.185,12.672
+Lagos,Africa,ssp245,2016,0.689,28.158
+Delhi,South Asia,ssp245,2016,0.448,28.85
+Tokyo,East Asia,ssp245,2016,0.76,18.32
+Sydney,Oceania,ssp245,2016,0.399,17.623
+Longyearbyen,Arctic,ssp245,2016,0.763,-9.642
+Manaus,South America,ssp245,2016,0.437,27.863
+San Diego,North America,ssp245,2017,0.539,18.467
+New York,North America,ssp245,2017,2.107,14.144
+London,Europe,ssp245,2017,0.302,12.788
+Lagos,Africa,ssp245,2017,0.21,27.679
+Delhi,South Asia,ssp245,2017,-0.386,28.017
+Tokyo,East Asia,ssp245,2017,0.591,18.151
+Sydney,Oceania,ssp245,2017,-0.193,17.03
+Longyearbyen,Arctic,ssp245,2017,1.865,-8.54
+Manaus,South America,ssp245,2017,0.248,27.673
+San Diego,North America,ssp245,2018,-0.463,17.465
+New York,North America,ssp245,2018,0.338,12.376
+London,Europe,ssp245,2018,0.9,13.387
+Lagos,Africa,ssp245,2018,0.399,27.868
+Delhi,South Asia,ssp245,2018,0.55,28.952
+Tokyo,East Asia,ssp245,2018,0.829,18.389
+Sydney,Oceania,ssp245,2018,-0.031,17.193
+Longyearbyen,Arctic,ssp245,2018,-0.268,-10.673
+Manaus,South America,ssp245,2018,0.614,28.04
+San Diego,North America,ssp245,2019,-0.448,17.481
+New York,North America,ssp245,2019,1.181,13.219
+London,Europe,ssp245,2019,1.06,13.546
+Lagos,Africa,ssp245,2019,0.784,28.253
+Delhi,South Asia,ssp245,2019,0.513,28.915
+Tokyo,East Asia,ssp245,2019,1.192,18.752
+Sydney,Oceania,ssp245,2019,0.888,18.112
+Longyearbyen,Arctic,ssp245,2019,0.821,-9.584
+Manaus,South America,ssp245,2019,0.963,28.389
+San Diego,North America,ssp245,2020,-0.18,17.749
+New York,North America,ssp245,2020,1.529,13.567
+London,Europe,ssp245,2020,1.109,13.596
+Lagos,Africa,ssp245,2020,0.301,27.77
+Delhi,South Asia,ssp245,2020,-0.589,27.813
+Tokyo,East Asia,ssp245,2020,1.461,19.021
+Sydney,Oceania,ssp245,2020,0.295,17.519
+Longyearbyen,Arctic,ssp245,2020,0.448,-9.958
+Manaus,South America,ssp245,2020,-0.163,27.263
+San Diego,North America,ssp245,2021,0.045,17.973
+New York,North America,ssp245,2021,1.368,13.405
+London,Europe,ssp245,2021,-0.392,12.095
+Lagos,Africa,ssp245,2021,0.362,27.831
+Delhi,South Asia,ssp245,2021,-0.126,28.277
+Tokyo,East Asia,ssp245,2021,1.409,18.969
+Sydney,Oceania,ssp245,2021,-0.393,16.83
+Longyearbyen,Arctic,ssp245,2021,-0.979,-11.385
+Manaus,South America,ssp245,2021,0.047,27.473
+San Diego,North America,ssp245,2022,-0.317,17.611
+New York,North America,ssp245,2022,1.384,13.421
+London,Europe,ssp245,2022,0.357,12.843
+Lagos,Africa,ssp245,2022,0.56,28.029
+Delhi,South Asia,ssp245,2022,1.134,29.537
+Tokyo,East Asia,ssp245,2022,1.045,18.605
+Sydney,Oceania,ssp245,2022,0.148,17.372
+Longyearbyen,Arctic,ssp245,2022,1.063,-9.342
+Manaus,South America,ssp245,2022,0.743,28.169
+San Diego,North America,ssp245,2023,0.742,18.67
+New York,North America,ssp245,2023,0.761,12.798
+London,Europe,ssp245,2023,0.56,13.047
+Lagos,Africa,ssp245,2023,0.831,28.301
+Delhi,South Asia,ssp245,2023,0.562,28.965
+Tokyo,East Asia,ssp245,2023,1.475,19.035
+Sydney,Oceania,ssp245,2023,0.426,17.649
+Longyearbyen,Arctic,ssp245,2023,-1.796,-12.201
+Manaus,South America,ssp245,2023,1.14,28.566
+San Diego,North America,ssp245,2024,0.168,18.097
+New York,North America,ssp245,2024,1.81,13.848
+London,Europe,ssp245,2024,0.383,12.87
+Lagos,Africa,ssp245,2024,1.189,28.658
+Delhi,South Asia,ssp245,2024,0.403,28.805
+Tokyo,East Asia,ssp245,2024,1.242,18.802
+Sydney,Oceania,ssp245,2024,1.404,18.627
+Longyearbyen,Arctic,ssp245,2024,2.802,-7.603
+Manaus,South America,ssp245,2024,1.568,28.994
+San Diego,North America,ssp245,2025,0.308,18.237
+New York,North America,ssp245,2025,1.868,13.905
+London,Europe,ssp245,2025,0.18,12.667
+Lagos,Africa,ssp245,2025,0.827,28.296
+Delhi,South Asia,ssp245,2025,-0.667,27.736
+Tokyo,East Asia,ssp245,2025,1.041,18.601
+Sydney,Oceania,ssp245,2025,0.71,17.934
+Longyearbyen,Arctic,ssp245,2025,3.261,-7.145
+Manaus,South America,ssp245,2025,0.28,27.706
+San Diego,North America,ssp245,2026,0.41,18.338
+New York,North America,ssp245,2026,1.86,13.897
+London,Europe,ssp245,2026,-0.237,12.25
+Lagos,Africa,ssp245,2026,0.565,28.034
+Delhi,South Asia,ssp245,2026,-0.034,28.368
+Tokyo,East Asia,ssp245,2026,1.56,19.12
+Sydney,Oceania,ssp245,2026,0.207,17.431
+Longyearbyen,Arctic,ssp245,2026,1.986,-8.419
+Manaus,South America,ssp245,2026,0.412,27.838
+San Diego,North America,ssp245,2027,0.97,18.898
+New York,North America,ssp245,2027,1.363,13.4
+London,Europe,ssp245,2027,0.441,12.927
+Lagos,Africa,ssp245,2027,1.039,28.509
+Delhi,South Asia,ssp245,2027,1.053,29.456
+Tokyo,East Asia,ssp245,2027,1.057,18.618
+Sydney,Oceania,ssp245,2027,0.35,17.574
+Longyearbyen,Arctic,ssp245,2027,0.49,-9.915
+Manaus,South America,ssp245,2027,1.228,28.654
+San Diego,North America,ssp245,2028,1.082,19.011
+New York,North America,ssp245,2028,1.098,13.135
+London,Europe,ssp245,2028,0.581,13.068
+Lagos,Africa,ssp245,2028,1.1,28.569
+Delhi,South Asia,ssp245,2028,0.424,28.826
+Tokyo,East Asia,ssp245,2028,0.848,18.408
+Sydney,Oceania,ssp245,2028,1.434,18.657
+Longyearbyen,Arctic,ssp245,2028,2.427,-7.978
+Manaus,South America,ssp245,2028,1.258,28.684
+San Diego,North America,ssp245,2029,1.095,19.023
+New York,North America,ssp245,2029,2.127,14.164
+London,Europe,ssp245,2029,0.495,12.982
+Lagos,Africa,ssp245,2029,0.691,28.16
+Delhi,South Asia,ssp245,2029,1.57,29.973
+Tokyo,East Asia,ssp245,2029,1.235,18.795
+Sydney,Oceania,ssp245,2029,1.011,18.234
+Longyearbyen,Arctic,ssp245,2029,4.791,-5.614
+Manaus,South America,ssp245,2029,0.944,28.37
+San Diego,North America,ssp245,2030,1.058,18.986
+New York,North America,ssp245,2030,2.65,14.688
+London,Europe,ssp245,2030,-0.107,12.38
+Lagos,Africa,ssp245,2030,1.13,28.599
+Delhi,South Asia,ssp245,2030,1.047,29.45
+Tokyo,East Asia,ssp245,2030,1.399,18.959
+Sydney,Oceania,ssp245,2030,0.9,18.124
+Longyearbyen,Arctic,ssp245,2030,2.788,-7.617
+Manaus,South America,ssp245,2030,1.827,29.253
+San Diego,North America,ssp245,2031,0.902,18.83
+New York,North America,ssp245,2031,2.366,14.403
+London,Europe,ssp245,2031,0.489,12.976
+Lagos,Africa,ssp245,2031,0.867,28.336
+Delhi,South Asia,ssp245,2031,0.715,29.118
+Tokyo,East Asia,ssp245,2031,1.04,18.6
+Sydney,Oceania,ssp245,2031,0.695,17.919
+Longyearbyen,Arctic,ssp245,2031,5.234,-5.171
+Manaus,South America,ssp245,2031,0.85,28.276
+San Diego,North America,ssp245,2032,1.194,19.122
+New York,North America,ssp245,2032,1.162,13.199
+London,Europe,ssp245,2032,0.561,13.047
+Lagos,Africa,ssp245,2032,0.642,28.111
+Delhi,South Asia,ssp245,2032,0.239,28.642
+Tokyo,East Asia,ssp245,2032,0.971,18.531
+Sydney,Oceania,ssp245,2032,0.577,17.801
+Longyearbyen,Arctic,ssp245,2032,2.369,-8.036
+Manaus,South America,ssp245,2032,0.672,28.098
+San Diego,North America,ssp245,2033,0.3,18.229
+New York,North America,ssp245,2033,1.06,13.098
+London,Europe,ssp245,2033,1.065,13.551
+Lagos,Africa,ssp245,2033,0.979,28.449
+Delhi,South Asia,ssp245,2033,0.161,28.563
+Tokyo,East Asia,ssp245,2033,1.003,18.563
+Sydney,Oceania,ssp245,2033,0.734,17.958
+Longyearbyen,Arctic,ssp245,2033,3.166,-7.239
+Manaus,South America,ssp245,2033,1.148,28.574
+San Diego,North America,ssp245,2034,0.498,18.427
+New York,North America,ssp245,2034,2.287,14.324
+London,Europe,ssp245,2034,0.998,13.484
+Lagos,Africa,ssp245,2034,1.448,28.917
+Delhi,South Asia,ssp245,2034,0.56,28.963
+Tokyo,East Asia,ssp245,2034,1.589,19.149
+Sydney,Oceania,ssp245,2034,1.233,18.457
+Longyearbyen,Arctic,ssp245,2034,2.349,-8.056
+Manaus,South America,ssp245,2034,1.63,29.056
+San Diego,North America,ssp245,2035,0.48,18.409
+New York,North America,ssp245,2035,1.922,13.96
+London,Europe,ssp245,2035,0.895,13.381
+Lagos,Africa,ssp245,2035,1.015,28.484
+Delhi,South Asia,ssp245,2035,1.392,29.795
+Tokyo,East Asia,ssp245,2035,0.75,18.31
+Sydney,Oceania,ssp245,2035,0.978,18.201
+Longyearbyen,Arctic,ssp245,2035,2.865,-7.54
+Manaus,South America,ssp245,2035,0.996,28.422
+San Diego,North America,ssp245,2036,0.616,18.545
+New York,North America,ssp245,2036,1.287,13.325
+London,Europe,ssp245,2036,1.028,13.514
+Lagos,Africa,ssp245,2036,1.348,28.817
+Delhi,South Asia,ssp245,2036,0.948,29.351
+Tokyo,East Asia,ssp245,2036,1.408,18.968
+Sydney,Oceania,ssp245,2036,1.158,18.382
+Longyearbyen,Arctic,ssp245,2036,3.937,-6.468
+Manaus,South America,ssp245,2036,1.798,29.224
+San Diego,North America,ssp245,2037,-0.35,17.578
+New York,North America,ssp245,2037,1.805,13.843
+London,Europe,ssp245,2037,1.521,14.008
+Lagos,Africa,ssp245,2037,1.366,28.835
+Delhi,South Asia,ssp245,2037,1.924,30.326
+Tokyo,East Asia,ssp245,2037,1.564,19.124
+Sydney,Oceania,ssp245,2037,1.875,19.099
+Longyearbyen,Arctic,ssp245,2037,1.123,-9.283
+Manaus,South America,ssp245,2037,1.491,28.917
+San Diego,North America,ssp245,2038,0.699,18.628
+New York,North America,ssp245,2038,2.604,14.642
+London,Europe,ssp245,2038,2.582,15.069
+Lagos,Africa,ssp245,2038,1.227,28.696
+Delhi,South Asia,ssp245,2038,1.215,29.617
+Tokyo,East Asia,ssp245,2038,1.314,18.874
+Sydney,Oceania,ssp245,2038,1.345,18.569
+Longyearbyen,Arctic,ssp245,2038,0.977,-9.428
+Manaus,South America,ssp245,2038,1.807,29.233
+San Diego,North America,ssp245,2039,0.623,18.551
+New York,North America,ssp245,2039,2.84,14.877
+London,Europe,ssp245,2039,0.264,12.751
+Lagos,Africa,ssp245,2039,0.773,28.243
+Delhi,South Asia,ssp245,2039,0.161,28.564
+Tokyo,East Asia,ssp245,2039,1.137,18.697
+Sydney,Oceania,ssp245,2039,0.55,17.774
+Longyearbyen,Arctic,ssp245,2039,3.952,-6.453
+Manaus,South America,ssp245,2039,0.21,27.636
+San Diego,North America,ssp245,2040,0.452,18.381
+New York,North America,ssp245,2040,1.618,13.656
+London,Europe,ssp245,2040,0.615,13.102
+Lagos,Africa,ssp245,2040,1.21,28.68
+Delhi,South Asia,ssp245,2040,0.756,29.158
+Tokyo,East Asia,ssp245,2040,0.848,18.408
+Sydney,Oceania,ssp245,2040,1.101,18.325
+Longyearbyen,Arctic,ssp245,2040,0.25,-10.155
+Manaus,South America,ssp245,2040,1.011,28.437
+San Diego,North America,ssp245,2041,1.232,19.16
+New York,North America,ssp245,2041,2.479,14.517
+London,Europe,ssp245,2041,1.186,13.673
+Lagos,Africa,ssp245,2041,1.761,29.23
+Delhi,South Asia,ssp245,2041,0.67,29.072
+Tokyo,East Asia,ssp245,2041,1.107,18.668
+Sydney,Oceania,ssp245,2041,1.811,19.035
+Longyearbyen,Arctic,ssp245,2041,1.1,-9.305
+Manaus,South America,ssp245,2041,1.941,29.367
+San Diego,North America,ssp245,2042,0.795,18.723
+New York,North America,ssp245,2042,2.52,14.558
+London,Europe,ssp245,2042,1.107,13.593
+Lagos,Africa,ssp245,2042,1.162,28.631
+Delhi,South Asia,ssp245,2042,0.231,28.634
+Tokyo,East Asia,ssp245,2042,2.305,19.865
+Sydney,Oceania,ssp245,2042,1.507,18.73
+Longyearbyen,Arctic,ssp245,2042,1.398,-9.007
+Manaus,South America,ssp245,2042,0.698,28.124
+San Diego,North America,ssp245,2043,2.539,20.467
+New York,North America,ssp245,2043,1.057,13.095
+London,Europe,ssp245,2043,1.012,13.499
+Lagos,Africa,ssp245,2043,1.498,28.967
+Delhi,South Asia,ssp245,2043,0.851,29.254
+Tokyo,East Asia,ssp245,2043,1.666,19.226
+Sydney,Oceania,ssp245,2043,1.368,18.591
+Longyearbyen,Arctic,ssp245,2043,2.589,-7.816
+Manaus,South America,ssp245,2043,1.818,29.244
+San Diego,North America,ssp245,2044,1.554,19.482
+New York,North America,ssp245,2044,2.142,14.18
+London,Europe,ssp245,2044,0.978,13.465
+Lagos,Africa,ssp245,2044,1.658,29.127
+Delhi,South Asia,ssp245,2044,2.111,30.513
+Tokyo,East Asia,ssp245,2044,1.147,18.707
+Sydney,Oceania,ssp245,2044,1.576,18.8
+Longyearbyen,Arctic,ssp245,2044,0.499,-9.906
+Manaus,South America,ssp245,2044,2.29,29.716
+San Diego,North America,ssp245,2045,1.13,19.059
+New York,North America,ssp245,2045,2.315,14.353
+London,Europe,ssp245,2045,0.784,13.271
+Lagos,Africa,ssp245,2045,1.349,28.818
+Delhi,South Asia,ssp245,2045,1.645,30.048
+Tokyo,East Asia,ssp245,2045,1.285,18.845
+Sydney,Oceania,ssp245,2045,1.501,18.724
+Longyearbyen,Arctic,ssp245,2045,1.781,-8.624
+Manaus,South America,ssp245,2045,1.736,29.162
+San Diego,North America,ssp245,2046,1.179,19.107
+New York,North America,ssp245,2046,2.717,14.754
+London,Europe,ssp245,2046,0.321,12.808
+Lagos,Africa,ssp245,2046,1.557,29.026
+Delhi,South Asia,ssp245,2046,1.934,30.336
+Tokyo,East Asia,ssp245,2046,1.883,19.444
+Sydney,Oceania,ssp245,2046,1.741,18.965
+Longyearbyen,Arctic,ssp245,2046,2.241,-8.164
+Manaus,South America,ssp245,2046,2.383,29.809
+San Diego,North America,ssp245,2047,1.628,19.556
+New York,North America,ssp245,2047,2.512,14.55
+London,Europe,ssp245,2047,0.852,13.339
+Lagos,Africa,ssp245,2047,1.549,29.018
+Delhi,South Asia,ssp245,2047,1.742,30.144
+Tokyo,East Asia,ssp245,2047,1.214,18.774
+Sydney,Oceania,ssp245,2047,0.981,18.205
+Longyearbyen,Arctic,ssp245,2047,1.529,-8.876
+Manaus,South America,ssp245,2047,1.45,28.876
+San Diego,North America,ssp245,2048,1.863,19.791
+New York,North America,ssp245,2048,1.888,13.925
+London,Europe,ssp245,2048,0.966,13.452
+Lagos,Africa,ssp245,2048,1.445,28.914
+Delhi,South Asia,ssp245,2048,1.365,29.767
+Tokyo,East Asia,ssp245,2048,1.822,19.382
+Sydney,Oceania,ssp245,2048,1.305,18.528
+Longyearbyen,Arctic,ssp245,2048,3.78,-6.625
+Manaus,South America,ssp245,2048,1.169,28.595
+San Diego,North America,ssp245,2049,2.045,19.973
+New York,North America,ssp245,2049,1.758,13.796
+London,Europe,ssp245,2049,1.535,14.022
+Lagos,Africa,ssp245,2049,1.613,29.083
+Delhi,South Asia,ssp245,2049,2.047,30.45
+Tokyo,East Asia,ssp245,2049,1.885,19.445
+Sydney,Oceania,ssp245,2049,1.607,18.831
+Longyearbyen,Arctic,ssp245,2049,2.112,-8.293
+Manaus,South America,ssp245,2049,2.217,29.643
+San Diego,North America,ssp245,2050,0.851,18.779
+New York,North America,ssp245,2050,3.219,15.256
+London,Europe,ssp245,2050,0.948,13.435
+Lagos,Africa,ssp245,2050,1.439,28.909
+Delhi,South Asia,ssp245,2050,1.786,30.189
+Tokyo,East Asia,ssp245,2050,2.356,19.916
+Sydney,Oceania,ssp245,2050,1.557,18.78
+Longyearbyen,Arctic,ssp245,2050,2.574,-7.831
+Manaus,South America,ssp245,2050,1.294,28.72
+San Diego,North America,ssp245,2051,1.969,19.897
+New York,North America,ssp245,2051,2.392,14.43
+London,Europe,ssp245,2051,0.564,13.051
+Lagos,Africa,ssp245,2051,1.97,29.439
+Delhi,South Asia,ssp245,2051,2.415,30.818
+Tokyo,East Asia,ssp245,2051,1.653,19.213
+Sydney,Oceania,ssp245,2051,1.8,19.024
+Longyearbyen,Arctic,ssp245,2051,3.45,-6.955
+Manaus,South America,ssp245,2051,1.882,29.308
+San Diego,North America,ssp245,2052,1.417,19.345
+New York,North America,ssp245,2052,2.949,14.986
+London,Europe,ssp245,2052,1.479,13.965
+Lagos,Africa,ssp245,2052,2.008,29.477
+Delhi,South Asia,ssp245,2052,2.124,30.526
+Tokyo,East Asia,ssp245,2052,2.042,19.602
+Sydney,Oceania,ssp245,2052,1.918,19.142
+Longyearbyen,Arctic,ssp245,2052,3.415,-6.991
+Manaus,South America,ssp245,2052,2.301,29.727
+San Diego,North America,ssp245,2053,1.186,19.114
+New York,North America,ssp245,2053,2.674,14.711
+London,Europe,ssp245,2053,0.501,12.987
+Lagos,Africa,ssp245,2053,1.907,29.376
+Delhi,South Asia,ssp245,2053,2.84,31.242
+Tokyo,East Asia,ssp245,2053,1.575,19.136
+Sydney,Oceania,ssp245,2053,1.702,18.926
+Longyearbyen,Arctic,ssp245,2053,4.225,-6.18
+Manaus,South America,ssp245,2053,1.702,29.128
+San Diego,North America,ssp245,2054,1.401,19.329
+New York,North America,ssp245,2054,1.917,13.954
+London,Europe,ssp245,2054,0.244,12.73
+Lagos,Africa,ssp245,2054,1.881,29.35
+Delhi,South Asia,ssp245,2054,1.758,30.16
+Tokyo,East Asia,ssp245,2054,1.757,19.317
+Sydney,Oceania,ssp245,2054,1.496,18.72
+Longyearbyen,Arctic,ssp245,2054,3.958,-6.447
+Manaus,South America,ssp245,2054,2.049,29.475
+San Diego,North America,ssp245,2055,1.026,18.955
+New York,North America,ssp245,2055,2.85,14.887
+London,Europe,ssp245,2055,0.395,12.882
+Lagos,Africa,ssp245,2055,1.324,28.793
+Delhi,South Asia,ssp245,2055,1.18,29.583
+Tokyo,East Asia,ssp245,2055,2.195,19.755
+Sydney,Oceania,ssp245,2055,1.118,18.342
+Longyearbyen,Arctic,ssp245,2055,2.831,-7.575
+Manaus,South America,ssp245,2055,1.108,28.534
+San Diego,North America,ssp245,2056,0.566,18.494
+New York,North America,ssp245,2056,2.491,14.529
+London,Europe,ssp245,2056,0.35,12.836
+Lagos,Africa,ssp245,2056,1.557,29.027
+Delhi,South Asia,ssp245,2056,1.414,29.817
+Tokyo,East Asia,ssp245,2056,1.633,19.194
+Sydney,Oceania,ssp245,2056,1.58,18.804
+Longyearbyen,Arctic,ssp245,2056,2.077,-8.328
+Manaus,South America,ssp245,2056,1.319,28.745
+San Diego,North America,ssp245,2057,0.467,18.396
+New York,North America,ssp245,2057,4.043,16.081
+London,Europe,ssp245,2057,0.763,13.249
+Lagos,Africa,ssp245,2057,1.922,29.391
+Delhi,South Asia,ssp245,2057,1.671,30.073
+Tokyo,East Asia,ssp245,2057,1.899,19.46
+Sydney,Oceania,ssp245,2057,1.586,18.81
+Longyearbyen,Arctic,ssp245,2057,1.78,-8.625
+Manaus,South America,ssp245,2057,1.883,29.309
+San Diego,North America,ssp245,2058,0.944,18.872
+New York,North America,ssp245,2058,2.132,14.17
+London,Europe,ssp245,2058,0.613,13.099
+Lagos,Africa,ssp245,2058,1.468,28.938
+Delhi,South Asia,ssp245,2058,1.499,29.901
+Tokyo,East Asia,ssp245,2058,2.93,20.49
+Sydney,Oceania,ssp245,2058,1.872,19.096
+Longyearbyen,Arctic,ssp245,2058,3.057,-7.349
+Manaus,South America,ssp245,2058,1.757,29.183
+San Diego,North America,ssp245,2059,0.835,18.763
+New York,North America,ssp245,2059,2.707,14.745
+London,Europe,ssp245,2059,0.889,13.376
+Lagos,Africa,ssp245,2059,2.147,29.616
+Delhi,South Asia,ssp245,2059,2.098,30.501
+Tokyo,East Asia,ssp245,2059,2.516,20.076
+Sydney,Oceania,ssp245,2059,2.003,19.227
+Longyearbyen,Arctic,ssp245,2059,3.444,-6.961
+Manaus,South America,ssp245,2059,2.595,30.021
+San Diego,North America,ssp245,2060,0.772,18.7
+New York,North America,ssp245,2060,3.263,15.301
+London,Europe,ssp245,2060,1.393,13.88
+Lagos,Africa,ssp245,2060,1.393,28.862
+Delhi,South Asia,ssp245,2060,1.184,29.586
+Tokyo,East Asia,ssp245,2060,2.711,20.271
+Sydney,Oceania,ssp245,2060,1.792,19.016
+Longyearbyen,Arctic,ssp245,2060,1.153,-9.252
+Manaus,South America,ssp245,2060,1.231,28.657
+San Diego,North America,ssp245,2061,1.527,19.455
+New York,North America,ssp245,2061,2.707,14.745
+London,Europe,ssp245,2061,0.734,13.221
+Lagos,Africa,ssp245,2061,1.76,29.229
+Delhi,South Asia,ssp245,2061,1.65,30.053
+Tokyo,East Asia,ssp245,2061,1.522,19.082
+Sydney,Oceania,ssp245,2061,1.834,19.058
+Longyearbyen,Arctic,ssp245,2061,1.605,-8.8
+Manaus,South America,ssp245,2061,1.88,29.306
+San Diego,North America,ssp245,2062,0.997,18.925
+New York,North America,ssp245,2062,3.498,15.535
+London,Europe,ssp245,2062,0.435,12.921
+Lagos,Africa,ssp245,2062,2.14,29.609
+Delhi,South Asia,ssp245,2062,2.877,31.28
+Tokyo,East Asia,ssp245,2062,2.467,20.027
+Sydney,Oceania,ssp245,2062,2.381,19.605
+Longyearbyen,Arctic,ssp245,2062,3.887,-6.518
+Manaus,South America,ssp245,2062,2.726,30.152
+San Diego,North America,ssp245,2063,1.143,19.071
+New York,North America,ssp245,2063,3.714,15.752
+London,Europe,ssp245,2063,1.018,13.505
+Lagos,Africa,ssp245,2063,1.924,29.393
+Delhi,South Asia,ssp245,2063,2.159,30.561
+Tokyo,East Asia,ssp245,2063,2.44,20.0
+Sydney,Oceania,ssp245,2063,2.088,19.311
+Longyearbyen,Arctic,ssp245,2063,2.672,-7.733
+Manaus,South America,ssp245,2063,2.058,29.483
+San Diego,North America,ssp245,2064,1.233,19.162
+New York,North America,ssp245,2064,3.547,15.584
+London,Europe,ssp245,2064,1.626,14.113
+Lagos,Africa,ssp245,2064,2.289,29.759
+Delhi,South Asia,ssp245,2064,2.206,30.608
+Tokyo,East Asia,ssp245,2064,2.719,20.279
+Sydney,Oceania,ssp245,2064,2.244,19.468
+Longyearbyen,Arctic,ssp245,2064,1.604,-8.801
+Manaus,South America,ssp245,2064,2.443,29.869
+San Diego,North America,ssp245,2065,1.275,19.203
+New York,North America,ssp245,2065,3.12,15.158
+London,Europe,ssp245,2065,0.264,12.751
+Lagos,Africa,ssp245,2065,2.173,29.642
+Delhi,South Asia,ssp245,2065,2.571,30.974
+Tokyo,East Asia,ssp245,2065,2.136,19.696
+Sydney,Oceania,ssp245,2065,2.541,19.765
+Longyearbyen,Arctic,ssp245,2065,3.718,-6.687
+Manaus,South America,ssp245,2065,2.15,29.576
+San Diego,North America,ssp245,2066,1.282,19.21
+New York,North America,ssp245,2066,2.975,15.012
+London,Europe,ssp245,2066,0.363,12.849
+Lagos,Africa,ssp245,2066,2.047,29.516
+Delhi,South Asia,ssp245,2066,1.972,30.375
+Tokyo,East Asia,ssp245,2066,1.969,19.529
+Sydney,Oceania,ssp245,2066,2.576,19.799
+Longyearbyen,Arctic,ssp245,2066,2.912,-7.493
+Manaus,South America,ssp245,2066,2.061,29.487
+San Diego,North America,ssp245,2067,0.985,18.914
+New York,North America,ssp245,2067,2.69,14.728
+London,Europe,ssp245,2067,0.584,13.071
+Lagos,Africa,ssp245,2067,2.356,29.825
+Delhi,South Asia,ssp245,2067,2.341,30.744
+Tokyo,East Asia,ssp245,2067,1.702,19.262
+Sydney,Oceania,ssp245,2067,2.638,19.861
+Longyearbyen,Arctic,ssp245,2067,2.426,-7.979
+Manaus,South America,ssp245,2067,3.097,30.523
+San Diego,North America,ssp245,2068,1.351,19.279
+New York,North America,ssp245,2068,3.504,15.542
+London,Europe,ssp245,2068,0.299,12.786
+Lagos,Africa,ssp245,2068,2.274,29.744
+Delhi,South Asia,ssp245,2068,2.909,31.312
+Tokyo,East Asia,ssp245,2068,1.77,19.33
+Sydney,Oceania,ssp245,2068,2.075,19.299
+Longyearbyen,Arctic,ssp245,2068,5.26,-5.146
+Manaus,South America,ssp245,2068,2.696,30.122
+San Diego,North America,ssp245,2069,1.981,19.909
+New York,North America,ssp245,2069,3.169,15.206
+London,Europe,ssp245,2069,-0.484,12.003
+Lagos,Africa,ssp245,2069,2.144,29.613
+Delhi,South Asia,ssp245,2069,1.811,30.213
+Tokyo,East Asia,ssp245,2069,2.288,19.849
+Sydney,Oceania,ssp245,2069,2.277,19.5
+Longyearbyen,Arctic,ssp245,2069,5.143,-5.262
+Manaus,South America,ssp245,2069,1.944,29.37
+San Diego,North America,ssp245,2070,1.624,19.553
+New York,North America,ssp245,2070,3.453,15.49
+London,Europe,ssp245,2070,0.192,12.679
+Lagos,Africa,ssp245,2070,2.249,29.718
+Delhi,South Asia,ssp245,2070,2.716,31.118
+Tokyo,East Asia,ssp245,2070,3.041,20.601
+Sydney,Oceania,ssp245,2070,2.694,19.918
+Longyearbyen,Arctic,ssp245,2070,0.759,-9.646
+Manaus,South America,ssp245,2070,2.447,29.873
+San Diego,North America,ssp245,2071,1.639,19.567
+New York,North America,ssp245,2071,2.878,14.916
+London,Europe,ssp245,2071,1.087,13.573
+Lagos,Africa,ssp245,2071,2.501,29.97
+Delhi,South Asia,ssp245,2071,3.233,31.636
+Tokyo,East Asia,ssp245,2071,2.052,19.612
+Sydney,Oceania,ssp245,2071,2.524,19.747
+Longyearbyen,Arctic,ssp245,2071,2.852,-7.553
+Manaus,South America,ssp245,2071,2.874,30.3
+San Diego,North America,ssp245,2072,0.913,18.841
+New York,North America,ssp245,2072,3.102,15.139
+London,Europe,ssp245,2072,0.103,12.59
+Lagos,Africa,ssp245,2072,2.521,29.991
+Delhi,South Asia,ssp245,2072,3.139,31.541
+Tokyo,East Asia,ssp245,2072,2.625,20.185
+Sydney,Oceania,ssp245,2072,2.734,19.958
+Longyearbyen,Arctic,ssp245,2072,3.94,-6.465
+Manaus,South America,ssp245,2072,2.817,30.243
+San Diego,North America,ssp245,2073,2.353,20.281
+New York,North America,ssp245,2073,3.438,15.476
+London,Europe,ssp245,2073,1.305,13.792
+Lagos,Africa,ssp245,2073,2.108,29.578
+Delhi,South Asia,ssp245,2073,2.215,30.618
+Tokyo,East Asia,ssp245,2073,1.869,19.429
+Sydney,Oceania,ssp245,2073,1.913,19.137
+Longyearbyen,Arctic,ssp245,2073,2.305,-8.101
+Manaus,South America,ssp245,2073,2.55,29.976
+San Diego,North America,ssp245,2074,1.515,19.443
+New York,North America,ssp245,2074,4.209,16.246
+London,Europe,ssp245,2074,1.378,13.864
+Lagos,Africa,ssp245,2074,2.769,30.238
+Delhi,South Asia,ssp245,2074,3.063,31.465
+Tokyo,East Asia,ssp245,2074,2.371,19.931
+Sydney,Oceania,ssp245,2074,2.93,20.154
+Longyearbyen,Arctic,ssp245,2074,6.321,-4.084
+Manaus,South America,ssp245,2074,3.095,30.521
+San Diego,North America,ssp245,2075,2.179,20.108
+New York,North America,ssp245,2075,3.15,15.188
+London,Europe,ssp245,2075,0.659,13.145
+Lagos,Africa,ssp245,2075,1.859,29.328
+Delhi,South Asia,ssp245,2075,3.133,31.535
+Tokyo,East Asia,ssp245,2075,2.328,19.889
+Sydney,Oceania,ssp245,2075,1.882,19.105
+Longyearbyen,Arctic,ssp245,2075,2.718,-7.687
+Manaus,South America,ssp245,2075,1.784,29.21
+San Diego,North America,ssp245,2076,1.668,19.596
+New York,North America,ssp245,2076,3.005,15.042
+London,Europe,ssp245,2076,-0.252,12.235
+Lagos,Africa,ssp245,2076,2.926,30.395
+Delhi,South Asia,ssp245,2076,4.08,32.483
+Tokyo,East Asia,ssp245,2076,2.275,19.835
+Sydney,Oceania,ssp245,2076,2.995,20.219
+Longyearbyen,Arctic,ssp245,2076,3.653,-6.752
+Manaus,South America,ssp245,2076,3.213,30.639
+San Diego,North America,ssp245,2077,2.046,19.974
+New York,North America,ssp245,2077,4.516,16.554
+London,Europe,ssp245,2077,0.87,13.357
+Lagos,Africa,ssp245,2077,2.682,30.151
+Delhi,South Asia,ssp245,2077,3.03,31.432
+Tokyo,East Asia,ssp245,2077,2.118,19.678
+Sydney,Oceania,ssp245,2077,3.057,20.28
+Longyearbyen,Arctic,ssp245,2077,2.507,-7.898
+Manaus,South America,ssp245,2077,2.931,30.357
+San Diego,North America,ssp245,2078,1.532,19.46
+New York,North America,ssp245,2078,4.422,16.46
+London,Europe,ssp245,2078,1.462,13.948
+Lagos,Africa,ssp245,2078,2.126,29.595
+Delhi,South Asia,ssp245,2078,1.507,29.91
+Tokyo,East Asia,ssp245,2078,2.868,20.429
+Sydney,Oceania,ssp245,2078,1.794,19.018
+Longyearbyen,Arctic,ssp245,2078,4.839,-5.566
+Manaus,South America,ssp245,2078,2.113,29.539
+San Diego,North America,ssp245,2079,2.688,20.616
+New York,North America,ssp245,2079,3.473,15.51
+London,Europe,ssp245,2079,0.476,12.962
+Lagos,Africa,ssp245,2079,2.446,29.915
+Delhi,South Asia,ssp245,2079,2.758,31.16
+Tokyo,East Asia,ssp245,2079,2.876,20.436
+Sydney,Oceania,ssp245,2079,2.973,20.197
+Longyearbyen,Arctic,ssp245,2079,2.845,-7.561
+Manaus,South America,ssp245,2079,3.071,30.497
+San Diego,North America,ssp245,2080,1.363,19.291
+New York,North America,ssp245,2080,4.501,16.539
+London,Europe,ssp245,2080,0.848,13.335
+Lagos,Africa,ssp245,2080,2.689,30.158
+Delhi,South Asia,ssp245,2080,2.934,31.337
+Tokyo,East Asia,ssp245,2080,3.477,21.038
+Sydney,Oceania,ssp245,2080,3.161,20.384
+Longyearbyen,Arctic,ssp245,2080,2.547,-7.858
+Manaus,South America,ssp245,2080,3.205,30.631
+San Diego,North America,ssp245,2081,1.222,19.15
+New York,North America,ssp245,2081,4.465,16.502
+London,Europe,ssp245,2081,0.915,13.402
+Lagos,Africa,ssp245,2081,2.341,29.81
+Delhi,South Asia,ssp245,2081,2.727,31.13
+Tokyo,East Asia,ssp245,2081,2.786,20.346
+Sydney,Oceania,ssp245,2081,2.553,19.777
+Longyearbyen,Arctic,ssp245,2081,2.251,-8.154
+Manaus,South America,ssp245,2081,1.946,29.372
+San Diego,North America,ssp245,2082,1.28,19.208
+New York,North America,ssp245,2082,3.943,15.981
+London,Europe,ssp245,2082,0.067,12.553
+Lagos,Africa,ssp245,2082,2.905,30.374
+Delhi,South Asia,ssp245,2082,3.569,31.972
+Tokyo,East Asia,ssp245,2082,2.586,20.146
+Sydney,Oceania,ssp245,2082,3.357,20.581
+Longyearbyen,Arctic,ssp245,2082,3.948,-6.457
+Manaus,South America,ssp245,2082,3.164,30.59
+San Diego,North America,ssp245,2083,2.022,19.951
+New York,North America,ssp245,2083,4.031,16.068
+London,Europe,ssp245,2083,0.052,12.539
+Lagos,Africa,ssp245,2083,2.56,30.029
+Delhi,South Asia,ssp245,2083,2.373,30.776
+Tokyo,East Asia,ssp245,2083,2.168,19.728
+Sydney,Oceania,ssp245,2083,2.587,19.81
+Longyearbyen,Arctic,ssp245,2083,4.518,-5.887
+Manaus,South America,ssp245,2083,2.309,29.735
+San Diego,North America,ssp245,2084,1.899,19.828
+New York,North America,ssp245,2084,3.311,15.349
+London,Europe,ssp245,2084,0.392,12.879
+Lagos,Africa,ssp245,2084,2.401,29.87
+Delhi,South Asia,ssp245,2084,3.107,31.51
+Tokyo,East Asia,ssp245,2084,1.396,18.956
+Sydney,Oceania,ssp245,2084,2.208,19.432
+Longyearbyen,Arctic,ssp245,2084,3.796,-6.609
+Manaus,South America,ssp245,2084,2.365,29.791
+San Diego,North America,ssp245,2085,1.53,19.459
+New York,North America,ssp245,2085,3.592,15.63
+London,Europe,ssp245,2085,1.325,13.812
+Lagos,Africa,ssp245,2085,2.612,30.081
+Delhi,South Asia,ssp245,2085,2.824,31.226
+Tokyo,East Asia,ssp245,2085,2.204,19.764
+Sydney,Oceania,ssp245,2085,3.196,20.42
+Longyearbyen,Arctic,ssp245,2085,5.567,-4.838
+Manaus,South America,ssp245,2085,3.256,30.682
+San Diego,North America,ssp245,2086,2.472,20.401
+New York,North America,ssp245,2086,4.105,16.142
+London,Europe,ssp245,2086,1.144,13.63
+Lagos,Africa,ssp245,2086,2.791,30.26
+Delhi,South Asia,ssp245,2086,3.019,31.421
+Tokyo,East Asia,ssp245,2086,1.677,19.237
+Sydney,Oceania,ssp245,2086,2.848,20.071
+Longyearbyen,Arctic,ssp245,2086,4.15,-6.255
+Manaus,South America,ssp245,2086,2.733,30.159
+San Diego,North America,ssp245,2087,1.812,19.74
+New York,North America,ssp245,2087,3.716,15.753
+London,Europe,ssp245,2087,1.106,13.593
+Lagos,Africa,ssp245,2087,3.002,30.472
+Delhi,South Asia,ssp245,2087,2.934,31.336
+Tokyo,East Asia,ssp245,2087,2.82,20.381
+Sydney,Oceania,ssp245,2087,3.417,20.641
+Longyearbyen,Arctic,ssp245,2087,3.588,-6.817
+Manaus,South America,ssp245,2087,3.604,31.03
+San Diego,North America,ssp245,2088,1.993,19.921
+New York,North America,ssp245,2088,3.356,15.394
+London,Europe,ssp245,2088,0.417,12.903
+Lagos,Africa,ssp245,2088,2.855,30.324
+Delhi,South Asia,ssp245,2088,3.454,31.856
+Tokyo,East Asia,ssp245,2088,2.296,19.856
+Sydney,Oceania,ssp245,2088,3.218,20.441
+Longyearbyen,Arctic,ssp245,2088,4.888,-5.518
+Manaus,South America,ssp245,2088,2.69,30.116
+San Diego,North America,ssp245,2089,1.326,19.254
+New York,North America,ssp245,2089,3.016,15.053
+London,Europe,ssp245,2089,0.885,13.372
+Lagos,Africa,ssp245,2089,2.708,30.177
+Delhi,South Asia,ssp245,2089,2.808,31.21
+Tokyo,East Asia,ssp245,2089,2.086,19.646
+Sydney,Oceania,ssp245,2089,3.183,20.407
+Longyearbyen,Arctic,ssp245,2089,4.719,-5.686
+Manaus,South America,ssp245,2089,3.484,30.91
+San Diego,North America,ssp245,2090,2.4,20.328
+New York,North America,ssp245,2090,3.756,15.793
+London,Europe,ssp245,2090,0.752,13.238
+Lagos,Africa,ssp245,2090,2.874,30.343
+Delhi,South Asia,ssp245,2090,2.443,30.845
+Tokyo,East Asia,ssp245,2090,2.547,20.107
+Sydney,Oceania,ssp245,2090,2.917,20.14
+Longyearbyen,Arctic,ssp245,2090,7.38,-3.025
+Manaus,South America,ssp245,2090,3.295,30.721
+San Diego,North America,ssp245,2091,1.938,19.866
+New York,North America,ssp245,2091,4.583,16.621
+London,Europe,ssp245,2091,2.025,14.512
+Lagos,Africa,ssp245,2091,3.122,30.592
+Delhi,South Asia,ssp245,2091,3.237,31.64
+Tokyo,East Asia,ssp245,2091,2.124,19.684
+Sydney,Oceania,ssp245,2091,3.424,20.648
+Longyearbyen,Arctic,ssp245,2091,5.992,-4.413
+Manaus,South America,ssp245,2091,3.359,30.785
+San Diego,North America,ssp245,2092,1.531,19.459
+New York,North America,ssp245,2092,3.628,15.665
+London,Europe,ssp245,2092,0.908,13.395
+Lagos,Africa,ssp245,2092,2.703,30.172
+Delhi,South Asia,ssp245,2092,4.236,32.638
+Tokyo,East Asia,ssp245,2092,1.975,19.536
+Sydney,Oceania,ssp245,2092,3.247,20.471
+Longyearbyen,Arctic,ssp245,2092,4.64,-5.765
+Manaus,South America,ssp245,2092,2.725,30.151
+San Diego,North America,ssp245,2093,1.9,19.828
+New York,North America,ssp245,2093,4.236,16.273
+London,Europe,ssp245,2093,0.186,12.673
+Lagos,Africa,ssp245,2093,3.139,30.608
+Delhi,South Asia,ssp245,2093,3.001,31.404
+Tokyo,East Asia,ssp245,2093,1.91,19.471
+Sydney,Oceania,ssp245,2093,3.751,20.975
+Longyearbyen,Arctic,ssp245,2093,5.884,-4.521
+Manaus,South America,ssp245,2093,3.3,30.726
+San Diego,North America,ssp245,2094,1.87,19.798
+New York,North America,ssp245,2094,4.635,16.673
+London,Europe,ssp245,2094,0.185,12.672
+Lagos,Africa,ssp245,2094,2.63,30.1
+Delhi,South Asia,ssp245,2094,3.581,31.983
+Tokyo,East Asia,ssp245,2094,2.224,19.785
+Sydney,Oceania,ssp245,2094,2.995,20.219
+Longyearbyen,Arctic,ssp245,2094,4.422,-5.983
+Manaus,South America,ssp245,2094,2.705,30.131
+San Diego,North America,ssp245,2095,1.772,19.7
+New York,North America,ssp245,2095,4.847,16.884
+London,Europe,ssp245,2095,0.526,13.013
+Lagos,Africa,ssp245,2095,3.239,30.708
+Delhi,South Asia,ssp245,2095,3.826,32.228
+Tokyo,East Asia,ssp245,2095,2.155,19.715
+Sydney,Oceania,ssp245,2095,3.857,21.08
+Longyearbyen,Arctic,ssp245,2095,6.411,-3.994
+Manaus,South America,ssp245,2095,3.278,30.704
+San Diego,North America,ssp245,2096,1.695,19.623
+New York,North America,ssp245,2096,3.166,15.204
+London,Europe,ssp245,2096,0.354,12.841
+Lagos,Africa,ssp245,2096,2.943,30.413
+Delhi,South Asia,ssp245,2096,3.73,32.133
+Tokyo,East Asia,ssp245,2096,2.375,19.935
+Sydney,Oceania,ssp245,2096,3.207,20.431
+Longyearbyen,Arctic,ssp245,2096,3.985,-6.42
+Manaus,South America,ssp245,2096,2.992,30.418
+San Diego,North America,ssp245,2097,2.8,20.729
+New York,North America,ssp245,2097,3.516,15.554
+London,Europe,ssp245,2097,-0.018,12.469
+Lagos,Africa,ssp245,2097,2.686,30.155
+Delhi,South Asia,ssp245,2097,4.294,32.696
+Tokyo,East Asia,ssp245,2097,2.553,20.113
+Sydney,Oceania,ssp245,2097,3.24,20.463
+Longyearbyen,Arctic,ssp245,2097,4.541,-5.864
+Manaus,South America,ssp245,2097,3.298,30.724
+San Diego,North America,ssp245,2098,1.673,19.602
+New York,North America,ssp245,2098,3.389,15.427
+London,Europe,ssp245,2098,1.38,13.867
+Lagos,Africa,ssp245,2098,3.077,30.547
+Delhi,South Asia,ssp245,2098,2.935,31.338
+Tokyo,East Asia,ssp245,2098,1.825,19.385
+Sydney,Oceania,ssp245,2098,3.349,20.572
+Longyearbyen,Arctic,ssp245,2098,5.574,-4.831
+Manaus,South America,ssp245,2098,3.326,30.752
+San Diego,North America,ssp245,2099,2.661,20.59
+New York,North America,ssp245,2099,2.611,14.648
+London,Europe,ssp245,2099,0.776,13.263
+Lagos,Africa,ssp245,2099,2.683,30.152
+Delhi,South Asia,ssp245,2099,3.136,31.539
+Tokyo,East Asia,ssp245,2099,2.721,20.281
+Sydney,Oceania,ssp245,2099,2.856,20.08
+Longyearbyen,Arctic,ssp245,2099,2.658,-7.747
+Manaus,South America,ssp245,2099,2.699,30.125
+San Diego,North America,ssp245,2100,1.864,19.793
+New York,North America,ssp245,2100,4.246,16.284
+London,Europe,ssp245,2100,1.224,13.711
+Lagos,Africa,ssp245,2100,3.47,30.94
+Delhi,South Asia,ssp245,2100,3.972,32.375
+Tokyo,East Asia,ssp245,2100,2.846,20.406
+Sydney,Oceania,ssp245,2100,3.917,21.141
+Longyearbyen,Arctic,ssp245,2100,2.939,-7.466
+Manaus,South America,ssp245,2100,3.823,31.249
+San Diego,North America,ssp370,2015,-0.192,17.737
+New York,North America,ssp370,2015,-0.526,11.512
+London,Europe,ssp370,2015,-0.047,12.44
+Lagos,Africa,ssp370,2015,0.593,28.062
+Delhi,South Asia,ssp370,2015,0.249,28.651
+Tokyo,East Asia,ssp370,2015,0.777,18.337
+Sydney,Oceania,ssp370,2015,0.294,17.518
+Longyearbyen,Arctic,ssp370,2015,0.885,-9.52
+Manaus,South America,ssp370,2015,0.438,27.864
+San Diego,North America,ssp370,2016,0.409,18.338
+New York,North America,ssp370,2016,-0.233,11.804
+London,Europe,ssp370,2016,-0.492,11.995
+Lagos,Africa,ssp370,2016,0.563,28.032
+Delhi,South Asia,ssp370,2016,-0.256,28.146
+Tokyo,East Asia,ssp370,2016,0.836,18.396
+Sydney,Oceania,ssp370,2016,0.027,17.251
+Longyearbyen,Arctic,ssp370,2016,1.512,-8.893
+Manaus,South America,ssp370,2016,0.596,28.021
+San Diego,North America,ssp370,2017,0.712,18.64
+New York,North America,ssp370,2017,0.343,12.381
+London,Europe,ssp370,2017,-0.249,12.238
+Lagos,Africa,ssp370,2017,0.749,28.218
+Delhi,South Asia,ssp370,2017,0.481,28.883
+Tokyo,East Asia,ssp370,2017,0.781,18.341
+Sydney,Oceania,ssp370,2017,1.242,18.466
+Longyearbyen,Arctic,ssp370,2017,0.685,-9.72
+Manaus,South America,ssp370,2017,0.805,28.231
+San Diego,North America,ssp370,2018,0.484,18.412
+New York,North America,ssp370,2018,1.299,13.337
+London,Europe,ssp370,2018,-1.217,11.269
+Lagos,Africa,ssp370,2018,1.136,28.605
+Delhi,South Asia,ssp370,2018,0.7,29.102
+Tokyo,East Asia,ssp370,2018,0.429,17.989
+Sydney,Oceania,ssp370,2018,1.26,18.483
+Longyearbyen,Arctic,ssp370,2018,-1.524,-11.929
+Manaus,South America,ssp370,2018,1.33,28.756
+San Diego,North America,ssp370,2019,-0.023,17.905
+New York,North America,ssp370,2019,0.404,12.441
+London,Europe,ssp370,2019,-1.063,11.424
+Lagos,Africa,ssp370,2019,0.587,28.056
+Delhi,South Asia,ssp370,2019,-0.562,27.841
+Tokyo,East Asia,ssp370,2019,1.491,19.051
+Sydney,Oceania,ssp370,2019,0.577,17.801
+Longyearbyen,Arctic,ssp370,2019,-1.974,-12.379
+Manaus,South America,ssp370,2019,0.138,27.564
+San Diego,North America,ssp370,2020,0.006,17.935
+New York,North America,ssp370,2020,1.366,13.404
+London,Europe,ssp370,2020,0.678,13.164
+Lagos,Africa,ssp370,2020,0.436,27.906
+Delhi,South Asia,ssp370,2020,0.1,28.503
+Tokyo,East Asia,ssp370,2020,0.389,17.949
+Sydney,Oceania,ssp370,2020,0.074,17.298
+Longyearbyen,Arctic,ssp370,2020,-0.605,-11.01
+Manaus,South America,ssp370,2020,0.153,27.579
+San Diego,North America,ssp370,2021,0.503,18.431
+New York,North America,ssp370,2021,0.772,12.809
+London,Europe,ssp370,2021,0.621,13.108
+Lagos,Africa,ssp370,2021,0.36,27.829
+Delhi,South Asia,ssp370,2021,0.816,29.219
+Tokyo,East Asia,ssp370,2021,1.091,18.651
+Sydney,Oceania,ssp370,2021,0.139,17.362
+Longyearbyen,Arctic,ssp370,2021,-1.507,-11.913
+Manaus,South America,ssp370,2021,0.325,27.751
+San Diego,North America,ssp370,2022,0.611,18.54
+New York,North America,ssp370,2022,1.515,13.552
+London,Europe,ssp370,2022,0.7,13.186
+Lagos,Africa,ssp370,2022,0.436,27.905
+Delhi,South Asia,ssp370,2022,0.11,28.512
+Tokyo,East Asia,ssp370,2022,1.146,18.707
+Sydney,Oceania,ssp370,2022,0.297,17.521
+Longyearbyen,Arctic,ssp370,2022,0.109,-10.297
+Manaus,South America,ssp370,2022,0.538,27.964
+San Diego,North America,ssp370,2023,0.126,18.054
+New York,North America,ssp370,2023,0.926,12.964
+London,Europe,ssp370,2023,1.315,13.802
+Lagos,Africa,ssp370,2023,0.808,28.277
+Delhi,South Asia,ssp370,2023,0.363,28.766
+Tokyo,East Asia,ssp370,2023,1.442,19.002
+Sydney,Oceania,ssp370,2023,0.466,17.69
+Longyearbyen,Arctic,ssp370,2023,1.724,-8.681
+Manaus,South America,ssp370,2023,0.708,28.134
+San Diego,North America,ssp370,2024,0.102,18.03
+New York,North America,ssp370,2024,1.683,13.721
+London,Europe,ssp370,2024,0.445,12.932
+Lagos,Africa,ssp370,2024,1.297,28.766
+Delhi,South Asia,ssp370,2024,0.306,28.708
+Tokyo,East Asia,ssp370,2024,1.204,18.765
+Sydney,Oceania,ssp370,2024,1.083,18.307
+Longyearbyen,Arctic,ssp370,2024,1.579,-8.826
+Manaus,South America,ssp370,2024,1.13,28.556
+San Diego,North America,ssp370,2025,0.564,18.492
+New York,North America,ssp370,2025,0.544,12.581
+London,Europe,ssp370,2025,-0.786,11.7
+Lagos,Africa,ssp370,2025,0.912,28.381
+Delhi,South Asia,ssp370,2025,-0.999,27.403
+Tokyo,East Asia,ssp370,2025,1.0,18.56
+Sydney,Oceania,ssp370,2025,0.746,17.969
+Longyearbyen,Arctic,ssp370,2025,-0.025,-10.43
+Manaus,South America,ssp370,2025,0.351,27.777
+San Diego,North America,ssp370,2026,-0.101,17.827
+New York,North America,ssp370,2026,1.729,13.766
+London,Europe,ssp370,2026,0.57,13.056
+Lagos,Africa,ssp370,2026,0.526,27.995
+Delhi,South Asia,ssp370,2026,-0.193,28.209
+Tokyo,East Asia,ssp370,2026,1.146,18.706
+Sydney,Oceania,ssp370,2026,0.515,17.739
+Longyearbyen,Arctic,ssp370,2026,-1.372,-11.777
+Manaus,South America,ssp370,2026,0.132,27.558
+San Diego,North America,ssp370,2027,0.424,18.352
+New York,North America,ssp370,2027,1.357,13.395
+London,Europe,ssp370,2027,0.222,12.709
+Lagos,Africa,ssp370,2027,1.06,28.529
+Delhi,South Asia,ssp370,2027,1.378,29.78
+Tokyo,East Asia,ssp370,2027,1.874,19.435
+Sydney,Oceania,ssp370,2027,0.595,17.819
+Longyearbyen,Arctic,ssp370,2027,0.048,-10.357
+Manaus,South America,ssp370,2027,1.272,28.698
+San Diego,North America,ssp370,2028,0.232,18.161
+New York,North America,ssp370,2028,1.841,13.878
+London,Europe,ssp370,2028,0.619,13.106
+Lagos,Africa,ssp370,2028,0.751,28.22
+Delhi,South Asia,ssp370,2028,0.134,28.537
+Tokyo,East Asia,ssp370,2028,1.852,19.413
+Sydney,Oceania,ssp370,2028,0.809,18.033
+Longyearbyen,Arctic,ssp370,2028,0.073,-10.332
+Manaus,South America,ssp370,2028,0.946,28.371
+San Diego,North America,ssp370,2029,-0.428,17.501
+New York,North America,ssp370,2029,2.057,14.094
+London,Europe,ssp370,2029,0.383,12.87
+Lagos,Africa,ssp370,2029,0.773,28.242
+Delhi,South Asia,ssp370,2029,0.837,29.24
+Tokyo,East Asia,ssp370,2029,1.574,19.134
+Sydney,Oceania,ssp370,2029,0.838,18.062
+Longyearbyen,Arctic,ssp370,2029,1.94,-8.465
+Manaus,South America,ssp370,2029,0.882,28.308
+San Diego,North America,ssp370,2030,0.67,18.598
+New York,North America,ssp370,2030,1.699,13.737
+London,Europe,ssp370,2030,0.641,13.128
+Lagos,Africa,ssp370,2030,0.748,28.217
+Delhi,South Asia,ssp370,2030,1.157,29.56
+Tokyo,East Asia,ssp370,2030,1.105,18.665
+Sydney,Oceania,ssp370,2030,0.642,17.866
+Longyearbyen,Arctic,ssp370,2030,1.966,-8.439
+Manaus,South America,ssp370,2030,0.969,28.395
+San Diego,North America,ssp370,2031,0.66,18.589
+New York,North America,ssp370,2031,3.658,15.696
+London,Europe,ssp370,2031,0.641,13.128
+Lagos,Africa,ssp370,2031,1.02,28.49
+Delhi,South Asia,ssp370,2031,0.734,29.136
+Tokyo,East Asia,ssp370,2031,1.679,19.239
+Sydney,Oceania,ssp370,2031,1.847,19.07
+Longyearbyen,Arctic,ssp370,2031,2.791,-7.614
+Manaus,South America,ssp370,2031,1.403,28.829
+San Diego,North America,ssp370,2032,0.494,18.422
+New York,North America,ssp370,2032,3.455,15.493
+London,Europe,ssp370,2032,0.2,12.686
+Lagos,Africa,ssp370,2032,0.819,28.288
+Delhi,South Asia,ssp370,2032,0.928,29.33
+Tokyo,East Asia,ssp370,2032,0.526,18.086
+Sydney,Oceania,ssp370,2032,0.66,17.884
+Longyearbyen,Arctic,ssp370,2032,2.789,-7.616
+Manaus,South America,ssp370,2032,1.025,28.451
+San Diego,North America,ssp370,2033,-0.084,17.844
+New York,North America,ssp370,2033,2.213,14.251
+London,Europe,ssp370,2033,1.409,13.895
+Lagos,Africa,ssp370,2033,0.945,28.414
+Delhi,South Asia,ssp370,2033,0.846,29.248
+Tokyo,East Asia,ssp370,2033,1.611,19.171
+Sydney,Oceania,ssp370,2033,1.015,18.239
+Longyearbyen,Arctic,ssp370,2033,1.926,-8.479
+Manaus,South America,ssp370,2033,1.085,28.511
+San Diego,North America,ssp370,2034,0.505,18.433
+New York,North America,ssp370,2034,2.501,14.539
+London,Europe,ssp370,2034,0.034,12.52
+Lagos,Africa,ssp370,2034,0.601,28.07
+Delhi,South Asia,ssp370,2034,-0.12,28.282
+Tokyo,East Asia,ssp370,2034,1.735,19.295
+Sydney,Oceania,ssp370,2034,0.919,18.143
+Longyearbyen,Arctic,ssp370,2034,2.382,-8.023
+Manaus,South America,ssp370,2034,0.334,27.76
+San Diego,North America,ssp370,2035,0.746,18.674
+New York,North America,ssp370,2035,2.552,14.589
+London,Europe,ssp370,2035,0.554,13.04
+Lagos,Africa,ssp370,2035,0.774,28.244
+Delhi,South Asia,ssp370,2035,0.09,28.493
+Tokyo,East Asia,ssp370,2035,1.364,18.925
+Sydney,Oceania,ssp370,2035,0.528,17.751
+Longyearbyen,Arctic,ssp370,2035,-0.856,-11.261
+Manaus,South America,ssp370,2035,0.96,28.386
+San Diego,North America,ssp370,2036,0.773,18.702
+New York,North America,ssp370,2036,1.82,13.857
+London,Europe,ssp370,2036,0.07,12.557
+Lagos,Africa,ssp370,2036,1.318,28.787
+Delhi,South Asia,ssp370,2036,0.449,28.851
+Tokyo,East Asia,ssp370,2036,1.601,19.161
+Sydney,Oceania,ssp370,2036,1.219,18.442
+Longyearbyen,Arctic,ssp370,2036,1.656,-8.749
+Manaus,South America,ssp370,2036,1.158,28.584
+San Diego,North America,ssp370,2037,1.819,19.747
+New York,North America,ssp370,2037,2.17,14.208
+London,Europe,ssp370,2037,1.295,13.782
+Lagos,Africa,ssp370,2037,1.374,28.844
+Delhi,South Asia,ssp370,2037,-0.168,28.234
+Tokyo,East Asia,ssp370,2037,1.685,19.245
+Sydney,Oceania,ssp370,2037,1.774,18.998
+Longyearbyen,Arctic,ssp370,2037,3.473,-6.932
+Manaus,South America,ssp370,2037,1.818,29.244
+San Diego,North America,ssp370,2038,1.495,19.423
+New York,North America,ssp370,2038,1.835,13.872
+London,Europe,ssp370,2038,1.584,14.07
+Lagos,Africa,ssp370,2038,1.491,28.96
+Delhi,South Asia,ssp370,2038,1.293,29.695
+Tokyo,East Asia,ssp370,2038,1.49,19.05
+Sydney,Oceania,ssp370,2038,1.157,18.381
+Longyearbyen,Arctic,ssp370,2038,0.16,-10.246
+Manaus,South America,ssp370,2038,1.834,29.259
+San Diego,North America,ssp370,2039,1.15,19.079
+New York,North America,ssp370,2039,1.241,13.278
+London,Europe,ssp370,2039,0.484,12.971
+Lagos,Africa,ssp370,2039,0.976,28.446
+Delhi,South Asia,ssp370,2039,1.174,29.577
+Tokyo,East Asia,ssp370,2039,0.761,18.321
+Sydney,Oceania,ssp370,2039,1.364,18.587
+Longyearbyen,Arctic,ssp370,2039,1.752,-8.653
+Manaus,South America,ssp370,2039,0.868,28.294
+San Diego,North America,ssp370,2040,0.792,18.72
+New York,North America,ssp370,2040,2.788,14.825
+London,Europe,ssp370,2040,1.174,13.661
+Lagos,Africa,ssp370,2040,1.227,28.696
+Delhi,South Asia,ssp370,2040,2.324,30.727
+Tokyo,East Asia,ssp370,2040,1.922,19.482
+Sydney,Oceania,ssp370,2040,1.619,18.843
+Longyearbyen,Arctic,ssp370,2040,1.643,-8.762
+Manaus,South America,ssp370,2040,1.561,28.987
+San Diego,North America,ssp370,2041,0.877,18.805
+New York,North America,ssp370,2041,2.521,14.558
+London,Europe,ssp370,2041,0.75,13.236
+Lagos,Africa,ssp370,2041,1.513,28.982
+Delhi,South Asia,ssp370,2041,1.23,29.633
+Tokyo,East Asia,ssp370,2041,1.197,18.757
+Sydney,Oceania,ssp370,2041,2.145,19.369
+Longyearbyen,Arctic,ssp370,2041,1.87,-8.535
+Manaus,South America,ssp370,2041,1.889,29.315
+San Diego,North America,ssp370,2042,0.188,18.116
+New York,North America,ssp370,2042,2.888,14.926
+London,Europe,ssp370,2042,0.892,13.379
+Lagos,Africa,ssp370,2042,1.06,28.529
+Delhi,South Asia,ssp370,2042,0.339,28.741
+Tokyo,East Asia,ssp370,2042,2.088,19.648
+Sydney,Oceania,ssp370,2042,1.386,18.61
+Longyearbyen,Arctic,ssp370,2042,1.631,-8.774
+Manaus,South America,ssp370,2042,0.878,28.304
+San Diego,North America,ssp370,2043,0.652,18.58
+New York,North America,ssp370,2043,1.992,14.03
+London,Europe,ssp370,2043,0.593,13.079
+Lagos,Africa,ssp370,2043,1.326,28.796
+Delhi,South Asia,ssp370,2043,1.727,30.13
+Tokyo,East Asia,ssp370,2043,1.399,18.959
+Sydney,Oceania,ssp370,2043,1.651,18.875
+Longyearbyen,Arctic,ssp370,2043,3.507,-6.898
+Manaus,South America,ssp370,2043,1.453,28.879
+San Diego,North America,ssp370,2044,1.472,19.4
+New York,North America,ssp370,2044,2.31,14.348
+London,Europe,ssp370,2044,0.861,13.348
+Lagos,Africa,ssp370,2044,1.484,28.953
+Delhi,South Asia,ssp370,2044,1.126,29.529
+Tokyo,East Asia,ssp370,2044,1.561,19.121
+Sydney,Oceania,ssp370,2044,1.504,18.728
+Longyearbyen,Arctic,ssp370,2044,4.167,-6.238
+Manaus,South America,ssp370,2044,1.573,28.999
+San Diego,North America,ssp370,2045,1.049,18.977
+New York,North America,ssp370,2045,-0.245,11.792
+London,Europe,ssp370,2045,0.046,12.532
+Lagos,Africa,ssp370,2045,1.709,29.178
+Delhi,South Asia,ssp370,2045,1.579,29.982
+Tokyo,East Asia,ssp370,2045,2.161,19.721
+Sydney,Oceania,ssp370,2045,2.216,19.44
+Longyearbyen,Arctic,ssp370,2045,1.947,-8.458
+Manaus,South America,ssp370,2045,2.126,29.552
+San Diego,North America,ssp370,2046,0.148,18.076
+New York,North America,ssp370,2046,2.86,14.897
+London,Europe,ssp370,2046,0.269,12.756
+Lagos,Africa,ssp370,2046,2.078,29.548
+Delhi,South Asia,ssp370,2046,2.556,30.958
+Tokyo,East Asia,ssp370,2046,2.742,20.303
+Sydney,Oceania,ssp370,2046,2.088,19.312
+Longyearbyen,Arctic,ssp370,2046,3.109,-7.296
+Manaus,South America,ssp370,2046,2.361,29.787
+San Diego,North America,ssp370,2047,1.387,19.316
+New York,North America,ssp370,2047,3.157,15.194
+London,Europe,ssp370,2047,0.252,12.738
+Lagos,Africa,ssp370,2047,1.336,28.806
+Delhi,South Asia,ssp370,2047,0.484,28.887
+Tokyo,East Asia,ssp370,2047,1.552,19.112
+Sydney,Oceania,ssp370,2047,1.985,19.209
+Longyearbyen,Arctic,ssp370,2047,2.431,-7.974
+Manaus,South America,ssp370,2047,0.823,28.249
+San Diego,North America,ssp370,2048,-0.545,17.383
+New York,North America,ssp370,2048,3.135,15.173
+London,Europe,ssp370,2048,0.729,13.216
+Lagos,Africa,ssp370,2048,1.272,28.741
+Delhi,South Asia,ssp370,2048,0.432,28.835
+Tokyo,East Asia,ssp370,2048,1.777,19.337
+Sydney,Oceania,ssp370,2048,1.443,18.666
+Longyearbyen,Arctic,ssp370,2048,1.96,-8.445
+Manaus,South America,ssp370,2048,1.064,28.49
+San Diego,North America,ssp370,2049,1.302,19.23
+New York,North America,ssp370,2049,2.039,14.077
+London,Europe,ssp370,2049,1.054,13.54
+Lagos,Africa,ssp370,2049,1.673,29.142
+Delhi,South Asia,ssp370,2049,1.365,29.768
+Tokyo,East Asia,ssp370,2049,1.643,19.204
+Sydney,Oceania,ssp370,2049,1.637,18.861
+Longyearbyen,Arctic,ssp370,2049,0.932,-9.473
+Manaus,South America,ssp370,2049,1.797,29.223
+San Diego,North America,ssp370,2050,1.94,19.868
+New York,North America,ssp370,2050,3.215,15.253
+London,Europe,ssp370,2050,1.536,14.023
+Lagos,Africa,ssp370,2050,1.922,29.392
+Delhi,South Asia,ssp370,2050,1.546,29.949
+Tokyo,East Asia,ssp370,2050,1.891,19.451
+Sydney,Oceania,ssp370,2050,2.167,19.391
+Longyearbyen,Arctic,ssp370,2050,2.774,-7.631
+Manaus,South America,ssp370,2050,2.597,30.023
+San Diego,North America,ssp370,2051,0.975,18.903
+New York,North America,ssp370,2051,2.218,14.256
+London,Europe,ssp370,2051,0.93,13.416
+Lagos,Africa,ssp370,2051,1.84,29.309
+Delhi,South Asia,ssp370,2051,1.957,30.359
+Tokyo,East Asia,ssp370,2051,1.907,19.467
+Sydney,Oceania,ssp370,2051,1.56,18.784
+Longyearbyen,Arctic,ssp370,2051,2.262,-8.144
+Manaus,South America,ssp370,2051,2.271,29.697
+San Diego,North America,ssp370,2052,0.13,18.058
+New York,North America,ssp370,2052,2.433,14.471
+London,Europe,ssp370,2052,1.205,13.691
+Lagos,Africa,ssp370,2052,1.657,29.126
+Delhi,South Asia,ssp370,2052,1.676,30.079
+Tokyo,East Asia,ssp370,2052,2.421,19.981
+Sydney,Oceania,ssp370,2052,1.632,18.856
+Longyearbyen,Arctic,ssp370,2052,3.609,-6.796
+Manaus,South America,ssp370,2052,2.17,29.596
+San Diego,North America,ssp370,2053,0.418,18.346
+New York,North America,ssp370,2053,3.436,15.473
+London,Europe,ssp370,2053,0.954,13.441
+Lagos,Africa,ssp370,2053,2.017,29.486
+Delhi,South Asia,ssp370,2053,2.222,30.624
+Tokyo,East Asia,ssp370,2053,2.53,20.09
+Sydney,Oceania,ssp370,2053,1.684,18.908
+Longyearbyen,Arctic,ssp370,2053,2.31,-8.096
+Manaus,South America,ssp370,2053,2.515,29.941
+San Diego,North America,ssp370,2054,1.2,19.128
+New York,North America,ssp370,2054,3.152,15.189
+London,Europe,ssp370,2054,1.024,13.511
+Lagos,Africa,ssp370,2054,1.739,29.208
+Delhi,South Asia,ssp370,2054,1.578,29.981
+Tokyo,East Asia,ssp370,2054,1.432,18.992
+Sydney,Oceania,ssp370,2054,1.489,18.713
+Longyearbyen,Arctic,ssp370,2054,5.902,-4.503
+Manaus,South America,ssp370,2054,1.642,29.068
+San Diego,North America,ssp370,2055,1.353,19.281
+New York,North America,ssp370,2055,2.548,14.585
+London,Europe,ssp370,2055,0.728,13.215
+Lagos,Africa,ssp370,2055,2.22,29.689
+Delhi,South Asia,ssp370,2055,0.188,28.59
+Tokyo,East Asia,ssp370,2055,2.018,19.578
+Sydney,Oceania,ssp370,2055,2.503,19.727
+Longyearbyen,Arctic,ssp370,2055,3.839,-6.567
+Manaus,South America,ssp370,2055,2.65,30.076
+San Diego,North America,ssp370,2056,1.759,19.687
+New York,North America,ssp370,2056,0.916,12.954
+London,Europe,ssp370,2056,0.536,13.022
+Lagos,Africa,ssp370,2056,2.423,29.892
+Delhi,South Asia,ssp370,2056,1.388,29.79
+Tokyo,East Asia,ssp370,2056,2.449,20.009
+Sydney,Oceania,ssp370,2056,2.586,19.81
+Longyearbyen,Arctic,ssp370,2056,4.514,-5.892
+Manaus,South America,ssp370,2056,2.988,30.414
+San Diego,North America,ssp370,2057,1.731,19.659
+New York,North America,ssp370,2057,3.614,15.652
+London,Europe,ssp370,2057,0.501,12.988
+Lagos,Africa,ssp370,2057,2.409,29.878
+Delhi,South Asia,ssp370,2057,1.09,29.492
+Tokyo,East Asia,ssp370,2057,2.284,19.844
+Sydney,Oceania,ssp370,2057,2.451,19.674
+Longyearbyen,Arctic,ssp370,2057,3.3,-7.105
+Manaus,South America,ssp370,2057,2.187,29.613
+San Diego,North America,ssp370,2058,1.539,19.468
+New York,North America,ssp370,2058,4.167,16.204
+London,Europe,ssp370,2058,1.577,14.063
+Lagos,Africa,ssp370,2058,1.593,29.063
+Delhi,South Asia,ssp370,2058,1.254,29.657
+Tokyo,East Asia,ssp370,2058,1.542,19.103
+Sydney,Oceania,ssp370,2058,1.609,18.832
+Longyearbyen,Arctic,ssp370,2058,3.977,-6.428
+Manaus,South America,ssp370,2058,1.643,29.069
+San Diego,North America,ssp370,2059,1.045,18.973
+New York,North America,ssp370,2059,3.787,15.824
+London,Europe,ssp370,2059,0.253,12.74
+Lagos,Africa,ssp370,2059,2.085,29.554
+Delhi,South Asia,ssp370,2059,1.548,29.951
+Tokyo,East Asia,ssp370,2059,1.958,19.518
+Sydney,Oceania,ssp370,2059,1.948,19.172
+Longyearbyen,Arctic,ssp370,2059,3.07,-7.335
+Manaus,South America,ssp370,2059,2.039,29.465
+San Diego,North America,ssp370,2060,1.567,19.495
+New York,North America,ssp370,2060,3.477,15.514
+London,Europe,ssp370,2060,0.918,13.404
+Lagos,Africa,ssp370,2060,2.231,29.701
+Delhi,South Asia,ssp370,2060,1.598,30.0
+Tokyo,East Asia,ssp370,2060,1.798,19.358
+Sydney,Oceania,ssp370,2060,1.946,19.17
+Longyearbyen,Arctic,ssp370,2060,1.718,-8.688
+Manaus,South America,ssp370,2060,2.566,29.992
+San Diego,North America,ssp370,2061,2.071,19.999
+New York,North America,ssp370,2061,2.29,14.327
+London,Europe,ssp370,2061,0.77,13.257
+Lagos,Africa,ssp370,2061,1.932,29.401
+Delhi,South Asia,ssp370,2061,2.273,30.676
+Tokyo,East Asia,ssp370,2061,1.962,19.522
+Sydney,Oceania,ssp370,2061,2.034,19.258
+Longyearbyen,Arctic,ssp370,2061,2.067,-8.338
+Manaus,South America,ssp370,2061,1.648,29.074
+San Diego,North America,ssp370,2062,2.472,20.4
+New York,North America,ssp370,2062,2.662,14.699
+London,Europe,ssp370,2062,0.359,12.846
+Lagos,Africa,ssp370,2062,2.486,29.956
+Delhi,South Asia,ssp370,2062,2.281,30.684
+Tokyo,East Asia,ssp370,2062,1.594,19.155
+Sydney,Oceania,ssp370,2062,2.338,19.562
+Longyearbyen,Arctic,ssp370,2062,3.64,-6.765
+Manaus,South America,ssp370,2062,2.759,30.185
+San Diego,North America,ssp370,2063,1.649,19.577
+New York,North America,ssp370,2063,3.119,15.156
+London,Europe,ssp370,2063,1.196,13.683
+Lagos,Africa,ssp370,2063,2.756,30.225
+Delhi,South Asia,ssp370,2063,1.151,29.554
+Tokyo,East Asia,ssp370,2063,1.764,19.324
+Sydney,Oceania,ssp370,2063,2.693,19.916
+Longyearbyen,Arctic,ssp370,2063,1.723,-8.682
+Manaus,South America,ssp370,2063,3.038,30.464
+San Diego,North America,ssp370,2064,1.577,19.505
+New York,North America,ssp370,2064,3.501,15.538
+London,Europe,ssp370,2064,0.383,12.869
+Lagos,Africa,ssp370,2064,2.39,29.86
+Delhi,South Asia,ssp370,2064,1.703,30.105
+Tokyo,East Asia,ssp370,2064,1.347,18.907
+Sydney,Oceania,ssp370,2064,2.381,19.605
+Longyearbyen,Arctic,ssp370,2064,2.896,-7.509
+Manaus,South America,ssp370,2064,2.16,29.586
+San Diego,North America,ssp370,2065,1.371,19.3
+New York,North America,ssp370,2065,1.996,14.033
+London,Europe,ssp370,2065,1.311,13.797
+Lagos,Africa,ssp370,2065,2.13,29.599
+Delhi,South Asia,ssp370,2065,2.142,30.545
+Tokyo,East Asia,ssp370,2065,1.605,19.165
+Sydney,Oceania,ssp370,2065,2.221,19.444
+Longyearbyen,Arctic,ssp370,2065,1.776,-8.629
+Manaus,South America,ssp370,2065,2.909,30.335
+San Diego,North America,ssp370,2066,1.378,19.306
+New York,North America,ssp370,2066,3.459,15.496
+London,Europe,ssp370,2066,0.919,13.406
+Lagos,Africa,ssp370,2066,2.283,29.753
+Delhi,South Asia,ssp370,2066,2.757,31.16
+Tokyo,East Asia,ssp370,2066,2.29,19.85
+Sydney,Oceania,ssp370,2066,2.706,19.929
+Longyearbyen,Arctic,ssp370,2066,3.333,-7.072
+Manaus,South America,ssp370,2066,3.029,30.455
+San Diego,North America,ssp370,2067,1.526,19.454
+New York,North America,ssp370,2067,2.932,14.97
+London,Europe,ssp370,2067,1.459,13.946
+Lagos,Africa,ssp370,2067,2.513,29.983
+Delhi,South Asia,ssp370,2067,3.581,31.983
+Tokyo,East Asia,ssp370,2067,2.583,20.143
+Sydney,Oceania,ssp370,2067,3.069,20.292
+Longyearbyen,Arctic,ssp370,2067,3.938,-6.467
+Manaus,South America,ssp370,2067,3.085,30.511
+San Diego,North America,ssp370,2068,1.595,19.523
+New York,North America,ssp370,2068,4.025,16.062
+London,Europe,ssp370,2068,1.491,13.977
+Lagos,Africa,ssp370,2068,2.685,30.154
+Delhi,South Asia,ssp370,2068,3.419,31.821
+Tokyo,East Asia,ssp370,2068,2.622,20.182
+Sydney,Oceania,ssp370,2068,3.61,20.834
+Longyearbyen,Arctic,ssp370,2068,2.16,-8.245
+Manaus,South America,ssp370,2068,3.184,30.61
+San Diego,North America,ssp370,2069,1.977,19.906
+New York,North America,ssp370,2069,4.491,16.528
+London,Europe,ssp370,2069,1.17,13.656
+Lagos,Africa,ssp370,2069,2.074,29.544
+Delhi,South Asia,ssp370,2069,2.196,30.599
+Tokyo,East Asia,ssp370,2069,2.512,20.072
+Sydney,Oceania,ssp370,2069,2.641,19.865
+Longyearbyen,Arctic,ssp370,2069,1.926,-8.479
+Manaus,South America,ssp370,2069,2.176,29.602
+San Diego,North America,ssp370,2070,1.343,19.271
+New York,North America,ssp370,2070,3.809,15.846
+London,Europe,ssp370,2070,1.361,13.847
+Lagos,Africa,ssp370,2070,2.836,30.305
+Delhi,South Asia,ssp370,2070,2.671,31.073
+Tokyo,East Asia,ssp370,2070,2.723,20.283
+Sydney,Oceania,ssp370,2070,2.885,20.109
+Longyearbyen,Arctic,ssp370,2070,2.545,-7.86
+Manaus,South America,ssp370,2070,3.221,30.647
+San Diego,North America,ssp370,2071,1.595,19.524
+New York,North America,ssp370,2071,2.949,14.986
+London,Europe,ssp370,2071,1.619,14.106
+Lagos,Africa,ssp370,2071,2.146,29.615
+Delhi,South Asia,ssp370,2071,3.093,31.496
+Tokyo,East Asia,ssp370,2071,1.943,19.503
+Sydney,Oceania,ssp370,2071,3.092,20.316
+Longyearbyen,Arctic,ssp370,2071,4.866,-5.539
+Manaus,South America,ssp370,2071,2.411,29.837
+San Diego,North America,ssp370,2072,1.489,19.417
+New York,North America,ssp370,2072,4.142,16.179
+London,Europe,ssp370,2072,0.804,13.29
+Lagos,Africa,ssp370,2072,2.788,30.257
+Delhi,South Asia,ssp370,2072,2.879,31.281
+Tokyo,East Asia,ssp370,2072,1.422,18.982
+Sydney,Oceania,ssp370,2072,2.92,20.143
+Longyearbyen,Arctic,ssp370,2072,4.196,-6.209
+Manaus,South America,ssp370,2072,2.998,30.424
+San Diego,North America,ssp370,2073,1.693,19.622
+New York,North America,ssp370,2073,3.793,15.831
+London,Europe,ssp370,2073,1.167,13.654
+Lagos,Africa,ssp370,2073,2.355,29.824
+Delhi,South Asia,ssp370,2073,3.099,31.502
+Tokyo,East Asia,ssp370,2073,2.81,20.37
+Sydney,Oceania,ssp370,2073,2.632,19.856
+Longyearbyen,Arctic,ssp370,2073,3.412,-6.993
+Manaus,South America,ssp370,2073,2.621,30.047
+San Diego,North America,ssp370,2074,1.143,19.072
+New York,North America,ssp370,2074,3.358,15.395
+London,Europe,ssp370,2074,1.604,14.09
+Lagos,Africa,ssp370,2074,3.0,30.469
+Delhi,South Asia,ssp370,2074,2.959,31.361
+Tokyo,East Asia,ssp370,2074,3.64,21.2
+Sydney,Oceania,ssp370,2074,3.483,20.706
+Longyearbyen,Arctic,ssp370,2074,4.97,-5.435
+Manaus,South America,ssp370,2074,3.984,31.41
+San Diego,North America,ssp370,2075,1.124,19.052
+New York,North America,ssp370,2075,4.564,16.602
+London,Europe,ssp370,2075,2.385,14.871
+Lagos,Africa,ssp370,2075,3.174,30.643
+Delhi,South Asia,ssp370,2075,2.891,31.293
+Tokyo,East Asia,ssp370,2075,3.509,21.069
+Sydney,Oceania,ssp370,2075,2.863,20.086
+Longyearbyen,Arctic,ssp370,2075,4.632,-5.773
+Manaus,South America,ssp370,2075,3.468,30.894
+San Diego,North America,ssp370,2076,2.165,20.094
+New York,North America,ssp370,2076,5.429,17.466
+London,Europe,ssp370,2076,1.189,13.676
+Lagos,Africa,ssp370,2076,2.016,29.485
+Delhi,South Asia,ssp370,2076,1.497,29.9
+Tokyo,East Asia,ssp370,2076,2.465,20.025
+Sydney,Oceania,ssp370,2076,3.065,20.289
+Longyearbyen,Arctic,ssp370,2076,5.587,-4.818
+Manaus,South America,ssp370,2076,1.965,29.391
+San Diego,North America,ssp370,2077,1.593,19.521
+New York,North America,ssp370,2077,4.237,16.274
+London,Europe,ssp370,2077,1.147,13.634
+Lagos,Africa,ssp370,2077,2.516,29.986
+Delhi,South Asia,ssp370,2077,2.814,31.217
+Tokyo,East Asia,ssp370,2077,3.325,20.885
+Sydney,Oceania,ssp370,2077,3.241,20.464
+Longyearbyen,Arctic,ssp370,2077,1.827,-8.578
+Manaus,South America,ssp370,2077,2.806,30.232
+San Diego,North America,ssp370,2078,1.248,19.176
+New York,North America,ssp370,2078,3.132,15.169
+London,Europe,ssp370,2078,1.019,13.506
+Lagos,Africa,ssp370,2078,3.553,31.023
+Delhi,South Asia,ssp370,2078,2.827,31.23
+Tokyo,East Asia,ssp370,2078,3.598,21.158
+Sydney,Oceania,ssp370,2078,4.11,21.333
+Longyearbyen,Arctic,ssp370,2078,2.853,-7.552
+Manaus,South America,ssp370,2078,4.047,31.473
+San Diego,North America,ssp370,2079,1.541,19.469
+New York,North America,ssp370,2079,3.972,16.009
+London,Europe,ssp370,2079,0.503,12.989
+Lagos,Africa,ssp370,2079,2.933,30.402
+Delhi,South Asia,ssp370,2079,3.229,31.632
+Tokyo,East Asia,ssp370,2079,1.837,19.397
+Sydney,Oceania,ssp370,2079,3.39,20.613
+Longyearbyen,Arctic,ssp370,2079,2.907,-7.498
+Manaus,South America,ssp370,2079,3.003,30.429
+San Diego,North America,ssp370,2080,1.162,19.09
+New York,North America,ssp370,2080,5.205,17.243
+London,Europe,ssp370,2080,2.274,14.761
+Lagos,Africa,ssp370,2080,3.185,30.654
+Delhi,South Asia,ssp370,2080,2.56,30.963
+Tokyo,East Asia,ssp370,2080,2.28,19.841
+Sydney,Oceania,ssp370,2080,3.287,20.51
+Longyearbyen,Arctic,ssp370,2080,5.334,-5.071
+Manaus,South America,ssp370,2080,4.157,31.583
+San Diego,North America,ssp370,2081,1.156,19.084
+New York,North America,ssp370,2081,4.38,16.418
+London,Europe,ssp370,2081,1.095,13.582
+Lagos,Africa,ssp370,2081,2.981,30.45
+Delhi,South Asia,ssp370,2081,3.398,31.8
+Tokyo,East Asia,ssp370,2081,3.284,20.844
+Sydney,Oceania,ssp370,2081,3.649,20.873
+Longyearbyen,Arctic,ssp370,2081,6.603,-3.803
+Manaus,South America,ssp370,2081,3.55,30.976
+San Diego,North America,ssp370,2082,2.158,20.087
+New York,North America,ssp370,2082,4.252,16.289
+London,Europe,ssp370,2082,1.439,13.925
+Lagos,Africa,ssp370,2082,2.884,30.353
+Delhi,South Asia,ssp370,2082,3.462,31.865
+Tokyo,East Asia,ssp370,2082,3.487,21.048
+Sydney,Oceania,ssp370,2082,3.844,21.068
+Longyearbyen,Arctic,ssp370,2082,4.23,-6.175
+Manaus,South America,ssp370,2082,3.101,30.527
+San Diego,North America,ssp370,2083,1.871,19.799
+New York,North America,ssp370,2083,4.91,16.947
+London,Europe,ssp370,2083,1.318,13.805
+Lagos,Africa,ssp370,2083,3.111,30.58
+Delhi,South Asia,ssp370,2083,2.567,30.969
+Tokyo,East Asia,ssp370,2083,3.459,21.02
+Sydney,Oceania,ssp370,2083,4.309,21.533
+Longyearbyen,Arctic,ssp370,2083,5.272,-5.133
+Manaus,South America,ssp370,2083,4.026,31.452
+San Diego,North America,ssp370,2084,2.017,19.945
+New York,North America,ssp370,2084,5.366,17.404
+London,Europe,ssp370,2084,0.962,13.449
+Lagos,Africa,ssp370,2084,3.254,30.724
+Delhi,South Asia,ssp370,2084,2.709,31.112
+Tokyo,East Asia,ssp370,2084,3.064,20.624
+Sydney,Oceania,ssp370,2084,3.834,21.058
+Longyearbyen,Arctic,ssp370,2084,5.805,-4.6
+Manaus,South America,ssp370,2084,4.018,31.444
+San Diego,North America,ssp370,2085,2.311,20.239
+New York,North America,ssp370,2085,5.08,17.118
+London,Europe,ssp370,2085,2.507,14.994
+Lagos,Africa,ssp370,2085,3.532,31.002
+Delhi,South Asia,ssp370,2085,3.614,32.017
+Tokyo,East Asia,ssp370,2085,4.097,21.658
+Sydney,Oceania,ssp370,2085,3.861,21.084
+Longyearbyen,Arctic,ssp370,2085,3.217,-7.188
+Manaus,South America,ssp370,2085,4.39,31.816
+San Diego,North America,ssp370,2086,3.295,21.223
+New York,North America,ssp370,2086,4.618,16.656
+London,Europe,ssp370,2086,1.117,13.604
+Lagos,Africa,ssp370,2086,3.283,30.752
+Delhi,South Asia,ssp370,2086,4.308,32.711
+Tokyo,East Asia,ssp370,2086,3.551,21.111
+Sydney,Oceania,ssp370,2086,3.942,21.166
+Longyearbyen,Arctic,ssp370,2086,4.819,-5.586
+Manaus,South America,ssp370,2086,4.224,31.65
+San Diego,North America,ssp370,2087,2.554,20.483
+New York,North America,ssp370,2087,5.923,17.96
+London,Europe,ssp370,2087,1.425,13.912
+Lagos,Africa,ssp370,2087,3.711,31.181
+Delhi,South Asia,ssp370,2087,3.522,31.925
+Tokyo,East Asia,ssp370,2087,3.436,20.996
+Sydney,Oceania,ssp370,2087,4.061,21.285
+Longyearbyen,Arctic,ssp370,2087,5.567,-4.839
+Manaus,South America,ssp370,2087,4.413,31.839
+San Diego,North America,ssp370,2088,2.17,20.099
+New York,North America,ssp370,2088,6.145,18.183
+London,Europe,ssp370,2088,1.93,14.416
+Lagos,Africa,ssp370,2088,3.539,31.008
+Delhi,South Asia,ssp370,2088,3.162,31.564
+Tokyo,East Asia,ssp370,2088,3.57,21.131
+Sydney,Oceania,ssp370,2088,4.405,21.629
+Longyearbyen,Arctic,ssp370,2088,5.43,-4.975
+Manaus,South America,ssp370,2088,3.58,31.006
+San Diego,North America,ssp370,2089,2.369,20.298
+New York,North America,ssp370,2089,4.566,16.604
+London,Europe,ssp370,2089,1.639,14.125
+Lagos,Africa,ssp370,2089,3.558,31.027
+Delhi,South Asia,ssp370,2089,3.866,32.268
+Tokyo,East Asia,ssp370,2089,3.601,21.161
+Sydney,Oceania,ssp370,2089,3.46,20.684
+Longyearbyen,Arctic,ssp370,2089,6.426,-3.979
+Manaus,South America,ssp370,2089,4.157,31.583
+San Diego,North America,ssp370,2090,2.141,20.07
+New York,North America,ssp370,2090,5.04,17.077
+London,Europe,ssp370,2090,1.059,13.546
+Lagos,Africa,ssp370,2090,3.711,31.18
+Delhi,South Asia,ssp370,2090,3.116,31.518
+Tokyo,East Asia,ssp370,2090,3.253,20.813
+Sydney,Oceania,ssp370,2090,4.125,21.349
+Longyearbyen,Arctic,ssp370,2090,6.003,-4.402
+Manaus,South America,ssp370,2090,4.081,31.507
+San Diego,North America,ssp370,2091,2.974,20.902
+New York,North America,ssp370,2091,5.719,17.756
+London,Europe,ssp370,2091,1.36,13.846
+Lagos,Africa,ssp370,2091,3.338,30.808
+Delhi,South Asia,ssp370,2091,2.669,31.072
+Tokyo,East Asia,ssp370,2091,3.418,20.978
+Sydney,Oceania,ssp370,2091,3.519,20.743
+Longyearbyen,Arctic,ssp370,2091,6.737,-3.668
+Manaus,South America,ssp370,2091,3.493,30.919
+San Diego,North America,ssp370,2092,3.726,21.654
+New York,North America,ssp370,2092,4.581,16.619
+London,Europe,ssp370,2092,1.183,13.669
+Lagos,Africa,ssp370,2092,3.549,31.018
+Delhi,South Asia,ssp370,2092,3.315,31.717
+Tokyo,East Asia,ssp370,2092,3.372,20.932
+Sydney,Oceania,ssp370,2092,4.132,21.356
+Longyearbyen,Arctic,ssp370,2092,7.342,-3.063
+Manaus,South America,ssp370,2092,4.016,31.442
+San Diego,North America,ssp370,2093,2.775,20.704
+New York,North America,ssp370,2093,4.379,16.417
+London,Europe,ssp370,2093,1.619,14.106
+Lagos,Africa,ssp370,2093,4.027,31.496
+Delhi,South Asia,ssp370,2093,3.956,32.359
+Tokyo,East Asia,ssp370,2093,4.126,21.686
+Sydney,Oceania,ssp370,2093,4.265,21.489
+Longyearbyen,Arctic,ssp370,2093,5.765,-4.641
+Manaus,South America,ssp370,2093,4.788,32.214
+San Diego,North America,ssp370,2094,2.693,20.621
+New York,North America,ssp370,2094,5.424,17.462
+London,Europe,ssp370,2094,1.488,13.974
+Lagos,Africa,ssp370,2094,3.686,31.155
+Delhi,South Asia,ssp370,2094,3.221,31.623
+Tokyo,East Asia,ssp370,2094,3.875,21.435
+Sydney,Oceania,ssp370,2094,3.957,21.181
+Longyearbyen,Arctic,ssp370,2094,5.197,-5.208
+Manaus,South America,ssp370,2094,4.459,31.885
+San Diego,North America,ssp370,2095,3.747,21.675
+New York,North America,ssp370,2095,4.021,16.058
+London,Europe,ssp370,2095,1.038,13.525
+Lagos,Africa,ssp370,2095,3.108,30.577
+Delhi,South Asia,ssp370,2095,3.389,31.792
+Tokyo,East Asia,ssp370,2095,3.31,20.87
+Sydney,Oceania,ssp370,2095,3.536,20.76
+Longyearbyen,Arctic,ssp370,2095,6.685,-3.72
+Manaus,South America,ssp370,2095,3.659,31.085
+San Diego,North America,ssp370,2096,2.89,20.819
+New York,North America,ssp370,2096,5.634,17.672
+London,Europe,ssp370,2096,1.275,13.762
+Lagos,Africa,ssp370,2096,4.078,31.547
+Delhi,South Asia,ssp370,2096,4.359,32.762
+Tokyo,East Asia,ssp370,2096,3.741,21.301
+Sydney,Oceania,ssp370,2096,4.39,21.613
+Longyearbyen,Arctic,ssp370,2096,7.417,-2.988
+Manaus,South America,ssp370,2096,4.895,32.321
+San Diego,North America,ssp370,2097,3.18,21.108
+New York,North America,ssp370,2097,5.298,17.335
+London,Europe,ssp370,2097,2.258,14.745
+Lagos,Africa,ssp370,2097,4.293,31.762
+Delhi,South Asia,ssp370,2097,4.283,32.685
+Tokyo,East Asia,ssp370,2097,3.787,21.348
+Sydney,Oceania,ssp370,2097,5.397,22.62
+Longyearbyen,Arctic,ssp370,2097,7.054,-3.351
+Manaus,South America,ssp370,2097,4.611,32.037
+San Diego,North America,ssp370,2098,2.913,20.841
+New York,North America,ssp370,2098,5.845,17.883
+London,Europe,ssp370,2098,2.37,14.857
+Lagos,Africa,ssp370,2098,4.004,31.473
+Delhi,South Asia,ssp370,2098,3.973,32.376
+Tokyo,East Asia,ssp370,2098,3.787,21.347
+Sydney,Oceania,ssp370,2098,4.669,21.893
+Longyearbyen,Arctic,ssp370,2098,7.463,-2.942
+Manaus,South America,ssp370,2098,4.849,32.275
+San Diego,North America,ssp370,2099,2.2,20.128
+New York,North America,ssp370,2099,6.722,18.76
+London,Europe,ssp370,2099,3.313,15.8
+Lagos,Africa,ssp370,2099,3.914,31.383
+Delhi,South Asia,ssp370,2099,3.441,31.843
+Tokyo,East Asia,ssp370,2099,4.074,21.634
+Sydney,Oceania,ssp370,2099,4.071,21.295
+Longyearbyen,Arctic,ssp370,2099,6.534,-3.871
+Manaus,South America,ssp370,2099,4.491,31.917
+San Diego,North America,ssp370,2100,2.707,20.635
+New York,North America,ssp370,2100,5.297,17.335
+London,Europe,ssp370,2100,2.171,14.657
+Lagos,Africa,ssp370,2100,4.086,31.556
+Delhi,South Asia,ssp370,2100,4.967,33.369
+Tokyo,East Asia,ssp370,2100,3.779,21.339
+Sydney,Oceania,ssp370,2100,4.979,22.202
+Longyearbyen,Arctic,ssp370,2100,5.983,-4.422
+Manaus,South America,ssp370,2100,4.201,31.627
+San Diego,North America,ssp585,2015,-0.039,17.889
+New York,North America,ssp585,2015,0.456,12.493
+London,Europe,ssp585,2015,0.168,12.654
+Lagos,Africa,ssp585,2015,0.63,28.099
+Delhi,South Asia,ssp585,2015,0.33,28.732
+Tokyo,East Asia,ssp585,2015,0.67,18.23
+Sydney,Oceania,ssp585,2015,0.529,17.753
+Longyearbyen,Arctic,ssp585,2015,-0.091,-10.496
+Manaus,South America,ssp585,2015,0.515,27.941
+San Diego,North America,ssp585,2016,0.684,18.612
+New York,North America,ssp585,2016,0.069,12.106
+London,Europe,ssp585,2016,-0.203,12.284
+Lagos,Africa,ssp585,2016,0.291,27.76
+Delhi,South Asia,ssp585,2016,0.154,28.556
+Tokyo,East Asia,ssp585,2016,0.83,18.39
+Sydney,Oceania,ssp585,2016,0.205,17.429
+Longyearbyen,Arctic,ssp585,2016,2.66,-7.745
+Manaus,South America,ssp585,2016,0.279,27.705
+San Diego,North America,ssp585,2017,0.174,18.102
+New York,North America,ssp585,2017,0.751,12.789
+London,Europe,ssp585,2017,0.062,12.548
+Lagos,Africa,ssp585,2017,0.673,28.142
+Delhi,South Asia,ssp585,2017,0.776,29.179
+Tokyo,East Asia,ssp585,2017,1.069,18.629
+Sydney,Oceania,ssp585,2017,1.0,18.224
+Longyearbyen,Arctic,ssp585,2017,-0.35,-10.755
+Manaus,South America,ssp585,2017,1.023,28.449
+San Diego,North America,ssp585,2018,0.305,18.233
+New York,North America,ssp585,2018,0.455,12.493
+London,Europe,ssp585,2018,-0.056,12.431
+Lagos,Africa,ssp585,2018,0.254,27.724
+Delhi,South Asia,ssp585,2018,-0.042,28.36
+Tokyo,East Asia,ssp585,2018,0.998,18.558
+Sydney,Oceania,ssp585,2018,0.43,17.654
+Longyearbyen,Arctic,ssp585,2018,2.062,-8.343
+Manaus,South America,ssp585,2018,0.009,27.435
+San Diego,North America,ssp585,2019,1.066,18.994
+New York,North America,ssp585,2019,2.494,14.532
+London,Europe,ssp585,2019,0.221,12.708
+Lagos,Africa,ssp585,2019,0.536,28.006
+Delhi,South Asia,ssp585,2019,0.906,29.308
+Tokyo,East Asia,ssp585,2019,1.697,19.258
+Sydney,Oceania,ssp585,2019,0.517,17.741
+Longyearbyen,Arctic,ssp585,2019,2.75,-7.655
+Manaus,South America,ssp585,2019,0.49,27.916
+San Diego,North America,ssp585,2020,0.493,18.422
+New York,North America,ssp585,2020,0.83,12.867
+London,Europe,ssp585,2020,0.926,13.413
+Lagos,Africa,ssp585,2020,0.655,28.125
+Delhi,South Asia,ssp585,2020,0.783,29.186
+Tokyo,East Asia,ssp585,2020,1.195,18.755
+Sydney,Oceania,ssp585,2020,0.49,17.713
+Longyearbyen,Arctic,ssp585,2020,1.073,-9.332
+Manaus,South America,ssp585,2020,0.679,28.105
+San Diego,North America,ssp585,2021,0.719,18.647
+New York,North America,ssp585,2021,1.186,13.223
+London,Europe,ssp585,2021,0.256,12.743
+Lagos,Africa,ssp585,2021,0.832,28.301
+Delhi,South Asia,ssp585,2021,0.807,29.21
+Tokyo,East Asia,ssp585,2021,1.095,18.655
+Sydney,Oceania,ssp585,2021,0.738,17.962
+Longyearbyen,Arctic,ssp585,2021,1.677,-8.728
+Manaus,South America,ssp585,2021,1.01,28.436
+San Diego,North America,ssp585,2022,0.688,18.616
+New York,North America,ssp585,2022,1.924,13.961
+London,Europe,ssp585,2022,0.599,13.086
+Lagos,Africa,ssp585,2022,1.196,28.665
+Delhi,South Asia,ssp585,2022,1.002,29.405
+Tokyo,East Asia,ssp585,2022,0.809,18.369
+Sydney,Oceania,ssp585,2022,1.65,18.874
+Longyearbyen,Arctic,ssp585,2022,-0.452,-10.857
+Manaus,South America,ssp585,2022,1.379,28.805
+San Diego,North America,ssp585,2023,-0.073,17.855
+New York,North America,ssp585,2023,1.283,13.321
+London,Europe,ssp585,2023,0.752,13.238
+Lagos,Africa,ssp585,2023,0.79,28.259
+Delhi,South Asia,ssp585,2023,1.02,29.423
+Tokyo,East Asia,ssp585,2023,1.429,18.989
+Sydney,Oceania,ssp585,2023,0.792,18.016
+Longyearbyen,Arctic,ssp585,2023,0.493,-9.912
+Manaus,South America,ssp585,2023,0.526,27.952
+San Diego,North America,ssp585,2024,0.588,18.517
+New York,North America,ssp585,2024,0.655,12.692
+London,Europe,ssp585,2024,0.709,13.196
+Lagos,Africa,ssp585,2024,1.036,28.505
+Delhi,South Asia,ssp585,2024,0.801,29.204
+Tokyo,East Asia,ssp585,2024,0.945,18.505
+Sydney,Oceania,ssp585,2024,0.841,18.065
+Longyearbyen,Arctic,ssp585,2024,3.661,-6.744
+Manaus,South America,ssp585,2024,0.846,28.272
+San Diego,North America,ssp585,2025,0.177,18.106
+New York,North America,ssp585,2025,1.001,13.039
+London,Europe,ssp585,2025,1.348,13.835
+Lagos,Africa,ssp585,2025,1.316,28.785
+Delhi,South Asia,ssp585,2025,1.335,29.738
+Tokyo,East Asia,ssp585,2025,1.431,18.991
+Sydney,Oceania,ssp585,2025,1.181,18.405
+Longyearbyen,Arctic,ssp585,2025,2.353,-8.052
+Manaus,South America,ssp585,2025,1.301,28.727
+San Diego,North America,ssp585,2026,0.751,18.68
+New York,North America,ssp585,2026,1.941,13.978
+London,Europe,ssp585,2026,1.841,14.328
+Lagos,Africa,ssp585,2026,0.599,28.069
+Delhi,South Asia,ssp585,2026,0.75,29.152
+Tokyo,East Asia,ssp585,2026,1.208,18.769
+Sydney,Oceania,ssp585,2026,0.499,17.723
+Longyearbyen,Arctic,ssp585,2026,3.297,-7.108
+Manaus,South America,ssp585,2026,0.62,28.046
+San Diego,North America,ssp585,2027,0.605,18.534
+New York,North America,ssp585,2027,2.187,14.224
+London,Europe,ssp585,2027,1.247,13.734
+Lagos,Africa,ssp585,2027,0.941,28.411
+Delhi,South Asia,ssp585,2027,1.563,29.966
+Tokyo,East Asia,ssp585,2027,0.672,18.232
+Sydney,Oceania,ssp585,2027,1.243,18.467
+Longyearbyen,Arctic,ssp585,2027,4.423,-5.982
+Manaus,South America,ssp585,2027,1.287,28.713
+San Diego,North America,ssp585,2028,0.412,18.34
+New York,North America,ssp585,2028,2.427,14.464
+London,Europe,ssp585,2028,1.373,13.86
+Lagos,Africa,ssp585,2028,0.519,27.989
+Delhi,South Asia,ssp585,2028,0.108,28.51
+Tokyo,East Asia,ssp585,2028,1.247,18.807
+Sydney,Oceania,ssp585,2028,0.711,17.934
+Longyearbyen,Arctic,ssp585,2028,5.474,-4.932
+Manaus,South America,ssp585,2028,0.701,28.127
+San Diego,North America,ssp585,2029,0.477,18.405
+New York,North America,ssp585,2029,1.974,14.012
+London,Europe,ssp585,2029,-0.539,11.947
+Lagos,Africa,ssp585,2029,1.008,28.477
+Delhi,South Asia,ssp585,2029,0.496,28.898
+Tokyo,East Asia,ssp585,2029,0.891,18.452
+Sydney,Oceania,ssp585,2029,0.384,17.607
+Longyearbyen,Arctic,ssp585,2029,6.341,-4.064
+Manaus,South America,ssp585,2029,1.276,28.702
+San Diego,North America,ssp585,2030,0.785,18.713
+New York,North America,ssp585,2030,2.833,14.87
+London,Europe,ssp585,2030,0.72,13.207
+Lagos,Africa,ssp585,2030,1.633,29.103
+Delhi,South Asia,ssp585,2030,1.106,29.509
+Tokyo,East Asia,ssp585,2030,1.614,19.174
+Sydney,Oceania,ssp585,2030,1.441,18.665
+Longyearbyen,Arctic,ssp585,2030,5.103,-5.303
+Manaus,South America,ssp585,2030,1.846,29.272
+San Diego,North America,ssp585,2031,-0.026,17.903
+New York,North America,ssp585,2031,2.002,14.04
+London,Europe,ssp585,2031,1.129,13.615
+Lagos,Africa,ssp585,2031,1.655,29.125
+Delhi,South Asia,ssp585,2031,1.18,29.582
+Tokyo,East Asia,ssp585,2031,1.422,18.982
+Sydney,Oceania,ssp585,2031,1.62,18.843
+Longyearbyen,Arctic,ssp585,2031,3.247,-7.158
+Manaus,South America,ssp585,2031,1.888,29.314
+San Diego,North America,ssp585,2032,1.691,19.619
+New York,North America,ssp585,2032,1.752,13.79
+London,Europe,ssp585,2032,2.476,14.963
+Lagos,Africa,ssp585,2032,0.725,28.194
+Delhi,South Asia,ssp585,2032,0.964,29.367
+Tokyo,East Asia,ssp585,2032,1.347,18.907
+Sydney,Oceania,ssp585,2032,0.434,17.657
+Longyearbyen,Arctic,ssp585,2032,2.246,-8.159
+Manaus,South America,ssp585,2032,0.538,27.964
+San Diego,North America,ssp585,2033,0.503,18.431
+New York,North America,ssp585,2033,2.672,14.71
+London,Europe,ssp585,2033,1.736,14.222
+Lagos,Africa,ssp585,2033,1.1,28.57
+Delhi,South Asia,ssp585,2033,1.222,29.625
+Tokyo,East Asia,ssp585,2033,1.836,19.396
+Sydney,Oceania,ssp585,2033,0.927,18.151
+Longyearbyen,Arctic,ssp585,2033,3.547,-6.858
+Manaus,South America,ssp585,2033,1.363,28.789
+San Diego,North America,ssp585,2034,1.168,19.097
+New York,North America,ssp585,2034,2.759,14.796
+London,Europe,ssp585,2034,1.71,14.197
+Lagos,Africa,ssp585,2034,1.656,29.125
+Delhi,South Asia,ssp585,2034,0.975,29.378
+Tokyo,East Asia,ssp585,2034,1.948,19.508
+Sydney,Oceania,ssp585,2034,1.397,18.62
+Longyearbyen,Arctic,ssp585,2034,3.724,-6.682
+Manaus,South America,ssp585,2034,2.015,29.441
+San Diego,North America,ssp585,2035,0.603,18.531
+New York,North America,ssp585,2035,3.206,15.244
+London,Europe,ssp585,2035,1.111,13.598
+Lagos,Africa,ssp585,2035,1.072,28.541
+Delhi,South Asia,ssp585,2035,1.136,29.539
+Tokyo,East Asia,ssp585,2035,1.377,18.937
+Sydney,Oceania,ssp585,2035,0.831,18.054
+Longyearbyen,Arctic,ssp585,2035,3.539,-6.866
+Manaus,South America,ssp585,2035,1.161,28.587
+San Diego,North America,ssp585,2036,0.524,18.452
+New York,North America,ssp585,2036,2.028,14.066
+London,Europe,ssp585,2036,0.846,13.333
+Lagos,Africa,ssp585,2036,1.363,28.832
+Delhi,South Asia,ssp585,2036,1.49,29.892
+Tokyo,East Asia,ssp585,2036,2.284,19.844
+Sydney,Oceania,ssp585,2036,1.555,18.779
+Longyearbyen,Arctic,ssp585,2036,3.19,-7.215
+Manaus,South America,ssp585,2036,1.501,28.927
+San Diego,North America,ssp585,2037,0.889,18.817
+New York,North America,ssp585,2037,3.068,15.106
+London,Europe,ssp585,2037,0.856,13.343
+Lagos,Africa,ssp585,2037,1.528,28.997
+Delhi,South Asia,ssp585,2037,1.481,29.883
+Tokyo,East Asia,ssp585,2037,2.235,19.796
+Sydney,Oceania,ssp585,2037,1.496,18.719
+Longyearbyen,Arctic,ssp585,2037,3.199,-7.206
+Manaus,South America,ssp585,2037,2.003,29.429
+San Diego,North America,ssp585,2038,0.917,18.845
+New York,North America,ssp585,2038,1.96,13.997
+London,Europe,ssp585,2038,1.003,13.49
+Lagos,Africa,ssp585,2038,1.506,28.975
+Delhi,South Asia,ssp585,2038,1.58,29.983
+Tokyo,East Asia,ssp585,2038,1.94,19.5
+Sydney,Oceania,ssp585,2038,1.195,18.418
+Longyearbyen,Arctic,ssp585,2038,1.727,-8.678
+Manaus,South America,ssp585,2038,1.429,28.855
+San Diego,North America,ssp585,2039,1.361,19.289
+New York,North America,ssp585,2039,3.319,15.356
+London,Europe,ssp585,2039,1.233,13.719
+Lagos,Africa,ssp585,2039,1.737,29.206
+Delhi,South Asia,ssp585,2039,1.788,30.191
+Tokyo,East Asia,ssp585,2039,1.893,19.453
+Sydney,Oceania,ssp585,2039,2.157,19.381
+Longyearbyen,Arctic,ssp585,2039,1.362,-9.043
+Manaus,South America,ssp585,2039,2.693,30.119
+San Diego,North America,ssp585,2040,1.985,19.913
+New York,North America,ssp585,2040,3.003,15.04
+London,Europe,ssp585,2040,1.438,13.925
+Lagos,Africa,ssp585,2040,1.978,29.448
+Delhi,South Asia,ssp585,2040,1.378,29.781
+Tokyo,East Asia,ssp585,2040,1.929,19.489
+Sydney,Oceania,ssp585,2040,2.0,19.223
+Longyearbyen,Arctic,ssp585,2040,3.426,-6.979
+Manaus,South America,ssp585,2040,2.075,29.501
+San Diego,North America,ssp585,2041,0.534,18.462
+New York,North America,ssp585,2041,2.959,14.996
+London,Europe,ssp585,2041,0.895,13.381
+Lagos,Africa,ssp585,2041,1.495,28.964
+Delhi,South Asia,ssp585,2041,1.31,29.712
+Tokyo,East Asia,ssp585,2041,2.51,20.07
+Sydney,Oceania,ssp585,2041,1.719,18.943
+Longyearbyen,Arctic,ssp585,2041,5.098,-5.307
+Manaus,South America,ssp585,2041,1.601,29.027
+San Diego,North America,ssp585,2042,0.884,18.813
+New York,North America,ssp585,2042,3.679,15.716
+London,Europe,ssp585,2042,1.898,14.385
+Lagos,Africa,ssp585,2042,1.375,28.844
+Delhi,South Asia,ssp585,2042,1.849,30.252
+Tokyo,East Asia,ssp585,2042,2.77,20.33
+Sydney,Oceania,ssp585,2042,1.551,18.775
+Longyearbyen,Arctic,ssp585,2042,2.857,-7.548
+Manaus,South America,ssp585,2042,1.538,28.964
+San Diego,North America,ssp585,2043,0.068,17.997
+New York,North America,ssp585,2043,2.577,14.615
+London,Europe,ssp585,2043,1.654,14.141
+Lagos,Africa,ssp585,2043,1.628,29.098
+Delhi,South Asia,ssp585,2043,1.863,30.265
+Tokyo,East Asia,ssp585,2043,2.975,20.535
+Sydney,Oceania,ssp585,2043,2.013,19.237
+Longyearbyen,Arctic,ssp585,2043,2.82,-7.585
+Manaus,South America,ssp585,2043,2.052,29.478
+San Diego,North America,ssp585,2044,1.112,19.04
+New York,North America,ssp585,2044,2.894,14.931
+London,Europe,ssp585,2044,1.897,14.384
+Lagos,Africa,ssp585,2044,2.042,29.511
+Delhi,South Asia,ssp585,2044,1.034,29.437
+Tokyo,East Asia,ssp585,2044,3.119,20.679
+Sydney,Oceania,ssp585,2044,2.449,19.673
+Longyearbyen,Arctic,ssp585,2044,0.689,-9.716
+Manaus,South America,ssp585,2044,2.71,30.136
+San Diego,North America,ssp585,2045,1.395,19.324
+New York,North America,ssp585,2045,3.5,15.537
+London,Europe,ssp585,2045,1.245,13.732
+Lagos,Africa,ssp585,2045,1.33,28.799
+Delhi,South Asia,ssp585,2045,0.954,29.357
+Tokyo,East Asia,ssp585,2045,2.69,20.25
+Sydney,Oceania,ssp585,2045,1.748,18.972
+Longyearbyen,Arctic,ssp585,2045,0.744,-9.661
+Manaus,South America,ssp585,2045,1.317,28.743
+San Diego,North America,ssp585,2046,1.219,19.147
+New York,North America,ssp585,2046,4.228,16.265
+London,Europe,ssp585,2046,0.885,13.371
+Lagos,Africa,ssp585,2046,1.61,29.079
+Delhi,South Asia,ssp585,2046,1.868,30.271
+Tokyo,East Asia,ssp585,2046,2.094,19.654
+Sydney,Oceania,ssp585,2046,1.621,18.845
+Longyearbyen,Arctic,ssp585,2046,4.214,-6.191
+Manaus,South America,ssp585,2046,1.562,28.988
+San Diego,North America,ssp585,2047,1.941,19.869
+New York,North America,ssp585,2047,4.184,16.222
+London,Europe,ssp585,2047,1.507,13.994
+Lagos,Africa,ssp585,2047,2.246,29.715
+Delhi,South Asia,ssp585,2047,0.891,29.294
+Tokyo,East Asia,ssp585,2047,2.387,19.948
+Sydney,Oceania,ssp585,2047,3.119,20.343
+Longyearbyen,Arctic,ssp585,2047,-0.062,-10.467
+Manaus,South America,ssp585,2047,2.801,30.227
+San Diego,North America,ssp585,2048,1.704,19.632
+New York,North America,ssp585,2048,4.146,16.183
+London,Europe,ssp585,2048,1.421,13.907
+Lagos,Africa,ssp585,2048,2.024,29.493
+Delhi,South Asia,ssp585,2048,2.435,30.838
+Tokyo,East Asia,ssp585,2048,1.996,19.557
+Sydney,Oceania,ssp585,2048,2.257,19.481
+Longyearbyen,Arctic,ssp585,2048,5.589,-4.816
+Manaus,South America,ssp585,2048,2.3,29.726
+San Diego,North America,ssp585,2049,2.469,20.397
+New York,North America,ssp585,2049,3.735,15.773
+London,Europe,ssp585,2049,0.768,13.255
+Lagos,Africa,ssp585,2049,1.826,29.296
+Delhi,South Asia,ssp585,2049,3.1,31.503
+Tokyo,East Asia,ssp585,2049,2.279,19.839
+Sydney,Oceania,ssp585,2049,1.851,19.075
+Longyearbyen,Arctic,ssp585,2049,3.618,-6.787
+Manaus,South America,ssp585,2049,1.838,29.264
+San Diego,North America,ssp585,2050,2.623,20.552
+New York,North America,ssp585,2050,3.726,15.763
+London,Europe,ssp585,2050,1.061,13.548
+Lagos,Africa,ssp585,2050,2.122,29.591
+Delhi,South Asia,ssp585,2050,2.348,30.751
+Tokyo,East Asia,ssp585,2050,2.631,20.191
+Sydney,Oceania,ssp585,2050,2.108,19.332
+Longyearbyen,Arctic,ssp585,2050,6.186,-4.219
+Manaus,South America,ssp585,2050,2.423,29.849
+San Diego,North America,ssp585,2051,1.486,19.414
+New York,North America,ssp585,2051,3.607,15.645
+London,Europe,ssp585,2051,1.198,13.685
+Lagos,Africa,ssp585,2051,2.036,29.505
+Delhi,South Asia,ssp585,2051,2.186,30.589
+Tokyo,East Asia,ssp585,2051,2.648,20.208
+Sydney,Oceania,ssp585,2051,1.843,19.067
+Longyearbyen,Arctic,ssp585,2051,4.605,-5.8
+Manaus,South America,ssp585,2051,1.954,29.38
+San Diego,North America,ssp585,2052,1.699,19.628
+New York,North America,ssp585,2052,3.825,15.863
+London,Europe,ssp585,2052,1.5,13.986
+Lagos,Africa,ssp585,2052,2.657,30.126
+Delhi,South Asia,ssp585,2052,3.154,31.556
+Tokyo,East Asia,ssp585,2052,2.183,19.743
+Sydney,Oceania,ssp585,2052,2.587,19.811
+Longyearbyen,Arctic,ssp585,2052,5.092,-5.313
+Manaus,South America,ssp585,2052,2.545,29.971
+San Diego,North America,ssp585,2053,2.55,20.479
+New York,North America,ssp585,2053,3.954,15.991
+London,Europe,ssp585,2053,1.457,13.944
+Lagos,Africa,ssp585,2053,2.708,30.177
+Delhi,South Asia,ssp585,2053,2.83,31.233
+Tokyo,East Asia,ssp585,2053,2.467,20.027
+Sydney,Oceania,ssp585,2053,2.878,20.102
+Longyearbyen,Arctic,ssp585,2053,4.4,-6.005
+Manaus,South America,ssp585,2053,3.023,30.449
+San Diego,North America,ssp585,2054,1.947,19.875
+New York,North America,ssp585,2054,4.4,16.438
+London,Europe,ssp585,2054,2.521,15.008
+Lagos,Africa,ssp585,2054,2.599,30.069
+Delhi,South Asia,ssp585,2054,2.608,31.011
+Tokyo,East Asia,ssp585,2054,2.434,19.994
+Sydney,Oceania,ssp585,2054,2.266,19.49
+Longyearbyen,Arctic,ssp585,2054,6.785,-3.62
+Manaus,South America,ssp585,2054,3.007,30.433
+San Diego,North America,ssp585,2055,2.845,20.774
+New York,North America,ssp585,2055,4.765,16.803
+London,Europe,ssp585,2055,1.419,13.906
+Lagos,Africa,ssp585,2055,2.265,29.734
+Delhi,South Asia,ssp585,2055,3.576,31.978
+Tokyo,East Asia,ssp585,2055,2.668,20.228
+Sydney,Oceania,ssp585,2055,2.224,19.447
+Longyearbyen,Arctic,ssp585,2055,4.679,-5.726
+Manaus,South America,ssp585,2055,2.493,29.919
+San Diego,North America,ssp585,2056,2.276,20.204
+New York,North America,ssp585,2056,3.229,15.267
+London,Europe,ssp585,2056,1.294,13.781
+Lagos,Africa,ssp585,2056,2.839,30.308
+Delhi,South Asia,ssp585,2056,2.472,30.874
+Tokyo,East Asia,ssp585,2056,3.072,20.632
+Sydney,Oceania,ssp585,2056,2.806,20.03
+Longyearbyen,Arctic,ssp585,2056,5.144,-5.261
+Manaus,South America,ssp585,2056,3.616,31.042
+San Diego,North America,ssp585,2057,1.569,19.497
+New York,North America,ssp585,2057,4.031,16.069
+London,Europe,ssp585,2057,1.289,13.776
+Lagos,Africa,ssp585,2057,2.624,30.093
+Delhi,South Asia,ssp585,2057,3.652,32.055
+Tokyo,East Asia,ssp585,2057,2.98,20.54
+Sydney,Oceania,ssp585,2057,3.264,20.487
+Longyearbyen,Arctic,ssp585,2057,4.382,-6.023
+Manaus,South America,ssp585,2057,3.036,30.462
+San Diego,North America,ssp585,2058,1.476,19.404
+New York,North America,ssp585,2058,5.075,17.112
+London,Europe,ssp585,2058,0.893,13.379
+Lagos,Africa,ssp585,2058,2.807,30.276
+Delhi,South Asia,ssp585,2058,1.375,29.777
+Tokyo,East Asia,ssp585,2058,2.28,19.84
+Sydney,Oceania,ssp585,2058,2.505,19.728
+Longyearbyen,Arctic,ssp585,2058,3.988,-6.417
+Manaus,South America,ssp585,2058,2.614,30.04
+San Diego,North America,ssp585,2059,1.618,19.547
+New York,North America,ssp585,2059,4.3,16.337
+London,Europe,ssp585,2059,0.929,13.415
+Lagos,Africa,ssp585,2059,2.533,30.002
+Delhi,South Asia,ssp585,2059,3.561,31.963
+Tokyo,East Asia,ssp585,2059,2.512,20.072
+Sydney,Oceania,ssp585,2059,2.58,19.804
+Longyearbyen,Arctic,ssp585,2059,4.507,-5.898
+Manaus,South America,ssp585,2059,2.721,30.147
+San Diego,North America,ssp585,2060,2.189,20.117
+New York,North America,ssp585,2060,3.771,15.809
+London,Europe,ssp585,2060,0.618,13.104
+Lagos,Africa,ssp585,2060,2.795,30.264
+Delhi,South Asia,ssp585,2060,2.924,31.326
+Tokyo,East Asia,ssp585,2060,3.138,20.698
+Sydney,Oceania,ssp585,2060,3.067,20.291
+Longyearbyen,Arctic,ssp585,2060,4.223,-6.182
+Manaus,South America,ssp585,2060,3.294,30.72
+San Diego,North America,ssp585,2061,2.171,20.1
+New York,North America,ssp585,2061,4.182,16.22
+London,Europe,ssp585,2061,1.787,14.274
+Lagos,Africa,ssp585,2061,3.089,30.558
+Delhi,South Asia,ssp585,2061,3.666,32.068
+Tokyo,East Asia,ssp585,2061,3.241,20.801
+Sydney,Oceania,ssp585,2061,3.31,20.533
+Longyearbyen,Arctic,ssp585,2061,2.763,-7.642
+Manaus,South America,ssp585,2061,3.242,30.668
+San Diego,North America,ssp585,2062,1.274,19.202
+New York,North America,ssp585,2062,4.818,16.856
+London,Europe,ssp585,2062,0.741,13.227
+Lagos,Africa,ssp585,2062,3.426,30.895
+Delhi,South Asia,ssp585,2062,4.163,32.566
+Tokyo,East Asia,ssp585,2062,3.002,20.562
+Sydney,Oceania,ssp585,2062,3.181,20.405
+Longyearbyen,Arctic,ssp585,2062,3.981,-6.424
+Manaus,South America,ssp585,2062,3.779,31.205
+San Diego,North America,ssp585,2063,1.758,19.687
+New York,North America,ssp585,2063,4.826,16.863
+London,Europe,ssp585,2063,2.218,14.705
+Lagos,Africa,ssp585,2063,3.466,30.935
+Delhi,South Asia,ssp585,2063,3.467,31.87
+Tokyo,East Asia,ssp585,2063,3.514,21.074
+Sydney,Oceania,ssp585,2063,3.372,20.595
+Longyearbyen,Arctic,ssp585,2063,4.792,-5.613
+Manaus,South America,ssp585,2063,3.888,31.314
+San Diego,North America,ssp585,2064,2.525,20.453
+New York,North America,ssp585,2064,4.979,17.017
+London,Europe,ssp585,2064,2.098,14.584
+Lagos,Africa,ssp585,2064,2.788,30.258
+Delhi,South Asia,ssp585,2064,3.938,32.341
+Tokyo,East Asia,ssp585,2064,3.317,20.878
+Sydney,Oceania,ssp585,2064,3.441,20.665
+Longyearbyen,Arctic,ssp585,2064,5.678,-4.727
+Manaus,South America,ssp585,2064,2.825,30.25
+San Diego,North America,ssp585,2065,2.217,20.145
+New York,North America,ssp585,2065,4.197,16.234
+London,Europe,ssp585,2065,0.827,13.314
+Lagos,Africa,ssp585,2065,3.199,30.668
+Delhi,South Asia,ssp585,2065,3.9,32.302
+Tokyo,East Asia,ssp585,2065,3.447,21.007
+Sydney,Oceania,ssp585,2065,3.18,20.404
+Longyearbyen,Arctic,ssp585,2065,3.42,-6.986
+Manaus,South America,ssp585,2065,3.541,30.967
+San Diego,North America,ssp585,2066,1.662,19.59
+New York,North America,ssp585,2066,5.196,17.233
+London,Europe,ssp585,2066,2.749,15.235
+Lagos,Africa,ssp585,2066,3.467,30.936
+Delhi,South Asia,ssp585,2066,4.083,32.486
+Tokyo,East Asia,ssp585,2066,3.176,20.736
+Sydney,Oceania,ssp585,2066,3.668,20.891
+Longyearbyen,Arctic,ssp585,2066,5.261,-5.145
+Manaus,South America,ssp585,2066,3.709,31.135
+San Diego,North America,ssp585,2067,1.111,19.04
+New York,North America,ssp585,2067,5.312,17.35
+London,Europe,ssp585,2067,1.759,14.246
+Lagos,Africa,ssp585,2067,3.093,30.562
+Delhi,South Asia,ssp585,2067,3.809,32.212
+Tokyo,East Asia,ssp585,2067,3.803,21.364
+Sydney,Oceania,ssp585,2067,2.916,20.14
+Longyearbyen,Arctic,ssp585,2067,5.335,-5.07
+Manaus,South America,ssp585,2067,3.023,30.449
+San Diego,North America,ssp585,2068,2.512,20.44
+New York,North America,ssp585,2068,3.987,16.025
+London,Europe,ssp585,2068,2.263,14.749
+Lagos,Africa,ssp585,2068,3.603,31.072
+Delhi,South Asia,ssp585,2068,4.537,32.939
+Tokyo,East Asia,ssp585,2068,3.898,21.458
+Sydney,Oceania,ssp585,2068,3.479,20.702
+Longyearbyen,Arctic,ssp585,2068,4.424,-5.981
+Manaus,South America,ssp585,2068,4.18,31.606
+San Diego,North America,ssp585,2069,2.927,20.855
+New York,North America,ssp585,2069,4.177,16.214
+London,Europe,ssp585,2069,0.961,13.448
+Lagos,Africa,ssp585,2069,3.403,30.873
+Delhi,South Asia,ssp585,2069,3.512,31.914
+Tokyo,East Asia,ssp585,2069,3.583,21.143
+Sydney,Oceania,ssp585,2069,3.501,20.725
+Longyearbyen,Arctic,ssp585,2069,5.362,-5.043
+Manaus,South America,ssp585,2069,3.913,31.339
+San Diego,North America,ssp585,2070,3.004,20.932
+New York,North America,ssp585,2070,4.277,16.314
+London,Europe,ssp585,2070,1.175,13.661
+Lagos,Africa,ssp585,2070,2.905,30.375
+Delhi,South Asia,ssp585,2070,3.501,31.904
+Tokyo,East Asia,ssp585,2070,2.692,20.252
+Sydney,Oceania,ssp585,2070,3.539,20.763
+Longyearbyen,Arctic,ssp585,2070,6.365,-4.04
+Manaus,South America,ssp585,2070,3.051,30.477
+San Diego,North America,ssp585,2071,2.627,20.555
+New York,North America,ssp585,2071,4.579,16.617
+London,Europe,ssp585,2071,1.223,13.71
+Lagos,Africa,ssp585,2071,3.653,31.122
+Delhi,South Asia,ssp585,2071,4.054,32.457
+Tokyo,East Asia,ssp585,2071,2.983,20.543
+Sydney,Oceania,ssp585,2071,3.97,21.193
+Longyearbyen,Arctic,ssp585,2071,5.015,-5.39
+Manaus,South America,ssp585,2071,4.195,31.621
+San Diego,North America,ssp585,2072,2.702,20.631
+New York,North America,ssp585,2072,4.656,16.693
+London,Europe,ssp585,2072,0.794,13.281
+Lagos,Africa,ssp585,2072,3.086,30.555
+Delhi,South Asia,ssp585,2072,3.857,32.26
+Tokyo,East Asia,ssp585,2072,3.788,21.348
+Sydney,Oceania,ssp585,2072,3.259,20.483
+Longyearbyen,Arctic,ssp585,2072,5.564,-4.841
+Manaus,South America,ssp585,2072,3.367,30.793
+San Diego,North America,ssp585,2073,2.545,20.473
+New York,North America,ssp585,2073,4.425,16.463
+London,Europe,ssp585,2073,1.409,13.896
+Lagos,Africa,ssp585,2073,3.65,31.119
+Delhi,South Asia,ssp585,2073,3.539,31.942
+Tokyo,East Asia,ssp585,2073,3.395,20.956
+Sydney,Oceania,ssp585,2073,3.567,20.79
+Longyearbyen,Arctic,ssp585,2073,5.369,-5.036
+Manaus,South America,ssp585,2073,4.254,31.68
+San Diego,North America,ssp585,2074,3.033,20.962
+New York,North America,ssp585,2074,5.517,17.554
+London,Europe,ssp585,2074,1.476,13.963
+Lagos,Africa,ssp585,2074,3.154,30.623
+Delhi,South Asia,ssp585,2074,3.915,32.318
+Tokyo,East Asia,ssp585,2074,3.325,20.886
+Sydney,Oceania,ssp585,2074,3.293,20.517
+Longyearbyen,Arctic,ssp585,2074,5.415,-4.99
+Manaus,South America,ssp585,2074,3.487,30.913
+San Diego,North America,ssp585,2075,3.102,21.031
+New York,North America,ssp585,2075,4.699,16.737
+London,Europe,ssp585,2075,2.026,14.513
+Lagos,Africa,ssp585,2075,3.927,31.396
+Delhi,South Asia,ssp585,2075,4.386,32.789
+Tokyo,East Asia,ssp585,2075,3.694,21.254
+Sydney,Oceania,ssp585,2075,4.645,21.869
+Longyearbyen,Arctic,ssp585,2075,6.405,-4.001
+Manaus,South America,ssp585,2075,5.025,32.451
+San Diego,North America,ssp585,2076,2.965,20.894
+New York,North America,ssp585,2076,5.369,17.407
+London,Europe,ssp585,2076,2.027,14.513
+Lagos,Africa,ssp585,2076,3.814,31.283
+Delhi,South Asia,ssp585,2076,4.391,32.793
+Tokyo,East Asia,ssp585,2076,3.632,21.192
+Sydney,Oceania,ssp585,2076,4.441,21.665
+Longyearbyen,Arctic,ssp585,2076,5.294,-5.111
+Manaus,South America,ssp585,2076,4.155,31.581
+San Diego,North America,ssp585,2077,2.734,20.663
+New York,North America,ssp585,2077,6.02,18.058
+London,Europe,ssp585,2077,2.316,14.803
+Lagos,Africa,ssp585,2077,4.21,31.68
+Delhi,South Asia,ssp585,2077,5.257,33.659
+Tokyo,East Asia,ssp585,2077,4.152,21.712
+Sydney,Oceania,ssp585,2077,4.666,21.89
+Longyearbyen,Arctic,ssp585,2077,6.546,-3.859
+Manaus,South America,ssp585,2077,4.72,32.146
+San Diego,North America,ssp585,2078,2.502,20.43
+New York,North America,ssp585,2078,6.032,18.07
+London,Europe,ssp585,2078,2.756,15.242
+Lagos,Africa,ssp585,2078,4.104,31.573
+Delhi,South Asia,ssp585,2078,4.357,32.76
+Tokyo,East Asia,ssp585,2078,3.874,21.435
+Sydney,Oceania,ssp585,2078,4.669,21.892
+Longyearbyen,Arctic,ssp585,2078,8.851,-1.554
+Manaus,South America,ssp585,2078,4.581,32.007
+San Diego,North America,ssp585,2079,2.42,20.349
+New York,North America,ssp585,2079,5.809,17.846
+London,Europe,ssp585,2079,2.182,14.668
+Lagos,Africa,ssp585,2079,3.643,31.112
+Delhi,South Asia,ssp585,2079,4.688,33.091
+Tokyo,East Asia,ssp585,2079,3.919,21.479
+Sydney,Oceania,ssp585,2079,4.245,21.468
+Longyearbyen,Arctic,ssp585,2079,6.886,-3.519
+Manaus,South America,ssp585,2079,4.433,31.859
+San Diego,North America,ssp585,2080,3.111,21.039
+New York,North America,ssp585,2080,5.09,17.127
+London,Europe,ssp585,2080,1.578,14.065
+Lagos,Africa,ssp585,2080,3.993,31.462
+Delhi,South Asia,ssp585,2080,4.204,32.606
+Tokyo,East Asia,ssp585,2080,3.3,20.861
+Sydney,Oceania,ssp585,2080,4.565,21.788
+Longyearbyen,Arctic,ssp585,2080,8.835,-1.57
+Manaus,South America,ssp585,2080,4.816,32.242
+San Diego,North America,ssp585,2081,3.313,21.241
+New York,North America,ssp585,2081,6.92,18.957
+London,Europe,ssp585,2081,2.085,14.572
+Lagos,Africa,ssp585,2081,4.105,31.575
+Delhi,South Asia,ssp585,2081,4.83,33.233
+Tokyo,East Asia,ssp585,2081,3.932,21.492
+Sydney,Oceania,ssp585,2081,4.651,21.875
+Longyearbyen,Arctic,ssp585,2081,8.845,-1.56
+Manaus,South America,ssp585,2081,4.734,32.16
+San Diego,North America,ssp585,2082,3.412,21.34
+New York,North America,ssp585,2082,5.138,17.176
+London,Europe,ssp585,2082,1.847,14.334
+Lagos,Africa,ssp585,2082,4.277,31.746
+Delhi,South Asia,ssp585,2082,4.652,33.054
+Tokyo,East Asia,ssp585,2082,4.209,21.769
+Sydney,Oceania,ssp585,2082,4.918,22.142
+Longyearbyen,Arctic,ssp585,2082,7.21,-3.195
+Manaus,South America,ssp585,2082,5.29,32.716
+San Diego,North America,ssp585,2083,3.708,21.637
+New York,North America,ssp585,2083,5.827,17.865
+London,Europe,ssp585,2083,2.756,15.242
+Lagos,Africa,ssp585,2083,4.214,31.684
+Delhi,South Asia,ssp585,2083,5.444,33.846
+Tokyo,East Asia,ssp585,2083,4.239,21.799
+Sydney,Oceania,ssp585,2083,4.64,21.863
+Longyearbyen,Arctic,ssp585,2083,7.579,-2.826
+Manaus,South America,ssp585,2083,4.569,31.995
+San Diego,North America,ssp585,2084,3.519,21.447
+New York,North America,ssp585,2084,6.848,18.885
+London,Europe,ssp585,2084,1.853,14.339
+Lagos,Africa,ssp585,2084,4.731,32.2
+Delhi,South Asia,ssp585,2084,4.707,33.109
+Tokyo,East Asia,ssp585,2084,4.58,22.14
+Sydney,Oceania,ssp585,2084,4.829,22.053
+Longyearbyen,Arctic,ssp585,2084,7.502,-2.903
+Manaus,South America,ssp585,2084,5.513,32.939
+San Diego,North America,ssp585,2085,3.521,21.449
+New York,North America,ssp585,2085,6.05,18.087
+London,Europe,ssp585,2085,1.803,14.29
+Lagos,Africa,ssp585,2085,4.371,31.84
+Delhi,South Asia,ssp585,2085,5.422,33.825
+Tokyo,East Asia,ssp585,2085,4.437,21.998
+Sydney,Oceania,ssp585,2085,5.119,22.342
+Longyearbyen,Arctic,ssp585,2085,7.41,-2.996
+Manaus,South America,ssp585,2085,5.389,32.815
+San Diego,North America,ssp585,2086,2.872,20.801
+New York,North America,ssp585,2086,5.951,17.988
+London,Europe,ssp585,2086,2.802,15.288
+Lagos,Africa,ssp585,2086,4.86,32.329
+Delhi,South Asia,ssp585,2086,5.506,33.909
+Tokyo,East Asia,ssp585,2086,5.038,22.598
+Sydney,Oceania,ssp585,2086,5.123,22.347
+Longyearbyen,Arctic,ssp585,2086,7.269,-3.136
+Manaus,South America,ssp585,2086,5.706,33.132
+San Diego,North America,ssp585,2087,4.148,22.077
+New York,North America,ssp585,2087,6.957,18.995
+London,Europe,ssp585,2087,3.081,15.567
+Lagos,Africa,ssp585,2087,4.275,31.744
+Delhi,South Asia,ssp585,2087,5.447,33.849
+Tokyo,East Asia,ssp585,2087,4.183,21.743
+Sydney,Oceania,ssp585,2087,5.046,22.269
+Longyearbyen,Arctic,ssp585,2087,7.863,-2.542
+Manaus,South America,ssp585,2087,5.126,32.552
+San Diego,North America,ssp585,2088,3.87,21.798
+New York,North America,ssp585,2088,6.487,18.525
+London,Europe,ssp585,2088,3.246,15.732
+Lagos,Africa,ssp585,2088,4.916,32.385
+Delhi,South Asia,ssp585,2088,5.593,33.996
+Tokyo,East Asia,ssp585,2088,4.363,21.923
+Sydney,Oceania,ssp585,2088,5.514,22.737
+Longyearbyen,Arctic,ssp585,2088,7.344,-3.061
+Manaus,South America,ssp585,2088,5.75,33.176
+San Diego,North America,ssp585,2089,3.855,21.783
+New York,North America,ssp585,2089,6.059,18.096
+London,Europe,ssp585,2089,0.835,13.322
+Lagos,Africa,ssp585,2089,5.017,32.486
+Delhi,South Asia,ssp585,2089,6.664,35.066
+Tokyo,East Asia,ssp585,2089,4.726,22.286
+Sydney,Oceania,ssp585,2089,5.622,22.846
+Longyearbyen,Arctic,ssp585,2089,9.004,-1.401
+Manaus,South America,ssp585,2089,5.693,33.119
+San Diego,North America,ssp585,2090,3.188,21.116
+New York,North America,ssp585,2090,6.507,18.544
+London,Europe,ssp585,2090,1.189,13.676
+Lagos,Africa,ssp585,2090,5.243,32.712
+Delhi,South Asia,ssp585,2090,5.643,34.045
+Tokyo,East Asia,ssp585,2090,5.427,22.987
+Sydney,Oceania,ssp585,2090,6.033,23.256
+Longyearbyen,Arctic,ssp585,2090,8.963,-1.442
+Manaus,South America,ssp585,2090,5.987,33.413
+San Diego,North America,ssp585,2091,3.252,21.18
+New York,North America,ssp585,2091,6.636,18.674
+London,Europe,ssp585,2091,2.238,14.725
+Lagos,Africa,ssp585,2091,5.061,32.53
+Delhi,South Asia,ssp585,2091,6.198,34.6
+Tokyo,East Asia,ssp585,2091,4.874,22.434
+Sydney,Oceania,ssp585,2091,5.88,23.104
+Longyearbyen,Arctic,ssp585,2091,10.121,-0.285
+Manaus,South America,ssp585,2091,5.275,32.701
+San Diego,North America,ssp585,2092,4.743,22.671
+New York,North America,ssp585,2092,6.06,18.098
+London,Europe,ssp585,2092,2.989,15.475
+Lagos,Africa,ssp585,2092,4.769,32.238
+Delhi,South Asia,ssp585,2092,6.062,34.464
+Tokyo,East Asia,ssp585,2092,3.946,21.506
+Sydney,Oceania,ssp585,2092,6.17,23.394
+Longyearbyen,Arctic,ssp585,2092,9.35,-1.055
+Manaus,South America,ssp585,2092,5.556,32.982
+San Diego,North America,ssp585,2093,3.651,21.579
+New York,North America,ssp585,2093,7.276,19.313
+London,Europe,ssp585,2093,2.919,15.406
+Lagos,Africa,ssp585,2093,5.257,32.726
+Delhi,South Asia,ssp585,2093,5.743,34.146
+Tokyo,East Asia,ssp585,2093,5.28,22.841
+Sydney,Oceania,ssp585,2093,6.523,23.746
+Longyearbyen,Arctic,ssp585,2093,9.568,-0.837
+Manaus,South America,ssp585,2093,6.623,34.049
+San Diego,North America,ssp585,2094,4.632,22.56
+New York,North America,ssp585,2094,7.697,19.735
+London,Europe,ssp585,2094,3.561,16.048
+Lagos,Africa,ssp585,2094,5.244,32.714
+Delhi,South Asia,ssp585,2094,6.0,34.402
+Tokyo,East Asia,ssp585,2094,5.452,23.012
+Sydney,Oceania,ssp585,2094,5.554,22.778
+Longyearbyen,Arctic,ssp585,2094,9.888,-0.517
+Manaus,South America,ssp585,2094,6.075,33.501
+San Diego,North America,ssp585,2095,3.373,21.302
+New York,North America,ssp585,2095,7.278,19.315
+London,Europe,ssp585,2095,3.008,15.495
+Lagos,Africa,ssp585,2095,5.446,32.915
+Delhi,South Asia,ssp585,2095,5.117,33.52
+Tokyo,East Asia,ssp585,2095,5.126,22.686
+Sydney,Oceania,ssp585,2095,5.913,23.136
+Longyearbyen,Arctic,ssp585,2095,10.008,-0.397
+Manaus,South America,ssp585,2095,6.359,33.785
+San Diego,North America,ssp585,2096,4.682,22.611
+New York,North America,ssp585,2096,6.724,18.761
+London,Europe,ssp585,2096,3.679,16.165
+Lagos,Africa,ssp585,2096,5.292,32.761
+Delhi,South Asia,ssp585,2096,6.112,34.515
+Tokyo,East Asia,ssp585,2096,5.287,22.848
+Sydney,Oceania,ssp585,2096,5.732,22.956
+Longyearbyen,Arctic,ssp585,2096,9.507,-0.898
+Manaus,South America,ssp585,2096,5.978,33.404
+San Diego,North America,ssp585,2097,4.415,22.343
+New York,North America,ssp585,2097,6.937,18.975
+London,Europe,ssp585,2097,3.429,15.916
+Lagos,Africa,ssp585,2097,5.335,32.804
+Delhi,South Asia,ssp585,2097,5.059,33.461
+Tokyo,East Asia,ssp585,2097,5.655,23.215
+Sydney,Oceania,ssp585,2097,6.651,23.875
+Longyearbyen,Arctic,ssp585,2097,9.915,-0.491
+Manaus,South America,ssp585,2097,5.771,33.197
+San Diego,North America,ssp585,2098,4.458,22.387
+New York,North America,ssp585,2098,7.188,19.225
+London,Europe,ssp585,2098,3.085,15.571
+Lagos,Africa,ssp585,2098,5.507,32.976
+Delhi,South Asia,ssp585,2098,5.345,33.747
+Tokyo,East Asia,ssp585,2098,5.304,22.864
+Sydney,Oceania,ssp585,2098,5.847,23.071
+Longyearbyen,Arctic,ssp585,2098,10.864,0.459
+Manaus,South America,ssp585,2098,6.279,33.705
+San Diego,North America,ssp585,2099,4.697,22.625
+New York,North America,ssp585,2099,7.526,19.564
+London,Europe,ssp585,2099,3.541,16.028
+Lagos,Africa,ssp585,2099,5.362,32.831
+Delhi,South Asia,ssp585,2099,6.435,34.838
+Tokyo,East Asia,ssp585,2099,4.692,22.252
+Sydney,Oceania,ssp585,2099,6.352,23.576
+Longyearbyen,Arctic,ssp585,2099,10.828,0.423
+Manaus,South America,ssp585,2099,6.141,33.567
+San Diego,North America,ssp585,2100,3.958,21.887
+New York,North America,ssp585,2100,7.529,19.566
+London,Europe,ssp585,2100,3.498,15.984
+Lagos,Africa,ssp585,2100,5.736,33.205
+Delhi,South Asia,ssp585,2100,7.682,36.085
+Tokyo,East Asia,ssp585,2100,6.53,24.091
+Sydney,Oceania,ssp585,2100,6.152,23.376
+Longyearbyen,Arctic,ssp585,2100,9.866,-0.539
+Manaus,South America,ssp585,2100,6.513,33.939

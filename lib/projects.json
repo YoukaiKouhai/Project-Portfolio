@@ -1,5 +1,12 @@
 [
     {
+        "title": "Climate Futures Explorer",
+        "year": "2026",
+        "url": "project3/",
+        "image": "project3/preview.svg",
+        "description": "A D3-only interactive explorer for comparing local CMIP6 temperature projections across emissions pathways, warming thresholds, time horizons, and nine locations."
+    },
+    {
         "title": "Is the World Aging Rapidly?",
         "year": "2026",
         "url": "project2/",

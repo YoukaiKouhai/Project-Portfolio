@@ -1,0 +1,10 @@
+location,region,requested_lat,requested_lon,lat,lon,baseline_c
+San Diego,North America,32.7157,-117.1611,32.5131,-117.5000,17.9283
+New York,North America,40.7128,-74.0060,40.9948,-73.7500,12.0375
+London,Europe,51.5072,-0.1276,51.3613,-1.2500,12.4866
+Lagos,Africa,6.5244,3.3792,6.1257,3.7500,27.4692
+Delhi,South Asia,28.6139,77.2090,28.7435,77.5000,28.4025
+Tokyo,East Asia,35.6762,139.6503,35.3403,140.0000,17.5601
+Sydney,Oceania,-33.8688,151.2093,-33.4555,151.2500,17.2237
+Longyearbyen,Arctic,78.2232,15.6469,78.6911,16.2500,-10.4051
+Manaus,South America,-3.1190,-60.0217,-3.2984,-60.0000,27.4260

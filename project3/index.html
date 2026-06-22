@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Futures Explorer</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <script type="module" src="../global.js"></script>
+
+  <main class="project3-page">
+    <header class="project3-header">
+      <p class="project3-kicker">DSC 106 · Project 3 · Interactive Visualization</p>
+      <h1>Climate Futures Explorer</h1>
+      <p>
+        When—and where—does local warming cross critical thresholds under different
+        emissions pathways?
+      </p>
+      <p class="project3-subtitle">
+        Annual near-surface temperature from the CESM2 CMIP6 model, shown as change
+        from each location's 1981–2010 average.
+      </p>
+    </header>
+
+    <section class="explorer" aria-label="Interactive climate projection explorer">
+      <div class="control-panel">
+        <label>
+          Location
+          <select id="location-select"></select>
+        </label>
+
+        <fieldset id="scenario-controls">
+          <legend>Visible pathways</legend>
+        </fieldset>
+
+        <label>
+          Warming threshold
+          <span class="control-value" id="threshold-value">2.0°C</span>
+          <input id="threshold-slider" type="range" min="1" max="6" step="0.5" value="2">
+        </label>
+
+        <label>
+          Projection horizon
+          <span class="control-value" id="horizon-value">2100</span>
+          <input id="horizon-slider" type="range" min="2030" max="2100" step="5" value="2100">
+        </label>
+
+        <label>
+          Comparison pathway
+          <select id="focus-scenario"></select>
+        </label>
+      </div>
+
+      <div class="summary-strip" aria-live="polite">
+        <article>
+          <span>Selected location</span>
+          <strong id="summary-location"></strong>
+        </article>
+        <article>
+          <span>Threshold crossing</span>
+          <strong id="summary-crossing"></strong>
+        </article>
+        <article>
+          <span>Warming at horizon</span>
+          <strong id="summary-warming"></strong>
+        </article>
+      </div>
+
+      <section class="chart-section">
+        <div class="chart-heading">
+          <div>
+            <h2 id="main-chart-title"></h2>
+            <p>Annual anomaly relative to the local 1981–2010 mean; historical through 2014, projections thereafter.</p>
+          </div>
+          <button id="reset-button" type="button">Reset view</button>
+        </div>
+        <div id="temperature-chart" class="chart-frame"></div>
+      </section>
+
+      <section class="chart-section comparison-section">
+        <div class="chart-heading">
+          <div>
+            <h2 id="comparison-title"></h2>
+            <p>Click a location to move the main chart. Values use a five-year average ending at the selected horizon.</p>
+          </div>
+        </div>
+        <div id="comparison-chart" class="chart-frame"></div>
+      </section>
+
+      <aside id="climate-tooltip" class="climate-tooltip" hidden></aside>
+    </section>
+
+    <section class="project3-writeup">
+      <h2>Design rationale</h2>
+      <p>
+        The main chart uses position along shared time and temperature axes because the
+        central task is comparing trajectories and identifying threshold-crossing years.
+        Historical values are shown as one neutral line, while the four SSP pathways use
+        an ordered cool-to-hot palette. I considered small multiples, but overlaying the
+        scenarios makes their divergence after 2015 immediately visible and allows a
+        single threshold line to support direct comparison.
+      </p>
+      <p>
+        The location menu and scenario checkboxes are dynamic-query filters that reduce
+        clutter without hiding the available analytical dimensions. The warming-threshold
+        slider turns an abstract temperature curve into a concrete question—when does this
+        pathway first cross 1.5°C, 2°C, or a higher local threshold? The horizon slider
+        supports near-, mid-, and late-century exploration. Hovering provides exact values,
+        while clicking a scenario line changes the linked comparison pathway.
+      </p>
+      <p>
+        The ranked comparison chart uses horizontal position for anomaly and a common
+        baseline across locations. Its five-year average reduces single-year variability,
+        and clicking a row links the overview back to the detailed chart. I avoided a map
+        because nine points would emphasize geography without showing projected magnitude
+        as effectively; the ranked view better answers where warming is greatest under a
+        selected pathway and time horizon.
+      </p>
+
+      <h2>Data transformations</h2>
+      <p>
+        Monthly near-surface air temperature (<code>tas</code>) was extracted from the
+        NOAA/Google public CMIP6 Zarr catalog for NCAR CESM2 ensemble member
+        <code>r4i1p1f1</code>. Monthly values were weighted by days per month and aggregated
+        to annual means at the nearest model grid cell for nine locations. Each series is
+        expressed as an anomaly from that location's 1981–2010 historical mean. The
+        comparison chart averages the five years ending at the selected horizon.
+      </p>
+
+      <h2>Development process</h2>
+      <p>
+        This is an individual portfolio implementation. Development took approximately
+        12 people-hours across data access, transformation, interaction design,
+        implementation, and testing. The most time-consuming work was extracting a compact
+        reproducible subset from cloud-hosted CMIP6 Zarr stores and coordinating linked
+        interactions so every control updates the chart, summaries, annotations, and
+        comparison view consistently.
+      </p>
+
+      <p class="source-note">
+        Source:
+        <a href="https://console.cloud.google.com/marketplace/product/noaa-public/cmip6" target="_blank" rel="noopener noreferrer">
+          NOAA Public CMIP6 Dataset on Google Cloud
+        </a>.
+        This explorer shows one climate model and one ensemble member, not a multi-model
+        uncertainty range; results are projections rather than predictions.
+      </p>
+    </section>
+  </main>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
