@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Store Foods: Processing and Price</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <script type="module" src="../global.js"></script>
+
+  <main class="project1-page">
+    <header class="project1-header">
+      <p class="project1-kicker">DSC 106 · Project 1 · Expository Visualization</p>
+      <h1>Processing and price across grocery-store shelves</h1>
+      <p>
+        A static visualization investigating how the degree of food processing and
+        price per calorie differ across Whole Foods, Walmart, and Target.
+      </p>
+    </header>
+
+    <figure class="project1-figure">
+      <img
+        src="visualization.svg"
+        alt="Whole Foods has a smaller ultra-processed share than Walmart and Target, but its median price per 100 calories is about 2.7 times Walmart's."
+      >
+      <figcaption>
+        <a href="visualization.svg" download>Download the standalone SVG</a>
+      </figcaption>
+    </figure>
+
+    <section class="project1-writeup">
+      <h2>Design rationale</h2>
+
+      <p>
+        The visualization argues that Whole Foods presents a meaningful but costly tradeoff:
+        its assortment contains a smaller share of ultra-processed products, while the median
+        cost of 100 calories is substantially higher. This framing matters because processing
+        and affordability both shape what shoppers can realistically choose. The takeaway is
+        stated directly in the title so the graphic can stand on its own without the write-up.
+      </p>
+
+      <p>
+        The left panel uses 100% stacked horizontal bars because the central comparison is the
+        composition of each store's assortment. A common zero-to-100% scale supports precise
+        comparison, while the red ultra-processed segment receives the strongest visual weight.
+        Green represents minimally processed foods, and the two less central NOVA classes use
+        quieter intermediary colors. Direct percentage labels reduce dependence on the legend
+        and draw attention to the 67%, 80%, and 84% contrast.
+      </p>
+
+      <p>
+        The right panel uses aligned bars for median price per 100 calories, which makes the
+        price difference readable through position and length rather than area. I multiplied
+        the provided price-per-calorie measure by 100 for a more interpretable unit. Because
+        this variable is strongly right-skewed and contains extreme values, I used medians and
+        excluded missing, zero, and non-finite observations. The 2.7× annotation communicates
+        the Whole Foods-to-Walmart ratio without requiring mental arithmetic.
+      </p>
+
+      <p>
+        The design intentionally summarizes products at the store level, which makes the main
+        tradeoff clear but obscures differences in category mix, package size, brand, and the
+        number of options stocked. It also describes assortment rather than purchasing behavior:
+        every listed product receives equal weight. During development, I compared store-level
+        NOVA shares, FPro distributions, category counts, and price metrics before selecting
+        this paired view because it produced the clearest and most consequential story.
+      </p>
+    </section>
+
+    <section class="project1-methods">
+      <h2>Data and transformations</h2>
+      <dl>
+        <div>
+          <dt>Products analyzed</dt>
+          <dd>26,250</dd>
+        </div>
+        <div>
+          <dt>Processing measure</dt>
+          <dd>Predicted NOVA class for all products</dd>
+        </div>
+        <div>
+          <dt>Price measure</dt>
+          <dd>Median listed price per 100 calories</dd>
+        </div>
+        <div>
+          <dt>Valid price records</dt>
+          <dd>20,780 after excluding missing, zero, and non-finite values</dd>
+        </div>
+      </dl>
+      <p>
+        Data source:
+        <a href="https://dsc106.com/projects/project1/" target="_blank" rel="noopener noreferrer">
+          DSC 106 Grocery Store Foods dataset
+        </a>.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

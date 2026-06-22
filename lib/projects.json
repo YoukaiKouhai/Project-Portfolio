@@ -1,5 +1,12 @@
 [
     {
+        "title": "Grocery Store Foods: Processing and Price",
+        "year": "2026",
+        "url": "project1/",
+        "image": "project1/visualization.svg",
+        "description": "A static expository visualization showing that Whole Foods stocks a smaller share of ultra-processed products than Walmart or Target, but its median cost per 100 calories is about 2.7 times Walmart's."
+    },
+    {
         "title": "Bikewatching",
         "year": "2026",
         "url": "bikewatching/",

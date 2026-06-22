@@ -176,6 +176,16 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
             : BASE_PATH + url;
     }
 
+    function resolveProjectImage(image) {
+        if (!image) {
+            return 'placeholder.jpg';
+        }
+
+        return image.startsWith('http') || image.startsWith('/')
+            ? image
+            : BASE_PATH + image;
+    }
+
     // Loop through projects and create article elements
     projects.forEach(project => {
         const article = document.createElement('article');
@@ -194,7 +204,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
         // Create image
         const img = document.createElement('img');
-        img.src = project.image || 'placeholder.jpg';
+        img.src = resolveProjectImage(project.image);
         img.alt = project.title || 'Project Image';
 
         const projectDetails = document.createElement('div');

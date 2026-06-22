@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Whole Foods offers a less ultra-processed shelf, but calories cost almost three times Walmart's</title>
+  <desc id="desc">A two-panel visualization comparing NOVA food-processing shares and median price per 100 calories at Whole Foods, Walmart, and Target.</desc>
+
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #182126; }
+    .title { font-size: 42px; font-weight: 750; }
+    .subtitle { font-size: 19px; fill: #536168; }
+    .panel-title { font-size: 23px; font-weight: 700; }
+    .panel-note { font-size: 15px; fill: #647178; }
+    .store { font-size: 18px; font-weight: 700; }
+    .tick { font-size: 14px; fill: #657178; }
+    .bar-label { font-size: 17px; font-weight: 750; fill: white; }
+    .price { font-size: 20px; font-weight: 750; }
+    .annotation { font-size: 17px; font-weight: 700; }
+    .source { font-size: 13px; fill: #66747a; }
+    .axis { stroke: #b9c2c6; stroke-width: 1; }
+    .grid { stroke: #dfe4e6; stroke-width: 1; stroke-dasharray: 3 5; }
+  </style>
+
+  <rect width="1200" height="800" fill="#fbfcfc"/>
+
+  <text class="title" x="70" y="70">Whole Foods offers a less ultra-processed shelf,</text>
+  <text class="title" x="70" y="120">but calories cost almost 3× Walmart's</text>
+  <text class="subtitle" x="70" y="157">26,250 grocery products across three major retailers · processing shares use all products;</text>
+  <text class="subtitle" x="70" y="184">price estimates are medians among 20,780 products with a valid positive price-per-calorie value.</text>
+
+  <rect x="52" y="220" width="718" height="500" rx="8" fill="#ffffff" stroke="#d7dddf"/>
+  <text class="panel-title" x="82" y="263">How processed is each store's shelf?</text>
+  <text class="panel-note" x="82" y="291">Share of products by predicted NOVA class</text>
+
+  <line class="grid" x1="210" y1="325" x2="210" y2="612"/>
+  <line class="grid" x1="335" y1="325" x2="335" y2="612"/>
+  <line class="grid" x1="460" y1="325" x2="460" y2="612"/>
+  <line class="grid" x1="585" y1="325" x2="585" y2="612"/>
+  <line class="grid" x1="710" y1="325" x2="710" y2="612"/>
+
+  <text class="tick" x="210" y="635" text-anchor="middle">0%</text>
+  <text class="tick" x="335" y="635" text-anchor="middle">25%</text>
+  <text class="tick" x="460" y="635" text-anchor="middle">50%</text>
+  <text class="tick" x="585" y="635" text-anchor="middle">75%</text>
+  <text class="tick" x="710" y="635" text-anchor="middle">100%</text>
+
+  <text class="store" x="190" y="363" text-anchor="end">Whole Foods</text>
+  <text class="store" x="190" y="463" text-anchor="end">Walmart</text>
+  <text class="store" x="190" y="563" text-anchor="end">Target</text>
+
+  <!-- Whole Foods: 19.57, 3.71, 9.70, 67.01 -->
+  <rect x="210" y="332" width="97.85" height="50" fill="#288d68"/>
+  <rect x="307.85" y="332" width="18.55" height="50" fill="#a8cfb9"/>
+  <rect x="326.40" y="332" width="48.50" height="50" fill="#e5b766"/>
+  <rect x="374.90" y="332" width="335.05" height="50" fill="#c44e52"/>
+  <text class="bar-label" x="542" y="364" text-anchor="middle">67% ultra-processed</text>
+
+  <!-- Walmart: 9.22, 1.72, 8.86, 80.20 -->
+  <rect x="210" y="432" width="46.10" height="50" fill="#288d68"/>
+  <rect x="256.10" y="432" width="8.60" height="50" fill="#a8cfb9"/>
+  <rect x="264.70" y="432" width="44.30" height="50" fill="#e5b766"/>
+  <rect x="309.00" y="432" width="401.00" height="50" fill="#c44e52"/>
+  <text class="bar-label" x="510" y="464" text-anchor="middle">80% ultra-processed</text>
+
+  <!-- Target: 5.67, 0.92, 9.00, 84.41 -->
+  <rect x="210" y="532" width="28.35" height="50" fill="#288d68"/>
+  <rect x="238.35" y="532" width="4.60" height="50" fill="#a8cfb9"/>
+  <rect x="242.95" y="532" width="45.00" height="50" fill="#e5b766"/>
+  <rect x="287.95" y="532" width="422.05" height="50" fill="#c44e52"/>
+  <text class="bar-label" x="499" y="564" text-anchor="middle">84% ultra-processed</text>
+
+  <g transform="translate(82 675)">
+    <rect x="0" y="-14" width="16" height="16" fill="#288d68"/>
+    <text class="tick" x="23" y="0">Minimally processed</text>
+    <rect x="170" y="-14" width="16" height="16" fill="#a8cfb9"/>
+    <text class="tick" x="193" y="0">Culinary ingredients</text>
+    <rect x="354" y="-14" width="16" height="16" fill="#e5b766"/>
+    <text class="tick" x="377" y="0">Processed</text>
+    <rect x="474" y="-14" width="16" height="16" fill="#c44e52"/>
+    <text class="tick" x="497" y="0">Ultra-processed</text>
+  </g>
+
+  <rect x="790" y="220" width="358" height="500" rx="8" fill="#ffffff" stroke="#d7dddf"/>
+  <text class="panel-title" x="820" y="263">What do 100 calories cost?</text>
+  <text class="panel-note" x="820" y="291">Median listed price per 100 calories</text>
+
+  <line class="axis" x1="840" y1="620" x2="1108" y2="620"/>
+  <line class="grid" x1="840" y1="320" x2="840" y2="620"/>
+  <line class="grid" x1="974" y1="320" x2="974" y2="620"/>
+  <line class="grid" x1="1108" y1="320" x2="1108" y2="620"/>
+  <text class="tick" x="840" y="644" text-anchor="middle">$0.00</text>
+  <text class="tick" x="974" y="644" text-anchor="middle">$0.50</text>
+  <text class="tick" x="1108" y="644" text-anchor="middle">$1.00</text>
+
+  <text class="store" x="840" y="360">Walmart</text>
+  <rect x="840" y="378" width="92" height="38" fill="#4378a8"/>
+  <text class="price" x="942" y="404">$0.34</text>
+
+  <text class="store" x="840" y="465">Target</text>
+  <rect x="840" y="483" width="153" height="38" fill="#4378a8"/>
+  <text class="price" x="1003" y="509">$0.57</text>
+
+  <text class="store" x="840" y="570">Whole Foods</text>
+  <rect x="840" y="588" width="248" height="38" fill="#288d68"/>
+  <text class="price" x="1080" y="579" text-anchor="end">$0.93</text>
+
+  <path d="M 920 431 C 973 425, 1027 428, 1085 454" fill="none" stroke="#182126" stroke-width="1.5"/>
+  <path d="M 1085 454 l -9 -2 l 5 -8" fill="none" stroke="#182126" stroke-width="1.5"/>
+  <text class="annotation" x="1004" y="409" text-anchor="middle">2.7× Walmart</text>
+
+  <text class="source" x="70" y="756">Source: DSC 106 Grocery Store Foods / GroceryDB. NOVA class is model-predicted. Price panel excludes missing, zero,</text>
+  <text class="source" x="70" y="777">and non-finite price-per-calorie values; medians reduce the influence of extreme outliers. Product mix differs by store.</text>
+</svg>
