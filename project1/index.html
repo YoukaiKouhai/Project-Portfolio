@@ -3,99 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grocery Store Foods: Processing and Price</title>
+  <meta name="description" content="Interactive data story analyzing grocery processing, price, nutrition, and health tradeoffs across Walmart, Target, and Whole Foods.">
+  <title>Grocery Processing, Price, and Nutrition</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="project.css">
 </head>
 <body>
   <script type="module" src="../global.js"></script>
 
-  <main class="project1-page">
-    <header class="project1-header">
-      <p class="project1-kicker">DSC 106 · Project 1 · Expository Visualization</p>
-      <h1>Processing and price across grocery-store shelves</h1>
-      <p>
-        A static visualization investigating how the degree of food processing and
-        price per calorie differ across Whole Foods, Walmart, and Target.
+  <div class="read-progress" aria-hidden="true"><span id="read-progress-bar"></span></div>
+
+  <main class="grocery-story">
+    <header class="story-hero">
+      <p class="eyebrow">DSC 106 Project 1 expanded into an interactive data story</p>
+      <h1>What does a less processed grocery shelf cost?</h1>
+      <p class="dek">
+        A data journalism-style exploration of 26,250 Walmart, Target, and Whole Foods products, connecting food processing,
+        price per calorie, nutrition, and the limits of product-level grocery data.
       </p>
+      <div class="hero-actions" aria-label="Project actions">
+        <a class="button primary" href="#explore">Explore the dashboard</a>
+        <a class="button ghost" href="#methodology">Read the methodology</a>
+      </div>
+      <dl class="hero-stats" id="hero-stats" aria-label="Dataset summary">
+        <div><dt>Products</dt><dd>Loading</dd></div>
+        <div><dt>Stores</dt><dd>Loading</dd></div>
+        <div><dt>Median price</dt><dd>Loading</dd></div>
+        <div><dt>Ultra-processed</dt><dd>Loading</dd></div>
+      </dl>
     </header>
 
-    <figure class="project1-figure">
-      <img
-        src="visualization.svg"
-        alt="Whole Foods has a smaller ultra-processed share than Walmart and Target, but its median price per 100 calories is about 2.7 times Walmart's."
-      >
-      <figcaption>
-        <a href="visualization.svg" download>Download the standalone SVG</a>
-      </figcaption>
-    </figure>
-
-    <section class="project1-writeup">
-      <h2>Design rationale</h2>
-
-      <p>
-        The visualization argues that Whole Foods presents a meaningful but costly tradeoff:
-        its assortment contains a smaller share of ultra-processed products, while the median
-        cost of 100 calories is substantially higher. This framing matters because processing
-        and affordability both shape what shoppers can realistically choose. The takeaway is
-        stated directly in the title so the graphic can stand on its own without the write-up.
-      </p>
-
-      <p>
-        The left panel uses 100% stacked horizontal bars because the central comparison is the
-        composition of each store's assortment. A common zero-to-100% scale supports precise
-        comparison, while the red ultra-processed segment receives the strongest visual weight.
-        Green represents minimally processed foods, and the two less central NOVA classes use
-        quieter intermediary colors. Direct percentage labels reduce dependence on the legend
-        and draw attention to the 67%, 80%, and 84% contrast.
-      </p>
-
-      <p>
-        The right panel uses aligned bars for median price per 100 calories, which makes the
-        price difference readable through position and length rather than area. I multiplied
-        the provided price-per-calorie measure by 100 for a more interpretable unit. Because
-        this variable is strongly right-skewed and contains extreme values, I used medians and
-        excluded missing, zero, and non-finite observations. The 2.7× annotation communicates
-        the Whole Foods-to-Walmart ratio without requiring mental arithmetic.
-      </p>
-
-      <p>
-        The design intentionally summarizes products at the store level, which makes the main
-        tradeoff clear but obscures differences in category mix, package size, brand, and the
-        number of options stocked. It also describes assortment rather than purchasing behavior:
-        every listed product receives equal weight. During development, I compared store-level
-        NOVA shares, FPro distributions, category counts, and price metrics before selecting
-        this paired view because it produced the clearest and most consequential story.
-      </p>
+    <section class="article-section lead-section">
+      <div class="section-copy">
+        <p class="section-kicker">Why this matters</p>
+        <h2>Processing and affordability are both constraints.</h2>
+        <p>
+          Healthy grocery decisions are not just about willpower. Shoppers compare shelf options under time, price,
+          brand, package-size, and nutrition constraints. This project asks a narrower but useful question:
+          when we compare listed products, how do processing and price trade off across three large retailers?
+        </p>
+      </div>
+      <aside class="callout">
+        <strong>Unit of analysis:</strong> each row is a product listing, not a purchase. A cereal box and a snack pouch
+        each count once, even if shoppers buy them at different rates.
+      </aside>
     </section>
 
-    <section class="project1-methods">
-      <h2>Data and transformations</h2>
-      <dl>
+    <section class="scrolly" id="story">
+      <div class="story-steps" aria-label="Narrative steps">
+        <article class="step is-active" data-step="overview">
+          <p class="section-kicker">1. The headline</p>
+          <h2>Whole Foods has fewer ultra-processed listings, but calories cost more.</h2>
+          <p>
+            The original static graphic found a clear store-level tradeoff: Whole Foods lists a smaller ultra-processed
+            share, while its median cost per 100 calories is much higher.
+          </p>
+        </article>
+        <article class="step" data-step="processing">
+          <p class="section-kicker">2. Processing mix</p>
+          <h2>The biggest separation is in NOVA class 4.</h2>
+          <p>
+            Target and Walmart lean heavily toward ultra-processed products. Whole Foods still has many ultra-processed
+            listings, but its shelf mix is less concentrated there.
+          </p>
+        </article>
+        <article class="step" data-step="price">
+          <p class="section-kicker">3. Price</p>
+          <h2>The price story is skewed, so medians matter.</h2>
+          <p>
+            Price per calorie has extreme outliers. The story uses medians and separately flags outliers so a few unusual
+            products do not dominate the conclusion.
+          </p>
+        </article>
+        <article class="step" data-step="nutrition">
+          <p class="section-kicker">4. Nutrition</p>
+          <h2>Processing is related to nutrition, but it is not the whole story.</h2>
+          <p>
+            FPro, sugar, sodium, fiber, protein, and calories are combined into a transparent exploratory Health Index
+            below. It is meant for comparison, not medical advice.
+          </p>
+        </article>
+      </div>
+      <div class="sticky-visual">
+        <div class="chart-shell">
+          <div class="chart-title-row">
+            <div>
+              <p class="section-kicker">Scrollytelling view</p>
+              <h2 id="story-chart-title">Store-level processing and price</h2>
+            </div>
+            <span class="status-pill" id="story-status">Loading data</span>
+          </div>
+          <svg id="story-chart" role="img" aria-label="Animated comparison of grocery processing and price by store"></svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section trust-section" id="trust">
+      <div class="section-copy">
+        <p class="section-kicker">Trust and methodology</p>
+        <h2>How trustworthy is this insight?</h2>
+        <p>
+          The strongest signal is the store-level processing and median price comparison. The weakest parts are product
+          comparability, missing nutrition, and the fact that assortment is not the same as consumer behavior.
+        </p>
+      </div>
+      <div class="trust-grid" id="trust-grid" aria-label="Data quality cards"></div>
+    </section>
+
+    <section class="dashboard" id="explore">
+      <div class="dashboard-heading">
         <div>
-          <dt>Products analyzed</dt>
-          <dd>26,250</dd>
+          <p class="section-kicker">Interactive exploration</p>
+          <h2>Filter the shelf and watch the views coordinate.</h2>
+          <p>
+            Select stores, categories, or nutrition ranges. Brushing the scatterplot cross-filters the summary cards,
+            price distribution, processing mix, and basket search.
+          </p>
+        </div>
+        <div class="dashboard-actions">
+          <button type="button" class="button ghost" id="copy-link">Copy view link</button>
+          <button type="button" class="button ghost" id="reset-filters">Reset filters</button>
+        </div>
+      </div>
+
+      <section class="filters" aria-label="Dashboard filters">
+        <fieldset>
+          <legend>Store</legend>
+          <div class="segmented" id="store-filter"></div>
+        </fieldset>
+        <label>
+          Category
+          <select id="category-filter"></select>
+        </label>
+        <label>
+          Sugar max <span id="sugar-label"></span>
+          <input id="sugar-filter" type="range" min="0" max="100" step="1">
+        </label>
+        <label>
+          Sodium max <span id="sodium-label"></span>
+          <input id="sodium-filter" type="range" min="0" max="20000" step="50">
+        </label>
+        <label>
+          Minimum fiber <span id="fiber-label"></span>
+          <input id="fiber-filter" type="range" min="0" max="20" step="0.5">
+        </label>
+        <label>
+          Minimum protein <span id="protein-label"></span>
+          <input id="protein-filter" type="range" min="0" max="40" step="0.5">
+        </label>
+        <label>
+          FPro max <span id="fpro-label"></span>
+          <input id="fpro-filter" type="range" min="0" max="1" step="0.01">
+        </label>
+      </section>
+
+      <dl class="kpi-grid" id="kpi-grid" aria-label="Filtered summary"></dl>
+
+      <div class="dashboard-grid">
+        <article class="chart-shell primary-chart">
+          <div class="chart-title-row">
+            <div>
+              <p class="section-kicker">FPro x price</p>
+              <h3>Every dot is a product listing</h3>
+            </div>
+            <div class="chart-actions">
+              <button type="button" class="icon-button" id="export-scatter-svg" aria-label="Export scatterplot as SVG">SVG</button>
+              <button type="button" class="icon-button" id="export-scatter-png" aria-label="Export scatterplot as PNG">PNG</button>
+            </div>
+          </div>
+          <svg id="scatter-chart" role="img" aria-label="Scatterplot of FPro against price per 100 calories"></svg>
+          <p class="chart-note">Drag across the scatterplot to brush products. Double-click the plot to clear the brush.</p>
+        </article>
+
+        <article class="chart-shell">
+          <p class="section-kicker">Price distribution</p>
+          <h3>Most products cluster near the low end</h3>
+          <svg id="histogram-chart" role="img" aria-label="Histogram of price per 100 calories"></svg>
+        </article>
+
+        <article class="chart-shell">
+          <p class="section-kicker">NOVA explorer</p>
+          <h3>Processing mix by store</h3>
+          <svg id="stacked-chart" role="img" aria-label="Stacked bar chart of processing class by store"></svg>
+        </article>
+
+        <article class="chart-shell">
+          <p class="section-kicker">Health Index</p>
+          <h3>Median and quartile spread</h3>
+          <svg id="boxplot-chart" role="img" aria-label="Boxplot of Health Index by store"></svg>
+        </article>
+      </div>
+    </section>
+
+    <section class="basket" id="basket">
+      <div class="basket-copy">
+        <p class="section-kicker">Comparison tool</p>
+        <h2>Build a grocery basket.</h2>
+        <p>
+          Search filtered products, add them to a basket, and compare total cost, nutrition, processing, and exploratory
+          Health Index. The basket uses listed products, so it reflects product choices rather than store inventory depth.
+        </p>
+      </div>
+      <div class="basket-panel">
+        <div class="basket-controls">
+          <input id="product-search" type="search" placeholder="Search products, brands, or categories">
+          <select id="product-picker" size="6" aria-label="Product search results"></select>
+          <button type="button" class="button primary" id="add-product">Add selected product</button>
         </div>
         <div>
-          <dt>Processing measure</dt>
-          <dd>Predicted NOVA class for all products</dd>
+          <dl class="basket-summary" id="basket-summary"></dl>
+          <ul class="basket-list" id="basket-list"></ul>
         </div>
-        <div>
-          <dt>Price measure</dt>
-          <dd>Median listed price per 100 calories</dd>
+      </div>
+    </section>
+
+    <section class="article-section findings">
+      <div>
+        <p class="section-kicker">Key findings</p>
+        <h2>What I learned</h2>
+      </div>
+      <div class="finding-grid">
+        <article>
+          <h3>The main insight</h3>
+          <p>Whole Foods offers a less ultra-processed assortment, but the median calorie is more expensive.</p>
+        </article>
+        <article>
+          <h3>What cleaning changed</h3>
+          <p>Removing missing, zero, non-finite, and statistical price outliers makes the price comparison less volatile.</p>
+        </article>
+        <article>
+          <h3>What to be cautious about</h3>
+          <p>Products are weighted equally. The data does not measure sales volume, location, promotions, or shopper access.</p>
+        </article>
+        <article>
+          <h3>What this demonstrates</h3>
+          <p>D3 modules, coordinated views, brushing, URL state, export tools, transparent formulas, and responsive storytelling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="methodology" id="methodology">
+      <details open>
+        <summary>Reproducibility, formulas, and limitations</summary>
+        <div class="methodology-grid">
+          <article>
+            <h3>Data source</h3>
+            <p>
+              DSC 106 GroceryDB CSV downloaded from the course project resources. The page analyzes all 26,250 product
+              rows available in the file and keeps the original static visualization as a downloadable SVG.
+            </p>
+            <p><a href="data/grocerydb.csv" download>Download the local CSV</a> | <a href="visualization.svg" download>Download original SVG</a></p>
+          </article>
+          <article>
+            <h3>Cleaning logic</h3>
+            <p>
+              Numeric fields are parsed from strings, HTML entities in product names are decoded, price per calorie is
+              converted to price per 100 calories, sodium is displayed as mg per 100g, and price outliers are flagged
+              with the 1.5 x IQR rule.
+            </p>
+          </article>
+          <article>
+            <h3>Health Index</h3>
+            <p>
+              Score = 100 - 26(FPro) - 8(NOVA/3) - sugar penalty - sodium penalty - calorie penalty + fiber bonus +
+              protein bonus. The result is clamped to 0-100. This is an exploratory comparison score, not medical advice.
+            </p>
+          </article>
+          <article>
+            <h3>Limitations</h3>
+            <p>
+              NOVA/FPro values are model-derived, product listings are not purchases, prices may vary by region and time,
+              categories are uneven, and product weights do not perfectly standardize serving behavior.
+            </p>
+          </article>
         </div>
-        <div>
-          <dt>Valid price records</dt>
-          <dd>20,780 after excluding missing, zero, and non-finite values</dd>
-        </div>
-      </dl>
-      <p>
-        Data source:
-        <a href="https://dsc106.com/projects/project1/" target="_blank" rel="noopener noreferrer">
-          DSC 106 Grocery Store Foods dataset
-        </a>.
-      </p>
+      </details>
     </section>
   </main>
+
+  <div class="viz-tooltip" id="viz-tooltip" hidden></div>
+  <script src="vendor/d3.v7.min.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>

@@ -1,5 +1,12 @@
 [
     {
+        "title": "Peer-to-Peer Battleship",
+        "year": "2026",
+        "url": "python_projects/mini_python_projects/mini_python_project_1_battleship/battleship-web/",
+        "image": "python_projects/mini_python_projects/mini_python_project_1_battleship/battleship-web/preview.svg",
+        "description": "A host-authoritative two-player browser game using WebRTC and PeerJS, with private fleets, turn validation, room codes, live score tracking, and rematches."
+    },
+    {
         "title": "Climate Futures Explorer",
         "year": "2026",
         "url": "project3/",
@@ -14,11 +21,11 @@
         "description": "Two opposing persuasive visualizations use the same World Bank population dataset to argue for and against the proposition that the world is rapidly becoming an aging society."
     },
     {
-        "title": "Grocery Store Foods: Processing and Price",
+        "title": "Grocery Processing, Price, and Nutrition",
         "year": "2026",
         "url": "project1/",
         "image": "project1/visualization.svg",
-        "description": "A static expository visualization showing that Whole Foods stocks a smaller share of ultra-processed products than Walmart or Target, but its median cost per 100 calories is about 2.7 times Walmart's."
+        "description": "A publication-style interactive D3 data story with scrollytelling, coordinated filters, brushing, a Health Index, data-quality audit, exports, and a grocery basket comparison tool."
     },
     {
         "title": "Bikewatching",

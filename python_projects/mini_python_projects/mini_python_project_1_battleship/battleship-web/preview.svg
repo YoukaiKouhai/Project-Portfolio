@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">Peer-to-Peer Battleship game preview</title>
+  <desc id="description">Two opposing Battleship grids with ships, hits, misses, and a room code.</desc>
+  <rect width="1200" height="800" fill="#07131f"/>
+  <path d="M0 620 C180 560 340 680 520 620 S860 560 1200 640 V800 H0 Z" fill="#0d5964"/>
+  <path d="M0 675 C210 620 360 735 570 675 S920 625 1200 700" fill="none" stroke="#53d6c3" stroke-width="10" opacity=".5"/>
+  <text x="72" y="108" fill="#53d6c3" font-family="system-ui, sans-serif" font-size="26" font-weight="800" letter-spacing="4">TWO-PLAYER WEB GAME</text>
+  <text x="72" y="184" fill="#f2f7fb" font-family="system-ui, sans-serif" font-size="72" font-weight="800">Peer-to-Peer Battleship</text>
+  <g transform="translate(72 252)">
+    <rect width="488" height="318" rx="8" fill="#102438" stroke="#2d4d66" stroke-width="3"/>
+    <text x="28" y="48" fill="#a9bdcc" font-family="system-ui, sans-serif" font-size="24" font-weight="700">YOUR FLEET</text>
+    <g transform="translate(28 78)">
+      <g fill="#27445c" stroke="#365a75" stroke-width="2">
+        <rect width="74" height="74" rx="6"/><rect x="86" width="74" height="74" rx="6"/><rect x="172" width="74" height="74" rx="6"/><rect x="258" width="74" height="74" rx="6"/><rect x="344" width="74" height="74" rx="6"/>
+        <rect y="86" width="74" height="74" rx="6"/><rect x="86" y="86" width="74" height="74" rx="6"/><rect x="172" y="86" width="74" height="74" rx="6"/><rect x="258" y="86" width="74" height="74" rx="6"/><rect x="344" y="86" width="74" height="74" rx="6"/>
+        <rect y="172" width="74" height="74" rx="6"/><rect x="86" y="172" width="74" height="74" rx="6"/><rect x="172" y="172" width="74" height="74" rx="6"/><rect x="258" y="172" width="74" height="74" rx="6"/><rect x="344" y="172" width="74" height="74" rx="6"/>
+      </g>
+      <g fill="#f4c95d">
+        <rect x="86" width="74" height="74" rx="6"/><rect x="172" width="74" height="74" rx="6"/>
+        <rect x="258" y="86" width="74" height="74" rx="6"/><rect x="344" y="86" width="74" height="74" rx="6"/>
+      </g>
+      <rect y="172" width="74" height="74" rx="6" fill="#ff6b6b"/>
+    </g>
+  </g>
+  <g transform="translate(640 252)">
+    <rect width="488" height="318" rx="8" fill="#102438" stroke="#2d4d66" stroke-width="3"/>
+    <text x="28" y="48" fill="#a9bdcc" font-family="system-ui, sans-serif" font-size="24" font-weight="700">OPPONENT'S WATERS</text>
+    <g transform="translate(28 78)">
+      <g fill="#27445c" stroke="#365a75" stroke-width="2">
+        <rect width="74" height="74" rx="6"/><rect x="86" width="74" height="74" rx="6"/><rect x="172" width="74" height="74" rx="6"/><rect x="258" width="74" height="74" rx="6"/><rect x="344" width="74" height="74" rx="6"/>
+        <rect y="86" width="74" height="74" rx="6"/><rect x="86" y="86" width="74" height="74" rx="6"/><rect x="172" y="86" width="74" height="74" rx="6"/><rect x="258" y="86" width="74" height="74" rx="6"/><rect x="344" y="86" width="74" height="74" rx="6"/>
+        <rect y="172" width="74" height="74" rx="6"/><rect x="86" y="172" width="74" height="74" rx="6"/><rect x="172" y="172" width="74" height="74" rx="6"/><rect x="258" y="172" width="74" height="74" rx="6"/><rect x="344" y="172" width="74" height="74" rx="6"/>
+      </g>
+      <circle cx="37" cy="37" r="20" fill="#5da9e9"/>
+      <circle cx="295" cy="123" r="20" fill="#ff6b6b"/>
+      <circle cx="381" cy="209" r="20" fill="#5da9e9"/>
+    </g>
+  </g>
+  <g transform="translate(388 640)">
+    <rect width="424" height="92" rx="8" fill="#17314a" stroke="#53d6c3" stroke-width="3"/>
+    <text x="30" y="36" fill="#a9bdcc" font-family="system-ui, sans-serif" font-size="18" font-weight="700">ROOM CODE</text>
+    <text x="30" y="70" fill="#f2f7fb" font-family="ui-monospace, monospace" font-size="34" font-weight="800" letter-spacing="10">B7K9Q2</text>
+  </g>
+</svg>

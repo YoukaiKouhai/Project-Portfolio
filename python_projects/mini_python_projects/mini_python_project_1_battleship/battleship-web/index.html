@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="A beginner-friendly, peer-to-peer, one-dimensional Battleship game."
+    >
+    <meta name="theme-color" content="#07131f">
+    <title>Peer-to-Peer Battleship</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+      PeerJS wraps the lower-level WebRTC API. The page remains a static site:
+      this script runs in each player's browser and uses the public PeerJS
+      signaling service only to help the browsers find one another.
+    -->
+    <script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+    <script src="game.js" defer></script>
+    <script src="client.js" defer></script>
+  </head>
+
+  <body>
+    <main class="page-shell">
+      <a class="portfolio-back" href="../../../../projects/">
+        <span aria-hidden="true">&larr;</span>
+        Back to projects
+      </a>
+
+      <header class="hero">
+        <div>
+          <p class="eyebrow">One-dimensional browser game</p>
+          <h1>Peer-to-Peer Battleship</h1>
+          <p class="hero-copy">
+            Host a private two-player match, share the six-character room code,
+            and take turns firing at positions 0 through 19.
+          </p>
+        </div>
+        <div class="connection-badge" id="connectionBadge">Not connected</div>
+      </header>
+
+      <noscript>
+        <p class="notice error">
+          JavaScript is required because the game logic and peer connection run
+          in the browser.
+        </p>
+      </noscript>
+
+      <section class="panel connection-panel" id="connectionPanel">
+        <div class="panel-heading">
+          <div>
+            <p class="section-label">Step 1</p>
+            <h2>Connect two players</h2>
+          </div>
+          <p class="muted">Open this page in a second browser or send the link to a friend.</p>
+        </div>
+
+        <div class="connection-grid">
+          <article class="connection-card">
+            <h3>Host a game</h3>
+            <p>Your browser creates the room and becomes the game authority.</p>
+            <button class="primary-button" id="hostButton" type="button">
+              Host Game
+            </button>
+
+            <div class="room-code-box hidden" id="roomCodeBox">
+              <span class="room-code-label">Room code</span>
+              <strong id="roomCode">------</strong>
+              <button class="secondary-button compact" id="copyCodeButton" type="button">
+                Copy
+              </button>
+            </div>
+          </article>
+
+          <article class="connection-card">
+            <h3>Join a game</h3>
+            <p>Enter the room code shown on the host's screen.</p>
+            <label for="joinCode">Room code</label>
+            <input
+              id="joinCode"
+              type="text"
+              maxlength="6"
+              autocomplete="off"
+              placeholder="ABC123"
+              aria-describedby="joinHelp"
+            >
+            <small id="joinHelp">Letters and numbers only.</small>
+            <button class="primary-button" id="joinButton" type="button">
+              Join Game
+            </button>
+          </article>
+        </div>
+
+        <p class="notice" id="connectionMessage" aria-live="polite">
+          Choose Host Game or enter a room code.
+        </p>
+      </section>
+
+      <section class="game-layout hidden" id="gamePanel">
+        <section class="panel game-status-panel">
+          <div>
+            <p class="section-label">Match status</p>
+            <h2 id="turnMessage">Waiting for the game to begin...</h2>
+          </div>
+          <div class="player-chip" id="playerChip">Player</div>
+        </section>
+
+        <section class="score-grid" aria-label="Game totals">
+          <article class="score-card">
+            <span>Your hits</span>
+            <strong id="yourHits">0</strong>
+          </article>
+          <article class="score-card">
+            <span>Your misses</span>
+            <strong id="yourMisses">0</strong>
+          </article>
+          <article class="score-card">
+            <span>Opponent hits</span>
+            <strong id="opponentHits">0</strong>
+          </article>
+          <article class="score-card">
+            <span>Opponent misses</span>
+            <strong id="opponentMisses">0</strong>
+          </article>
+        </section>
+
+        <section class="boards-grid">
+          <article class="panel board-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Your fleet</p>
+                <h2>Your hidden board</h2>
+              </div>
+              <p class="muted">Only you and the host browser receive these ship positions.</p>
+            </div>
+            <div class="board" id="ownBoard" aria-label="Your ship board"></div>
+            <div class="ship-list" id="ownShipList"></div>
+          </article>
+
+          <article class="panel board-panel target-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-label">Your attack</p>
+                <h2>Opponent's waters</h2>
+              </div>
+              <p class="muted">Select an unguessed position when it is your turn.</p>
+            </div>
+            <div class="board" id="targetBoard" aria-label="Opponent target board"></div>
+            <div class="ship-list" id="opponentShipList"></div>
+          </article>
+        </section>
+
+        <section class="panel message-panel">
+          <div>
+            <p class="section-label">Game message</p>
+            <p class="game-message" id="gameMessage" aria-live="polite">
+              Waiting for both players.
+            </p>
+          </div>
+          <button class="primary-button hidden" id="restartButton" type="button">
+            Ready for Rematch
+          </button>
+        </section>
+
+        <section class="panel instructions-panel">
+          <h2>How to read the boards</h2>
+          <div class="legend">
+            <span><i class="legend-cell unknown"></i> Not guessed</span>
+            <span><i class="legend-cell ship"></i> Your ship</span>
+            <span><i class="legend-cell hit"></i> Hit</span>
+            <span><i class="legend-cell miss"></i> Miss</span>
+          </div>
+          <ul>
+            <li>Ships have lengths 2, 3, and 4 and never overlap.</li>
+            <li>A valid new guess ends the current player's turn.</li>
+            <li>Invalid and repeated guesses do not use the turn.</li>
+            <li>Sink all nine enemy ship positions to win.</li>
+            <li>Making more than six misses also causes a loss.</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
