@@ -9,22 +9,22 @@
     {
         "title": "Climate Futures Explorer",
         "year": "2026",
-        "url": "project3/",
-        "image": "project3/preview.svg",
+        "url": "dsc106_DataVisualization_projects/project3/",
+        "image": "dsc106_DataVisualization_projects/project3/preview.svg",
         "description": "A D3-only interactive explorer for comparing local CMIP6 temperature projections across emissions pathways, warming thresholds, time horizons, and nine locations."
     },
     {
         "title": "Is the World Aging Rapidly?",
         "year": "2026",
-        "url": "project2/",
-        "image": "project2/aging_urgent.svg",
+        "url": "dsc106_DataVisualization_projects/project2/",
+        "image": "dsc106_DataVisualization_projects/project2/aging_urgent.svg",
         "description": "Two opposing persuasive visualizations use the same World Bank population dataset to argue for and against the proposition that the world is rapidly becoming an aging society."
     },
     {
         "title": "Grocery Processing, Price, and Nutrition",
         "year": "2026",
-        "url": "project1/",
-        "image": "project1/visualization.svg",
+        "url": "dsc106_DataVisualization_projects/project1/",
+        "image": "dsc106_DataVisualization_projects/project1/visualization.svg",
         "description": "A publication-style interactive D3 data story with scrollytelling, coordinated filters, brushing, a Health Index, data-quality audit, exports, and a grocery basket comparison tool."
     },
     {

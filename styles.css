@@ -69,6 +69,7 @@ h2 {
 /* Navigation */
 nav {
   display: flex;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 1rem;
 }
@@ -81,7 +82,7 @@ nav ul, nav li {
 }
 
 nav a {
-  flex: 1;
+  flex: 1 1 7rem;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -204,6 +205,134 @@ form button:hover {
 .project-link {
   justify-self: center;
   font-weight: 700;
+}
+
+/* Publications */
+.publications-page {
+  max-width: 82ch;
+  margin-inline: auto;
+  padding-bottom: 4rem;
+}
+
+.publications-header {
+  margin-block: 2.25rem 2rem;
+}
+
+.publications-kicker {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.publications-header h1 {
+  margin-top: 0.35rem;
+}
+
+.publications-header p {
+  max-width: 68ch;
+  color: var(--text-secondary);
+}
+
+.publications-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.publication-entry {
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.publication-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.publication-authors,
+.publication-meta {
+  margin-block: 0.75rem 0;
+}
+
+.publication-authors {
+  color: var(--text-primary);
+}
+
+.publication-author-me {
+  padding: 0.05rem 0.22rem;
+  border-radius: 0.25rem;
+  color: var(--text-primary);
+  background: color-mix(in oklch, var(--color-accent), transparent 78%);
+  font-weight: 800;
+}
+
+.publication-meta {
+  color: var(--text-secondary);
+  font-family: Baskerville, Georgia, serif;
+  font-size: 1.05rem;
+}
+
+.publication-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publication-tags li {
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: var(--surface-bg);
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.15rem;
+}
+
+.publication-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+  color: var(--text-primary);
+  background: var(--page-bg);
+  font-weight: 750;
+  text-decoration: none;
+  transition: 180ms ease;
+  transition-property: border-color, background-color, transform;
+}
+
+.publication-links a:hover,
+.publication-links a:focus-visible {
+  border-color: var(--color-accent);
+  background: color-mix(in oklch, var(--color-accent), var(--page-bg) 86%);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .publication-entry {
+    padding-block: 1.2rem;
+  }
+
+  .publication-links a {
+    flex: 1 1 6rem;
+  }
 }
 
 .projects-visualization {

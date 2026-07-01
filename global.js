@@ -60,8 +60,8 @@ function setupNavigation() {
   const pages = [
     { url: '', title: 'Home' },
     { url: 'CV/', title: 'CV' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'meta/', title: 'Meta' },
+    { url: 'dsc106_DataVisualization_projects/projects/', title: 'Projects' },
+    { url: 'publications/', title: 'Publications' },
     { url: 'contact/', title: 'Contact' },
     { url: 'https://github.com/YoukaiKouhai', title: 'GitHub' }
   ];

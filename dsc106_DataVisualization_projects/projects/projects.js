@@ -1,5 +1,5 @@
 // Import functions from global.js
-import { fetchJSON, renderProjects } from '../global.js';
+import { fetchJSON, renderProjects } from '../../global.js';
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let query = '';
@@ -133,7 +133,7 @@ function updateView(projects) {
 // Immediately-invoked async function to load projects
 (async function loadProjects() {
   try {
-    const projects = await fetchJSON('../lib/projects.json');
+    const projects = await fetchJSON('../../lib/projects.json');
 
     if (!projectsContainer) {
       console.error('No container with class "projects" found in HTML.');
