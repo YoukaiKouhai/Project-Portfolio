@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TIDE · Trace decomposition</title>
+  <link rel="icon" href="data:,">
+  <link href="style.css" rel="stylesheet"><script src="app.js" defer></script>
+</head>
+<body>
+  <header><div class="header-inner"><strong class="brand">TIDE</strong><span class="product">Trace decomposition</span><span class="local">Bundled example</span></div></header>
+  <main>
+    <aside><h1>Example chromatograms</h1><p>Control and edited Sanger traces from the project's example pair.</p><p><a href="../">Back to TIDE project</a></p></aside>
+    <section class="workspace" aria-labelledby="results-title">
+      <div class="section-heading"><h2 id="results-title">Decomposition</h2><button id="export" hidden>Export CSV</button></div>
+      <p id="status" role="status" aria-live="polite">Reading example chromatograms…</p>
+      <div id="results" hidden>
+        <div class="metrics">
+          <div><span>Estimated editing</span><strong id="efficiency"></strong></div>
+          <div><span>Model fit · R²</span><strong id="fit"></strong></div>
+          <div><span>Cut after base</span><strong id="cut"></strong></div>
+        </div>
+        <div class="views" aria-label="Results view"><button type="button" data-view="0">Indel spectrum</button><button type="button" data-view="1">Aberrant signal</button><button type="button" data-view="2">Chromatograms</button><button type="button" data-view="3">+1 composition</button></div>
+        <figure><img id="plot" alt=""><figcaption id="caption"></figcaption></figure>
+        <div class="qc"><h3>Read quality</h3><p id="qc-text"></p><p id="warning" hidden></p></div>
+        <details class="table-box"><summary>Indel frequencies</summary><table><thead><tr><th>Size (bp)</th><th>Estimated frequency</th><th>Approx. p-value</th></tr></thead><tbody id="rows"></tbody></table></details>
+      </div>
+    </section>
+  </main>
+</body></html>

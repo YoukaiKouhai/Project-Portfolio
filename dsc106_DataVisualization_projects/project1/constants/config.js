@@ -18,5 +18,16 @@ export const DEFAULT_FILTERS = {
   sodiumMax: 20000,
   fiberMin: 0,
   proteinMin: 0,
+  caloriesMax: 900,
   fproMax: 1
+};
+
+export const DEFAULT_HEALTH_WEIGHTS = {
+  fpro: 26,
+  nova: 8,
+  sugar: 14,
+  sodium: 12,
+  calories: 9,
+  fiber: 9,
+  protein: 8
 };

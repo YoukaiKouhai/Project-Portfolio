@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Peer-reviewed publications, conference papers, posters, preprints, and research outputs by Austin Wong.">
-  <title>Publications</title>
+  <title>Publications and Projects</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -56,6 +56,17 @@
         </div>
       </article>
     </section>
+    <hr>
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="projects-visualization">
+        <svg id="projects-pie-plot" viewBox="-50 -50 100 100" role="group" aria-label="Projects by year"></svg>
+        <ul class="legend" aria-label="Filter projects by year"></ul>
+      </div>
+      <input class="searchBar" type="search" aria-label="Search projects" placeholder="Search projects...">
+      <div class="projects" data-collection="general" data-heading="h3" data-placeholders="placeholders.json"></div>
+    </section>
   </main>
+  <script type="module" src="../dsc106_DataVisualization_projects/projects/projects.js"></script>
 </body>
 </html>

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Climate Futures Explorer</title>
+  <meta name="description" content="Interactive D3 climate futures explorer for local CMIP6 warming trajectories across global cities.">
+  <title>Project 3 | Climate Futures Explorer</title>
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="project.css">
 </head>
@@ -11,20 +12,47 @@
   <script type="module" src="../../global.js"></script>
 
   <main class="project3-page">
-    <header class="project3-header">
-      <p class="project3-kicker">DSC 106 · Project 3 · Interactive Visualization</p>
+    <header class="project3-hero">
+      <p class="project3-kicker">DSC 106 Project 3 | Interactive environmental visualization</p>
       <h1>Climate Futures Explorer</h1>
-      <p>
-        When—and where—does local warming cross critical thresholds under different
-        emissions pathways?
-      </p>
+      <p class="hero-question">When, where, and under which emissions pathway does local warming cross critical thresholds?</p>
       <p class="project3-subtitle">
-        Annual near-surface temperature from the CESM2 CMIP6 model, shown as change
-        from each location's 1981–2010 average.
+        Annual near-surface temperature from the CESM2 CMIP6 model, transformed into local anomalies from each
+        location's 1981-2010 baseline.
       </p>
     </header>
 
+    <section class="guided-exploration" aria-labelledby="guide-title">
+      <div>
+        <p class="project3-kicker">How to explore</p>
+        <h2 id="guide-title">Use the controls to stress-test the climate story.</h2>
+        <p>
+          Choose a city on the map or ranking chart, scrub the projection horizon, animate time, change the warming
+          threshold, and compare scenarios. Every view is linked to the same exploration state.
+        </p>
+      </div>
+      <div class="insight-panel" aria-label="Show me insights">
+        <button type="button" class="insight-button" data-insight="arctic">Show strongest anomaly</button>
+        <button type="button" class="insight-button" data-insight="mitigation">Compare mitigation pathways</button>
+        <button type="button" class="insight-button" data-insight="near-term">Highlight near-term risk</button>
+        <button type="button" class="insight-button" data-insight="tropics">Reveal tropical baselines</button>
+      </div>
+    </section>
+
     <section class="explorer" aria-label="Interactive climate projection explorer">
+      <div class="dashboard-heading">
+        <div>
+          <p class="project3-kicker">Linked dashboard</p>
+          <h2 id="main-chart-title">Loading climate futures</h2>
+          <p id="state-note">Loading data.</p>
+        </div>
+        <div class="dashboard-actions">
+          <button id="play-button" type="button" class="button ghost">Play</button>
+          <button id="copy-link" type="button" class="button ghost">Copy view link</button>
+          <button id="reset-button" type="button" class="button ghost">Reset view</button>
+        </div>
+      </div>
+
       <div class="control-panel">
         <label>
           Location
@@ -37,7 +65,7 @@
 
         <label>
           Warming threshold
-          <span class="control-value" id="threshold-value">2.0°C</span>
+          <span class="control-value" id="threshold-value">2.0 degC</span>
           <input id="threshold-slider" type="range" min="1" max="6" step="0.5" value="2">
         </label>
 
@@ -51,7 +79,17 @@
           Comparison pathway
           <select id="focus-scenario"></select>
         </label>
+
+        <label>
+          Display metric
+          <select id="metric-select">
+            <option value="anomaly">Local anomaly</option>
+            <option value="temperature">Estimated absolute temperature</option>
+          </select>
+        </label>
       </div>
+
+      <div class="active-badges" id="active-badges" aria-label="Active dashboard state"></div>
 
       <div class="summary-strip" aria-live="polite">
         <article>
@@ -66,90 +104,113 @@
           <span>Warming at horizon</span>
           <strong id="summary-warming"></strong>
         </article>
+        <article>
+          <span>Location rank</span>
+          <strong id="summary-rank"></strong>
+        </article>
       </div>
 
-      <section class="chart-section">
-        <div class="chart-heading">
-          <div>
-            <h2 id="main-chart-title"></h2>
-            <p>Annual anomaly relative to the local 1981–2010 mean; historical through 2014, projections thereafter.</p>
+      <div class="dashboard-grid">
+        <section class="chart-section map-section">
+          <div class="chart-heading">
+            <div>
+              <p class="project3-kicker">Spatial overview</p>
+              <h3>Projected local warming by location</h3>
+              <p>Zoom or pan the projected map. Point size and color encode the selected pathway at the current horizon.</p>
+            </div>
+            <button id="reset-map" type="button" class="icon-button">Reset map</button>
           </div>
-          <button id="reset-button" type="button">Reset view</button>
-        </div>
-        <div id="temperature-chart" class="chart-frame"></div>
-      </section>
+          <div id="map-chart" class="chart-frame map-frame"></div>
+        </section>
 
-      <section class="chart-section comparison-section">
-        <div class="chart-heading">
-          <div>
-            <h2 id="comparison-title"></h2>
-            <p>Click a location to move the main chart. Values use a five-year average ending at the selected horizon.</p>
+        <section class="chart-section">
+          <div class="chart-heading">
+            <div>
+              <p class="project3-kicker">Temporal trajectories</p>
+              <h3>Scenario divergence over time</h3>
+              <p>Hover for details. Click a scenario line to make it the linked comparison pathway.</p>
+            </div>
           </div>
-        </div>
-        <div id="comparison-chart" class="chart-frame"></div>
-      </section>
+          <div id="temperature-chart" class="chart-frame"></div>
+        </section>
+
+        <section class="chart-section">
+          <div class="chart-heading">
+            <div>
+              <p class="project3-kicker">Cross-location comparison</p>
+              <h3 id="comparison-title">Warming across locations</h3>
+              <p>Values use a five-year average ending at the selected horizon. Click a row to select a location.</p>
+            </div>
+          </div>
+          <div id="comparison-chart" class="chart-frame"></div>
+        </section>
+
+        <section class="chart-section">
+          <div class="chart-heading">
+            <div>
+              <p class="project3-kicker">Analytical overlay</p>
+              <h3>Pathway spread at selected location</h3>
+              <p>The band shows the gap between the lowest and highest visible projection pathway.</p>
+            </div>
+          </div>
+          <div id="spread-chart" class="chart-frame"></div>
+        </section>
+      </div>
 
       <aside id="climate-tooltip" class="climate-tooltip" hidden></aside>
     </section>
 
     <section class="project3-writeup">
-      <h2>Design rationale</h2>
-      <p>
-        The main chart uses position along shared time and temperature axes because the
-        central task is comparing trajectories and identifying threshold-crossing years.
-        Historical values are shown as one neutral line, while the four SSP pathways use
-        an ordered cool-to-hot palette. I considered small multiples, but overlaying the
-        scenarios makes their divergence after 2015 immediately visible and allows a
-        single threshold line to support direct comparison.
-      </p>
-      <p>
-        The location menu and scenario checkboxes are dynamic-query filters that reduce
-        clutter without hiding the available analytical dimensions. The warming-threshold
-        slider turns an abstract temperature curve into a concrete question—when does this
-        pathway first cross 1.5°C, 2°C, or a higher local threshold? The horizon slider
-        supports near-, mid-, and late-century exploration. Hovering provides exact values,
-        while clicking a scenario line changes the linked comparison pathway.
-      </p>
-      <p>
-        The ranked comparison chart uses horizontal position for anomaly and a common
-        baseline across locations. Its five-year average reduces single-year variability,
-        and clicking a row links the overview back to the detailed chart. I avoided a map
-        because nine points would emphasize geography without showing projected magnitude
-        as effectively; the ranked view better answers where warming is greatest under a
-        selected pathway and time horizon.
-      </p>
-
-      <h2>Data transformations</h2>
-      <p>
-        Monthly near-surface air temperature (<code>tas</code>) was extracted from the
-        NOAA/Google public CMIP6 Zarr catalog for NCAR CESM2 ensemble member
-        <code>r4i1p1f1</code>. Monthly values were weighted by days per month and aggregated
-        to annual means at the nearest model grid cell for nine locations. Each series is
-        expressed as an anomaly from that location's 1981–2010 historical mean. The
-        comparison chart averages the five years ending at the selected horizon.
-      </p>
-
-      <h2>Development process</h2>
-      <p>
-        This is an individual portfolio implementation. Development took approximately
-        12 people-hours across data access, transformation, interaction design,
-        implementation, and testing. The most time-consuming work was extracting a compact
-        reproducible subset from cloud-hosted CMIP6 Zarr stores and coordinating linked
-        interactions so every control updates the chart, summaries, annotations, and
-        comparison view consistently.
-      </p>
-
+      <h2>Methodology and design rationale</h2>
+      <details open>
+        <summary>Data source and transformations</summary>
+        <p>
+          Monthly near-surface air temperature (<code>tas</code>) was extracted from the NOAA/Google public CMIP6
+          Zarr catalog for NCAR CESM2 ensemble member <code>r4i1p1f1</code>. Monthly values were weighted by days per
+          month and aggregated to annual means at the nearest model grid cell for nine locations.
+        </p>
+        <p>
+          Each series is expressed as an anomaly from that location's 1981-2010 historical mean. The comparison, map,
+          and rank summaries use a five-year mean ending at the selected horizon to reduce single-year noise.
+        </p>
+      </details>
+      <details>
+        <summary>Interaction and visual encoding rationale</summary>
+        <p>
+          The line chart uses shared time and temperature axes for trajectory comparison. The projected point map adds
+          spatial context without overclaiming geographic precision from only nine sampled model grid cells. The ranking
+          chart answers "where is warming greatest?" while the spread chart shows how emissions choices diverge.
+        </p>
+        <p>
+          Interactions are coordinated through one state object: selected location, focus pathway, visible pathways,
+          threshold, horizon, metric, map zoom, insight preset, and playback status. URL parameters encode shareable
+          filters without requiring a backend.
+        </p>
+      </details>
+      <details>
+        <summary>Limitations, performance, and accessibility</summary>
+        <p>
+          This explorer shows one climate model and one ensemble member, not a multi-model uncertainty range. Locations
+          are nearest grid cells rather than station observations. SVG rendering is appropriate for this compact dataset;
+          grouped summaries are cached and redraws are scheduled with <code>requestAnimationFrame</code>.
+        </p>
+        <p>
+          The dashboard uses keyboard-focusable controls, direct labels, visible selected states, accessible color
+          contrast against light and dark themes, and text summaries for the current filtered state.
+        </p>
+      </details>
       <p class="source-note">
         Source:
         <a href="https://console.cloud.google.com/marketplace/product/noaa-public/cmip6" target="_blank" rel="noopener noreferrer">
           NOAA Public CMIP6 Dataset on Google Cloud
         </a>.
-        This explorer shows one climate model and one ensemble member, not a multi-model
-        uncertainty range; results are projections rather than predictions.
+        <a href="climate_locations.csv">Download climate data</a> |
+        <a href="locations.csv">Download location metadata</a>
       </p>
     </section>
   </main>
 
+  <script src="vendor/d3.v7.min.js"></script>
   <script src="main.js" type="module"></script>
 </body>
 </html>

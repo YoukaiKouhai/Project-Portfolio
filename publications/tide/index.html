@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIDE Trace Decomposition | Austin Wong</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <script type="module" src="../../global.js"></script>
+</head>
+<body>
+  <main>
+    <p><a href="../#projects-heading">Publications and Projects</a> / 2025</p>
+    <h1>TIDE Trace Decomposition</h1>
+    <p>Compare an unedited Sanger trace with a mixed trace to estimate how often the sequence length changed.</p>
+    <figure>
+      <img src="spectrum.png" style="width:100%;height:auto" alt="Indel frequencies estimated from the bundled pair of Sanger chromatograms.">
+      <figcaption>Indel frequencies estimated from the bundled pair of Sanger chromatograms.</figcaption>
+    </figure>
+    <h2>Reading a mixed trace</h2>
+    <p>A mixed sample can produce overlapping peaks. The Python analyzer fits shifted copies of the control signal to the mixed trace and reports how much of the signal each length change explains. Several different sequences can share the same length change.</p>
+    <h2>Explore the example</h2>
+    <p>The results viewer opens the bundled example from the Python GUI. Switch between its four plots, inspect the frequency table, or export the spectrum. To analyze your own files, extract the local GUI download, install its requirements, and run the browser app.</p>
+    <a href="viewer/">Open example GUI</a> &middot; <a href="tide-gui.zip" download>Download local GUI</a><pre><code>python -m pip install -r requirements.txt
+python AustinWong_TIDE_DASH.py</code></pre><p>Open <code>http://127.0.0.1:8765/</code> while the app is running.</p>
+  </main>
+</body>
+</html>

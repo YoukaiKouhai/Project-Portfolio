@@ -25,6 +25,7 @@ export class Basket {
   updateProducts(products) {
     this.filtered = products.length ? products : this.products;
     this.renderOptions();
+    this.renderBasket();
   }
 
   renderOptions() {

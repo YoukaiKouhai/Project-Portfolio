@@ -330,6 +330,76 @@ svg {
   background: linear-gradient(90deg, var(--green), var(--gold), var(--red));
 }
 
+.trust-detail {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+.trust-detail-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--panel);
+}
+
+.trust-detail-card h3 {
+  margin: 0.15rem 0 0.5rem;
+}
+
+.trust-detail-card p {
+  color: var(--muted);
+}
+
+.pipeline-bars {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.pipeline-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  align-items: end;
+}
+
+.pipeline-row small,
+.outlier-list span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.pipeline-row i {
+  grid-column: 1 / -1;
+  display: block;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+}
+
+.outlier-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.outlier-list li {
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.outlier-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .dashboard,
 .basket,
 .methodology {
@@ -369,6 +439,7 @@ svg {
 
 .filters select,
 .filters input[type="range"],
+.health-controls input[type="range"],
 .basket input,
 .basket select {
   width: 100%;
@@ -384,6 +455,53 @@ svg {
 .basket select {
   padding: 0.55rem;
   font: inherit;
+}
+
+.health-controls {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.3fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: color-mix(in oklch, var(--panel), var(--paper) 18%);
+}
+
+.health-controls h3 {
+  margin: 0.15rem 0 0.5rem;
+}
+
+.health-controls p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.health-controls summary {
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.health-weight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.health-weight-grid label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.health-formula {
+  margin-top: 0.85rem !important;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.86rem;
 }
 
 .segmented {
@@ -597,11 +715,48 @@ svg {
   background: var(--green);
 }
 
+.tooltip-percentiles {
+  color: var(--ink) !important;
+  font-weight: 800;
+}
+
+.tooltip-radar {
+  width: 9rem;
+  max-width: 100%;
+  margin: 0.45rem auto 0.2rem;
+}
+
+.tooltip-radar line {
+  stroke: var(--line);
+  stroke-width: 0.8;
+}
+
+.tooltip-radar text {
+  fill: var(--muted);
+  font-size: 6px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.radar-grid {
+  fill: color-mix(in oklch, var(--green), transparent 90%);
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.radar-shape {
+  fill: color-mix(in oklch, var(--green), transparent 64%);
+  stroke: var(--green);
+  stroke-width: 1.5;
+}
+
 @media (max-width: 920px) {
   .article-section,
   .scrolly,
   .dashboard-heading,
   .dashboard-grid,
+  .health-controls,
+  .trust-detail,
   .basket,
   .basket-panel {
     display: block;

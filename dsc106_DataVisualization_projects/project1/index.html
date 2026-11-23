@@ -108,6 +108,7 @@
         </p>
       </div>
       <div class="trust-grid" id="trust-grid" aria-label="Data quality cards"></div>
+      <div class="trust-detail" id="trust-detail" aria-label="Interactive data cleaning summary"></div>
     </section>
 
     <section class="dashboard" id="explore">
@@ -152,9 +153,37 @@
           <input id="protein-filter" type="range" min="0" max="40" step="0.5">
         </label>
         <label>
+          Calories max <span id="calories-label"></span>
+          <input id="calories-filter" type="range" min="0" max="900" step="10">
+        </label>
+        <label>
           FPro max <span id="fpro-label"></span>
           <input id="fpro-filter" type="range" min="0" max="1" step="0.01">
         </label>
+      </section>
+
+      <section class="health-controls" aria-labelledby="health-controls-title">
+        <div>
+          <p class="section-kicker">Custom Health Index</p>
+          <h3 id="health-controls-title">Tune the exploratory score.</h3>
+          <p>
+            Adjust the penalties and bonuses to test how sensitive the story is to the scoring assumptions. The score is
+            recalculated live for every product and is not medical advice.
+          </p>
+        </div>
+        <details open>
+          <summary>Formula weights</summary>
+          <div class="health-weight-grid">
+            <label>FPro penalty <span id="weight-fpro-label"></span><input id="weight-fpro" data-health-weight="fpro" type="range" min="0" max="40" step="1"></label>
+            <label>NOVA penalty <span id="weight-nova-label"></span><input id="weight-nova" data-health-weight="nova" type="range" min="0" max="20" step="1"></label>
+            <label>Sugar penalty <span id="weight-sugar-label"></span><input id="weight-sugar" data-health-weight="sugar" type="range" min="0" max="30" step="1"></label>
+            <label>Sodium penalty <span id="weight-sodium-label"></span><input id="weight-sodium" data-health-weight="sodium" type="range" min="0" max="30" step="1"></label>
+            <label>Calories penalty <span id="weight-calories-label"></span><input id="weight-calories" data-health-weight="calories" type="range" min="0" max="24" step="1"></label>
+            <label>Fiber bonus <span id="weight-fiber-label"></span><input id="weight-fiber" data-health-weight="fiber" type="range" min="0" max="24" step="1"></label>
+            <label>Protein bonus <span id="weight-protein-label"></span><input id="weight-protein" data-health-weight="protein" type="range" min="0" max="24" step="1"></label>
+          </div>
+          <p class="health-formula" id="health-formula"></p>
+        </details>
       </section>
 
       <dl class="kpi-grid" id="kpi-grid" aria-label="Filtered summary"></dl>
@@ -265,8 +294,9 @@
           <article>
             <h3>Health Index</h3>
             <p>
-              Score = 100 - 26(FPro) - 8(NOVA/3) - sugar penalty - sodium penalty - calorie penalty + fiber bonus +
-              protein bonus. The result is clamped to 0-100. This is an exploratory comparison score, not medical advice.
+              Default score = 100 - 26(FPro) - 8(NOVA/3) - sugar penalty - sodium penalty - calorie penalty + fiber
+              bonus + protein bonus. Dashboard sliders make these weights adjustable, then clamp the result to 0-100.
+              This is an exploratory comparison score, not medical advice.
             </p>
           </article>
           <article>

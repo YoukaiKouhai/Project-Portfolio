@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Persuasive Visualization: Is the World Aging Rapidly?</title>
+  <meta name="description" content="Interactive DSC 106 Project 2 dashboard exploring persuasive framing in global population aging data.">
+  <title>Project 2 | Aging Society Explorer</title>
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="project.css">
 </head>
@@ -11,183 +12,216 @@
   <script type="module" src="../../global.js"></script>
 
   <main class="project2-page">
-    <header class="project2-header">
-      <p class="project2-kicker">DSC 106 · Project 2 · Persuasive/Deceptive Visualization</p>
+    <header class="project2-hero">
+      <p class="project2-kicker">DSC 106 Project 2 | Persuasive visualization upgraded into an exploratory dashboard</p>
       <h1>Is the world rapidly becoming an aging society?</h1>
-      <p class="proposition">
-        <strong>Proposition:</strong> The world is rapidly becoming an aging society.
+      <p class="proposition"><strong>Proposition:</strong> The world is rapidly becoming an aging society.</p>
+      <p class="hero-copy">
+        The original project compared two persuasive framings of the same World Bank population-aging data. This version
+        keeps that rhetorical audit, then adds a linked dashboard for testing how region selection, time windows, and
+        metric choices change the argument.
       </p>
-      <p>
-        The same World Bank population dataset can make this proposition feel urgent
-        or overstated. The paired views below intentionally use different rhetorical
-        frames, followed by a transparent audit of those choices.
-      </p>
-      <p class="author">Individual portfolio implementation by Austin Wong.</p>
     </header>
 
-    <section class="perspective perspective-for">
-      <div class="perspective-heading">
-        <p class="stance">Perspective A · Supports the proposition</p>
-        <h2>Major economies are aging fast</h2>
+    <section class="explore-intro" aria-labelledby="explore-title">
+      <div>
+        <p class="project2-kicker">How to explore</p>
+        <h2 id="explore-title">Start with a claim, then stress-test it.</h2>
+        <p>
+          Brush the timeline to change the year window, brush or click the scatterplot to select regions, switch metrics,
+          and use the table or chips to link highlights across every view.
+        </p>
+      </div>
+      <div class="insight-panel" aria-label="Showcase insights">
+        <button type="button" class="insight-button" data-insight="urgent">Show the urgent framing</button>
+        <button type="button" class="insight-button" data-insight="uneven">Compare high vs low income</button>
+        <button type="button" class="insight-button" data-insight="outliers">Reveal strongest outliers</button>
+      </div>
+    </section>
+
+    <section class="project2-dashboard" id="dashboard">
+      <div class="dashboard-heading">
+        <div>
+          <p class="project2-kicker">Coordinated exploration</p>
+          <h2>Population aging, filtered by your choices.</h2>
+          <p id="dashboard-subtitle">Loading data.</p>
+        </div>
+        <div class="dashboard-actions">
+          <button type="button" class="button ghost" id="copy-dashboard-link">Copy view link</button>
+          <button type="button" class="button ghost" id="reset-dashboard">Reset view</button>
+        </div>
       </div>
 
-      <figure>
-        <img
-          src="aging_urgent.svg"
-          alt="A line chart with a compressed vertical axis showing rising age-65-plus shares from 2000 to 2020 in the European Union, high-income economies, North America, East Asia and Pacific, and the world."
-        >
-        <figcaption><a href="aging_urgent.svg" download>Download visualization A</a></figcaption>
-      </figure>
+      <div class="control-surface" aria-label="Dashboard controls">
+        <fieldset>
+          <legend>Regions</legend>
+          <div class="region-controls" id="region-controls"></div>
+        </fieldset>
+        <label>
+          Active metric
+          <select id="metric-select"></select>
+        </label>
+        <label>
+          Sort ranking
+          <select id="sort-select"></select>
+        </label>
+      </div>
 
-      <div class="decision-list">
-        <article>
-          <span class="score deceptive">−1.5</span>
-          <h3>Selected economically prominent regions</h3>
-          <p>
-            I included the European Union, high-income economies, North America, East
-            Asia and Pacific, and the World aggregate. This helps the argument by
-            emphasizing places with clear upward trajectories, but it omits low-income
-            regions where aging is limited or nearly flat.
-          </p>
+      <div class="active-badges" id="active-badges" aria-label="Active filter badges"></div>
+      <p class="insight-note" id="insight-note"></p>
+      <dl class="summary-cards" id="summary-cards" aria-label="Current dashboard summary"></dl>
+
+      <div class="visual-grid">
+        <article class="chart-shell timeline-shell">
+          <div class="chart-heading">
+            <div>
+              <p class="project2-kicker">Semantic zoom + dynamic annotation</p>
+              <h3>Timeline of age 65+ share</h3>
+            </div>
+            <span>Brush the x-axis to zoom</span>
+          </div>
+          <svg id="timeline-chart" role="img" aria-label="Linked time-series chart of population aging"></svg>
         </article>
 
-        <article>
-          <span class="score deceptive">−1.5</span>
-          <h3>Started the timeline in 2000</h3>
-          <p>
-            The recent twenty-year window highlights acceleration and avoids the slower
-            early decades. The period is substantively relevant to current policy, but
-            choosing it after seeing the data increases the perceived speed of change.
-          </p>
+        <article class="chart-shell">
+          <div class="chart-heading">
+            <div>
+              <p class="project2-kicker">Brush and link</p>
+              <h3>Starting point vs increase</h3>
+            </div>
+            <span>Brush to filter regions</span>
+          </div>
+          <svg id="change-scatter" role="img" aria-label="Scatterplot comparing 2000 age share and 2000 to 2020 increase"></svg>
         </article>
 
-        <article>
-          <span class="score deceptive">−2</span>
-          <h3>Truncated the vertical axis at 5%</h3>
-          <p>
-            The compressed 5%–22% scale makes differences and slopes visually dramatic.
-            It supports precise comparison within the observed range, but it also makes
-            modest percentage-point changes occupy most of the chart height.
-          </p>
+        <article class="chart-shell">
+          <div class="chart-heading">
+            <div>
+              <p class="project2-kicker">Part to whole</p>
+              <h3>2020 age composition</h3>
+            </div>
+            <span>Same selected regions</span>
+          </div>
+          <svg id="composition-chart" role="img" aria-label="Stacked bars showing young, working-age, and older adult shares"></svg>
         </article>
 
-        <article>
-          <span class="score earnest">+1</span>
-          <h3>Direct labels, values, and method disclosure</h3>
-          <p>
-            Every series is directly labeled at its 2020 endpoint, and the source note
-            discloses both the selected-region filter and truncated axis. These choices
-            reduce lookup effort and give careful readers enough information to audit
-            the persuasive framing.
-          </p>
+        <article class="chart-shell">
+          <div class="chart-heading">
+            <div>
+              <p class="project2-kicker">Ranking</p>
+              <h3>Current metric comparison</h3>
+            </div>
+            <span>Hover to link</span>
+          </div>
+          <svg id="ranking-chart" role="img" aria-label="Ranked bar chart for the active aging metric"></svg>
+        </article>
+
+        <article class="table-shell">
+          <div class="chart-heading">
+            <div>
+              <p class="project2-kicker">Linked records</p>
+              <h3>Regional audit table</h3>
+            </div>
+            <span>Click a row to isolate it</span>
+          </div>
+          <div class="table-wrap">
+            <table id="ranked-table">
+              <thead>
+                <tr>
+                  <th>Region</th>
+                  <th>2020 65+</th>
+                  <th>Change</th>
+                  <th>Index</th>
+                  <th>Outlier</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="perspective perspective-against">
-      <div class="perspective-heading">
-        <p class="stance">Perspective B · Challenges the proposition</p>
-        <h2>The world remains overwhelmingly young and working-age</h2>
+    <section class="source-figures" aria-labelledby="source-figures-title">
+      <div class="section-heading">
+        <p class="project2-kicker">Original persuasive artifacts</p>
+        <h2 id="source-figures-title">Two truthful charts, two very different impressions.</h2>
       </div>
-
-      <figure>
-        <img
-          src="aging_context.svg"
-          alt="A one-hundred-person grid showing about nine people age 65 or older, sixty-five working-age people, and twenty-six people under age 15, alongside regional age-65-plus percentages."
-        >
-        <figcaption><a href="aging_context.svg" download>Download visualization B</a></figcaption>
-      </figure>
-
-      <div class="decision-list">
+      <div class="source-grid">
         <article>
-          <span class="score earnest">+2</span>
-          <h3>Used the World aggregate and a part-to-whole denominator</h3>
+          <h3>Perspective A: supports the proposition</h3>
+          <img src="aging_urgent.svg" alt="Line chart emphasizing rapid aging across selected major economies.">
           <p>
-            The 100-person grid makes the 9.3% global share concrete and preserves the
-            full population denominator. This directly answers how dominant older adults
-            are in the population rather than only how quickly their share has changed.
+            Selected prominent regions and a truncated y-axis make the rate of change feel urgent.
+            <a href="aging_urgent.svg" download>Download visualization A</a>
           </p>
         </article>
-
         <article>
-          <span class="score deceptive">−1</span>
-          <h3>Focused on one endpoint instead of change over time</h3>
+          <h3>Perspective B: challenges the proposition</h3>
+          <img src="aging_context.svg" alt="Context chart showing global age groups and regional older adult shares.">
           <p>
-            A 2020 snapshot weakens the sense of acceleration by removing the historical
-            trajectory. The endpoint is accurate, but it answers “how old is the world
-            now?” more strongly than “how rapidly is the world aging?”
-          </p>
-        </article>
-
-        <article>
-          <span class="score earnest">+1.5</span>
-          <h3>Added contrasting regional aggregates</h3>
-          <p>
-            Showing the European Union, high-income, low-income, and Sub-Saharan African
-            aggregates reveals that aging is highly uneven. This prevents the global
-            average from hiding important geographic differences.
-          </p>
-        </article>
-
-        <article>
-          <span class="score neutral">0</span>
-          <h3>Used “fewer than 1 in 10” framing</h3>
-          <p>
-            The phrase is numerically faithful to 9.3%, but it emphasizes smallness and
-            can encourage readers to discount future momentum. I chose it because it is
-            memorable, while recognizing that an equally valid title could stress that
-            the share nearly doubled since 1960.
+            A part-to-whole snapshot makes the global population still look overwhelmingly young and working-age.
+            <a href="aging_context.svg" download>Download visualization B</a>
           </p>
         </article>
       </div>
     </section>
 
     <section class="reflection">
-      <h2>Reflection</h2>
+      <h2>Design reflection</h2>
       <p>
-        The straightforward part was finding accurate values and producing legible
-        encodings. The difficult part was realizing how easily a defensible analytical
-        choice became rhetorical. Selecting 2000–2020, choosing major economies, or
-        switching from rate-of-change to population composition did not require changing
-        a single value, yet each choice substantially changed the emotional and policy
-        implications of the result.
+        The most important lesson from this project is that honest data can still be rhetorically powerful. Selecting
+        2000-2020, choosing major economies, truncating an axis, or switching from change over time to population
+        composition can change the emotional meaning of the same underlying values.
       </p>
       <p>
-        The most surprising lesson was that disclosure alone does not neutralize a
-        persuasive design. A small note saying “axis begins at 5%” is technically honest,
-        but many readers will still remember the steep lines rather than the footnote.
-        Conversely, the 100-person view feels calm and contextual while strategically
-        ignoring six decades of growth. Ethical visualization therefore requires more
-        than factual marks; it requires considering the question a design makes easy to
-        answer and the nearby questions it quietly suppresses.
-      </p>
-      <p>
-        I define acceptable persuasion as framing that advances an interpretation while
-        preserving access to material counterevidence, denominators, transformations,
-        and uncertainty. A visualization becomes misleading when its persuasive effect
-        depends on readers not noticing a consequential omission. The boundary is not a
-        single technique such as truncation or filtering, but whether the omitted context
-        would reasonably reverse or substantially qualify the claimed conclusion.
+        I define acceptable persuasion as framing that advances an interpretation while preserving access to material
+        counterevidence, denominators, transformations, and limitations. This upgraded dashboard makes those alternatives
+        interactive instead of hiding them in a footnote.
       </p>
     </section>
 
     <section class="methods">
-      <h2>Data and transformations</h2>
-      <p>
-        Source:
-        <a href="https://github.com/light-and-salt/World-Bank-Data-by-Indicators/tree/master/health" target="_blank" rel="noopener noreferrer">
-          World Bank Data by Indicators, health
-        </a>.
-        The analysis uses population age 65+ as a percentage of total population,
-        population ages 15–64 as a percentage of total population, and derived
-        under-15 share calculated as 100 minus those two groups.
-      </p>
-      <p>
-        <a href="aging_series.csv">Download selected time-series data</a>
-        ·
-        <a href="aging_context.csv">Download 2020 context data</a>
-      </p>
+      <details>
+        <summary>Methodology, data, and reproducibility</summary>
+        <div class="methods-grid">
+          <article>
+            <h3>Dataset source</h3>
+            <p>
+              World Bank population age indicators, prepared for DSC 106. The project uses age 65+ share from 2000-2020
+              and 2020 population composition for selected regional aggregates.
+            </p>
+            <p><a href="aging_series.csv">Download selected time-series data</a> | <a href="aging_context.csv">Download 2020 context data</a></p>
+          </article>
+          <article>
+            <h3>Derived fields</h3>
+            <p>
+              Change is 2020 age 65+ share minus 2000 age 65+ share. Indexed growth sets each region's 2000 value to
+              100. Young share is calculated as 100 minus working-age and older-adult shares in the context data.
+            </p>
+          </article>
+          <article>
+            <h3>Interaction model</h3>
+            <p>
+              A centralized state object tracks filters, selected regions, brush extents, active metric, sort order,
+              highlighted region, zoom level, and active insight. URL parameters encode the shareable state.
+            </p>
+          </article>
+          <article>
+            <h3>Limitations</h3>
+            <p>
+              The dashboard uses regional aggregates rather than countries or individuals. Low-income and Sub-Saharan
+              Africa appear in the 2020 context data but not the time-series CSV, so growth metrics are unavailable for
+              those records.
+            </p>
+          </article>
+        </div>
+      </details>
     </section>
   </main>
+
+  <div class="project2-tooltip" id="project2-tooltip" hidden></div>
+  <script src="vendor/d3.v7.min.js"></script>
+  <script type="module" src="project2.js"></script>
 </body>
 </html>

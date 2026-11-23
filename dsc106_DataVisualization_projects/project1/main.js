@@ -4,7 +4,7 @@ import { Basket } from './components/Basket.js';
 import { Tooltip } from './components/Tooltip.js';
 import { setupExports } from './components/exporters.js';
 import { setupNarrative, setupProgress } from './components/Narrative.js';
-import { filtersFromUrl, formatMoney, formatNumber, markPriceOutliers, preprocessRow, summarize } from './components/utils.js';
+import { applyHealthIndex, filtersFromUrl, formatMoney, formatNumber, markPriceOutliers, preprocessRow, summarize } from './components/utils.js';
 
 const d3 = window.d3;
 
@@ -13,6 +13,7 @@ async function init() {
   const rows = await d3.csv('data/grocerydb.csv');
   const products = rows.map(preprocessRow);
   const outlierStats = markPriceOutliers(products);
+  applyHealthIndex(products);
 
   renderHero(products);
   renderTrust(products, outlierStats);
@@ -52,6 +53,17 @@ function renderTrust(products, outlierStats) {
   const validPrice = products.filter((d) => d.validPrice).length;
   const cleanPrice = products.filter((d) => d.validPrice && !d.priceOutlier).length;
   const validNutrition = products.filter((d) => d.validNutrition).length;
+  const validWeight = products.filter((d) => Number.isFinite(d.weight) && d.weight > 0).length;
+  const outlierExamples = products
+    .filter((d) => d.priceOutlier)
+    .sort((a, b) => b.pricePer100Cal - a.pricePer100Cal)
+    .slice(0, 3);
+  const pipeline = [
+    { label: 'All product listings', value: products.length, detail: 'Rows loaded from the local GroceryDB CSV.' },
+    { label: 'Usable price-per-calorie', value: validPrice, detail: 'Rows with positive finite price-per-calorie values.' },
+    { label: 'After IQR price rule', value: cleanPrice, detail: 'Rows retained for median price and distribution charts.' },
+    { label: 'Complete nutrition fields', value: validNutrition, detail: 'Rows available for the Health Index calculation.' }
+  ];
   const cards = [
     {
       title: 'Missing and invalid price',
@@ -72,6 +84,18 @@ function renderTrust(products, outlierStats) {
       confidence: validNutrition / products.length
     },
     {
+      title: 'Package weight coverage',
+      value: `${formatNumber(validWeight)} usable`,
+      detail: 'Package weight is retained for audit context, while nutrition values are compared per 100g.',
+      confidence: validWeight / products.length
+    },
+    {
+      title: 'NOVA/FPro interpretation',
+      value: 'Exploratory',
+      detail: 'Processing labels are useful for shelf-level comparison, but they are not a substitute for dietary guidance.',
+      confidence: 0.72
+    },
+    {
       title: 'Normalization',
       value: 'Per 100g / 100 cal',
       detail: 'Nutrition fields are interpreted per 100g. Price is converted to listed dollars per 100 calories.',
@@ -88,6 +112,43 @@ function renderTrust(products, outlierStats) {
       </div>
     </article>
   `).join('');
+
+  document.querySelector('#trust-detail').innerHTML = `
+    <article class="trust-detail-card">
+      <div>
+        <p class="section-kicker">Cleaning pipeline</p>
+        <h3>What changed before the charts?</h3>
+        <p>Counts step down as the page removes unusable price rows, flags high-end price outliers, and checks complete nutrition fields.</p>
+      </div>
+      <div class="pipeline-bars" aria-label="Before and after filtering counts">
+        ${pipeline.map((step) => `
+          <div class="pipeline-row">
+            <div>
+              <strong>${step.label}</strong>
+              <small>${step.detail}</small>
+            </div>
+            <span>${formatNumber(step.value)}</span>
+            <i style="width: ${Math.max(4, Math.round((step.value / products.length) * 100))}%"></i>
+          </div>
+        `).join('')}
+      </div>
+    </article>
+    <article class="trust-detail-card">
+      <div>
+        <p class="section-kicker">Outlier examples</p>
+        <h3>Rows flagged, not deleted.</h3>
+        <p>Outliers remain available in the audit, but are excluded from price medians and distribution charts.</p>
+      </div>
+      <ul class="outlier-list">
+        ${outlierExamples.map((product) => `
+          <li>
+            <strong>${product.name}</strong>
+            <span>${product.store} | ${product.category} | ${formatMoney(product.pricePer100Cal)} per 100 cal</span>
+          </li>
+        `).join('')}
+      </ul>
+    </article>
+  `;
 }
 
 init().catch((error) => {

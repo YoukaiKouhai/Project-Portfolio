@@ -13,6 +13,8 @@ export class Tooltip {
       <p>${product.store} | ${product.brand} | ${product.category}</p>
       <p><strong>${formatMoney(product.price)}</strong> listed price | ${formatMoney(product.pricePer100Cal)} per 100 calories</p>
       <p>FPro ${formatNumber(product.fpro, 2)} | ${product.novaLabel} | Health Index ${formatNumber(product.health, 0)}</p>
+      <p class="tooltip-percentiles">Health percentile ${formatNumber(product.healthPercentile, 0)} | Price percentile ${formatNumber(product.pricePercentile, 0)}</p>
+      ${this.radar(product)}
       <div class="tooltip-bars">
         ${this.bar('Sugar', product.sugar, 60, 'g')}
         ${this.bar('Sodium', product.sodiumMg, 1600, 'mg')}
@@ -21,6 +23,38 @@ export class Tooltip {
       </div>
     `;
     this.move(event);
+  }
+
+  radar(product) {
+    const metrics = [
+      { label: 'Health', value: product.health / 100 },
+      { label: 'Protein', value: product.protein / 35 },
+      { label: 'Fiber', value: product.fiber / 15 },
+      { label: 'Sugar-', value: 1 - product.sugar / 60 },
+      { label: 'Sodium-', value: 1 - product.sodiumMg / 1600 },
+      { label: 'FPro-', value: 1 - product.fpro }
+    ].map((metric) => ({ ...metric, value: Math.max(0, Math.min(1, Number.isFinite(metric.value) ? metric.value : 0)) }));
+    const center = 42;
+    const radius = 30;
+    const points = metrics.map((metric, index) => {
+      const angle = -Math.PI / 2 + (index / metrics.length) * Math.PI * 2;
+      return `${center + Math.cos(angle) * radius * metric.value},${center + Math.sin(angle) * radius * metric.value}`;
+    }).join(' ');
+    const axes = metrics.map((metric, index) => {
+      const angle = -Math.PI / 2 + (index / metrics.length) * Math.PI * 2;
+      const x = center + Math.cos(angle) * radius;
+      const y = center + Math.sin(angle) * radius;
+      const labelX = center + Math.cos(angle) * (radius + 12);
+      const labelY = center + Math.sin(angle) * (radius + 12);
+      return `<line x1="${center}" y1="${center}" x2="${x}" y2="${y}"></line><text x="${labelX}" y="${labelY}">${metric.label}</text>`;
+    }).join('');
+    return `
+      <svg class="tooltip-radar" viewBox="0 0 84 84" aria-label="Mini nutrition radar">
+        <polygon class="radar-grid" points="42,12 68,27 68,57 42,72 16,57 16,27"></polygon>
+        ${axes}
+        <polygon class="radar-shape" points="${points}"></polygon>
+      </svg>
+    `;
   }
 
   bar(label, value, max, unit) {

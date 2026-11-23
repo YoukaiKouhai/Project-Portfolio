@@ -82,6 +82,9 @@ nav ul, nav li {
 }
 
 nav a {
+  display: grid;
+  place-content: center;
+  white-space: pre-line;
   flex: 1 1 7rem;
   text-align: center;
   text-decoration: none;
@@ -796,6 +799,28 @@ dl.info[hidden]:not(:hover, :focus-within) {
   flex: 1 1 auto;
   max-width: calc(100% - 100px - 35px - 150px);
   word-wrap: break-word;
+}
+
+.resume-education .resume-line {
+  display: grid;
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.resume-education .column1 {
+  margin-right: 0;
+  white-space: normal;
+}
+
+.resume-education .column2 {
+  max-width: none;
+}
+
+@media (max-width: 560px) {
+  .resume-education .resume-line {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
 }
 
 .role {

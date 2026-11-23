@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardiac Lead Localization in 3D CT | Austin Wong</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <script type="module" src="../../global.js"></script>
+</head>
+<body>
+  <main>
+    <p><a href="../#projects-heading">Publications and Projects</a> / 2026</p>
+    <h1>Cardiac Lead Localization in 3D CT</h1>
+    <p>Locate the electrode contacts of a cardiac resynchronization therapy device and compare their positions across cardiac CT scans.</p>
+    <figure>
+      <img src="pipeline.png" style="width:100%;height:auto" alt="Overview of the cardiac lead localization pipeline.">
+      <figcaption>Overview of the cardiac lead localization pipeline.</figcaption>
+    </figure>
+    <h2>From voxels to landmarks</h2>
+    <p>The team extracted electrode centroids from labeled volumes and checked their coordinates against manual Horos annotations. The apex, base, and anterior landmark define a patient-specific frame for comparing lead positions.</p>
+    <h2>Evaluating localization</h2>
+    <p>The project compares classical image processing with 3D MONAI and PyTorch models. Overlays show where a prediction lands on a scan, while centroid distances quantify localization error and bullseye plots summarize ventricular position.</p>
+    <p>Spring 2026 &middot; UC San Diego BENG 280C<br>Austin Wong, Deepta Bharadwaj, and Nausheen Nakhawa</p><a href="https://github.com/YoukaiKouhai/Optimal-LV-Placement-ML">Explore the code and evaluation</a>
+  </main>
+</body>
+</html>

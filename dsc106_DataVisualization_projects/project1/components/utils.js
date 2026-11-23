@@ -1,4 +1,4 @@
-import { DEFAULT_FILTERS, NOVA_CLASSES } from '../constants/config.js';
+import { DEFAULT_FILTERS, DEFAULT_HEALTH_WEIGHTS, NOVA_CLASSES } from '../constants/config.js';
 
 const parser = document.createElement('textarea');
 
@@ -55,14 +55,48 @@ export function computeCalories(product) {
   return protein * 4 + carbs * 4 + fat * 9;
 }
 
-export function computeHealthIndex(product) {
-  const novaPenalty = ((product.nova ?? 0) / 3) * 8;
-  const sugarPenalty = clamp((product.sugar ?? 0) / 60, 0, 1) * 14;
-  const sodiumPenalty = clamp((product.sodiumMg ?? 0) / 1600, 0, 1) * 12;
-  const caloriePenalty = clamp(((product.calories ?? 0) - 120) / 380, 0, 1) * 9;
-  const fiberBonus = clamp((product.fiber ?? 0) / 12, 0, 1) * 9;
-  const proteinBonus = clamp((product.protein ?? 0) / 25, 0, 1) * 8;
-  return clamp(100 - (product.fpro ?? 0) * 26 - novaPenalty - sugarPenalty - sodiumPenalty - caloriePenalty + fiberBonus + proteinBonus, 0, 100);
+export function computeHealthIndex(product, weights = DEFAULT_HEALTH_WEIGHTS) {
+  const novaPenalty = ((product.nova ?? 0) / 3) * weights.nova;
+  const sugarPenalty = clamp((product.sugar ?? 0) / 60, 0, 1) * weights.sugar;
+  const sodiumPenalty = clamp((product.sodiumMg ?? 0) / 1600, 0, 1) * weights.sodium;
+  const caloriePenalty = clamp(((product.calories ?? 0) - 120) / 380, 0, 1) * weights.calories;
+  const fiberBonus = clamp((product.fiber ?? 0) / 12, 0, 1) * weights.fiber;
+  const proteinBonus = clamp((product.protein ?? 0) / 25, 0, 1) * weights.protein;
+  return clamp(100 - (product.fpro ?? 0) * weights.fpro - novaPenalty - sugarPenalty - sodiumPenalty - caloriePenalty + fiberBonus + proteinBonus, 0, 100);
+}
+
+function percentileRank(sorted, value) {
+  if (!Number.isFinite(value) || !sorted.length) return null;
+  let low = 0;
+  let high = sorted.length;
+  while (low < high) {
+    const mid = Math.floor((low + high) / 2);
+    if (sorted[mid] <= value) low = mid + 1;
+    else high = mid;
+  }
+  return clamp((low / sorted.length) * 100, 0, 100);
+}
+
+export function annotatePercentiles(products) {
+  const healthValues = products.map((d) => d.health).filter(Number.isFinite).sort((a, b) => a - b);
+  const priceValues = products
+    .filter((d) => d.validPrice && !d.priceOutlier)
+    .map((d) => d.pricePer100Cal)
+    .filter(Number.isFinite)
+    .sort((a, b) => a - b);
+  products.forEach((product) => {
+    product.healthPercentile = percentileRank(healthValues, product.health);
+    product.pricePercentile = percentileRank(priceValues, product.pricePer100Cal);
+  });
+  return products;
+}
+
+export function applyHealthIndex(products, weights = DEFAULT_HEALTH_WEIGHTS) {
+  products.forEach((product) => {
+    product.health = computeHealthIndex(product, weights);
+  });
+  annotatePercentiles(products);
+  return products;
 }
 
 export function preprocessRow(row, index) {
@@ -141,6 +175,7 @@ export function filterProducts(products, filters, brushedIds = null) {
     if (filters.sodiumMax < DEFAULT_FILTERS.sodiumMax && Number.isFinite(product.sodiumMg) && product.sodiumMg > filters.sodiumMax) return false;
     if (filters.fiberMin > DEFAULT_FILTERS.fiberMin && Number.isFinite(product.fiber) && product.fiber < filters.fiberMin) return false;
     if (filters.proteinMin > DEFAULT_FILTERS.proteinMin && Number.isFinite(product.protein) && product.protein < filters.proteinMin) return false;
+    if (filters.caloriesMax < DEFAULT_FILTERS.caloriesMax && Number.isFinite(product.calories) && product.calories > filters.caloriesMax) return false;
     if (filters.fproMax < DEFAULT_FILTERS.fproMax && Number.isFinite(product.fpro) && product.fpro > filters.fproMax) return false;
     if (brushedIds && !brushedIds.has(product.id)) return false;
     return true;
@@ -157,6 +192,7 @@ export function filtersFromUrl() {
     ['sodium', 'sodiumMax'],
     ['fiber', 'fiberMin'],
     ['protein', 'proteinMin'],
+    ['calories', 'caloriesMax'],
     ['fpro', 'fproMax']
   ]) {
     if (params.has(param)) filters[key] = Number(params.get(param));
@@ -172,6 +208,7 @@ export function writeFiltersToUrl(filters) {
   params.set('sodium', filters.sodiumMax);
   params.set('fiber', filters.fiberMin);
   params.set('protein', filters.proteinMin);
+  params.set('calories', filters.caloriesMax);
   params.set('fpro', filters.fproMax);
   history.replaceState(null, '', `${location.pathname}?${params.toString()}${location.hash}`);
 }

@@ -1,6 +1,31 @@
 [
     {
+        "title": "TIDE Trace Decomposition",
+        "year": "2025",
+        "collection": "general",
+        "url": "publications/tide/",
+        "image": "publications/tide/spectrum.png",
+        "description": "Compare an unedited Sanger trace with a mixed trace to estimate how often the sequence length changed."
+    },
+    {
+        "title": "Cardiac Lead Localization in 3D CT",
+        "year": "2026",
+        "collection": "general",
+        "url": "publications/optimal-lv-placement/",
+        "image": "publications/optimal-lv-placement/pipeline.png",
+        "description": "Locate the electrode contacts of a cardiac resynchronization therapy device and compare their positions across cardiac CT scans."
+    },
+    {
+        "title": "Portable ECG Education Platform",
+        "year": "2026",
+        "collection": "general",
+        "url": "publications/portable-ecg/",
+        "image": "publications/portable-ecg/prototype.png",
+        "description": "A portable electrocardiogram lets students follow a cardiac signal from the electrodes to six displayed limb leads."
+    },
+    {
         "title": "Peer-to-Peer Battleship",
+        "collection": "general",
         "year": "2026",
         "url": "python_projects/mini_python_projects/mini_python_project_1_battleship/battleship-web/",
         "image": "python_projects/mini_python_projects/mini_python_project_1_battleship/battleship-web/preview.svg",

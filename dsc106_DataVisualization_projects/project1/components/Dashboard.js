@@ -1,5 +1,5 @@
-import { DEFAULT_FILTERS } from '../constants/config.js';
-import { filterProducts, formatMoney, formatNumber, groupSummary, summarize, writeFiltersToUrl } from './utils.js';
+import { DEFAULT_FILTERS, DEFAULT_HEALTH_WEIGHTS } from '../constants/config.js';
+import { applyHealthIndex, filterProducts, formatMoney, formatNumber, groupSummary, summarize, writeFiltersToUrl } from './utils.js';
 import { renderBoxplot, renderHistogram, renderScatter, renderStacked } from './charts.js';
 
 export class Dashboard {
@@ -7,6 +7,7 @@ export class Dashboard {
     this.products = products;
     this.tooltip = tooltip;
     this.filters = initialFilters;
+    this.healthWeights = structuredClone(DEFAULT_HEALTH_WEIGHTS);
     this.brushedIds = null;
     this.listeners = new Set();
   }
@@ -59,6 +60,7 @@ export class Dashboard {
       ['sodium-filter', 'sodiumMax'],
       ['fiber-filter', 'fiberMin'],
       ['protein-filter', 'proteinMin'],
+      ['calories-filter', 'caloriesMax'],
       ['fpro-filter', 'fproMax']
     ]) {
       const input = document.querySelector(`#${id}`);
@@ -72,8 +74,11 @@ export class Dashboard {
 
     document.querySelector('#reset-filters').addEventListener('click', () => {
       this.filters = structuredClone(DEFAULT_FILTERS);
+      this.healthWeights = structuredClone(DEFAULT_HEALTH_WEIGHTS);
+      applyHealthIndex(this.products, this.healthWeights);
       this.brushedIds = null;
       this.syncControls();
+      this.syncHealthControls();
       this.render();
     });
 
@@ -84,7 +89,22 @@ export class Dashboard {
       setTimeout(() => { event.currentTarget.textContent = 'Copy view link'; }, 1200);
     });
 
+    this.setupHealthControls();
     this.syncControls();
+  }
+
+  setupHealthControls() {
+    document.querySelectorAll('[data-health-weight]').forEach((input) => {
+      const key = input.dataset.healthWeight;
+      input.value = this.healthWeights[key];
+      input.addEventListener('input', () => {
+        this.healthWeights[key] = Number(input.value);
+        applyHealthIndex(this.products, this.healthWeights);
+        this.syncHealthControls();
+        this.render();
+      });
+    });
+    this.syncHealthControls();
   }
 
   syncControls() {
@@ -96,12 +116,24 @@ export class Dashboard {
     document.querySelector('#sodium-filter').value = this.filters.sodiumMax;
     document.querySelector('#fiber-filter').value = this.filters.fiberMin;
     document.querySelector('#protein-filter').value = this.filters.proteinMin;
+    document.querySelector('#calories-filter').value = this.filters.caloriesMax;
     document.querySelector('#fpro-filter').value = this.filters.fproMax;
     document.querySelector('#sugar-label').textContent = `${formatNumber(this.filters.sugarMax, 0)}g`;
     document.querySelector('#sodium-label').textContent = `${formatNumber(this.filters.sodiumMax, 0)}mg`;
     document.querySelector('#fiber-label').textContent = `${formatNumber(this.filters.fiberMin, 1)}g`;
     document.querySelector('#protein-label').textContent = `${formatNumber(this.filters.proteinMin, 1)}g`;
+    document.querySelector('#calories-label').textContent = `${formatNumber(this.filters.caloriesMax, 0)} cal`;
     document.querySelector('#fpro-label').textContent = formatNumber(this.filters.fproMax, 2);
+  }
+
+  syncHealthControls() {
+    Object.entries(this.healthWeights).forEach(([key, value]) => {
+      const label = document.querySelector(`#weight-${key}-label`);
+      const input = document.querySelector(`#weight-${key}`);
+      if (label) label.textContent = formatNumber(value, 0);
+      if (input) input.value = value;
+    });
+    document.querySelector('#health-formula').textContent = `Score = 100 - ${this.healthWeights.fpro}(FPro) - ${this.healthWeights.nova}(NOVA/3) - scaled sugar/sodium/calorie penalties + scaled fiber/protein bonuses.`;
   }
 
   filtered() {

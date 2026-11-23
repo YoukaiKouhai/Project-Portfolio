@@ -17,7 +17,7 @@ function getProjectYear(project) {
 }
 
 function matchesSearch(project) {
-  const values = Object.values(project).join('\n').toLowerCase();
+  const values = [project.title, project.description, project.year].join('\n').toLowerCase();
   return values.includes(query.toLowerCase());
 }
 
@@ -126,14 +126,20 @@ function updateView(projects) {
     ? searchedProjects.filter((project) => getProjectYear(project) === selectedYear)
     : searchedProjects;
 
-  renderProjects(visibleProjects, projectsContainer, 'h2');
+  renderProjects(visibleProjects, projectsContainer, projectsContainer.dataset.heading || 'h2');
   renderPieChart(searchedProjects, projects);
 }
 
 // Immediately-invoked async function to load projects
 (async function loadProjects() {
   try {
-    const projects = await fetchJSON('../../lib/projects.json');
+    const catalog = await fetchJSON(new URL('../../lib/projects.json', import.meta.url));
+    const collection = projectsContainer.dataset.collection;
+    const projects = catalog.filter(project => (project.collection || 'visualization') === collection);
+    if (projectsContainer.dataset.placeholders) {
+      const placeholders = await fetchJSON(projectsContainer.dataset.placeholders);
+      projects.push(...placeholders);
+    }
 
     if (!projectsContainer) {
       console.error('No container with class "projects" found in HTML.');
