@@ -1,3 +1,4 @@
 node_modules/
+/python_projects/TIDE/
 __pycache__/
 *.py[cod]
