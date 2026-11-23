@@ -1,0 +1,10 @@
+Summary Statistics for Estimated Inpatient Beds Occupied by COVID-19 Patients
+Number of unique territories data taken: 52
+Mean: 3920.973
+Median: 996.5
+Standard Deviation: 14294.182
+Maximum inpatient count: 129602
+Minimum inpatient count: 32
+Average percentage of inpatient beds occupied by COVID-19 patients estimated: 11.557%
+Total inpatient beds: 43624328
+Range of inpatient counts: 129570
