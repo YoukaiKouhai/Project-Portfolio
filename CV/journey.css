@@ -39,6 +39,14 @@ html[data-theme="dark"] #cv .column1 { color: #f2a995 }
 body.riding { height: 100dvh; margin-block: 0; display: flex; flex-direction: column; overflow: hidden }
 body.riding .color-scheme { display: none }
 body.riding > nav { margin-bottom: 0 }
+#journey #env-mode { font-size: .8rem; padding: .2rem .55rem; margin-inline-start: .25rem; white-space: nowrap }
+#env-panel { position: fixed; z-index: 5; width: min(16rem,calc(100vw - 1rem)); max-height: 65dvh; overflow: auto; box-sizing: border-box; padding: .85rem; color: #182830; background: #fff; border: 1px solid #9eaeb5; border-radius: 6px; box-shadow: 0 4px 18px #152c3933 }
+#env-panel label { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .45rem; margin-bottom: .65rem; font-size: .9rem }
+#env-panel input { grid-column: 1 / -1; width: 100%; margin: 0 }
+#env-panel output { font-variant-numeric: tabular-nums }
+@media (max-width: 760px) {
+  #journey #env-mode { margin: 0; padding: .15rem .4rem; font-size: .72rem }
+}
 #journey { --ink: #1e352f; --muted: #50665e; --paper: #faf9f3; --accent: #a23d2c; --line: #cdd3c7; color: var(--ink); color-scheme: light; font: 100%/1.55 "Segoe UI", sans-serif; position: relative; flex: 1; min-height: 0; width: 100vw; align-self: center; isolation: isolate; overflow: hidden; background: #b6d1af }
 @scope (#journey) {
   * { box-sizing: border-box }

@@ -18,7 +18,14 @@ const names = sections.map(s => s.querySelector("h2").textContent);
 const shortNames = ["Summary", "Education", "Skills", "Work", "Research", "Eng Projects", "CS Projects", "Leadership"];
 const compact = matchMedia("(max-width: 760px), (max-height: 560px)");
 const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d",{alpha:false});
+const display = canvas.getContext("2d",{alpha:false});
+// At night the transparent terrain doubles as its own silhouette for the
+// multiply pass. This keeps the moon and sky untouched, even above the ridge.
+const landscape=document.createElement("canvas");
+const terrain=landscape.getContext("2d");
+const foreground=document.createElement("canvas");
+const front=foreground.getContext("2d");
+let ctx=display;
 let station = 0, position = 0, page = 0, trip = null, frame = 0;
 let width=1,height=1,lens=1,horizon=0,cameraHeight=SCENE.cameraHeight;
 const riding = () => !$("journey").hidden;
@@ -78,32 +85,41 @@ function biomeWeights(stop) {
 }
 function drawFuji(distance) {
   ctx.save();
-  ctx.translate(width*(.58-.012*Math.sin(distance*.003)),0);
-  ctx.scale(Math.min(width*.26,horizon*2.3),horizon);
+  ctx.translate(width*(.58-.012*Math.sin(distance*.003)),horizon*.30);
+  ctx.scale(Math.min(width*.26,horizon*2.3),horizon*.70);
   polygon([[-1,.82],[-.57,.50],[-.24,.21],[-.075,.042],[.045,.038],
     [.27,.25],[.60,.54],[1,.82]],"#788f9d");
   polygon([[-.03,.10],[.045,.038],[.27,.25],[.60,.54],[1,.82],[.24,.65]],"#91a5aa");
-  polygon([[-.35,.31],[-.075,.042],[.045,.038],[.32,.30],[.16,.23],
+  if(ENV.season==="summer") polygon([[-.13,.10],[-.075,.042],[.045,.038],[.10,.09],[0,.07]],"#edf1ed");
+  else polygon([[-.35,.31],[-.075,.042],[.045,.038],[.32,.30],[.16,.23],
     [.10,.25],[.018,.16],[-.10,.28],[-.14,.22]],"#f1f5ef");
   ctx.restore();
 }
 // The skyline is a distant painted layer. Cache its towers and windows at
 // display resolution on resize; each frame only pans the finished panorama.
 const skyline=document.createElement("canvas");
+const skylineLights=document.createElement("canvas");
 function cacheSkyline() {
   const dpr=Math.min(devicePixelRatio||1,2);
   skyline.width=Math.ceil(width*1.08*dpr);skyline.height=Math.ceil(horizon*dpr);
   const g=skyline.getContext("2d");
   g.setTransform(skyline.width/1080,0,0,skyline.height/100,0,0);
+  skylineLights.width=skyline.width;skylineLights.height=skyline.height;
+  const lights=skylineLights.getContext("2d");
+  lights.setTransform(skyline.width/1080,0,0,skyline.height/100,0,0);
+  lights.fillStyle=ENV.lamp;
   for(let row=0;row<2;row++) {
     for(let i=0,x=-4;x<1080;i++) {
       const seed=200*row+i,w=9+noise(seed+19)*20;
       const h=13+noise(seed+4)*27+(row?2:13);
-      g.fillStyle=row?"#657c81":"#90a2a7";g.fillRect(x,100-h,w,h);
+      g.fillStyle=ENV.towers[row];g.fillRect(x,100-h,w,h);
       if(i%4===0) g.fillRect(x+w*.20,97-h,w*.56,4);
       if(row && i%3!==0) {
         g.fillStyle="#cdbf9d";
-        for(let j=1;j<4;j++) g.fillRect(x+3+j%2*4,102-h+j*5,w*.22,1.4);
+        for(let j=1;j<4;j++) {
+          g.fillRect(x+3+j%2*4,102-h+j*5,w*.22,1.4);
+          lights.fillRect(x+3+j%2*4,102-h+j*5,w*.22,1.4);
+        }
       }
       x+=w+1+noise(seed+8)*4;
     }
@@ -125,13 +141,6 @@ function cacheSkyline() {
   g.fillStyle="#a65343";g.fillRect(cx-6,47,12,4);g.fillRect(cx-3,28,6,2.5);
 }
 function drawHills(distance,biome) {
-  const sky = ctx.createLinearGradient(0,0,0,height*.26);
-  sky.addColorStop(0,"#a8ced5");
-  sky.addColorStop(1,"#f5e7bd");
-  ctx.fillStyle = sky;
-  // Overpaint the fractional horizon pixel before compositing the ground.
-  ctx.fillRect(0,0,width,Math.ceil(horizon)+1);
-  ellipse(width*.72,height*.09,height*.045,height*.045,"#fff2ca");
   if(biome.river>0) {ctx.globalAlpha=biome.river;drawFuji(distance);ctx.globalAlpha=1;}
   for (let layer=0; layer<3; layer++) {
     const points = [[0,horizon]];
@@ -141,7 +150,7 @@ function drawHills(distance,biome) {
       points.push([x*width,ridge*horizon/SCENE.horizonY]);
     }
     points.push([width,horizon]);
-    polygon(points,["#a9c1b8","#8fae99","#729581"][layer]);
+    polygon(points,ENV.hills[layer]);
   }
   if(biome.city>0) {
     ctx.globalAlpha=biome.city;
@@ -152,14 +161,16 @@ function drawHills(distance,biome) {
 function drawTree(x, z, n) {
   const [cx,cy] = project(x,z);
   const unit = lens/(z+9), h = (2+noise(n)*2.6)*unit;
-  ellipse(cx+unit*.45,cy,unit*.95,unit*.17,"#7b986a");
+  ellipse(cx+unit*.45,cy,unit*.95,unit*.17,ENV.land.grass[1]);
   ctx.fillStyle="#716953";
   ctx.fillRect(cx-unit*.09,cy-h*.5,unit*.18,h*.5);
   const half=h*.24;
+  const leaf=ENV.land.trees[noise(n+91)<ENV.land.share ? 1+Math.floor(noise(n+45)*(ENV.land.trees.length-1)) : 0];
   polygon([[cx-half,cy-h*.45],[cx-half*.6,cy-h*.84],[cx,cy-h],[cx+half*.8,cy-h*.81],
-           [cx+half,cy-h*.43],[cx,cy-h*.28]],"#456e56");
+           [cx+half,cy-h*.43],[cx,cy-h*.28]],leaf[0]);
   polygon([[cx-half,cy-h*.45],[cx-half*.6,cy-h*.84],[cx,cy-h],[cx+half*.16,cy-h*.55],
-           [cx-half*.16,cy-h*.34]],"#709668");
+           [cx-half*.16,cy-h*.34]],leaf[1]);
+  if(ENV.season==="winter") polygon([[cx,cy-h],[cx+half*.8,cy-h*.81],[cx+half*.2,cy-h*.84],[cx,cy-h*.78],[cx-half*.62,cy-h*.82]],ENV.land.grass[2]);
 }
 function wrapSignText(label, maxChars = 16) {
   const lines = [""];
@@ -176,8 +187,9 @@ function platformSign(z,index) {
   if (signZ < -2 || signZ > 105) return null;
   const [x,y]=project(3.7,signZ,.63);
   const scale=lens/(signZ+9), size=clamp(scale*.33,4,18);
-  ctx.font="700 "+size+"px Segoe UI, sans-serif";
-  const lines=wrapSignText(names[index]);
+  const fontIndex=Math.round(size*4);
+  ctx.font=signFonts[fontIndex];
+  const lines=signLines[index];
   const w=Math.max(...lines.map(line=>ctx.measureText(line).width))+2.8*size;
   const lineHeight=size*1.18, h=lines.length*lineHeight+size*1.05;
   const bottom=y-1.65*scale;
@@ -203,7 +215,7 @@ function drawPlatform(z, index,city) {
   const near=Math.max(-4,z);
   if (end<=near) return;
   surface([[2,near,0],[2,end,0],[2,end,.63],[2,near,.63]],"#867f6c");
-  strip(2,5.8,near,end,.63,"#d5c5a4");
+  strip(2,5.8,near,end,.63,ENV.season==="winter"?ENV.land.grass[1]:"#d5c5a4");
   strip(2.08,2.19,near,end,.64,"#fff0b4");
   // Timber bench on the far edge of the platform.
   const bench=z+4.5;
@@ -215,10 +227,14 @@ function drawPlatform(z, index,city) {
     surface([[5.12,bench,1.18],[5.12,bench+1.75,1.18],[5.12,bench+1.75,1.5],[5.12,bench,1.5]],"#9b7952");
   }
   if(city>0 && index>=6) drawCanopy(near,end,z,city);
+  if(!ENV.nightAlpha) drawSign(z,index);
+}
+function drawSign(z,index) {
   const sign = platformSign(z,index);
   if (!sign) return;
   const {x,y,scale,size,lines,w,h,lineHeight,bottom,top}=sign;
-  ctx.font="700 "+size+"px Segoe UI, sans-serif";
+  const fontIndex=Math.round(size*4);
+  ctx.font=signFonts[fontIndex];
   ctx.fillStyle="#544f3e";
   for (const post of [-.32,.32]) ctx.fillRect(x+w*post,bottom,scale*.09,y-bottom);
   const left=x-w/2, accent=JR_LINE_COLORS[index];
@@ -228,8 +244,8 @@ function drawPlatform(z, index,city) {
   const badge=1.20*size,bx=left+size*.28,by=top+(h-badge)/2;
   ctx.strokeStyle=accent;ctx.lineWidth=Math.max(.6,size*.11);ctx.strokeRect(bx,by,badge,badge);
   ctx.fillStyle="#19272f";ctx.textAlign="center";ctx.textBaseline="middle";
-  ctx.font="bold "+size*.72+"px monospace";ctx.fillText(numberTag(index),bx+badge/2,by+badge/2);
-  ctx.font="700 "+size+"px Segoe UI, sans-serif";
+  ctx.font=badgeFonts[fontIndex];ctx.fillText(signNumbers[index],bx+badge/2,by+badge/2);
+  ctx.font=signFonts[fontIndex];
   lines.forEach((line,i)=>ctx.fillText(line,x+.64*size,top+size*.52+(i+.5)*lineHeight));
   if (index === station) signBounds = {x:x-w/2, y:top, w, h};
 }
@@ -255,7 +271,9 @@ function makeTrain(style) {
     }
     const diffuse=(n[0]*.48+n[1]*.24+n[2]*Math.sqrt(.712))/Math.hypot(...n);
     const shade=.55+.45*Math.max(0,diffuse);
-    faces.push({points,part,z:center[1],shade,color:tint(rgb(color),shade),stripe:color==="#0b62a8"});
+    const emission=color==="#1f2a33" || color==="#d8c98f" ? "lamp" :
+      color==="#ff5a4a" || color==="#ff3b30" ? "tail" : null;
+    faces.push({points,part,z:center[1],shade,color:tint(rgb(color),shade),emission,stripe:color==="#0b62a8"});
   }
   function cap(ring,color,inside) {
     // A fan of quads, with a triangle at the end of odd-sided sections.
@@ -387,6 +405,8 @@ function makeTrain(style) {
 const trainMeshes={shinkansen500:makeTrain("shinkansen500"),d51:makeTrain("d51")};
 let trainPaths=[],steamClip=0,trainSpeed=0,lastDistance=0,lastTrainTime=0;
 const trainSprite=document.createElement("canvas");
+const trainLights=document.createElement("canvas");
+let swayX=0,swayY=0;
 let spriteLeft=0,spriteTop=0,spriteScale=1,spriteTint="",stripeFrame=0;
 let stripeStart=rgb("#0b62a8"),stripeEnd=stripeStart,stripeChanged=0;
 function stripeAt(now) {
@@ -421,9 +441,17 @@ function paintTrainSprite(stripe) {
   brush.setTransform(spriteScale,0,0,spriteScale,-spriteLeft*spriteScale,-spriteTop*spriteScale);
   brush.clearRect(spriteLeft,spriteTop,trainSprite.width/spriteScale,trainSprite.height/spriteScale);
   brush.strokeStyle="rgba(0,0,0,.16)";brush.lineWidth=1;
+  trainLights.width=trainSprite.width;trainLights.height=trainSprite.height;
+  const lights=trainLights.getContext("2d");
+  lights.setTransform(spriteScale,0,0,spriteScale,-spriteLeft*spriteScale,-spriteTop*spriteScale);
   for(const f of trainPaths) {
     brush.fillStyle=stripe && f.stripe?tint(stripe,f.shade):f.color;
     brush.fill(f.path);if(!compact.matches) brush.stroke(f.path);
+    // Opaque faces erase lamps behind them, preserving the mesh's depth order.
+    lights.globalCompositeOperation=f.emission?"source-over":"destination-out";
+    lights.fillStyle=ENV[f.emission]||"#000";
+    lights.shadowBlur=f.emission==="tail"?4:0;lights.shadowColor=ENV.tail;
+    lights.fill(f.path);
   }
   spriteTint=stripe?stripe.map(Math.round).join(","):"";
 }
@@ -435,7 +463,8 @@ function drawTrain() {
   const strength=Math.min(1,Math.abs(trainSpeed)/28);
   const stripe=STRIPE_FOLLOWS_LINE?stripeAt(now):null;
   ctx.save();
-  ctx.translate(1.5*strength*Math.sin(distance*.64),strength*Math.sin(distance*1.42));
+  swayX=1.5*strength*Math.sin(distance*.64);swayY=strength*Math.sin(distance*1.42);
+  ctx.translate(swayX,swayY);
   if(stripe && stripe.map(Math.round).join(",")!==spriteTint) paintTrainSprite(stripe);
   ctx.drawImage(trainSprite,spriteLeft,spriteTop,trainSprite.width/spriteScale,trainSprite.height/spriteScale);
   if(trainStyle==="d51" && strength>.01) {
@@ -446,7 +475,7 @@ function drawTrain() {
       const [x,y]=project(.12*Math.sin(distance*.08+i),12.54-Math.sign(trainSpeed)*phase*1.45,2.13+phase*1.65);
       const r=lens/21*(.10+phase*.40);
       const puff=Array.from({length:6},(_,j)=>[x+r*Math.cos(j*Math.PI/3+i),y+r*.8*Math.sin(j*Math.PI/3+i)]);
-      polygon(puff,"rgba(224,230,229,"+(.37*strength*(1-phase))+")");
+      ctx.globalAlpha=.37*strength*(1-phase);polygon(puff,"#e0e6e5");
     }
   }
   ctx.restore();
@@ -487,18 +516,18 @@ function drawPaddies(distance,opacity) {
     const z=row*14-distance,end=z+14,near=Math.max(-4,z);
     for(const side of [-1,1]) {
       for(const [inner,outer] of [[2.3,10],[10.3,23],[23.3,40]]) {
-        strip(side*inner,side*outer,near,end,0,"#7c9668");
+        strip(side*inner,side*outer,near,end,0,ENV.land.grass[1]);
         const start=Math.max(-4,z+.44);
         if(end-.44<=start) continue;
-        const water=noise(row+inner+side)>.42;
-        strip(side*(inner+.16),side*(outer-.16),start,end-.44,.01,water?"#9ec4c5":"#8eb69b");
+        const patch=noise(row+inner+side)>.42?0:1,water=ENV.season==="spring" && !patch;
+        strip(side*(inner+.16),side*(outer-.16),start,end-.44,.01,ENV.land.field[patch]);
         if(water && z+5>near) strip(side*(inner+.8),side*(outer-1.4),Math.max(near,z+4.8),z+5,.015,"#bad2cb");
       }
     }
   }
   ctx.restore();
 }
-function drawTown(distance,opacity) {
+function drawTown(distance,opacity,lightsOnly=false) {
   ctx.save();
   for(let block=Math.floor((distance+140)/11);block>=Math.ceil((distance+45)/11);block--) {
     const z=block*11-distance;
@@ -508,14 +537,17 @@ function drawTown(distance,opacity) {
       const w=3+noise(seed+2)*2,d=4.1,eave=2.5+noise(seed+5)*1.6;
       const left=x-w/2,right=x+w/2;
       const wall=side<0?right:left;
+      if(!lightsOnly) {
       surface([[wall,z,0],[wall,z+d,0],[wall,z+d,eave],[wall,z,eave]],"#c0b59a");
       surface([[left,z,0],[right,z,0],[right,z,eave],[left,z,eave]],"#eddfc3");
       surface([[left,z,eave],[right,z,eave],[x,z,eave+1.25]],"#e1d0af");
       for(const edge of (side<0?[left-.24,right+.24]:[right+.24,left-.24])) {
         surface([[edge,z-.3,eave],[edge,z+d+.3,eave],[x,z+d+.3,eave+1.32],[x,z-.3,eave+1.32]],
-          edge<x?"#54626c":"#68777b");
+          ENV.season==="winter"?ENV.land.grass[edge<x?1:2]:edge<x?"#54626c":"#68777b");
       }
-      surface([[left+.45,z,.85],[x,z,.85],[x,z,1.75],[left+.45,z,1.75]],"#66777a");
+      }
+      for(const dx of [.4,1.05])
+        surface([[left+dx,z,.85],[left+dx+.43,z,.85],[left+dx+.43,z,1.65],[left+dx,z,1.65]],lightsOnly?ENV.lamp:"#66777a");
     }
   }
   ctx.restore();
@@ -588,21 +620,34 @@ function drawCatenary(distance,near,far) {
 function drawScene() {
   const distance=position*SCENE.stationSpacing;
   const biome=biomeWeights(position);
+  ctx.fillStyle=ENV.gradient;ctx.fillRect(0,0,width,Math.ceil(horizon)+1);
+  drawSkyBodies();
+  if(ENV.nightAlpha>0){
+    ctx=terrain;ctx.clearRect(0,0,width,height);
+  }
   drawHills(distance,biome);
-  ctx.fillStyle="#a8bd87"; ctx.fillRect(0,horizon,width,height-horizon);
+  ctx.fillStyle=ENV.land.grass[0]; ctx.fillRect(0,horizon,width,height-horizon);
   // Every sleeper, field and tree has a fixed world coordinate, including in reverse.
   const start=Math.floor(distance-4), far=200;
   for (let n=Math.floor((distance+far)/9); n>=Math.floor(start/9); n--) {
     const z=Math.max(-4,n*9-distance), end=(n+1)*9-distance;
     if (end<=z) continue;
     for (const sign of [-1,1]) {
-      strip(sign*2,sign*65,z,end,0,["#adc38d","#a6bb82","#b6c996"][Math.floor(noise(n+sign)*3)]);
-      strip(sign*9,sign*19,z,end,0,noise(n)>.5?"#bfca8e":"#94b282");
+      strip(sign*2,sign*65,z,end,0,ENV.land.grass[Math.floor(noise(n+sign)*3)]);
+      strip(sign*9,sign*19,z,end,0,ENV.land.grass[noise(n)>.5?1:2]);
     }
   }
   if(biome.paddies>0) drawPaddies(distance,biome.paddies);
   if(biome.river>0) drawCrossings(distance,biome.river,false);
   if(biome.town>0) drawTown(distance,biome.town);
+  const maskWindows=ENV.nightAlpha>0 && (biome.town>0 || biome.city>0);
+  if(maskWindows){
+    if(foreground.width!==landscape.width || foreground.height!==landscape.height){
+      foreground.width=landscape.width;foreground.height=landscape.height;
+      front.setTransform(terrain.getTransform());
+    }
+    ctx=front;ctx.clearRect(0,0,width,height);
+  }
   // Trees fade into the urban horizon during the last biome transition.
   ctx.globalAlpha=1-biome.city;
   const obstacles=treeObstacles(distance);
@@ -613,7 +658,7 @@ function drawScene() {
     if (clearTree(x,z,n,obstacles)) drawTree(x,z,n);
   }
   ctx.globalAlpha=1;
-  strip(-1.47,1.47,-4,far,0,"#919482");
+  strip(-1.47,1.47,-4,far,0,ENV.season==="winter"?"#b7c5cb":"#919482");
   // Sleepers share a material. Batch them into one path and one GPU fill.
   ctx.beginPath();
   for (let n=Math.ceil((distance+far)/.8); n>=Math.ceil((distance-4)/.8); n--) {
@@ -625,7 +670,7 @@ function drawScene() {
   ctx.fillStyle="#756e5f";ctx.fill();
   for (const x of [-.81,.81]) {
     strip(x-.055,x+.055,-4,far,.08,"#4b5b58");
-    strip(x,x+.048,-4,far,.09,"#dedbc5");
+    strip(x,x+.048,-4,far,.09,ENV.season==="winter"?"#7c898b":"#dedbc5");
   }
   if(biome.town>0) drawParapets(biome.town);
   if(biome.river>0) drawCrossings(distance,biome.river,true);
@@ -649,6 +694,47 @@ function drawScene() {
     drawCatenary(distance,-7,TRAIN_BOX.far);
     ctx.restore();
   }
+  if(ENV.nightAlpha>0){
+    if(maskWindows) terrain.drawImage(foreground,0,0,width,height);
+    ctx=display;ctx.drawImage(landscape,0,0,width,height);
+    terrain.save();terrain.globalCompositeOperation="source-in";
+    terrain.fillStyle=ENV.nightTint;terrain.fillRect(0,0,width,height);terrain.restore();
+    drawNightLights(distance,biome);
+  }
+}
+function drawNightLights(distance,biome){
+  ctx.save();
+  ctx.globalCompositeOperation="multiply";ctx.globalAlpha=ENV.nightAlpha;
+  ctx.drawImage(landscape,0,0,width,height);
+  ctx.globalCompositeOperation="source-over";
+  // Reuse the spent tint mask for emissions. Cut nearer silhouettes out of
+  // the distant windows, then cut the train out of the platform lamps.
+  ctx=terrain;ctx.clearRect(0,0,width,height);
+  if(biome.town || biome.city){
+    ctx.globalAlpha=ENV.nightAlpha*biome.city;
+    if(biome.city) ctx.drawImage(skylineLights,-width*(.04+.017*Math.sin(distance*.004)),0,width*1.08,horizon);
+    if(biome.town) drawTown(distance,biome.town*ENV.nightAlpha,true);
+    ctx.globalAlpha=1;ctx.globalCompositeOperation="destination-out";
+    ctx.drawImage(foreground,0,0,width,height);ctx.globalCompositeOperation="source-over";
+  }
+  for(const [i,world] of stationWorldZ.entries()){
+    const z=world+1-distance;
+    if(z>180 || z+16<=-4) continue;
+    for(const dz of [2,9,15]){
+      if(z+dz<=-4) continue;
+      const [x,y]=project(2.55,z+dz,.65),r=lens/(z+dz+9);
+      ctx.globalAlpha=.23*ENV.nightAlpha;ellipse(x,y,.48*r,.11*r,ENV.lamp);
+      ctx.globalAlpha=ENV.nightAlpha;ellipse(x,y,.075*r,.03*r,ENV.lamp);
+    }
+    ctx.globalAlpha=1;drawSign(z,i);
+  }
+  ctx.globalAlpha=1;ctx.globalCompositeOperation="destination-out";
+  ctx.drawImage(trainSprite,spriteLeft+swayX,spriteTop+swayY,trainSprite.width/spriteScale,trainSprite.height/spriteScale);
+  ctx.globalCompositeOperation="source-over";ctx=display;ctx.globalAlpha=1;
+  ctx.drawImage(landscape,0,0,width,height);
+  ctx.globalAlpha=ENV.nightAlpha;
+  ctx.drawImage(trainLights,spriteLeft+swayX,spriteTop+swayY,trainSprite.width/spriteScale,trainSprite.height/spriteScale);
+  ctx.restore();
 }
 function paintSizedScene() {
   const rect=canvas.getBoundingClientRect();
@@ -661,7 +747,10 @@ function paintSizedScene() {
   cacheTrain();
   const dpr=Math.min(window.devicePixelRatio||1,2);
   canvas.width=Math.max(1,Math.round(width*dpr)); canvas.height=Math.max(1,Math.round(height*dpr));
+  landscape.width=canvas.width;landscape.height=canvas.height;
+  terrain.setTransform(dpr,0,0,dpr,0,0);
   ctx.setTransform(dpr,0,0,dpr,0,0);
+  cacheSkyGradient();
   drawScene();
 }
 function resizeScene() {
@@ -673,6 +762,81 @@ function resizeScene() {
 
 const GAP = 10;
 const clamp = (value, lo, hi) => Math.max(lo, Math.min(value, hi));
+// Canonical dates represent the middle of each meteorological season. Auto uses
+// the actual local calendar date; UTC subtraction avoids a DST-shortened day.
+const conifer=["#2f5c3e","#4a7a54"];
+const lands={
+  spring:{day:105,grass:["#a8bd87","#b6c996","#a1bd83"],field:["#9ec4c5","#8eb69b"],trees:[conifer,["#e396ac","#f4bfd0"]],share:.35,air:"#e3f4ef"},
+  summer:{day:196,grass:["#769c5c","#88ae6d","#779f66"],field:["#548f45","#66a353"],trees:[conifer],share:0,air:"#eddfbb"},
+  autumn:{day:288,grass:["#cbb482","#c2a874","#d1ba88"],field:["#d9a738","#c69128"],trees:[conifer,["#8f2d2a","#ab4441"],["#d96b27","#ed8844"],["#dfa22c","#f0c455"]],share:.5,air:"#f5d8a9"},
+  winter:{day:15,grass:["#e4ecf1","#d7e2e9","#eef3f6"],field:["#cedae1","#e1eaf0"],trees:[conifer],share:0,air:"#dbeaf6"}
+};
+// Phase runs 0..4: midnight, sunrise, noon, sunset, midnight. Its slope
+// follows solar elevation, not a fixed hour on the clock.
+const skyStops=[
+  [0,"#111b37","#344563","#354256",.86],[.64,"#374566","#a78289","#566177",.67],
+  [1,"#8494ba","#ffd29b","#958899",.30],[1.52,"#9bc9df","#f6e9ce","#a0b8aa",0],
+  [2,"#76b7dc","#e1eeda","#9bb8ac",0],[3,"#9c8bab","#ffb683","#a18688",.30],
+  [3.38,"#474768","#c58087","#605b73",.68],[3.8,"#1b2645","#44516b","#40495d",.83],
+  [4,"#111b37","#344563","#354256",.86]
+];
+const params=new URLSearchParams(location.search);
+let seasonChoice=Object.hasOwn(lands,params.get("season"))?params.get("season"):"",
+    hourChoice=/^(?:[01]?\d|2[0-3])$/.test(params.get("hour")??"")?Number(params.get("hour")):null;
+const ENV={nightTint:"#284879",lamp:"#ffd97d",tail:"#ff6552"};
+function blendColor(a,b,t) {return tint(mix(rgb(a),rgb(b),t),1);}
+function refreshEnv(now=new Date()) {
+  const month=now.getMonth(),season=seasonChoice||["winter","spring","summer","autumn"][Math.floor(((month+1)%12)/3)];
+  const day=seasonChoice?lands[season].day:1+(Date.UTC(now.getFullYear(),month,now.getDate())-Date.UTC(now.getFullYear(),0,1))/86400000;
+  const hour=hourChoice??(now.getHours()+now.getMinutes()/60);
+  if(ENV.day===day && ENV.hour===hour && ENV.season===season) return;
+  const len=12.1-3.1*Math.cos(2*Math.PI*(day+10)/365),rise=12-len/2,set=12+len/2;
+  const daylight=hour>=rise && hour<=set;
+  const progress=daylight?(hour-rise)/len:((hour-set+24)%24)/(24-len);
+  const alt=(daylight?1:-1)*Math.sin(Math.PI*progress);
+  const phase=hour<12?1+alt:3-alt;
+  const n=skyStops.findIndex((stop,i)=>i>0 && stop[0]>=phase);
+  const a=skyStops[n-1],b=skyStops[n],t=smoother((phase-a[0])/(b[0]-a[0]));
+  const changed=ENV.season!==season || ENV.daylight!==daylight;
+  Object.assign(ENV,{season,land:lands[season],day,hour,daylight,progress,sunAlt:alt,
+    sky:blendColor(a[1],b[1],t),base:tint(mix(mix(rgb(a[2]),rgb(b[2]),t),rgb(lands[season].air),.4*Math.max(0,alt)),1),
+    hills:[1,.89,.77].map(k=>tint(mix(rgb(a[3]),rgb(b[3]),t),k)),
+    towers:["#90a2a7","#657c81"].map(c=>blendColor(c,lands[season].air,.12)),
+    nightAlpha:a[4]+(b[4]-a[4])*t});
+  if(riding() && horizon>0) {
+    cacheSkyGradient(); if(changed) {cacheSkyline();cacheTrain();} drawScene();
+  }
+}
+function cacheSkyGradient(){
+  ENV.gradient=ctx.createLinearGradient(0,0,0,Math.max(1,horizon));
+  ENV.gradient.addColorStop(0,ENV.sky);
+  ENV.gradient.addColorStop(.85,ENV.base);
+  ENV.gradient.addColorStop(1,ENV.base);
+  ENV.arcStart=clamp((headSign.getBoundingClientRect().right-canvas.getBoundingClientRect().left)/width+.035,.40,.85);
+}
+const stars=Array.from({length:62},(_,i)=>[noise(i+400),noise(i+530)*.78,.6+noise(i+330)]);
+const signLines=names.map(name=>wrapSignText(name));
+const signNumbers=names.map((_,i)=>numberTag(i));
+const signFonts=Array.from({length:73},(_,i)=>"700 "+i/4+"px Segoe UI, sans-serif");
+const badgeFonts=Array.from({length:73},(_,i)=>"bold "+i*.18+"px monospace");
+function drawSkyBodies(){
+  ctx.save();
+  if(ENV.sunAlt<0){
+    ctx.globalAlpha=Math.min(1,-ENV.sunAlt*3);
+    for(const [x,y,r] of stars) ellipse(x*width,y*horizon,r,r,"#e5eaf8");
+  }
+  ctx.globalAlpha=Math.min(1,Math.abs(ENV.sunAlt)*12);
+  const p=ENV.progress,r=Math.max(2,Math.min(horizon*.083,width*.019));
+  ellipse(width*(ENV.arcStart+(.95-ENV.arcStart)*p),horizon*(.23-.12*Math.sin(Math.PI*p)),r,r,ENV.daylight?"#fff0b4":"#e6edfa");
+  if(ENV.season==="summer"){
+    ctx.globalAlpha=.36*Math.max(0,ENV.sunAlt);
+    for(const x of [.20,.48,.85]){
+      const y=horizon*(.28+x*.12),w=width*.045;
+      polygon([[width*x-w,y],[width*x-w*.4,y-horizon*.055],[width*x,y-horizon*.09],[width*x+w*.45,y-horizon*.05],[width*x+w,y]],"#ffffff");
+    }
+  }
+  ctx.restore();
+}
 const overlaps = (a,b) => a.x < b.x+b.w && b.x < a.x+a.w && a.y < b.y+b.h && b.y < a.y+a.h;
 function padded(box, gap) {
   return {x:box.x-gap, y:box.y-gap, w:box.w+2*gap, h:box.h+2*gap};
@@ -1212,6 +1376,7 @@ function readingStation() {
   return Math.max(0,sections.findLastIndex(s=>s.getBoundingClientRect().top<=line));
 }
 function toggleRide() {
+  if(!skyPanel.hidden) closeSky();
   closeSheet();
   const entering=!riding();
   const index=entering ? readingStation() : (trip?.to ?? station);
@@ -1273,12 +1438,67 @@ trainButton.addEventListener("click",()=>{
   cacheTrain(); // Reprojects the selected mesh and refreshes the steam clip.
   drawScene();
 });
+const skyButton=document.createElement("button"),skyPanel=document.createElement("div");
+skyButton.type="button";skyButton.id="env-mode";
+skyButton.setAttribute("aria-haspopup","dialog");skyButton.setAttribute("aria-controls","env-panel");
+skyPanel.id="env-panel";skyPanel.hidden=true;skyPanel.setAttribute("role","dialog");
+skyPanel.setAttribute("aria-label","Sky settings");
+skyPanel.innerHTML='<label>Season <select id="env-season"><option value="">Auto</option><option value="spring">Spring</option><option value="summer">Summer</option><option value="autumn">Autumn</option><option value="winter">Winter</option></select></label><label>Hour <output for="env-hour"></output><input id="env-hour" type="range" min="0" max="23" step="1"></label><button type="button">Reset to Auto</button>';
+trainButton.after(skyButton);
+$("journey").append(skyPanel);
+const seasonInput=$("env-season"),hourInput=$("env-hour"),hourOutput=skyPanel.querySelector("output");
+function updateSky(){
+  refreshEnv();
+  seasonInput.value=seasonChoice;hourInput.value=Math.floor(ENV.hour);
+  const time=String(hourInput.value).padStart(2,"0")+":00";
+  hourOutput.value=time;
+  hourInput.setAttribute("aria-valuetext",time);
+  skyButton.textContent="Sky: "+(!seasonChoice && hourChoice===null?"Auto":
+    ENV.season[0].toUpperCase()+ENV.season.slice(1)+" "+time);
+}
+function placeSky(){
+  if(skyPanel.hidden)return;
+  const r=skyButton.getBoundingClientRect();
+  skyPanel.style.left=Math.max(8,Math.min(innerWidth-skyPanel.offsetWidth-8,r.right-skyPanel.offsetWidth))+"px";
+  skyPanel.style.bottom=Math.max(8,innerHeight-r.top+6)+"px";
+}
+function closeSky(focus=false){
+  skyPanel.hidden=true;skyButton.setAttribute("aria-expanded","false");
+  if(focus) skyButton.focus();
+}
+skyButton.addEventListener("click",()=>{
+  if(!skyPanel.hidden){closeSky(true);return;}
+  skyPanel.hidden=false;skyButton.setAttribute("aria-expanded","true");
+  placeSky();seasonInput.focus();
+});
+document.addEventListener("pointerdown",e=>{
+  if(!skyPanel.hidden && !skyPanel.contains(e.target) && !skyButton.contains(e.target))closeSky();
+});
+window.addEventListener("resize",placeSky);
+function setOverride(){
+  const url=new URL(location.href);
+  for(const [key,value] of [["season",seasonChoice],["hour",hourChoice]]){
+    if(value==="" || value===null)url.searchParams.delete(key);else url.searchParams.set(key,value);
+  }
+  history.replaceState(history.state,"",url);
+  updateSky();placeSky();
+}
+seasonInput.addEventListener("change",()=>{seasonChoice=seasonInput.value;setOverride();});
+hourInput.addEventListener("input",()=>{hourChoice=hourInput.valueAsNumber;setOverride();});
+skyPanel.querySelector("button").addEventListener("click",()=>{seasonChoice="";hourChoice=null;setOverride();});
+closeSky();updateSky();
+setInterval(()=>{if(!document.hidden)updateSky();},60000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)updateSky();});
 $("motion").addEventListener("click",()=>{
   motionChoice=skipTrainMotion();
   syncMotionControl();
 });
 new ResizeObserver(resizeScene).observe(canvas.parentElement);
 document.addEventListener("keydown",event=>{
+  if(!skyPanel.hidden){
+    if(event.key==="Escape"){event.preventDefault();closeSky(true);}
+    return;
+  }
   if (sheet.open || !riding() || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
   if (event.key==="Escape") { toggleRide(); return; }
   // Keep normal keyboard reading and link activation inside the card.
