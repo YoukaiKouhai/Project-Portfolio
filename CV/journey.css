@@ -1,0 +1,148 @@
+/* The standard CV uses the portfolio theme; the journey has its own palette. */
+[hidden] { display: none !important }
+.top { position: sticky; top: 0; z-index: 3; display: flex; justify-content: flex-end; background: var(--page-bg); padding: .45rem 0 }
+#toggle { display: inline-flex; align-items: center; gap: .6rem; padding: .5rem .85rem; border: 1px solid var(--border-color); border-radius: 2rem; background: var(--surface-bg); color: var(--text-primary); font: inherit; cursor: pointer }
+.switch { display: inline-flex; align-items: center; width: 2rem; height: 1.1rem; border-radius: 1rem; padding: 2px; background: #637269 }
+.switch::after { content: ""; width: .85rem; height: .85rem; border-radius: 50%; background: white }
+[aria-pressed=true] .switch { background: #24624f }
+[aria-pressed=true] .switch::after { margin-left: auto }
+
+#cv .entry { display: block }
+.station { border-top: 1px solid var(--border-color); scroll-margin-top: 4rem }
+#cv [data-layout="skills"] .resume-line { display: grid; grid-template-columns: minmax(9rem, 1fr) 2fr; gap: .5rem }
+#cv [data-layout="skills"] .column2 { max-width: none }
+@media (max-width: 640px) {
+  #cv .resume-line, #cv [data-layout="skills"] .resume-line { display: grid; grid-template-columns: 1fr }
+  #cv .column2 { max-width: none }
+  #cv .role { text-align: left }
+}
+body.riding { height: 100dvh; margin-block: 0; display: flex; flex-direction: column; overflow: hidden }
+body.riding .color-scheme { display: none }
+body.riding > nav { margin-bottom: 0 }
+#journey { --ink: #1e352f; --muted: #50665e; --paper: #faf9f3; --accent: #a23d2c; --line: #cdd3c7; color: var(--ink); color-scheme: light; font: 100%/1.55 "Segoe UI", sans-serif; position: relative; flex: 1; min-height: 0; width: 100vw; align-self: center; isolation: isolate; overflow: hidden; background: #b6d1af }
+@scope (#journey) {
+  * { box-sizing: border-box }
+  h2 { color: var(--ink) }
+  .resume-line, .column1, .column2, .role { display: block; max-width: none; margin: 0; white-space: normal; text-align: left }
+  #route { margin-bottom: 0; border: 0; flex-wrap: nowrap }
+a { color: #146452; text-underline-offset: .18em }
+a:hover { color: var(--accent) }
+button { font: inherit; cursor: pointer; color: inherit; background: var(--paper); border: 1px solid var(--line); border-radius: .45rem; padding: .42rem .8rem }
+button:hover:enabled { background: #e4ece2 }
+button:disabled { opacity: .42; cursor: default }
+:focus-visible { outline: 3px solid #99542c; outline-offset: 3px }
+
+.column1:not(:empty) { font-size: .82rem; color: var(--accent); font-weight: 650; margin-bottom: .15rem }
+.role { font-style: italic; color: var(--muted) }
+.no-style { list-style: none; padding: 0; margin: .5rem 0 0 }
+li + li { margin-top: .35rem }
+
+.landscape, #threads { position: absolute; inset: 0; width: 100%; height: 100% }
+canvas { display: block; width: 100%; height: 100%; touch-action: none }
+#threads { pointer-events: none; overflow: hidden }
+.journey-head { position: absolute; z-index: 2; inset: 0 0 auto; padding: 1.1rem clamp(1rem,3vw,3rem); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; pointer-events: none }
+.journey-head > div:first-child { background: #faf9f3f5; border: 1px solid #c2d2bc; border-radius: .7rem; padding: .62rem 1rem }
+#stop-count { font-size: .75rem; letter-spacing: .09em; color: #3e5f50; font-weight: 700; margin: 0 0 .18rem; text-transform: uppercase }
+#station-title { margin: 0; font-size: clamp(1.25rem,2.8vw,2.25rem) }
+#pages { display: flex; align-items: center; gap: .55rem; background: var(--paper); padding: .25rem; border-radius: .65rem; pointer-events: auto; white-space: nowrap; font-size: .86rem }
+#pages button { min-width: 2.3rem; font-size: 1.15rem; padding: .1rem .4rem }
+#cards { position: absolute; inset: 0; pointer-events: none }
+.card { pointer-events: auto; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #9aaa9c var(--paper);
+  background: #fffdf6; border: 1px solid #afbdab; border-top: 3px solid #a54e35; border-radius: 16px; line-height: 1.45;
+  box-shadow: 0 5px 16px #253e3426 }
+.card p { margin: 0 }
+.card strong { font-family: Georgia, serif }
+.always-open { position: absolute; padding: .85rem 1.05rem; }
+#cards[data-layout="skills"] .always-open { padding: .65rem .9rem; font-size: .93rem; }
+@media (max-height: 760px) {
+  #cards[data-layout="skills"] .always-open { padding: .55rem .85rem; font-size: .86rem; }
+}
+.pill { position: absolute; display: flex; flex-direction: column;
+  transition: width .32s ease, height .32s ease }
+.pill.measuring { transition: none }
+.card-toggle { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: .13rem .3rem; text-align: left; flex: none; color: var(--ink); background: transparent;
+  width: 100%; border: 0; padding: .6rem .8rem .65rem; overflow-wrap: anywhere; line-height: 1.25 }
+.card-toggle:focus-visible, .card-detail:focus-visible { outline-offset: -3px }
+.card-toggle > * { grid-column: 1 / -1 }
+.card-toggle > :first-child { grid-column: 1; grid-row: 1 }
+.card-toggle small { font-size: .75rem; color: var(--accent); font-weight: 600 }
+.card-toggle em { color: var(--muted); font-size: .83rem }
+.card-toggle::after { content: "+" / ""; grid-column: 2; grid-row: 1; line-height: 1; font-size: 1.15rem; color: var(--accent) }
+.expanded .card-toggle::after { content: "âˆ’" / "" }
+.card-detail { padding: .35rem .85rem .8rem; font-size: .94rem; overflow: auto; min-height: 2.5rem;
+  overscroll-behavior: contain; scrollbar-width: thin }
+#threads path { fill: none; stroke: #45674f; stroke-width: 2.75; stroke-linecap: round }
+#threads circle { fill: #45674f }
+/* Paths run from the platform to each card. Reveal every branch before showing the cards. */
+.growing { --grow-time: 1.25s; --branch-stagger: 85ms }
+.growing #threads path { stroke-dasharray: 1 1;
+  animation: grow-branch var(--grow-time) ease-in-out calc(var(--order) * var(--branch-stagger)) backwards }
+.growing #threads g circle { animation: fade-in .15s ease-out
+  calc(var(--grow-time) + var(--order) * var(--branch-stagger)) backwards }
+.growing #cards > .card { animation: fade-in .42s ease-out
+  calc(var(--grow-time) + var(--last-branch) * var(--branch-stagger) + var(--order) * 60ms) backwards }
+#cards.leaving, #threads.leaving { animation: depart .24s ease-in forwards; pointer-events: none }
+.leaving .card { pointer-events: none }
+@keyframes arrive { from { opacity: 0; transform: translateY(8px) } }
+@keyframes grow-branch { from { stroke-dashoffset: 1 } to { stroke-dashoffset: 0 } }
+@keyframes fade-in { from { opacity: 0; visibility: hidden } to { opacity: 1; visibility: visible } }
+@keyframes depart { to { opacity: 0; transform: translateY(18px) } }
+footer { position: absolute; inset: auto 0 0; background: #faf9f3fa; border-top: 1px solid #a4b6a6; padding: .7rem clamp(.6rem,3vw,3rem) .8rem }
+.driving { display: flex; justify-content: space-between; align-items: center; gap: .5rem }
+.driving span { color: var(--muted); text-align: center; font-size: .85rem }
+#motion { font-size: .85rem; padding: .18rem .6rem }
+#motion[aria-pressed="true"] { background: #24624f; color: white }
+#route { display: flex; margin-top: .6rem }
+#route button { position: relative; background: transparent; flex: 1; padding: 1.05rem .12rem 0; border: none; font-size: .8rem; border-radius: 0 }
+#route button::before { content: ""; position: absolute; top: .4rem; height: 2px; left: 0; right: 0; background: #91a497 }
+#route button:first-child::before { left: 50% }
+#route button:last-child::before { right: 50% }
+#route button::after { content: ""; position: absolute; top: .13rem; left: 50%; transform: translateX(-50%); width: .54rem; height: .54rem; background: var(--paper); border: 2px solid #56806b; border-radius: 50% }
+#route button[aria-current=step] { color: #8c3324; font-weight: 700 }
+#route button[aria-current=step]::after { background: var(--accent); border-color: var(--accent) }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%) }
+#stage-view, #stage { display: contents }
+@media (min-width: 760.01px) and (min-height: 560.01px) {
+  :scope { display: flex; flex-direction: column }
+  #stage-view { display: block; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain }
+  #stage { display: block; position: relative; height: 100%; min-height: var(--reading-height, 0px) }
+  :scope footer { position: static; flex: none }
+  .pill { overflow: hidden }
+  #cards:is([data-layout="summary"],[data-layout="skills"],[data-layout="leadership"]) .always-open,
+  #cards:is([data-layout="education"],[data-layout="research"]) .card-detail { overflow: visible }
+  #cards:is([data-layout="education"],[data-layout="research"]) .card-detail { flex: none }
+  .card-detail { min-height: 0 }
+  #cards[data-layout="research"] .card-detail { font-size: .91rem; line-height: 1.37 }
+  @media (max-width: 1120px), (max-height: 760px) {
+    .card-toggle { padding: .43rem .65rem }
+    .card-detail { font-size: .87rem; line-height: 1.37; padding: .2rem .65rem .6rem }
+    #cards[data-layout="research"] .card-detail { font-size: .87rem }
+  }
+}
+@media (max-width: 760px), (max-height: 560px) {
+  #contents { display: none }
+  #cv { margin-top: 2rem }
+  :scope { display: grid; grid-template-rows: auto minmax(0,1.2fr) minmax(0,1fr) auto }
+  .journey-head { position: static; grid-row: 1; align-items: center; padding: .4rem .6rem; gap: .4rem; background: var(--paper) }
+  .journey-head > div:first-child { background: none; border: 0; padding: 0 }
+  #station-title { font-size: 1.15rem }
+  #stop-count { font-size: .68rem }
+  #pages { gap: .25rem; font-size: .76rem }
+  .landscape { grid-row: 2; position: relative }
+  #cards { grid-row: 3; position: static; padding: .5rem; display: grid; min-height: 0; background: #d8e2d2 }
+  .card { width: 100%; height: 100%; max-height: none; padding: .65rem 1rem; min-height: 0 }
+  :scope[data-motion="on"] .card { animation: arrive .32s ease-out }
+  #threads { display: none }
+  footer { position: static; grid-row: 4; padding: .4rem .5rem }
+  #route button { min-height: 1.6rem; padding: .9rem 0 0; font-size: .66rem; overflow-wrap: anywhere }
+  .driving button { font-size: .85rem }
+}
+:scope[data-motion="off"] :is(#cards.leaving, #threads.leaving) { animation: none }
+:scope[data-motion="off"] .pill { transition: none }
+
+}
+@media print {
+  .top, #journey, body > nav, .color-scheme { display: none !important }
+  #cv[hidden] { display: block !important }
+  body.riding { display: block; height: auto; overflow: visible }
+}

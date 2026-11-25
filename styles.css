@@ -801,6 +801,35 @@ dl.info[hidden]:not(:hover, :focus-within) {
   word-wrap: break-word;
 }
 
+.cv-experience .resume-line {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) 9.375rem;
+  column-gap: 1.5rem;
+}
+
+.cv-experience .column1 {
+  white-space: normal;
+  margin-right: 0;
+}
+
+.cv-experience .column2 {
+  max-width: none;
+}
+
+@media (max-width: 640px) {
+  .cv-experience .resume-line {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-experience .column1:empty {
+    display: none;
+  }
+
+  .cv-experience .role {
+    text-align: left;
+  }
+}
+
 .resume-education .resume-line {
   display: grid;
   grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
