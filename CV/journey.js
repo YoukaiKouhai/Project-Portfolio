@@ -664,11 +664,16 @@ function toggleRide() {
   }
 }
 sections.forEach((section,i)=>{
+  const link=document.createElement("a");
+  link.href="#"+section.id;
+  link.textContent=names[i];
+  $("cv-contents").append(link);
   const stop=document.createElement("button");
   stop.textContent=shortNames[i]; stop.title=names[i]; stop.setAttribute("aria-label",names[i]);
   stop.addEventListener("click",()=>travel(i));
   $("route").append(stop);
 });
+$("cv-contents").hidden=false;
 if (ctx) $("toggle").hidden=false;
 $("toggle").addEventListener("click",toggleRide);
 $("next").addEventListener("click",()=>step(1));
