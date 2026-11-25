@@ -533,7 +533,11 @@ function desktopCard(entry,i) {
   return card;
 }
 function renderCards(animateArrival=false) {
-  const entries=[...sections[station].querySelectorAll(".entry")], mobile=compact.matches;
+  const entries=[...sections[station].querySelectorAll(".entry")]
+    .map((entry,i)=>({entry,order:Number(entry.dataset.journeyOrder ?? i+1)}))
+    .sort((a,b)=>a.order-b.order)
+    .map(item=>item.entry);
+  const mobile=compact.matches;
   const cards=$("cards");
   cards.replaceChildren(); $("threads").replaceChildren();
   $("journey").classList.toggle("growing",animateArrival && !mobile && !skipTrainMotion());
