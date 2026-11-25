@@ -12,7 +12,6 @@ const sections = [...document.querySelectorAll(".station")];
 const names = sections.map(s => s.querySelector("h2").textContent);
 const shortNames = ["Summary", "Education", "Skills", "Work", "Research", "Eng Projects", "CS Projects", "Leadership"];
 const compact = matchMedia("(max-width: 760px), (max-height: 560px)");
-const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 let station = 0, position = 0, page = 0, trip = null, frame = 0;
@@ -26,7 +25,6 @@ let signBounds = null;
 const SCROLL_PX = 1100, SETTLE_MS = 300, INERTIA_MS = 180, COMMIT_PX = 60;
 let scrub = 0, lastWheel = -Infinity;
 let parkedDirection = 0;
-let motionChoice=null;
 const skipTrainMotion = () => $("journey").dataset.motion==="off";
 const smoother = t => t*t*t*(t*(6*t-15)+10);
 function warp(s) {
@@ -679,22 +677,18 @@ $("earlier").addEventListener("click",()=>turnPage(-1));
 $("later").addEventListener("click",()=>turnPage(1));
 
 compact.addEventListener("change",()=>{
-  syncMotionControl();
   page=0;
   if (riding() && !trip) renderCards();
 });
-function syncMotionControl() {
-  const enabled=motionChoice ?? !reduced.matches;
+function setTrainMotion(enabled) {
   $("journey").dataset.motion=enabled ? "on" : "off";
   $("motion").setAttribute("aria-pressed",String(enabled));
   $("motion-state").textContent=enabled ? "On" : "Off";
   if (!enabled) $("journey").classList.remove("growing");
 }
-syncMotionControl();
-reduced.addEventListener("change",syncMotionControl);
+setTrainMotion(true);
 $("motion").addEventListener("click",()=>{
-  motionChoice=skipTrainMotion();
-  syncMotionControl();
+  setTrainMotion(skipTrainMotion());
 });
 new ResizeObserver(resizeScene).observe(canvas.parentElement);
 document.addEventListener("keydown",event=>{
