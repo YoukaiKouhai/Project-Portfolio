@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking COVID-19 Inpatient Bed Occupancy | Austin Wong</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <script type="module" src="../../global.js"></script>
+</head>
+<body>
+  <main>
+    <p><a href="../#projects-heading">Publications and Projects</a> / 2023</p>
+    <h1>Tracking COVID-19 Inpatient Bed Occupancy</h1>
+    <p>How many inpatient beds were occupied by COVID-19 patients, and what share of hospital capacity did that represent? For our San Jose State University biomedical engineering term project, we examined daily estimates from January 14 through February 13, 2021.</p>
+    <p><strong>Tanwani Tanwani and Austin Wong</strong> &middot; BME 133 &middot; 2023</p>
+    <figure>
+      <img src="../../python_projects/SJSU_%5BBENG133%5D%20-%20FinalProject/BME133_Tanwani-Austin_Term%20Project/output%20files/plot.png" style="width:100%;height:auto" alt="Line chart showing a decline in the mean estimated COVID-19 inpatient bed count from mid-January to mid-February 2021.">
+      <figcaption>Original Matplotlib output. Each point is the mean estimated bed count across reporting codes on that date, not a national total.</figcaption>
+    </figure>
+    <h2>What did a typical report look like?</h2>
+    <p>The median estimate was 996.5 occupied beds per record, compared with a mean of 3,921. Large counts pull the mean upward. Looking at capacity instead of counts, the average reported occupancy was 11.56%. That is an unweighted average of reporting percentages, not the percentage of all U.S. beds occupied.</p>
+    <h2>From CSV to dashboard</h2>
+    <p>Our Python analyzer used pandas to parse dates, convert comma-formatted counts to numbers, and summarize the estimates. We plotted daily means with Matplotlib and built a local Dash app with a Plotly line chart of daily sums. The file includes a countrywide reporting code alongside state-level records, so adding every row can double-count beds.</p>
+    <div class="publication-links">
+      <a href="presentation.pdf">Read the project slides (PDF)</a>
+      <a href="../../python_projects/SJSU_%5BBENG133%5D%20-%20FinalProject/BME133_Tanwani-Austin_Term%20Project/BME133_GROUP2_TERM-PROJECT_V1.4_4.29.23.py">View the Python source</a>
+    </div>
+  </main>
+</body>
+</html>

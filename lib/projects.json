@@ -24,6 +24,14 @@
         "description": "A portable electrocardiogram lets students follow a cardiac signal from the electrodes to six displayed limb leads."
     },
     {
+        "title": "Tracking COVID-19 Inpatient Bed Occupancy",
+        "year": "2023",
+        "collection": "general",
+        "url": "publications/covid-inpatient-beds/",
+        "image": "python_projects/SJSU_%5BBENG133%5D%20-%20FinalProject/BME133_Tanwani-Austin_Term%20Project/output%20files/plot.png",
+        "description": "A Python analysis of hospital occupancy in early 2021, comparing the number of beds used by COVID-19 patients with their share of inpatient capacity."
+    },
+    {
         "title": "Peer-to-Peer Battleship",
         "collection": "general",
         "year": "2026",
