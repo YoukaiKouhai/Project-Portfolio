@@ -2,29 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
   <!-- Load JS -->
   <script type="module" src="../global.js"></script>
   <script type="module" src="contact.js"></script>
 
-  <h1>Contact</h1>
-
-  <form action="mailto:you@example.com" method="GET">
-
-    <label>
-      <span>Subject:</span>
-      <input type="text" name="subject" placeholder="Hello from your site" />
-    </label>
-
-    <label>
-      <span>Message:</span>
-      <textarea name="body" rows="6" placeholder="Type your message here..."></textarea>
-    </label>
-
-    <button type="submit">Send</button>
-  </form>
+  <main class="contact">
+    <h1>Contact</h1>
+    <p>Have a question about a project or an idea for a collaboration? Send me a note.</p>
+    <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScQS2dT3aSQHCWvbEhsbZTdw7EA-Psb_m3GVO1ckG9pBNO9cA/formResponse" method="post" target="_blank">
+      <label>
+        <span>Contact info <small>(optional)</small></span>
+        <input type="text" name="entry.2072945478" placeholder="Email or another way to reach you">
+      </label>
+      <label>
+        <span>Subject <small>(optional)</small></span>
+        <input type="text" name="entry.783262107">
+      </label>
+      <label>
+        <span>Message <small>(required)</small></span>
+        <textarea name="entry.1597835981" rows="6" required></textarea>
+      </label>
+      <p>Your message goes to Austin via Google Forms. Include contact info if you'd like a reply.</p>
+      <button type="submit">Send message</button>
+    </form>
+    <section id="contact-response" aria-labelledby="response-heading" hidden>
+      <h2 id="response-heading" tabindex="-1">Submission response</h2>
+      <p>Check Google's confirmation below. If it doesn't appear, <a href="https://docs.google.com/forms/d/e/1FAIpQLScQS2dT3aSQHCWvbEhsbZTdw7EA-Psb_m3GVO1ckG9pBNO9cA/viewform" target="_blank" rel="noopener noreferrer">open the Google Form in a new tab</a>.</p>
+      <iframe name="contact-result" title="Google Forms submission response"></iframe>
+    </section>
+  </main>
 </body>
 </html>

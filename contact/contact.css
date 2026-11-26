@@ -1,0 +1,10 @@
+.contact { max-width: 42rem; margin-inline: auto; }
+.contact form, .contact form label { grid-template-columns: minmax(0, 1fr); }
+.contact form label { gap: .35rem; }
+.contact form :is(input, textarea) { grid-column: 1; border-radius: 4px; }
+.contact textarea { resize: vertical; }
+.contact form p { margin: 0; }
+.contact small, .contact form p { color: var(--text-secondary); }
+.contact form button { justify-self: start; padding-inline: 1.25rem; border-radius: 4px; background: #176057; color: #fff; }
+.contact form button:hover { background: #104940; }
+.contact iframe { width: 100%; height: 22rem; border: 1px solid var(--border-color); box-sizing: border-box; }

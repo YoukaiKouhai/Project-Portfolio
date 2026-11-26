@@ -1,24 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form[action^="mailto:"]');
-  if (!form) return;
+const form = document.querySelector('#contact-form');
+const message = form.querySelector('textarea');
+const response = document.querySelector('#contact-response');
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();  // stop default submission
-
-    const formData = new FormData(form);
-    let params = [];
-
-    for (let [name, value] of formData) {
-      // encode value for URL, skip empty fields optionally
-      if (value.trim() !== '') {
-        params.push(`${encodeURIComponent(name)}=${encodeURIComponent(value)}`);
-      }
-    }
-
-    const baseMailto = form.action; // e.g., "mailto:you@example.com"
-    const url = `${baseMailto}?${params.join('&')}`;
-
-    // Open mail client with constructed URL
-    location.href = url;
-  });
+// Use the native POST: a cross-origin fetch cannot verify Google's response.
+// Without JavaScript the same form opens Google's response in a new tab.
+form.target = response.querySelector('iframe').name;
+message.addEventListener('input', () => message.setCustomValidity(''));
+form.addEventListener('submit', (event) => {
+  if (!message.value.trim()) {
+    event.preventDefault();
+    message.setCustomValidity('Please enter a message.');
+    message.reportValidity();
+    return;
+  }
+  response.hidden = false;
+  document.querySelector('#response-heading').focus();
 });
