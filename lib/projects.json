@@ -1,5 +1,13 @@
 [
     {
+        "title": "OncoMorph-AI: Morphology Lab",
+        "year": "2026",
+        "collection": "general",
+        "url": "publications/morphology-lab/",
+        "image": "publications/morphology-lab/figures/projection.png",
+        "description": "Explore how nuclear measurements separate historical diagnoses, where classifiers disagree, and which cases a research model refers for review."
+    },
+    {
         "title": "TIDE Trace Decomposition",
         "year": "2025",
         "collection": "general",
