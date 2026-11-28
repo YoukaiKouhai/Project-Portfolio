@@ -1,30 +1,48 @@
-/* Color definitions */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;700&display=swap');
+
+/* Color definitions
+   Light = "Unicorn mode": armor white, hull navy, psycommu red.
+   Dark  = "Destroy mode": deep navy with a brighter red glow.
+   Red is for interface (links, buttons, current page).
+   Blue is for data (charts), so red stays free to mean "selected". */
 :root {
-  --color-accent: oklch(70% 0.1 192);
-  --color-accent-light: oklch(from var(--color-accent) 95% 5% h);
-  --color-accent-dark: oklch(from var(--color-accent) 60% 40% h);
-  --border-color: oklch(80% 3% 200);
-  --page-bg: #ffffff;
-  --text-primary: #333333;
-  --text-secondary: #444444;
-  --surface-bg: #f5f5f5;
-  --resume-bg: #f8f8f8;
-  --profile-bg: #f0f0f0;
-  --profile-border: #cccccc;
-  --profile-shadow: rgba(0, 0, 0, 0.1);
+  --button-cut: polygon(0 0, calc(100% - .75rem) 0, 100% .75rem, 100% 100%, .75rem 100%, 0 calc(100% - .75rem));
+  --font-display: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+
+  --color-accent: #C8102E;
+  --color-accent-dark: #9B0C24;
+  --color-accent-light: color-mix(in oklch, var(--color-accent), white 88%);
+  --color-data: #2457C5;
+  --color-gold: #F2C14E;
+
+  --border-color: #C9D1E0;
+  --page-bg: #F4F6FA;
+  --text-primary: #0E1A33;
+  --text-secondary: #3F4C66;
+  --surface-bg: #E8ECF4;
+  --resume-bg: #EEF1F7;
+  --profile-bg: #E8ECF4;
+  --profile-border: #C9D1E0;
+  --profile-shadow: rgba(14, 26, 51, 0.12);
   --button-text: #ffffff;
 }
 
 html[data-theme="dark"] {
-  --border-color: oklch(50% 10% 200 / 40%);
-  --page-bg: oklch(15% 0.02 235);
-  --text-primary: #fffefe;
-  --text-secondary: oklch(83% 0.03 220);
-  --surface-bg: oklch(22% 0.03 235);
-  --resume-bg: oklch(18% 0.03 235);
-  --profile-bg: oklch(20% 0.03 235);
-  --profile-border: oklch(42% 0.04 235);
-  --profile-shadow: rgba(0, 0, 0, 0.35);
+  --color-accent: #FF5C7A;
+  --color-accent-dark: #FF8DA1;
+  --color-data: #7AA7FF;
+
+  --border-color: #2A3658;
+  --page-bg: #0B1226;
+  --text-primary: #EEF1F7;
+  --text-secondary: #A9B4CC;
+  --surface-bg: #141D38;
+  --resume-bg: #101831;
+  --profile-bg: #141D38;
+  --profile-border: #2A3658;
+  --profile-shadow: rgba(0, 0, 0, 0.45);
+  --button-text: #0B1226;
 }
 
 /* Base styles */
@@ -40,7 +58,8 @@ html[data-theme="dark"] {
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  position: relative;
+  font-family: var(--font-body);
   line-height: 1.6;
   max-width: 100ch;
   margin-inline: auto;
@@ -49,8 +68,31 @@ body {
   color: var(--text-primary);
 }
 
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.08em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.16em;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: #0E1A33;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Typography */
 h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
   margin-top: 1em;
   margin-bottom: 0.5em;
   line-height: 1.1;
@@ -59,7 +101,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(2rem, 10vw, 4rem);
+  font-size: 3rem;
 }
 
 h2 {
@@ -73,6 +115,8 @@ nav {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 1rem;
 }
+body > nav { padding-inline-end: 9rem }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px }
 
 nav ul, nav li {
   display: contents;
@@ -89,18 +133,30 @@ nav a {
   text-align: center;
   text-decoration: none;
   color: inherit;
+  font-family: var(--font-display);
+  font-weight: 500;
   padding: 0.5em;
-  transition: background-color 0.3s, border-bottom 0.3s;
+  border-bottom: 0.3em solid transparent;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 nav a.current {
-  border-bottom: 0.4em solid var(--border-color);
-  padding-bottom: 0.1em;
+  border-bottom-color: var(--color-accent);
+  font-weight: 700;
 }
 
 nav a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  background-color: color-mix(in oklch, var(--color-accent), var(--page-bg) 85%);
+  border-bottom-color: var(--border-color);
+  background-color: color-mix(in oklch, var(--color-accent), var(--page-bg) 90%);
+}
+
+nav a.current:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
 }
 
 /* Media elements */
@@ -173,19 +229,73 @@ form button:hover {
 /* Projects grid */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em;
-  margin-top: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.projects:empty::before {
+  content: "Loading projects…";
+  color: var(--text-secondary);
 }
 
 .projects article {
+  position: relative;
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
-  padding: 1em;
-  border-radius: 0.5em;
-  text-align: center;
+  row-gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  text-align: left;
   background: var(--surface-bg);
+  transition: border-color 0.2s;
+}
+
+.projects article:hover,
+.projects article:focus-within {
+  border-color: var(--color-accent);
+}
+
+/* Image first, then title, then details, whatever order the JS appends them in */
+.projects article img {
+  grid-row: 1;
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--border-color);
+}
+
+.projects article > :is(h1, h2, h3, h4, h5, h6) {
+  grid-row: 2;
+  margin: 0;
+  padding: 1rem 1rem 0.25rem;
+  font-size: 1.25rem;
+}
+
+.projects article > :is(h1, h2, h3, h4, h5, h6) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Makes the whole card clickable through the title link */
+.projects article > :is(h1, h2, h3, h4, h5, h6) a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.projects article > :is(h1, h2, h3, h4, h5, h6) a:focus-visible {
+  outline: none;
+}
+
+.projects article:has(h2 a:focus-visible, h3 a:focus-visible) {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 .projects p {
@@ -193,8 +303,15 @@ form button:hover {
 }
 
 .project-details {
+  grid-row: 3;
   display: grid;
+  align-content: start;
   gap: 0.35em;
+  padding: 0 1rem 1rem;
+}
+
+.project-details p:first-child {
+  margin-top: 0;
 }
 
 .project-year {
@@ -206,7 +323,10 @@ form button:hover {
 }
 
 .project-link {
-  justify-self: center;
+  position: relative;
+  z-index: 1;
+  justify-self: start;
+  margin-top: 0.25rem;
   font-weight: 700;
 }
 
@@ -252,7 +372,7 @@ form button:hover {
 
 .publication-title {
   margin: 0;
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-size: 1.65rem;
   line-height: 1.2;
 }
 
@@ -325,7 +445,6 @@ form button:hover {
 .publication-links a:focus-visible {
   border-color: var(--color-accent);
   background: color-mix(in oklch, var(--color-accent), var(--page-bg) 86%);
-  transform: translateY(-1px);
 }
 
 @media (max-width: 560px) {
@@ -395,7 +514,7 @@ form button:hover {
 }
 
 .selected {
-  --color: oklch(60% 45% 0) !important;
+  --color: var(--color-accent) !important;
 }
 
 path.selected {
@@ -583,7 +702,7 @@ path.selected {
 }
 
 .commit-dot {
-  fill: var(--color-accent);
+  fill: var(--color-data);
   fill-opacity: 0.7;
   stroke: var(--page-bg);
   stroke-width: 1;
@@ -603,7 +722,7 @@ path.selected {
 }
 
 .commit-dot.selected {
-  fill: oklch(65% 0.22 27);
+  fill: var(--color-accent);
   fill-opacity: 1;
   stroke: var(--text-primary);
 }
@@ -665,7 +784,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 .selection {
-  fill: var(--color-accent);
+  fill: var(--color-data);
   fill-opacity: 0.12;
   stroke: var(--text-primary);
   stroke-opacity: 0.7;
@@ -921,7 +1040,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 /* Color scheme switcher */
 .color-scheme {
   position: absolute;
-  top: 1rem;
+  top: 0.9rem;
   right: 1rem;
   font-size: 80%;
   font-family: inherit;
@@ -939,32 +1058,195 @@ dl.info[hidden]:not(:hover, :focus-within) {
   padding: 0.2rem 0.35rem;
 }
 
-#profile-stats {
-  background-color: var(--profile-bg);
-  border: 1px solid var(--profile-border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  box-shadow: 0 2px 6px var(--profile-shadow);
-  font-family: Arial, sans-serif;
+@media (max-width: 40rem) {
+  body > nav {
+    padding-inline-end: 0;
+  }
+
+  .color-scheme {
+    position: static;
+    display: block;
+    margin-top: 0.5rem;
+    text-align: right;
+  }
 }
 
+/* GitHub stats (home page) */
+#profile-stats {
+  margin-block: clamp(3rem, 8vw, 5rem) 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+#profile-stats h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
 
 #profile-stats dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.5em 1em;
-}
-
-#profile-stats dt {
-  grid-row: 1;
-  font-weight: bold;
-  text-align: center;
+  gap: 0.15rem 1.5rem;
+  margin: 0;
 }
 
 #profile-stats dd {
-  grid-row: 2;
-  text-align: center;
+  grid-row: 1;
   margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+#profile-stats dt {
+  grid-row: 2;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 36rem) {
+  #profile-stats dl {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+  }
+
+  #profile-stats dd { grid-row: auto; }
+  #profile-stats dt { grid-row: auto; }
+}
+
+/* Home page */
+body.home {
+  max-width: 72rem;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 4.5rem);
+  align-items: center;
+  padding-block: clamp(2rem, 7vw, 5rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hero-lead {
+  max-width: 30ch;
+  margin: 1.25rem 0 0;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* Buttons share one shape: a cut corner at top-right and bottom-left */
+.button {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--button-text);
+  background: var(--color-accent);
+  clip-path: var(--button-cut);
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  color: var(--button-text);
+  background: var(--color-accent-dark);
+}
+
+.button:focus-visible {
+  /* outlines are clipped by clip-path, so draw the ring inside */
+  box-shadow: inset 0 0 0 3px var(--page-bg), inset 0 0 0 5px var(--text-primary);
+}
+
+.button-dark {
+  color: var(--page-bg);
+  background: var(--text-primary);
+}
+
+.button-dark:hover {
+  color: var(--button-text);
+  background: var(--color-accent);
+}
+
+.hero-figure {
+  margin: 0;
+}
+
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(80vh, 46rem);
+  object-fit: cover;
+  clip-path: polygon(0 0, calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 2.5rem 100%, 0 calc(100% - 2.5rem));
+}
+
+.hero-figure figcaption {
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 0.3rem solid var(--color-accent);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 52rem) {
+  .hero { gap: 1.25rem }
+  .hero-figure img { max-height: min(42vh, 24rem) }
+  .hero h1 { font-size: 3.5rem }
+  body > h1, main > h1 { font-size: 2.25rem }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: clamp(2rem, 6vw, 4rem);
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.section-head a {
+  font-weight: 700;
+}
+
+.site-footer {
+  margin-top: clamp(3rem, 8vw, 5rem);
+  padding-block: 1.5rem 3rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+  }
 }

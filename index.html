@@ -4,36 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Austin: Personal site and portfolio</title>
+  <meta name="description" content="Austin's portfolio: data visualization projects, Python work, publications, and CV.">
+  <meta property="og:title" content="Austin: Personal site and portfolio">
+  <meta property="og:description" content="Data visualization projects, Python work, publications, and CV.">
+  <meta property="og:image" content="https://youkaikouhai.github.io/Project-Portfolio/images/UnicornGundamStatue.JPG">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Load JS -->
+<body class="home">
+  <!-- Load JS (adds the nav and theme switcher at the top of the page) -->
   <script type="module" src="global.js"></script>
-  
-  <h1>Austin's Personal Site and Portfolio</h1>
 
-  <p>Hi, I'm Austin. I'm trying to create my first personal/project portfolio site. Check back some time later for updates.</p>
-  <p>This website was inspired by https://dsc106.com/.</p>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Austin Wong</h1>
+      <p class="hero-lead">I build Python tools and data visualizations to explore biomedical signals and imaging data.</p>
+      <p class="hero-actions">
+        <a class="button" href="#projects">See my projects</a>
+        <a class="button button-dark" href="CV/">Read my CV</a>
+      </p>
+    </div>
 
+    <figure class="hero-figure">
+      <img src="images/UnicornGundamStatue.JPG"
+           alt="The Unicorn Gundam statue standing in front of a building in Odaiba, Tokyo">
+      <figcaption>Unicorn Gundam statue, Odaiba, Tokyo. Photo by me.</figcaption>
+    </figure>
+  </header>
 
+  <main>
+    <section id="projects">
+      <div class="section-head">
+        <h2>Latest projects</h2>
+        <a href="publications/#projects-heading">More projects</a>
+      </div>
+      <div class="projects"></div>
+    </section>
 
-  <img class="centered-image"
-       src="images/UnicornGundamStatue.JPG"
-       alt="Unicorn Gundam Statue in Odaiba Tokyo">
+    <div id="profile-stats">
+      <!-- GitHub stats will be inserted here dynamically -->
+    </div>
+  </main>
 
-  <p class="caption">Please enjoy this picture I took of the Unicorn Gundam Statue in Odaiba Tokyo.</p>
-
-  <div id="profile-stats">
-    <!-- GitHub stats will be inserted here dynamically -->
-  </div>
-
-  <h2>Latest Projects</h2>
-  <div class="projects">
-    <!-- Projects will be inserted here by index.js -->
-  </div>
+  <footer class="site-footer">
+    <p>Layout inspired by <a href="https://dsc106.com/">dsc106.com</a>. Source code on <a href="https://github.com/YoukaiKouhai/Project-Portfolio">GitHub</a>.</p>
+  </footer>
 
   <!-- Load the JS module -->
   <script src="index.js" type="module" defer></script>
-  
 </body>
 </html>

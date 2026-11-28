@@ -7,25 +7,20 @@
 [aria-pressed=true] .switch { background: #24624f }
 [aria-pressed=true] .switch::after { margin-left: auto }
 
-html:not([data-theme="dark"]) {
-  --page-bg: #faf9f3; --text-primary: #1e352f; --text-secondary: #50665e;
-  --border-color: #cdd3c7;
-}
 body:not(.riding) { max-width: 71rem }
 #cv { display: grid; grid-template-columns: 13rem minmax(0,48rem); gap: clamp(2rem,5vw,6rem); justify-content: center; align-items: start; margin: 3rem auto; line-height: 1.55 }
 #cv-contents { display: block; position: sticky; top: 5rem; margin-top: 1rem; border: 0; border-left: 2px solid var(--border-color) }
 #cv-contents a { display: block; padding: .35rem .9rem; text-align: left; font-size: .9rem; color: var(--text-secondary) }
 #cv-contents a:hover { text-decoration: underline }
 #cv .resume { min-width: 0; background: transparent; color: var(--text-primary); margin: 0; padding: 0 }
-#cv h1, #cv h2 { font-family: Georgia, serif; font-weight: 500; line-height: 1.12 }
+#cv h1, #cv h2 { font-family: var(--font-display); font-weight: 600; line-height: 1.12 }
 #cv h1 { font-size: 4.8rem; margin: 0 }
 #cv h2 { font-size: 2.4rem; margin: 0 0 1.2rem }
 #cv .resume > p { max-width: 65ch; color: var(--text-secondary) }
 #cv .station { border-top: 1px solid var(--border-color); padding: 1.6rem 0; margin-top: 1.4rem; scroll-margin-top: 4rem }
 #cv .entry, #cv .resume-line { display: block; margin: 0 }
 #cv .entry + .entry { margin-top: 1.3rem }
-#cv .column1 { font-size: .82rem; font-weight: 650; color: #a23d2c; margin: 0 0 .15rem; white-space: normal }
-html[data-theme="dark"] #cv .column1 { color: #f2a995 }
+#cv .column1 { font-size: .82rem; font-weight: 650; color: var(--color-accent); margin: 0 0 .15rem; white-space: normal }
 #cv .column2 { max-width: none }
 #cv .role { text-align: left; color: var(--text-secondary) }
 #cv .no-style { margin: .5rem 0 0 }

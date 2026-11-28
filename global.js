@@ -66,10 +66,7 @@ function setupNavigation() {
     { url: 'https://github.com/YoukaiKouhai', title: 'GitHub' }
   ];
 
-  // Detect environment
-  const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-    ? "/" 
-    : "/Project-Portfolio/";
+  const BASE_PATH = new URL('.', import.meta.url).pathname;
 
   // Create nav element
   const nav = document.createElement('nav');
@@ -83,7 +80,7 @@ function setupNavigation() {
     // Highlight current page
     a.classList.toggle(
       'current',
-      a.host === location.host && a.pathname === location.pathname
+      a.host === location.host && a.pathname === location.pathname.replace(/index\.html$/, '')
     );
     
     // Open external links in new tab
@@ -95,16 +92,8 @@ function setupNavigation() {
     nav.append(a);
   });
 
-  // Insert nav based on page
-  const isHomePage = location.pathname === BASE_PATH || 
-                     location.pathname === BASE_PATH + "index.html";
-  
-  if (isHomePage) {
-    const h1 = document.querySelector("h1");
-    h1 ? h1.insertAdjacentElement("afterend", nav) : document.body.prepend(nav);
-  } else {
-    document.body.prepend(nav);
-  }
+  // Nav sits at the top of every page, including the home page
+  document.body.prepend(nav);
 }
 
 // Initialize everything when DOM is loaded
@@ -162,9 +151,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         return;
     }
 
-    const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-        ? "/"
-        : "/Project-Portfolio/";
+    const BASE_PATH = new URL('.', import.meta.url).pathname;
 
     function resolveProjectUrl(url) {
         if (!url) {

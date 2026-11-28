@@ -17,9 +17,10 @@ import { fetchJSON, renderProjects } from './global.js';
     }
 
     // Render the latest projects inside the container
-    renderProjects(latestProjects, projectsContainer, 'h2');
+    renderProjects(latestProjects, projectsContainer, 'h3');
   } catch (error) {
     console.error('Failed to load projects:', error);
+    document.querySelector('.projects').textContent = 'Projects could not be loaded.';
   }
 })();
 

@@ -63,7 +63,7 @@ function renderPieChart(projects, allProjects) {
   }
 
   const colors = d3
-    .scaleOrdinal(d3.schemeTableau10)
+    .scaleOrdinal(data.map((_, i) => `color-mix(in srgb, var(--color-data) ${100 - 60*i/Math.max(1,data.length-1)}%, var(--page-bg))`))
     .domain(data.map((d) => d.label));
 
   const arcData = sliceGenerator(data);

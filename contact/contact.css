@@ -5,6 +5,7 @@
 .contact textarea { resize: vertical; }
 .contact form p { margin: 0; }
 .contact small, .contact form p { color: var(--text-secondary); }
-.contact form button { justify-self: start; padding-inline: 1.25rem; border-radius: 4px; background: #176057; color: #fff; }
-.contact form button:hover { background: #104940; }
+.contact form button { justify-self: start; padding-inline: 1.25rem; background: var(--color-accent); color: var(--button-text); clip-path: var(--button-cut); }
+.contact form button:hover { background: var(--color-accent-dark); }
+.contact form button:focus-visible { box-shadow: inset 0 0 0 3px var(--page-bg), inset 0 0 0 5px var(--text-primary); }
 .contact iframe { width: 100%; height: 22rem; border: 1px solid var(--border-color); box-sizing: border-box; }
