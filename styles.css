@@ -115,7 +115,12 @@ nav {
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 1rem;
 }
-body > nav { padding-inline-end: 9rem }
+body > nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.65fr 1.55fr 1fr 1fr;
+  padding-inline-end: 8rem;
+}
+body > nav > a { min-width: 0; padding-inline: .25rem }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px }
 
 nav ul, nav li {
@@ -1058,7 +1063,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
   padding: 0.2rem 0.35rem;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 52rem) {
   body > nav {
     padding-inline-end: 0;
   }
@@ -1069,6 +1074,9 @@ dl.info[hidden]:not(:hover, :focus-within) {
     margin-top: 0.5rem;
     text-align: right;
   }
+}
+@media (max-width: 40rem) {
+  body > nav { grid-template-columns: repeat(3, minmax(0, 1fr)) }
 }
 
 /* GitHub stats (home page) */

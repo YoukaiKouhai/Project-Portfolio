@@ -140,6 +140,10 @@ function updateView(projects) {
       const placeholders = await fetchJSON(projectsContainer.dataset.placeholders);
       projects.push(...placeholders);
     }
+    if (collection === 'general') {
+      projects.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0)
+        || a.title.localeCompare(b.title, 'en', { sensitivity: 'base', numeric: true }));
+    }
 
     if (!projectsContainer) {
       console.error('No container with class "projects" found in HTML.');
