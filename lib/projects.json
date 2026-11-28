@@ -8,12 +8,12 @@
         "description": "Explore how nuclear measurements separate historical diagnoses, where classifiers disagree, and which cases a research model refers for review."
     },
     {
-        "title": "TIDE Trace Decomposition",
-        "year": "2025",
+        "title": "CRISPR Trace Decomposer",
+        "year": "2026",
         "collection": "general",
         "url": "publications/tide/",
         "image": "publications/tide/spectrum.png",
-        "description": "Compare an unedited Sanger trace with a mixed trace to estimate how often the sequence length changed."
+        "description": "An interactive Sanger trace explorer with linked chromatograms, fit reconstruction, and a synthetic benchmark with known frequencies."
     },
     {
         "title": "Cardiac Lead Localization in 3D CT",
